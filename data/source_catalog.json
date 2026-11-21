@@ -32,6 +32,78 @@
     "description": "July 7–August 14, 2027"
   },
   {
+    "title": "Starfish Project",
+    "producer": "Intiman Theatre",
+    "source_name": "Intiman Theatre Upcoming Productions",
+    "source_url": "https://www.intiman.org/",
+    "official_url": "https://www.intiman.org/starfish/",
+    "description": "After-school technical arts training program for middle and high school students. Learn More"
+  },
+  {
+    "title": "Intiman Cabaret",
+    "producer": "Intiman Theatre",
+    "source_name": "Intiman Theatre Upcoming Productions",
+    "source_url": "https://www.intiman.org/",
+    "official_url": "https://www.intiman.org/cabaret/",
+    "description": ""
+  },
+  {
+    "title": "Peter Pan Goes Wrong",
+    "producer": "Seattle Rep",
+    "source_name": "Seattle Rep 2026/27 Season",
+    "source_url": "https://www.seattlerep.org/plays/202627-season",
+    "official_url": "https://www.seattlerep.org/plays/202627-season/peter-pan-goes-wrong",
+    "description": "Nov. 27, 2026 – Jan. 3, 2027"
+  },
+  {
+    "title": "John Proctor Is the Villain",
+    "producer": "Seattle Rep",
+    "source_name": "Seattle Rep 2026/27 Season",
+    "source_url": "https://www.seattlerep.org/plays/202627-season",
+    "official_url": "https://www.seattlerep.org/plays/202627-season/john-proctor-is-the-villain",
+    "description": "Jan. 21 – Feb. 21, 2027"
+  },
+  {
+    "title": "Intimate Apparel",
+    "producer": "Seattle Rep",
+    "source_name": "Seattle Rep 2026/27 Season",
+    "source_url": "https://www.seattlerep.org/plays/202627-season",
+    "official_url": "https://www.seattlerep.org/plays/202627-season/intimate-apparel",
+    "description": "Feb. 18 – Mar. 21, 2027"
+  },
+  {
+    "title": "You Are Cordially Invited to the End of the World!",
+    "producer": "Seattle Rep",
+    "source_name": "Seattle Rep 2026/27 Season",
+    "source_url": "https://www.seattlerep.org/plays/202627-season",
+    "official_url": "https://www.seattlerep.org/plays/202627-season/you-are-cordially-invited-to-the-end-of-the-world",
+    "description": "May 13 – June 13, 2027"
+  },
+  {
+    "title": "Young Rep Productions",
+    "producer": "Seattle Rep",
+    "source_name": "Seattle Rep 2026/27 Season",
+    "source_url": "https://www.seattlerep.org/plays/202627-season",
+    "official_url": "https://www.seattlerep.org/education/for-youth",
+    "description": "Check out our 2026 Young Rep productions, starring the next generation of theater makers in fully produced shows on the Leo K. stage"
+  },
+  {
+    "title": "Eureka Day",
+    "producer": "Seattle Rep",
+    "source_name": "Seattle Rep 2026/27 Season",
+    "source_url": "https://www.seattlerep.org/plays/202627-season",
+    "official_url": "https://www.seattlerep.org/plays/202627-season/eureka-day",
+    "description": "Sept. 24 – Nov. 15, 2026"
+  },
+  {
+    "title": "Freak The Mighty",
+    "producer": "Seattle Rep",
+    "source_name": "Seattle Rep 2026/27 Season",
+    "source_url": "https://www.seattlerep.org/plays/202627-season",
+    "official_url": "https://www.seattlerep.org/plays/202627-season/freak-the-mighty",
+    "description": "Jul. 30 – Sept. 6, 2026"
+  },
+  {
     "title": "Improv Happy Hour",
     "producer": "Unexpected Productions",
     "source_name": "Unexpected Productions Events",
@@ -110,77 +182,5 @@
     "source_url": "https://www.unexpectedproductions.org/events/list/",
     "official_url": "https://www.unexpectedproductions.org/event/an-improvised-christmas-carol/2026-11-27/",
     "description": "November 27 @ 7:30 pm - 9:00 pm An Improvised Christmas Carol"
-  },
-  {
-    "title": "Starfish Project",
-    "producer": "Intiman Theatre",
-    "source_name": "Intiman Theatre Upcoming Productions",
-    "source_url": "https://www.intiman.org/",
-    "official_url": "https://www.intiman.org/starfish/",
-    "description": "After-school technical arts training program for middle and high school students. Learn More"
-  },
-  {
-    "title": "Intiman Cabaret",
-    "producer": "Intiman Theatre",
-    "source_name": "Intiman Theatre Upcoming Productions",
-    "source_url": "https://www.intiman.org/",
-    "official_url": "https://www.intiman.org/cabaret/",
-    "description": ""
-  },
-  {
-    "title": "Peter Pan Goes Wrong",
-    "producer": "Seattle Rep",
-    "source_name": "Seattle Rep 2026/27 Season",
-    "source_url": "https://www.seattlerep.org/plays/202627-season",
-    "official_url": "https://www.seattlerep.org/plays/202627-season/peter-pan-goes-wrong",
-    "description": "Nov. 27, 2026 – Jan. 3, 2027"
-  },
-  {
-    "title": "John Proctor Is the Villain",
-    "producer": "Seattle Rep",
-    "source_name": "Seattle Rep 2026/27 Season",
-    "source_url": "https://www.seattlerep.org/plays/202627-season",
-    "official_url": "https://www.seattlerep.org/plays/202627-season/john-proctor-is-the-villain",
-    "description": "Jan. 21 – Feb. 21, 2027"
-  },
-  {
-    "title": "Intimate Apparel",
-    "producer": "Seattle Rep",
-    "source_name": "Seattle Rep 2026/27 Season",
-    "source_url": "https://www.seattlerep.org/plays/202627-season",
-    "official_url": "https://www.seattlerep.org/plays/202627-season/intimate-apparel",
-    "description": "Feb. 18 – Mar. 21, 2027"
-  },
-  {
-    "title": "You Are Cordially Invited to the End of the World!",
-    "producer": "Seattle Rep",
-    "source_name": "Seattle Rep 2026/27 Season",
-    "source_url": "https://www.seattlerep.org/plays/202627-season",
-    "official_url": "https://www.seattlerep.org/plays/202627-season/you-are-cordially-invited-to-the-end-of-the-world",
-    "description": "May 13 – June 13, 2027"
-  },
-  {
-    "title": "Young Rep Productions",
-    "producer": "Seattle Rep",
-    "source_name": "Seattle Rep 2026/27 Season",
-    "source_url": "https://www.seattlerep.org/plays/202627-season",
-    "official_url": "https://www.seattlerep.org/education/for-youth",
-    "description": "Check out our 2026 Young Rep productions, starring the next generation of theater makers in fully produced shows on the Leo K. stage"
-  },
-  {
-    "title": "Eureka Day",
-    "producer": "Seattle Rep",
-    "source_name": "Seattle Rep 2026/27 Season",
-    "source_url": "https://www.seattlerep.org/plays/202627-season",
-    "official_url": "https://www.seattlerep.org/plays/202627-season/eureka-day",
-    "description": "Sept. 24 – Nov. 15, 2026"
-  },
-  {
-    "title": "Freak The Mighty",
-    "producer": "Seattle Rep",
-    "source_name": "Seattle Rep 2026/27 Season",
-    "source_url": "https://www.seattlerep.org/plays/202627-season",
-    "official_url": "https://www.seattlerep.org/plays/202627-season/freak-the-mighty",
-    "description": "Jul. 30 – Sept. 6, 2026"
   }
 ]
