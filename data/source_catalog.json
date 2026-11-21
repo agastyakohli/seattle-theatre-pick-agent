@@ -32,6 +32,22 @@
     "description": "July 7–August 14, 2027"
   },
   {
+    "title": "Starfish Project",
+    "producer": "Intiman Theatre",
+    "source_name": "Intiman Theatre Upcoming Productions",
+    "source_url": "https://www.intiman.org/",
+    "official_url": "https://www.intiman.org/starfish/",
+    "description": "After-school technical arts training program for middle and high school students. Learn More"
+  },
+  {
+    "title": "Intiman Cabaret",
+    "producer": "Intiman Theatre",
+    "source_name": "Intiman Theatre Upcoming Productions",
+    "source_url": "https://www.intiman.org/",
+    "official_url": "https://www.intiman.org/cabaret/",
+    "description": ""
+  },
+  {
     "title": "Improv Happy Hour",
     "producer": "Unexpected Productions",
     "source_name": "Unexpected Productions Events",
@@ -142,6 +158,14 @@
     "source_url": "https://www.seattlerep.org/plays/202627-season",
     "official_url": "https://www.seattlerep.org/plays/202627-season/you-are-cordially-invited-to-the-end-of-the-world",
     "description": "May 13 – June 13, 2027"
+  },
+  {
+    "title": "Young Rep Productions",
+    "producer": "Seattle Rep",
+    "source_name": "Seattle Rep 2026/27 Season",
+    "source_url": "https://www.seattlerep.org/plays/202627-season",
+    "official_url": "https://www.seattlerep.org/education/for-youth",
+    "description": "Check out our 2026 Young Rep productions, starring the next generation of theater makers in fully produced shows on the Leo K. stage"
   },
   {
     "title": "Eureka Day",
