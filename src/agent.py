@@ -454,6 +454,9 @@ def main():
                 print("SOURCE ERROR", source["name"], str(exc), file=sys.stderr)
     productions = merge(productions, found)
     already = {x.get("production_id") for x in featured}
+    # Title-level suppression preserves historical featured entries across
+    # the identity-key migration from venue-based to producer-based IDs.
+    already_titles = {clean(x.get("title")).casefold() for x in featured if x.get("title")}
     today = datetime.now(TZ).date().isoformat()
     candidates = []
     # One pick per producer within a rolling seven-day window.
@@ -473,7 +476,7 @@ def main():
                 recent_producers.add(key)
 
     for p in productions:
-        if p.get("id") in already or p.get("featured"):
+        if p.get("id") in already or clean(p.get("title")).casefold() in already_titles or p.get("featured"):
             continue
         # A pick must have a performance explicitly listed for today.
         performance_dates = set(p.get("performance_dates") or [])
