@@ -4,6 +4,7 @@ import html
 import json
 import re
 import sys
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import date, datetime
 from pathlib import Path
 from urllib.parse import urljoin, urlparse
@@ -313,14 +314,17 @@ def main():
     productions = json.loads(productions_path.read_text()) if productions_path.exists() else []
     featured = json.loads(featured_path.read_text()) if featured_path.exists() else []
     found = []
-    for source in CFG["sources"]:
-        if not source.get("enabled"):
-            continue
-        try:
-            found.extend(extract(source))
-            print("Fetched:", source["name"])
-        except Exception as exc:
-            print("SOURCE ERROR", source["name"], str(exc), file=sys.stderr)
+    enabled_sources = [source for source in CFG["sources"] if source.get("enabled")]
+    # Fetch calendars concurrently so one slow site does not hold up every other source.
+    with ThreadPoolExecutor(max_workers=5) as pool:
+        jobs = {pool.submit(extract, source): source for source in enabled_sources}
+        for job in as_completed(jobs):
+            source = jobs[job]
+            try:
+                found.extend(job.result())
+                print("Fetched:", source["name"])
+            except Exception as exc:
+                print("SOURCE ERROR", source["name"], str(exc), file=sys.stderr)
     productions = merge(productions, found)
     already = {x.get("production_id") for x in featured}
     today = datetime.now(TZ).date().isoformat()
