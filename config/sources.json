@@ -21,14 +21,56 @@
       "url": "https://www.stgpresents.org/calendar/",
       "type": "html",
       "enabled": true,
-      "priority": 2
+      "priority": 5,
+      "producer_type": "presenter"
     },
     {
       "name": "5th Avenue Theatre",
       "url": "https://www.5thavenue.org/shows/",
       "type": "html",
       "enabled": true,
-      "priority": 2
+      "priority": 1,
+      "producer": "The 5th Avenue Theatre"
+    },
+    {
+      "name": "Taproot Theatre Performances",
+      "url": "https://taproottheatre.org/performances/",
+      "type": "html",
+      "enabled": true,
+      "priority": 0,
+      "producer": "Taproot Theatre"
+    },
+    {
+      "name": "Seattle Public Theater Current Season",
+      "url": "https://www.seattlepublictheater.org/current-season",
+      "type": "html",
+      "enabled": true,
+      "priority": 0,
+      "producer": "Seattle Public Theater"
+    },
+    {
+      "name": "Village Theatre Shows",
+      "url": "https://villagetheatre.org/see-a-show/",
+      "type": "html",
+      "enabled": true,
+      "priority": 0,
+      "producer": "Village Theatre"
+    },
+    {
+      "name": "ArtsWest",
+      "url": "https://www.artswest.org/",
+      "type": "html",
+      "enabled": true,
+      "priority": 0,
+      "producer": "ArtsWest"
+    },
+    {
+      "name": "Intiman Theatre Season",
+      "url": "https://www.intiman.org/2026-27-season/",
+      "type": "html",
+      "enabled": true,
+      "priority": 0,
+      "producer": "Intiman Theatre"
     }
   ],
   "include_categories": [
