@@ -8,7 +8,7 @@ on:
         required: true
         default: "true"
   schedule:
-    - cron: "30 16 * * *" # 8:30 AM Pacific during standard time; shifts to 9:30 AM during daylight time
+    - cron: "30 16 * * *" # dry-run only until Facebook publishing is explicitly enabled
 
 permissions:
   contents: write
@@ -30,7 +30,7 @@ jobs:
           if [ "${{ github.event_name }}" = "workflow_dispatch" ] && [ "${{ inputs.dry_run }}" = "true" ]; then
             python -m src.agent --dry-run
           else
-            python -m src.agent --publish
+            python -m src.agent --dry-run
           fi
       - name: Commit updated production history
         run: |
