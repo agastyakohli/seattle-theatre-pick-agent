@@ -769,10 +769,10 @@ def main():
     official_catalog = []
     successful_sources = set()
     enabled_sources = [source for source in CFG["sources"] if source.get("enabled")]
-    # Fetch calendars concurrently so one slow site does not hol    # Fetch calendars sequentially to reduce bursts that may trigger source-side throttling.
+    # Fetch calendars sequentially to reduce bursts that may trigger source-side throttling.
     for source in enabled_sources:
         try:
-            extracted = job.result()
+            extracted = extract(source)
             successful_sources.add(source["name"])
             listings = extracted["productions"]
             found.extend(listings)
