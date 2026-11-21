@@ -549,9 +549,9 @@ def is_excluded_event(item):
     # Exclude speakeasy/casino-format events regardless of whether they
     # describe themselves as immersive. Immersive plays remain eligible.
     speakeasy_patterns = [
-        r"\\bspeakeas(?:y|ies)\\b",
-        r"\\bcasino\\b",
-        r"\\bgambling\\b",
+        r"\bspeakeas(?:y|ies)\b",
+        r"\bcasino\b",
+        r"\bgambling\b",
     ]
     if any(re.search(pattern, combined, re.IGNORECASE) for pattern in speakeasy_patterns):
         return True
@@ -567,11 +567,11 @@ def parse_nwtheatre_run_end_dates(html_text, productions):
     have one unambiguous date-range listing on the page.
     """
     soup = BeautifulSoup(html_text or "", "html.parser")
-    lines = [clean(line) for line in soup.get_text("\\n").splitlines()]
+    lines = [clean(line) for line in soup.get_text("\n").splitlines()]
     lines = [line for line in lines if line]
     directory_dates = {}
     date_range = re.compile(
-        r"\\((\\d{1,2})/(\\d{1,2})\\s*[-–]\\s*(\\d{1,2})/(\\d{1,2})(?:/(\\d{4}))?\\)"
+        r"\((\d{1,2})/(\d{1,2})\s*[-–]\s*(\d{1,2})/(\d{1,2})(?:/(\d{4}))?\)"
     )
 
     def normalized(value):
