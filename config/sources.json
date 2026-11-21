@@ -57,7 +57,7 @@
     },
     {
       "name": "ArtsWest",
-      "url": "https://www.artswest.org/",
+      "url": "https://www.artswest.org/2026-27-season/",
       "type": "html",
       "enabled": true,
       "priority": 0,
@@ -97,7 +97,7 @@
     },
     {
       "name": "Annex Theatre Productions",
-      "url": "https://www.annextheatre.org/",
+      "url": "https://www.annextheatre.org/season-40-overview/",
       "type": "html",
       "enabled": true,
       "priority": 0,
