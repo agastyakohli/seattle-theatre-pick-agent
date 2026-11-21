@@ -25,7 +25,7 @@
     },
     {
       "name": "5th Avenue Theatre",
-      "url": "https://www.5thavenue.org/events/",
+      "url": "https://www.5thavenue.org/shows/",
       "type": "html",
       "enabled": true,
       "priority": 2
@@ -46,15 +46,24 @@
   ],
   "exclude_title_terms": [
     "tour",
-    "class",
-    "workshop",
     "audition",
     "camp",
-    "ballet class",
-    "dance class",
     "concert",
     "meet and greet",
     "open house"
   ],
-  "minimum_confidence": 0.72
+  "minimum_confidence": 0.72,
+  "exclude_event_terms": [
+    "class",
+    "classes",
+    "workshop",
+    "workshops",
+    "lesson",
+    "lessons",
+    "course",
+    "courses",
+    "training",
+    "master class",
+    "masterclass"
+  ]
 }
