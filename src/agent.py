@@ -290,7 +290,7 @@ def load_official_catalog():
 
 
 def event_links(event_url, fallback=None, item=None):
-    """Enrich event details and prefer producer page, ticketing page, then calendar listing."""
+    """Enrich the selected calendar pick; prefer producer page, ticketing page, then calendar listing."""
     fallback = fallback or event_url
     producer_url = ""
     ticket_url = ""
@@ -441,19 +441,6 @@ def event_links(event_url, fallback=None, item=None):
                         break
         except Exception as exc:
             print("PRODUCER PAGE LOOKUP WARNING:", str(exc))
-    # Match the selected dated calendar listing to an official producer catalogue.
-    # The catalogue supplies show-page URLs/descriptions only; dates always come
-    # from the dated event occurrence, never from a season run range.
-    official = catalog_match(item.get("title", "") if item else "",
-                             item.get("producer", "") if item else "",
-                             load_official_catalog())
-    if official:
-        producer_url = official.get("official_url") or producer_url
-        if item is not None and official.get("description"):
-            item["description"] = official["description"][:600]
-            closing_date = explicit_run_end_date(item)
-            if closing_date:
-                item["run_end_date"] = closing_date
     return producer_url or ticket_url or event_url or fallback, producer_url, ticket_url
 
 def extract(source):
@@ -524,7 +511,6 @@ def extract(source):
             "dated_performances": sum(len(x.get("performance_dates", [])) for x in ai1ec_results)
         }
         results.extend(ai1ec_results)
-    official_catalog = catalog_from_page(soup, source)
     # JSON-LD is generally more reliable than guessing from arbitrary page markup.
     for script in soup.select('script[type="application/ld+json"]'):
         try:
@@ -605,7 +591,7 @@ def extract(source):
         item.setdefault("ticket_url", "")
         # Keep the discovered event link for now. Enrich only the selected pick.
         item["url"] = event_url
-    return {"productions": results, "catalog": official_catalog, "diagnostic": diagnostic}
+    return {"productions": results, "diagnostic": diagnostic}
 
 
 def is_excluded_event(item):
@@ -766,17 +752,13 @@ def main():
     productions = json.loads(productions_path.read_text()) if productions_path.exists() else []
     featured = json.loads(featured_path.read_text()) if featured_path.exists() else []
     found = []
-    official_catalog = []
-    successful_sources = set()
     enabled_sources = [source for source in CFG["sources"] if source.get("enabled")]
     # Fetch calendars sequentially to reduce bursts that may trigger source-side throttling.
     for source in enabled_sources:
         try:
             extracted = extract(source)
-            successful_sources.add(source["name"])
             listings = extracted["productions"]
             found.extend(listings)
-            official_catalog.extend(extracted["catalog"])
             dated = sum(1 for item in listings if item.get("performance_dates") or item.get("start_date"))
             print("Fetched:", source["name"])
             diag = extracted.get("diagnostic", {})
@@ -798,22 +780,12 @@ def main():
                 print("NWTHEATRE JSONLD:", json.dumps(diag.get("jsonld_summaries", []), ensure_ascii=False))
                 print("NWTHEATRE INLINE CALENDAR DATA:", json.dumps(diag.get("calendar_inline_scripts", []), ensure_ascii=False))
                 print("NWTHEATRE AI1EC EXPORT:", json.dumps(diag.get("ai1ec_export", {}), ensure_ascii=False))
-            print("EXTRACTION:", source["name"], "-", len(listings), "dated listings;", len(extracted["catalog"]), "official show pages catalogued")
+            print("CALENDAR INVENTORY:", source["name"], "-", len(listings), "dated listings")
             for item in listings[:3]:
                 print("  LISTING:", clean(item.get("title", "(untitled)")), "| dates:", ", ".join(item.get("performance_dates") or ([item.get("start_date")] if item.get("start_date") else [])) or "(none)")
-            for item in extracted["catalog"][:3]:
-                print("  OFFICIAL SHOW:", clean(item.get("title")), "|", item.get("official_url"))
         except Exception as exc:
             print("SOURCE ERROR", source["name"], str(exc), file=sys.stderr)
     productions = merge(productions, found)
-    # Replace each source's previous catalogue snapshot with this run's results.
-    catalog_by_source = {entry["source_name"]: [] for entry in official_catalog}
-    for entry in official_catalog:
-        catalog_by_source.setdefault(entry["source_name"], []).append(entry)
-    prior_catalog = load_official_catalog()
-    retained_catalog = [entry for entry in prior_catalog if entry.get("source_name") not in catalog_by_source]
-    combined_catalog = retained_catalog + official_catalog
-    (DATA / "source_catalog.json").write_text(json.dumps(combined_catalog, indent=2, ensure_ascii=False) + "\n")
     already = {x.get("production_id") for x in featured}
     # Title-level suppression preserves historical featured entries across
     # the identity-key migration from venue-based to producer-based IDs.
@@ -852,13 +824,6 @@ def main():
         if key and key in recent_producers:
             print("SKIPPED FOR PRODUCER VARIETY:", p.get("title", "(untitled)"), "-", p.get("producer") or p.get("venue"))
             continue
-        # Pull an explicit closing date from the matched official show page
-        # before ranking; link enrichment happens only after the pick is selected.
-        official = catalog_match(p.get("title", ""), p.get("producer", ""), combined_catalog)
-        if official and official.get("description"):
-            closing_date = explicit_run_end_date({"description": official["description"]})
-            if closing_date:
-                p["run_end_date"] = closing_date
         candidates.append(p)
     # A verified earlier closing date wins; unknown closing dates sort after known dates.
     # Existing presenter/source priorities break ties between equally urgent shows.
