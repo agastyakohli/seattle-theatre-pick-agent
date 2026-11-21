@@ -152,7 +152,7 @@ def event_links(event_url, fallback=None, item=None):
                     if overlap:
                         candidates.append((overlap, href))
             candidates.sort(reverse=True)
-            if candidates and candidates[0][0] >= min(2, len(title_words)):
+            if candidates and candidates[0][0] >= 1:
                 producer_url = candidates[0][1]
             else:
                 # Follow one likely portfolio/experiences index and match the show title there.
@@ -175,7 +175,7 @@ def event_links(event_url, fallback=None, item=None):
                         if overlap and href.startswith(("http://", "https://")) and urlparse(href).netloc.casefold() == urlparse(index.url).netloc.casefold():
                             matches.append((overlap, href))
                     matches.sort(reverse=True)
-                    if matches and matches[0][0] >= min(2, len(title_words)):
+                    if matches and matches[0][0] >= 1:
                         producer_url = matches[0][1]
                         break
         except Exception as exc:
@@ -183,7 +183,7 @@ def event_links(event_url, fallback=None, item=None):
     return producer_url or ticket_url or event_url or fallback, producer_url, ticket_url
 
 def extract(source):
-    response = requests.get(source["url"], headers=HEADERS, timeout=25)
+    response = requests.get(source["url"], headers=HEADERS, timeout=15)
     response.raise_for_status()
     soup = BeautifulSoup(response.text, "html.parser")
     results = []
