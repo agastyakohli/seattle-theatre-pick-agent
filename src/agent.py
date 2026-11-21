@@ -40,8 +40,10 @@ def parse_date(value):
     except Exception:
         return None
 
-def identity(title, venue):
-    raw = clean(title).casefold() + "|" + clean(venue).casefold()
+def identity(title, producer_or_venue):
+    # Prefer producer identity so the same production from multiple calendars
+    # merges even when one source names the company and another names its venue.
+    raw = clean(title).casefold() + "|" + clean(producer_or_venue).casefold()
     return hashlib.sha256(raw.encode()).hexdigest()[:16]
 
 def event_links(event_url, fallback=None, item=None):
@@ -334,11 +336,31 @@ def producer_key(item):
 
 
 def merge(existing, incoming):
-    records = {p["id"]:p for p in existing if p.get("id")}
+    records = {}
+    # Re-key legacy records using producer identity where available, coalescing
+    # duplicates that were previously split by inconsistent venue labels.
+    for prior in existing:
+        if not prior.get("title"):
+            continue
+        pid = identity(prior["title"], prior.get("producer") or prior.get("venue", ""))
+        prior["id"] = pid
+        if pid not in records:
+            records[pid] = prior
+        else:
+            kept = records[pid]
+            kept["performance_dates"] = sorted(set(kept.get("performance_dates", [])) | set(prior.get("performance_dates", [])))
+            occurrences = kept.setdefault("performance_occurrences", [])
+            seen = {(x.get("date"), x.get("event_url")) for x in occurrences}
+            for occurrence in prior.get("performance_occurrences", []):
+                key = (occurrence.get("date"), occurrence.get("event_url"))
+                if key not in seen:
+                    occurrences.append(occurrence)
+                    seen.add(key)
+            kept["sources"] = list(dict.fromkeys((kept.get("sources") or []) + (prior.get("sources") or [])))
     for item in incoming:
         if not item.get("title") or not item.get("url"):
             continue
-        pid = identity(item["title"], item.get("venue", ""))
+        pid = identity(item["title"], item.get("producer") or item.get("venue", ""))
         item["id"] = pid
         item_dates = set(item.get("performance_dates") or [])
         if item.get("start_date"):
@@ -477,7 +499,17 @@ def main():
             occurrence for occurrence in (pick.get("performance_occurrences") or [])
             if occurrence.get("date") == today and occurrence.get("event_url")
         ]
-        event_url = (todays_occurrences[-1].get("event_url") if todays_occurrences
+        # Prefer the producing company's own domain for the matching date;
+        # use a ticketing/calendar URL only when no producer event page exists.
+        preferred_hosts = {
+            urlparse(source.get("url", "")).netloc.casefold().removeprefix("www.")
+            for source in CFG.get("sources", [])
+            if source.get("producer") and clean(source.get("producer")).casefold() == clean(pick.get("producer")).casefold()
+        }
+        def occurrence_rank(occurrence):
+            host = urlparse(occurrence.get("event_url", "")).netloc.casefold().removeprefix("www.")
+            return (0 if host in preferred_hosts else 1, occurrence.get("event_url", ""))
+        event_url = (sorted(todays_occurrences, key=occurrence_rank)[0].get("event_url") if todays_occurrences
                      else pick.get("event_url") or pick.get("url"))
         print("CONFIRMED PERFORMANCE DATE:", today)
         print("MATCHING EVENT LISTING:", event_url)
