@@ -401,6 +401,32 @@ def extract(source):
             if re.search(r"ai1ec|calendar|ajax|event|wp-json", node.get_text() or "", re.I)
         ][:8],
     }
+    # NWTheatre's All-in-One Event Calendar renders its agenda through the
+    # plugin and does not expose event dates in the initial HTML response.
+    # Probe the plugin's documented iCalendar export endpoint before building
+    # a dedicated collector; this is diagnostic only for now.
+    if source["name"] == "NWTheatre Calendar":
+        try:
+            feed_url = "https://www.nwtheatre.org/"
+            feed_response = requests.get(
+                feed_url,
+                params={"plugin": "all-in-one-event-calendar",
+                        "controller": "ai1ec_exporter_controller",
+                        "action": "export_events", "no_html": "true"},
+                headers={**HEADERS, "Accept": "text/calendar"},
+                timeout=20)
+            feed_text = feed_response.text or ""
+            diagnostic["ai1ec_export"] = {
+                "status": feed_response.status_code,
+                "content_type": feed_response.headers.get("Content-Type", ""),
+                "final_url": feed_response.url,
+                "bytes": len(feed_response.content),
+                "vevents": feed_text.count("BEGIN:VEVENT"),
+                "sample": re.sub(r"\\s+", " ", feed_text[:900])
+            }
+        except Exception as exc:
+            diagnostic["ai1ec_export"] = {"error": str(exc)[:240]}
+
     results = []
     official_catalog = catalog_from_page(soup, source)
     # JSON-LD is generally more reliable than guessing from arbitrary page markup.
@@ -678,6 +704,7 @@ def main():
                     print("NWTHEATRE DATE ELEMENTS:", json.dumps(diag.get("date_attributes", []), ensure_ascii=False))
                     print("NWTHEATRE JSONLD:", json.dumps(diag.get("jsonld_summaries", []), ensure_ascii=False))
                     print("NWTHEATRE INLINE CALENDAR DATA:", json.dumps(diag.get("calendar_inline_scripts", []), ensure_ascii=False))
+                    print("NWTHEATRE AI1EC EXPORT:", json.dumps(diag.get("ai1ec_export", {}), ensure_ascii=False))
                 print("EXTRACTION:", source["name"], "-", len(listings), "dated listings;", len(extracted["catalog"]), "official show pages catalogued")
                 for item in listings[:3]:
                     print("  LISTING:", clean(item.get("title", "(untitled)")), "| dates:", ", ".join(item.get("performance_dates") or ([item.get("start_date")] if item.get("start_date") else [])) or "(none)")
