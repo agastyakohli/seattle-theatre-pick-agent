@@ -332,6 +332,14 @@ def merge(existing, incoming):
         item_dates = set(item.get("performance_dates") or [])
         if item.get("start_date"):
             item_dates.add(item["start_date"])
+        # Keep each explicitly listed performance date paired with the event URL
+        # that supplied it. This prevents a merged production from retaining an
+        # unrelated/older occurrence URL.
+        incoming_occurrences = [
+            {"date": day, "event_url": item.get("event_url") or item.get("url")}
+            for day in sorted(item_dates)
+            if item.get("event_url") or item.get("url")
+        ]
         prior = records.get(pid)
         if prior:
             # Preserve exact listed dates; never infer that a production runs daily.
@@ -339,6 +347,14 @@ def merge(existing, incoming):
             if prior.get("start_date"):
                 known.add(prior["start_date"])
             prior["performance_dates"] = sorted(known | item_dates)
+            occurrences = prior.get("performance_occurrences") or []
+            occurrence_keys = {(x.get("date"), x.get("event_url")) for x in occurrences}
+            for occurrence in incoming_occurrences:
+                key = (occurrence["date"], occurrence["event_url"])
+                if key not in occurrence_keys:
+                    occurrences.append(occurrence)
+                    occurrence_keys.add(key)
+            prior["performance_occurrences"] = occurrences
             if prior["performance_dates"]:
                 prior["start_date"] = prior["performance_dates"][0]
                 prior["end_date"] = prior["performance_dates"][-1]
@@ -359,6 +375,7 @@ def merge(existing, incoming):
                 prior["sources"].append(item["source"])
         else:
             item["performance_dates"] = sorted(item_dates)
+            item["performance_occurrences"] = incoming_occurrences
             item["sources"] = [item.pop("source")]
             item["featured"] = False
             records[pid] = item
@@ -444,8 +461,15 @@ def main():
         print("No validated future production found. No post will be published.")
     else:
         pick = candidates[0]
-        # Resolve producer/ticket links and fill missing details for this one event only.
-        event_url = pick.get("event_url") or pick.get("url")
+        # Report and use the exact occurrence URL associated with today's listed date.
+        todays_occurrences = [
+            occurrence for occurrence in (pick.get("performance_occurrences") or [])
+            if occurrence.get("date") == today and occurrence.get("event_url")
+        ]
+        event_url = (todays_occurrences[-1].get("event_url") if todays_occurrences
+                     else pick.get("event_url") or pick.get("url"))
+        print("CONFIRMED PERFORMANCE DATE:", today)
+        print("MATCHING EVENT LISTING:", event_url)
         preferred, producer_url, ticket_url = event_links(event_url, pick.get("url"), pick)
         # Use only destinations verified from this event page on this run.
         # Never let stale saved producer/ticket URLs override fresh resolution.
