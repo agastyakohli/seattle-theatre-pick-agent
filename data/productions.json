@@ -143,7 +143,9 @@
     "sources": [
       "Theatre Puget Sound Community Events Calendar"
     ],
-    "featured": false
+    "featured": false,
+    "run_end_date": "2026-12-27",
+    "run_end_source": "NWTheatre 2026 Shows directory"
   },
   {
     "title": "Snowed In",
@@ -675,7 +677,9 @@
     "sources": [
       "Theatre Puget Sound Community Events Calendar"
     ],
-    "featured": false
+    "featured": false,
+    "run_end_date": "2026-10-11",
+    "run_end_source": "NWTheatre 2026 Shows directory"
   },
   {
     "title": "Nanay",
@@ -806,7 +810,9 @@
     "sources": [
       "Theatre Puget Sound Community Events Calendar"
     ],
-    "featured": false
+    "featured": false,
+    "run_end_date": "2026-11-14",
+    "run_end_source": "NWTheatre 2026 Shows directory"
   },
   {
     "title": "THE DUMB WAITER by Harold Pinter",
@@ -1049,12 +1055,12 @@
     ],
     "venue": "Unexpected Productions Improv",
     "producer": "Theatre Puget Sound",
-    "description": "A completely improvised musical about the rise, drama, and legendary songs of the world’s most iconic trio. Every legendary group has a story. The meteoric rise. The backstage drama. The […] \\n",
-    "url": "https://theatrepugetsound.org/event/kit-cat-and-caboodle-an-improvised-musical-retrospective/2026-11-07/",
+    "description": "A completely improvised musical about the rise, drama, and legendary songs of the world’s most iconic trio. Every legendary group has a story. The meteoric rise. The backstage drama. The... \\n",
+    "url": "https://www.unexpectedproductions.org/series/kit-cat-and-caboodle-an-improvised-musical-retrospective/",
     "event_url": "https://theatrepugetsound.org/event/kit-cat-and-caboodle-an-improvised-musical-retrospective/2026-11-07/",
     "source_priority": 1,
-    "producer_url": "",
-    "ticket_url": "",
+    "producer_url": "https://www.unexpectedproductions.org/series/kit-cat-and-caboodle-an-improvised-musical-retrospective/",
+    "ticket_url": "https://theatrepugetsound.org/event/kit-cat-and-caboodle-an-improvised-musical-retrospective/2026-11-21/",
     "id": "82fcb919f7080b0e",
     "performance_occurrences": [
       {
@@ -1202,7 +1208,9 @@
     "sources": [
       "Theatre Puget Sound Community Events Calendar"
     ],
-    "featured": false
+    "featured": false,
+    "run_end_date": "2026-11-15",
+    "run_end_source": "NWTheatre 2026 Shows directory"
   },
   {
     "title": "Smoke on the Mountain",
@@ -1785,7 +1793,9 @@
     "sources": [
       "Theatre Puget Sound Community Events Calendar"
     ],
-    "featured": false
+    "featured": false,
+    "run_end_date": "2026-11-15",
+    "run_end_source": "NWTheatre 2026 Shows directory"
   },
   {
     "title": "नेहा & Neel (Neha and Neel | नेहा और नील)",
@@ -2025,7 +2035,9 @@
     "sources": [
       "Theatre Puget Sound Community Events Calendar"
     ],
-    "featured": false
+    "featured": false,
+    "run_end_date": "2026-11-14",
+    "run_end_source": "NWTheatre 2026 Shows directory"
   },
   {
     "title": "Improv & Flow: Seattle Center",
@@ -2209,7 +2221,9 @@
     "sources": [
       "Theatre Puget Sound Community Events Calendar"
     ],
-    "featured": false
+    "featured": false,
+    "run_end_date": "2026-10-11",
+    "run_end_source": "NWTheatre 2026 Shows directory"
   },
   {
     "title": "Little Mermaid Original Musical Adaptation",
@@ -2303,7 +2317,9 @@
     "sources": [
       "Theatre Puget Sound Community Events Calendar"
     ],
-    "featured": false
+    "featured": false,
+    "run_end_date": "2026-12-27",
+    "run_end_source": "NWTheatre 2026 Shows directory"
   },
   {
     "title": "Come On-A My House",
