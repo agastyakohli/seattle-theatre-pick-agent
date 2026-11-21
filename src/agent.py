@@ -42,6 +42,108 @@ def parse_date(value):
         return None
 
 
+def ical_unescape(value):
+    return (value or "").replace(r"\n", "\n").replace(r"\N", "\n").replace(r"\,", ",").replace(r"\;", ";").replace(r"\\", "\\")
+
+
+def parse_ical_value(value, params=None):
+    params = params or {}
+    value = value.strip()
+    try:
+        if params.get("VALUE", "").upper() == "DATE" or re.fullmatch(r"\d{8}", value):
+            return datetime.strptime(value[:8], "%Y%m%d").replace(tzinfo=TZ)
+        if re.fullmatch(r"\d{8}T\d{6}Z", value):
+            return datetime.strptime(value, "%Y%m%dT%H%M%SZ").replace(tzinfo=ZoneInfo("UTC")).astimezone(TZ)
+        if re.fullmatch(r"\d{8}T\d{6}", value):
+            parsed = datetime.strptime(value, "%Y%m%dT%H%M%S")
+            tzid = params.get("TZID")
+            try:
+                return parsed.replace(tzinfo=ZoneInfo(tzid)) .astimezone(TZ) if tzid else parsed.replace(tzinfo=TZ)
+            except Exception:
+                return parsed.replace(tzinfo=TZ)
+        parsed = dateparser.parse(value)
+        if parsed and parsed.tzinfo is None:
+            parsed = parsed.replace(tzinfo=TZ)
+        return parsed.astimezone(TZ) if parsed else None
+    except Exception:
+        return None
+
+
+def parse_ai1ec_ical(text, source):
+    """Convert NWTheatre's All-in-One Event Calendar export into dated listings."""
+    unfolded = re.sub(r"\r?\n[ \t]", "", text or "")
+    events = re.findall(r"BEGIN:VEVENT(.*?)END:VEVENT", unfolded, flags=re.S | re.I)
+    today = datetime.now(TZ).date()
+    horizon = today + __import__("datetime").timedelta(days=400)
+    results = []
+
+    for block in events:
+        props = {}
+        for line in block.splitlines():
+            if not line or ":" not in line:
+                continue
+            left, value = line.split(":", 1)
+            bits = left.split(";")
+            key = bits[0].upper()
+            params = {}
+            for bit in bits[1:]:
+                if "=" in bit:
+                    k, v = bit.split("=", 1)
+                    params[k.upper()] = v.strip('"')
+            props.setdefault(key, []).append((value.strip(), params))
+
+        def first(key):
+            values = props.get(key, [])
+            return values[0] if values else ("", {})
+
+        title = clean(ical_unescape(first("SUMMARY")[0]))
+        start_raw, start_params = first("DTSTART")
+        start_dt = parse_ical_value(start_raw, start_params)
+        if not title or not start_dt or first("STATUS")[0].upper() == "CANCELLED":
+            continue
+
+        dates = {start_dt.date()}
+        rule_raw = first("RRULE")[0]
+        if rule_raw:
+            try:
+                from dateutil.rrule import rrulestr
+                rule = rrulestr(rule_raw, dtstart=start_dt)
+                dates.update(dt.date() for dt in rule.between(
+                    datetime.combine(today, datetime.min.time(), tzinfo=TZ),
+                    datetime.combine(horizon, datetime.max.time(), tzinfo=TZ), inc=True))
+            except Exception:
+                pass
+        for raw, params in props.get("RDATE", []):
+            for value in raw.split(","):
+                dt = parse_ical_value(value, params)
+                if dt:
+                    dates.add(dt.date())
+        for raw, params in props.get("EXDATE", []):
+            for value in raw.split(","):
+                dt = parse_ical_value(value, params)
+                if dt:
+                    dates.discard(dt.date())
+
+        future_dates = sorted(d.isoformat() for d in dates if today <= d <= horizon)
+        if not future_dates:
+            continue
+
+        end_raw, end_params = first("DTEND")
+        end_dt = parse_ical_value(end_raw, end_params) if end_raw else None
+        url = ical_unescape(first("URL")[0]) or source["url"]
+        location = clean(ical_unescape(first("LOCATION")[0]))
+        description = clean(ical_unescape(first("DESCRIPTION")[0]))[:600]
+        categories = clean(ical_unescape(first("CATEGORIES")[0]))
+        results.append({
+            "title": title, "start_date": future_dates[0],
+            "end_date": future_dates[-1], "performance_dates": future_dates,
+            "venue": location, "producer": "", "description": description,
+            "categories": categories, "url": url, "event_url": url,
+            "source": source["name"]
+        })
+    return results
+
+
 def explicit_run_end_date(item):
     """Return a closing date only when an explicit multi-day run is stated."""
     if item.get("run_end_date"):
@@ -401,33 +503,28 @@ def extract(source):
             if re.search(r"ai1ec|calendar|ajax|event|wp-json", node.get_text() or "", re.I)
         ][:8],
     }
-    # NWTheatre's All-in-One Event Calendar renders its agenda through the
-    # plugin and does not expose event dates in the initial HTML response.
-    # Probe the plugin's documented iCalendar export endpoint before building
-    # a dedicated collector; this is diagnostic only for now.
-    if source["name"] == "NWTheatre Calendar":
-        try:
-            feed_url = "https://www.nwtheatre.org/"
-            feed_response = requests.get(
-                feed_url,
-                params={"plugin": "all-in-one-event-calendar",
-                        "controller": "ai1ec_exporter_controller",
-                        "action": "export_events", "no_html": "true"},
-                headers={**HEADERS, "Accept": "text/calendar"},
-                timeout=20)
-            feed_text = feed_response.text or ""
-            diagnostic["ai1ec_export"] = {
-                "status": feed_response.status_code,
-                "content_type": feed_response.headers.get("Content-Type", ""),
-                "final_url": feed_response.url,
-                "bytes": len(feed_response.content),
-                "vevents": feed_text.count("BEGIN:VEVENT"),
-                "sample": feed_text[:900].replace("\r", " ").replace("\n", " ")
-            }
-        except Exception as exc:
-            diagnostic["ai1ec_export"] = {"error": str(exc)[:240]}
-
     results = []
+    if source["name"] == "NWTheatre Calendar":
+        feed_url = "https://www.nwtheatre.org/"
+        feed_response = requests.get(
+            feed_url,
+            params={"plugin": "all-in-one-event-calendar",
+                    "controller": "ai1ec_exporter_controller",
+                    "action": "export_events", "no_html": "true"},
+            headers={**HEADERS, "Accept": "text/calendar"},
+            timeout=30)
+        feed_response.raise_for_status()
+        feed_text = feed_response.text or ""
+        ai1ec_results = parse_ai1ec_ical(feed_text, source)
+        diagnostic["ai1ec_export"] = {
+            "status": feed_response.status_code,
+            "content_type": feed_response.headers.get("Content-Type", ""),
+            "bytes": len(feed_response.content),
+            "vevents": feed_text.count("BEGIN:VEVENT"),
+            "parsed_events": len(ai1ec_results),
+            "dated_performances": sum(len(x.get("performance_dates", [])) for x in ai1ec_results)
+        }
+        results.extend(ai1ec_results)
     official_catalog = catalog_from_page(soup, source)
     # JSON-LD is generally more reliable than guessing from arbitrary page markup.
     for script in soup.select('script[type="application/ld+json"]'):
