@@ -53,8 +53,7 @@
       "url": "https://villagetheatre.org/see-a-show/",
       "type": "html",
       "enabled": true,
-      "priority": 0,
-      "producer": "Village Theatre"
+      "priority": 0
     },
     {
       "name": "ArtsWest",
