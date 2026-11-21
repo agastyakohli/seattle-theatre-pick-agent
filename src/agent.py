@@ -391,7 +391,7 @@ def extract(source):
         item.setdefault("ticket_url", "")
         # Keep the discovered event link for now. Enrich only the selected pick.
         item["url"] = event_url
-    return {\"productions\": results, \"catalog\": official_catalog}
+    return {"productions": results, "catalog": official_catalog}
 
 
 def is_excluded_event(item):
@@ -579,7 +579,7 @@ def main():
     prior_catalog = load_official_catalog()
     retained_catalog = [entry for entry in prior_catalog if entry.get("source_name") not in catalog_by_source]
     combined_catalog = retained_catalog + official_catalog
-    (DATA / "source_catalog.json").write_text(json.dumps(combined_catalog, indent=2, ensure_ascii=False) + "\\n")
+    (DATA / "source_catalog.json").write_text(json.dumps(combined_catalog, indent=2, ensure_ascii=False) + "\n")
     already = {x.get("production_id") for x in featured}
     # Title-level suppression preserves historical featured entries across
     # the identity-key migration from venue-based to producer-based IDs.
