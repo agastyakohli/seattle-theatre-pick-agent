@@ -53,15 +53,13 @@ def event_links(event_url, fallback=None, item=None):
         response = requests.get(event_url, headers=HEADERS, timeout=15)
         response.raise_for_status()
         soup = BeautifulSoup(response.text, "html.parser")
+        page_description = ""
         if item is not None:
-            if not item.get("description"):
-                meta = soup.select_one('meta[property="og:description"], meta[name="description"]')
-                if meta:
-                    item["description"] = clean(meta.get("content"))[:600]
-                if not item.get("description"):
-                    desc = soup.select_one('[itemprop="description"], .event-description, .tribe-events-single-event-description')
-                    if desc:
-                        item["description"] = clean(desc)[:600]
+            # The selected occurrence page is more authoritative than snippets
+            # inherited from aggregator cards or older Eventbrite occurrences.
+            meta = soup.select_one('meta[property="og:description"], meta[name="description"]')
+            if meta:
+                page_description = clean(meta.get("content"))
             if not item.get("venue"):
                 venue = soup.select_one('[itemprop="location"], .event-venue, .venue')
                 if venue:
@@ -92,8 +90,8 @@ def event_links(event_url, fallback=None, item=None):
                         item["producer"] = clean(org.get("name"))
                     if org.get("url"):
                         producer_url = urljoin(event_url, org["url"])
-                if item is not None and not item.get("description") and obj.get("description"):
-                    item["description"] = clean(obj.get("description"))[:600]
+                if item is not None and obj.get("description") and any("Event" in t for t in (obj.get("@type", []) if isinstance(obj.get("@type"), list) else [obj.get("@type", "")])):
+                    page_description = clean(obj.get("description"))
                 if item is not None and not item.get("venue"):
                     loc = obj.get("location")
                     if isinstance(loc, dict) and loc.get("name"):
@@ -133,6 +131,19 @@ def event_links(event_url, fallback=None, item=None):
                 producer_url = href
             if not ticket_url and (any(term in host for term in ("eventbrite.", "ticketmaster.", "showclix.", "brownpapertickets.")) or any(term in label for term in ("buy tickets", "get tickets", "tickets"))):
                 ticket_url = href
+        if item is not None and page_description:
+            item["description"] = page_description[:600]
+        # If this is a producer's own event URL (as configured), retain that
+        # specific event link even when the site redirects to a ticketing host.
+        original_host = urlparse(event_url).netloc.casefold()
+        item_producer = clean(item.get("producer") if item else "").casefold()
+        for configured_source in CFG.get("sources", []):
+            configured_producer = clean(configured_source.get("producer", "")).casefold()
+            configured_host = urlparse(configured_source.get("url", "")).netloc.casefold()
+            if (item_producer and configured_producer == item_producer
+                    and configured_host == original_host):
+                producer_url = event_url
+                break
     except Exception as exc:
         print("LINK LOOKUP WARNING:", str(exc))
     # Verified canonical page for this known producer/production pair.
