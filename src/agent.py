@@ -599,7 +599,7 @@ def main():
                 print("SOURCE ERROR", source["name"], str(exc), file=sys.stderr)
     productions = merge(productions, found)
     # Replace each source's previous catalogue snapshot with this run's results.
-    catalog_by_source = {name: [] for name in successful_sources}
+    catalog_by_source = {entry["source_name"]: [] for entry in official_catalog}
     for entry in official_catalog:
         catalog_by_source.setdefault(entry["source_name"], []).append(entry)
     prior_catalog = load_official_catalog()
