@@ -226,8 +226,11 @@ def merge(existing, incoming):
                 prior["start_date"] = prior["performance_dates"][0]
                 prior["end_date"] = prior["performance_dates"][-1]
             for key in ("venue", "producer", "description", "event_url", "producer_url", "ticket_url"):
-                if item.get(key) and not prior.get(key):
+                if item.get(key) and (not prior.get(key) or key in ("producer_url", "ticket_url")):
                     prior[key] = item[key]
+            # Replace an older calendar URL with the best destination discovered now.
+            if item.get("url") and (item.get("producer_url") or item.get("ticket_url")):
+                prior["url"] = item["url"]
             prior.setdefault("sources", [])
             if item["source"] not in prior["sources"]:
                 prior["sources"].append(item["source"])
