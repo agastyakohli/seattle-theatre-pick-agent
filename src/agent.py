@@ -107,14 +107,14 @@ def is_excluded_event(item):
 
     # These phrases identify instructional or participatory listings, not performances.
     instructional_patterns = [
-        r"\\bclass(?:es)?\\b",
-        r"\\bworkshops?\\b",
-        r"\\bmaster\\s*class(?:es)?\\b",
-        r"\\blessons?\\b",
-        r"\\bcourses?\\b",
-        r"\\btraining\\b",
-        r"\\bcamps?\\b",
-        r"\\bauditions?\\b",
+        r"\bclass(?:es)?\b",
+        r"\bworkshops?\b",
+        r"\bmaster\s*class(?:es)?\b",
+        r"\blessons?\b",
+        r"\bcourses?\b",
+        r"\btraining\b",
+        r"\bcamps?\b",
+        r"\bauditions?\b",
     ]
     if any(re.search(pattern, combined, re.IGNORECASE) for pattern in instructional_patterns):
         return True
