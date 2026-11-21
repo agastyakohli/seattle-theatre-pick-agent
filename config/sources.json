@@ -70,6 +70,22 @@
       "enabled": true,
       "priority": 0,
       "producer": "Intiman Theatre"
+    },
+    {
+      "name": "Unexpected Productions Events",
+      "url": "https://www.unexpectedproductions.org/events/list/",
+      "type": "html",
+      "enabled": true,
+      "priority": 0,
+      "producer": "Unexpected Productions"
+    },
+    {
+      "name": "Union Arts Center Events",
+      "url": "https://order.unionartscenter.org/events?view=list",
+      "type": "html",
+      "enabled": true,
+      "priority": 0,
+      "producer": "Union Arts Center"
     }
   ],
   "include_categories": [
