@@ -4,6 +4,7 @@ import html
 import json
 import re
 import sys
+from difflib import SequenceMatcher
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import date, datetime
 from pathlib import Path
@@ -45,6 +46,103 @@ def identity(title, producer_or_venue):
     # merges even when one source names the company and another names its venue.
     raw = clean(title).casefold() + "|" + clean(producer_or_venue).casefold()
     return hashlib.sha256(raw.encode()).hexdigest()[:16]
+
+def title_tokens(value):
+    ignored = {"the", "a", "an", "of", "and", "at", "in", "for", "by"}
+    return {word for word in re.findall(r"[a-z0-9]+", clean(value).casefold()) if len(word) > 1 and word not in ignored}
+
+
+def catalog_from_page(soup, source):
+    """Capture official show-page links and descriptions without inventing performance dates."""
+    producer = clean(source.get("producer", ""))
+    if not producer:
+        return []
+    base_url = source["url"]
+    base_host = urlparse(base_url).netloc.casefold().removeprefix("www.")
+    entries = []
+    seen = set()
+    generic = {"mainstage", "season", "current season", "upcoming", "shows", "productions",
+               "tickets", "get tickets", "buy tickets", "wip showcase", "co-productions and extras"}
+    for heading in soup.select("h2, h3, h4"):
+        title = clean(heading.get_text(" ", strip=True))
+        if not title or title.casefold() in generic or len(title) < 4:
+            continue
+        title_words = title_tokens(title)
+        if len(title_words) < 1:
+            continue
+        candidates = []
+        # A show's title may be linked directly, or its ticket/show link may sit
+        # beside the heading in the same card. Never promote an external ticket URL
+        # to the producer's official show URL.
+        ancestors = [heading] + list(heading.parents)[:4]
+        for node in ancestors:
+            if not getattr(node, "select", None):
+                continue
+            for anchor in node.select("a[href]"):
+                href = urljoin(base_url, anchor.get("href", ""))
+                host = urlparse(href).netloc.casefold().removeprefix("www.")
+                if not href.startswith(("http://", "https://")) or host != base_host:
+                    continue
+                label = clean(anchor.get_text(" ", strip=True))
+                if any(term in label.casefold() for term in ("ticket", "donate", "subscribe", "directions")):
+                    continue
+                overlap = len(title_words & title_tokens(label))
+                candidates.append((overlap, href))
+            if candidates:
+                break
+        candidates.sort(key=lambda value: (value[0], value[1]), reverse=True)
+        detail_url = candidates[0][1] if candidates and candidates[0][0] else base_url
+        container_text = ""
+        for node in ancestors[1:]:
+            text_value = clean(node.get_text(" ", strip=True))
+            if len(text_value) > len(title) + 35:
+                container_text = text_value
+                break
+        description = container_text.replace(title, "", 1).strip(" |—-:")[:700]
+        key = (title.casefold(), detail_url)
+        if key in seen:
+            continue
+        seen.add(key)
+        entries.append({"title": title, "producer": producer, "source_name": source["name"],
+                        "source_url": base_url, "official_url": detail_url,
+                        "description": description})
+    return entries
+
+
+def catalog_match(title, producer, catalog):
+    target = title_tokens(title)
+    if not target:
+        return None
+    ranked = []
+    for entry in catalog:
+        entry_producer = clean(entry.get("producer", "")).casefold()
+        if producer and entry_producer and entry_producer != clean(producer).casefold():
+            continue
+        candidate = title_tokens(entry.get("title", ""))
+        if not candidate:
+            continue
+        coverage = len(target & candidate) / max(len(target), len(candidate))
+        ratio = SequenceMatcher(None, clean(title).casefold(), clean(entry.get("title", "")).casefold()).ratio()
+        score = max(coverage, ratio)
+        if score >= 0.72:
+            ranked.append((score, entry))
+    ranked.sort(key=lambda pair: pair[0], reverse=True)
+    if not ranked:
+        return None
+    if len(ranked) > 1 and ranked[0][0] - ranked[1][0] < 0.08:
+        return None
+    return ranked[0][1]
+
+
+def load_official_catalog():
+    path = DATA / "source_catalog.json"
+    if not path.exists():
+        return []
+    try:
+        return json.loads(path.read_text())
+    except Exception:
+        return []
+
 
 def event_links(event_url, fallback=None, item=None):
     """Enrich event details and prefer producer page, ticketing page, then calendar listing."""
@@ -198,6 +296,16 @@ def event_links(event_url, fallback=None, item=None):
                         break
         except Exception as exc:
             print("PRODUCER PAGE LOOKUP WARNING:", str(exc))
+    # Match the selected dated calendar listing to an official producer catalogue.
+    # The catalogue supplies show-page URLs/descriptions only; dates always come
+    # from the dated event occurrence, never from a season run range.
+    official = catalog_match(item.get("title", "") if item else "",
+                             item.get("producer", "") if item else "",
+                             load_official_catalog())
+    if official:
+        producer_url = official.get("official_url") or producer_url
+        if item is not None and official.get("description"):
+            item["description"] = official["description"][:600]
     return producer_url or ticket_url or event_url or fallback, producer_url, ticket_url
 
 def extract(source):
@@ -205,6 +313,7 @@ def extract(source):
     response.raise_for_status()
     soup = BeautifulSoup(response.text, "html.parser")
     results = []
+    official_catalog = catalog_from_page(soup, source)
     # JSON-LD is generally more reliable than guessing from arbitrary page markup.
     for script in soup.select('script[type="application/ld+json"]'):
         try:
@@ -282,7 +391,7 @@ def extract(source):
         item.setdefault("ticket_url", "")
         # Keep the discovered event link for now. Enrich only the selected pick.
         item["url"] = event_url
-    return results
+    return {\"productions\": results, \"catalog\": official_catalog}
 
 
 def is_excluded_event(item):
@@ -441,6 +550,7 @@ def main():
     productions = json.loads(productions_path.read_text()) if productions_path.exists() else []
     featured = json.loads(featured_path.read_text()) if featured_path.exists() else []
     found = []
+    official_catalog = []
     enabled_sources = [source for source in CFG["sources"] if source.get("enabled")]
     # Fetch calendars concurrently so one slow site does not hold up every other source.
     with ThreadPoolExecutor(max_workers=5) as pool:
@@ -449,15 +559,27 @@ def main():
             source = jobs[job]
             try:
                 extracted = job.result()
-                found.extend(extracted)
-                dated = sum(1 for item in extracted if item.get("performance_dates") or item.get("start_date"))
+                listings = extracted["productions"]
+                found.extend(listings)
+                official_catalog.extend(extracted["catalog"])
+                dated = sum(1 for item in listings if item.get("performance_dates") or item.get("start_date"))
                 print("Fetched:", source["name"])
-                print("EXTRACTION:", source["name"], "-", len(extracted), "listings;", dated, "with explicit dates")
-                for item in extracted[:3]:
+                print("EXTRACTION:", source["name"], "-", len(listings), "dated listings;", len(extracted["catalog"]), "official show pages catalogued")
+                for item in listings[:3]:
                     print("  LISTING:", clean(item.get("title", "(untitled)")), "| dates:", ", ".join(item.get("performance_dates") or ([item.get("start_date")] if item.get("start_date") else [])) or "(none)")
+                for item in extracted["catalog"][:3]:
+                    print("  OFFICIAL SHOW:", clean(item.get("title")), "|", item.get("official_url"))
             except Exception as exc:
                 print("SOURCE ERROR", source["name"], str(exc), file=sys.stderr)
     productions = merge(productions, found)
+    # Replace each source's previous catalogue snapshot with this run's results.
+    catalog_by_source = {source["name"]: [] for source in enabled_sources}
+    for entry in official_catalog:
+        catalog_by_source.setdefault(entry["source_name"], []).append(entry)
+    prior_catalog = load_official_catalog()
+    retained_catalog = [entry for entry in prior_catalog if entry.get("source_name") not in catalog_by_source]
+    combined_catalog = retained_catalog + official_catalog
+    (DATA / "source_catalog.json").write_text(json.dumps(combined_catalog, indent=2, ensure_ascii=False) + "\\n")
     already = {x.get("production_id") for x in featured}
     # Title-level suppression preserves historical featured entries across
     # the identity-key migration from venue-based to producer-based IDs.
