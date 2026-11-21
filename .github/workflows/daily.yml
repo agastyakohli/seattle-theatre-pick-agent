@@ -31,6 +31,7 @@ jobs:
           FB_PAGE_ID: ${{ secrets.FB_PAGE_ID }}
           FB_PAGE_ACCESS_TOKEN: ${{ secrets.FB_PAGE_ACCESS_TOKEN }}
         run: |
+          python -m py_compile src/agent.py
           if [ "${{ github.event_name }}" = "workflow_dispatch" ] && [ "${{ inputs.test_facebook }}" = "true" ]; then
             python -m src.agent --test-facebook
           else
