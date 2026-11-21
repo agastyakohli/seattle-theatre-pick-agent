@@ -448,8 +448,13 @@ def main():
         for job in as_completed(jobs):
             source = jobs[job]
             try:
-                found.extend(job.result())
+                extracted = job.result()
+                found.extend(extracted)
+                dated = sum(1 for item in extracted if item.get("performance_dates") or item.get("start_date"))
                 print("Fetched:", source["name"])
+                print("EXTRACTION:", source["name"], "-", len(extracted), "listings;", dated, "with explicit dates")
+                for item in extracted[:3]:
+                    print("  LISTING:", clean(item.get("title", "(untitled)")), "| dates:", ", ".join(item.get("performance_dates") or ([item.get("start_date")] if item.get("start_date") else [])) or "(none)")
             except Exception as exc:
                 print("SOURCE ERROR", source["name"], str(exc), file=sys.stderr)
     productions = merge(productions, found)
