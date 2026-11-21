@@ -133,6 +133,51 @@ def event_links(event_url, fallback=None, item=None):
                 producer_url = href
             if not ticket_url and (any(term in host for term in ("eventbrite.", "ticketmaster.", "showclix.", "brownpapertickets.")) or any(term in label for term in ("buy tickets", "get tickets", "tickets"))):
                 ticket_url = href
+    # If the calendar only exposes the producer homepage, look for a
+    # production-specific page on that site (including its experiences/shows index).
+    if producer_url and item is not None and item.get("title"):
+        try:
+            title_words = {w for w in re.findall(r"[a-z0-9]+", clean(item["title"]).casefold()) if len(w) > 2}
+            home = requests.get(producer_url, headers=HEADERS, timeout=10)
+            home.raise_for_status()
+            home_soup = BeautifulSoup(home.text, "html.parser")
+            candidates = []
+            for a in home_soup.select("a[href]"):
+                label = clean(a.get_text(" ", strip=True)).casefold()
+                href = urljoin(home.url, a.get("href", ""))
+                if href.startswith(("http://", "https://")) and urlparse(href).netloc.casefold() == urlparse(home.url).netloc.casefold():
+                    overlap = len(title_words & set(re.findall(r"[a-z0-9]+", label)))
+                    if overlap:
+                        candidates.append((overlap, href))
+            candidates.sort(reverse=True)
+            if candidates and candidates[0][0] >= min(2, len(title_words)):
+                producer_url = candidates[0][1]
+            else:
+                # Follow one likely portfolio/experiences index and match the show title there.
+                index_links = []
+                for a in home_soup.select("a[href]"):
+                    label = clean(a.get_text(" ", strip=True)).casefold()
+                    href = urljoin(home.url, a.get("href", ""))
+                    if any(word in label for word in ("experience", "project", "production", "show", "work")):
+                        if href.startswith(("http://", "https://")) and urlparse(href).netloc.casefold() == urlparse(home.url).netloc.casefold():
+                            index_links.append(href)
+                for index_url in list(dict.fromkeys(index_links))[:2]:
+                    index = requests.get(index_url, headers=HEADERS, timeout=10)
+                    index.raise_for_status()
+                    index_soup = BeautifulSoup(index.text, "html.parser")
+                    matches = []
+                    for a in index_soup.select("a[href]"):
+                        label = clean(a.get_text(" ", strip=True)).casefold()
+                        href = urljoin(index.url, a.get("href", ""))
+                        overlap = len(title_words & set(re.findall(r"[a-z0-9]+", label)))
+                        if overlap and href.startswith(("http://", "https://")) and urlparse(href).netloc.casefold() == urlparse(index.url).netloc.casefold():
+                            matches.append((overlap, href))
+                    matches.sort(reverse=True)
+                    if matches and matches[0][0] >= min(2, len(title_words)):
+                        producer_url = matches[0][1]
+                        break
+        except Exception as exc:
+            print("PRODUCER PAGE LOOKUP WARNING:", str(exc))
     except Exception as exc:
         print("LINK LOOKUP WARNING:", str(exc))
     return producer_url or ticket_url or event_url or fallback, producer_url, ticket_url
