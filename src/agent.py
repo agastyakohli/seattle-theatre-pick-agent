@@ -21,13 +21,13 @@ TZ = ZoneInfo(CFG.get("timezone", "America/Los_Angeles"))
 HEADERS = {"User-Agent": "SeattleTheatrePickBot/1.0 (community theatre calendar)"}
 
 def clean(value):
-    # Some event feeds HTML-encode their descriptions, so strip markup after
-    # decoding entities as well as handling ordinary HTML fragments.
+    # Avoid parsing plain URLs as HTML; this also prevents noisy BeautifulSoup warnings.
     text = str(value or "")
+    if re.match(r"^https?://\\S+$", text.strip(), re.IGNORECASE):
+        return text.strip()
     for _ in range(2):
         text = BeautifulSoup(html.unescape(text), "html.parser").get_text(" ", strip=True)
-    return re.sub(r"\s+", " ", text).strip()
-
+    return re.sub(r"\\s+", " ", text).strip()
 def parse_date(value):
     if not value:
         return None
@@ -187,16 +187,16 @@ def extract(source):
               "source":source["name"]})
     for item in results:
         event_url = item.get("event_url") or item.get("url") or source["url"]
-        preferred, producer_url, ticket_url = event_links(event_url, source["url"], item)
         item["source_priority"] = source.get("priority", 3)
         if source.get("producer") and not item.get("producer"):
             item["producer"] = source["producer"]
         if source.get("producer_type"):
             item["producer_type"] = source["producer_type"]
         item["event_url"] = event_url
-        item["producer_url"] = item.get("producer_url") or producer_url
-        item["ticket_url"] = item.get("ticket_url") or ticket_url
-        item["url"] = preferred
+        item.setdefault("producer_url", "")
+        item.setdefault("ticket_url", "")
+        # Keep the discovered event link for now. Enrich only the selected pick.
+        item["url"] = event_url
     return results
 
 
@@ -363,6 +363,12 @@ def main():
         print("No validated future production found. No post will be published.")
     else:
         pick = candidates[0]
+        # Resolve producer/ticket links and fill missing details for this one event only.
+        event_url = pick.get("event_url") or pick.get("url")
+        preferred, producer_url, ticket_url = event_links(event_url, pick.get("url"), pick)
+        pick["producer_url"] = pick.get("producer_url") or producer_url
+        pick["ticket_url"] = pick.get("ticket_url") or ticket_url
+        pick["url"] = preferred
         description = clean(pick.get("description")) or ("A live theatre production from " + clean(pick.get("producer") or "a local theatre company") + ".")
         message = ("🎭 Seattle Theatre Pick of the Day: " + clean(pick["title"]) + "\n\n" +
           description + "\n\n" +
