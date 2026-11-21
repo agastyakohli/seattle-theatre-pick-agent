@@ -323,6 +323,37 @@ def event_links(event_url, fallback=None, item=None):
                         break
         except Exception as exc:
             print("PRODUCER PAGE LOOKUP WARNING:", str(exc))
+    # Read show-specific descriptive metadata from the official producer page,
+    # but only after this dated calendar occurrence has already been selected.
+    if producer_url and producer_url != event_url and item is not None:
+        try:
+            official_response = requests.get(producer_url, headers=HEADERS, timeout=10)
+            official_response.raise_for_status()
+            official_soup = BeautifulSoup(official_response.text, "html.parser")
+            official_description = ""
+            meta = official_soup.select_one(
+                'meta[property="og:description"], meta[name="description"]')
+            if meta:
+                official_description = clean(meta.get("content"))
+            if not official_description:
+                for script in official_soup.select('script[type="application/ld+json"]'):
+                    try:
+                        payload = json.loads(script.string or script.get_text())
+                    except Exception:
+                        continue
+                    stack = payload if isinstance(payload, list) else [payload]
+                    while stack and not official_description:
+                        obj = stack.pop()
+                        if isinstance(obj, list):
+                            stack.extend(obj)
+                        elif isinstance(obj, dict):
+                            stack.extend(obj.get("@graph", []) if isinstance(obj.get("@graph"), list) else [])
+                            if obj.get("description"):
+                                official_description = clean(obj["description"])
+            if official_description:
+                item["description"] = official_description[:600]
+        except Exception as exc:
+            print("OFFICIAL SHOW ENRICHMENT WARNING:", str(exc))
     return producer_url or ticket_url or event_url or fallback, producer_url, ticket_url
 
 def extract(source):
