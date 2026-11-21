@@ -1453,7 +1453,7 @@
     "source_name": "Taproot Theatre Performances",
     "source_url": "https://taproottheatre.org/performances/",
     "official_url": "https://taproottheatre.org/2026/charlie-brown-christmas/",
-    "description": "November 18–December 26, 2026 Louisa May Alcott’s Little Women December 3–26, 2026  January 20–February 20, 2027 FANNIE: The Music and Life of Fannie Lou Hamer March 17–April 24, 2027 Sense and Sensibility May 12–June 12, 2027 House of India July 7–August 14, 2027 Peril in the Alps September 15–October 23, 2027 The 25th Annual Putnam County Spelling Bee"
+    "description": ""
   },
   {
     "title": "Sense and Sensibility",
@@ -1461,7 +1461,7 @@
     "source_name": "Taproot Theatre Performances",
     "source_url": "https://taproottheatre.org/performances/",
     "official_url": "https://taproottheatre.org/2027/sensibility/",
-    "description": "November 18–December 26, 2026 Louisa May Alcott’s Little Women December 3–26, 2026 A Charlie Brown Christmas January 20–February 20, 2027 FANNIE: The Music and Life of Fannie Lou Hamer March 17–April 24, 2027  May 12–June 12, 2027 House of India July 7–August 14, 2027 Peril in the Alps September 15–October 23, 2027 The 25th Annual Putnam County Spelling Bee"
+    "description": "March 17–April 24, 2027"
   },
   {
     "title": "House of India",
@@ -1469,7 +1469,7 @@
     "source_name": "Taproot Theatre Performances",
     "source_url": "https://taproottheatre.org/performances/",
     "official_url": "https://taproottheatre.org/2027/house-of-india/",
-    "description": "November 18–December 26, 2026 Louisa May Alcott’s Little Women December 3–26, 2026 A Charlie Brown Christmas January 20–February 20, 2027 FANNIE: The Music and Life of Fannie Lou Hamer March 17–April 24, 2027 Sense and Sensibility May 12–June 12, 2027  July 7–August 14, 2027 Peril in the Alps September 15–October 23, 2027 The 25th Annual Putnam County Spelling Bee"
+    "description": "May 12–June 12, 2027"
   },
   {
     "title": "Peril in the Alps",
@@ -1477,31 +1477,7 @@
     "source_name": "Taproot Theatre Performances",
     "source_url": "https://taproottheatre.org/performances/",
     "official_url": "https://taproottheatre.org/2027/peril-in-the-alps/",
-    "description": "November 18–December 26, 2026 Louisa May Alcott’s Little Women December 3–26, 2026 A Charlie Brown Christmas January 20–February 20, 2027 FANNIE: The Music and Life of Fannie Lou Hamer March 17–April 24, 2027 Sense and Sensibility May 12–June 12, 2027 House of India July 7–August 14, 2027  September 15–October 23, 2027 The 25th Annual Putnam County Spelling Bee"
-  },
-  {
-    "title": "Season Subscriptions",
-    "producer": "Taproot Theatre",
-    "source_name": "Taproot Theatre Performances",
-    "source_url": "https://taproottheatre.org/performances/",
-    "official_url": "https://taproottheatre.org/subscriptions",
-    "description": "Enjoy the full year of storytelling with guaranteed seats, flexible exchanges, and exclusive savings. Subscribers get the best value—and the best seats in the house. Learn more >"
-  },
-  {
-    "title": "Plan Your Visit",
-    "producer": "Taproot Theatre",
-    "source_name": "Taproot Theatre Performances",
-    "source_url": "https://taproottheatre.org/performances/",
-    "official_url": "https://taproottheatre.org/performances/kbyg/",
-    "description": ""
-  },
-  {
-    "title": "November 2026",
-    "producer": "Unexpected Productions",
-    "source_name": "Unexpected Productions Events",
-    "source_url": "https://www.unexpectedproductions.org/events/list/",
-    "official_url": "https://www.unexpectedproductions.org/series/seattle-theatresports-2026/",
-    "description": "Sat 21 Improv Happy Hour November 21 @ 6:00 pm - 7:00 pm Improv Happy Hour Unexpected Productions 1428 Post Alley at the Gum Wall in Pike Place Market, Seattle, WA, United States Join us for Improv Happy Hour, where comedy is unscripted, unpredictable, and unbelievably fun! From movie mashups to literary spoofs and bold, experimental comedy, our quick-thinking performers turn your suggestions... Sat 21 Kit, Cat and Caboodle: An Improvised Musical Retrospective November 21 @ 7:30 pm - 8:45 pm Kit, Cat and Caboodle: An Improvised Musical Retrospective Unexpected Productions 1428 Post Alley at the Gum Wall in Pike Place Market, Seattle, WA, United States A completely improvised musical about th"
+    "description": "July 7–August 14, 2027"
   },
   {
     "title": "Improv Happy Hour",
@@ -1518,14 +1494,6 @@
     "source_url": "https://www.unexpectedproductions.org/events/list/",
     "official_url": "https://www.unexpectedproductions.org/event/kit-cat-and-caboodle-an-improvised-musical-retrospective-2/2026-11-21/",
     "description": "November 21 @ 7:30 pm - 8:45 pm Kit, Cat and Caboodle: An Improvised Musical Retrospective Unexpected Productions 1428 Post Alley at the Gum Wall in Pike Place Market, Seattle, WA, United States"
-  },
-  {
-    "title": "Seattle Theatresports 2026",
-    "producer": "Unexpected Productions",
-    "source_name": "Unexpected Productions Events",
-    "source_url": "https://www.unexpectedproductions.org/events/list/",
-    "official_url": "https://www.unexpectedproductions.org/event/seattle-theatresports-2026-3/2026-11-21/",
-    "description": "November 21 @ 9:30 pm - 11:00 pm Seattle Theatresports 2026 Unexpected Productions 1428 Post Alley at the Gum Wall in Pike Place Market, Seattle, WA, United States"
   },
   {
     "title": "Cinema Unexpected: An Improvised Movie Live",
@@ -1568,14 +1536,6 @@
     "description": "November 24 @ 9:00 pm - 10:00 pm Improv Unexpected at Jules Maes in Georgetown Jules Maes Saloon 1428 Post Alley5919 Airport Way S, Seattle, WA, United States"
   },
   {
-    "title": "Duo Comedy Showcase 2026",
-    "producer": "Unexpected Productions",
-    "source_name": "Unexpected Productions Events",
-    "source_url": "https://www.unexpectedproductions.org/events/list/",
-    "official_url": "https://www.unexpectedproductions.org/event/duo-comedy-showcase-2026/2026-11-25/",
-    "description": "November 25 @ 8:00 pm - 9:30 pm Duo Comedy Showcase 2026 Unexpected Productions 1428 Post Alley at the Gum Wall in Pike Place Market, Seattle, WA, United States"
-  },
-  {
     "title": "Thanksgiving Day",
     "producer": "Unexpected Productions",
     "source_name": "Unexpected Productions Events",
@@ -1605,7 +1565,7 @@
     "source_name": "Seattle Rep 2026/27 Season",
     "source_url": "https://www.seattlerep.org/plays/202627-season",
     "official_url": "https://www.seattlerep.org/plays/202627-season/peter-pan-goes-wrong",
-    "description": ""
+    "description": "Nov. 27, 2026 – Jan. 3, 2027"
   },
   {
     "title": "John Proctor Is the Villain",
@@ -1613,7 +1573,7 @@
     "source_name": "Seattle Rep 2026/27 Season",
     "source_url": "https://www.seattlerep.org/plays/202627-season",
     "official_url": "https://www.seattlerep.org/plays/202627-season/john-proctor-is-the-villain",
-    "description": ""
+    "description": "Jan. 21 – Feb. 21, 2027"
   },
   {
     "title": "Intimate Apparel",
@@ -1621,7 +1581,7 @@
     "source_name": "Seattle Rep 2026/27 Season",
     "source_url": "https://www.seattlerep.org/plays/202627-season",
     "official_url": "https://www.seattlerep.org/plays/202627-season/intimate-apparel",
-    "description": ""
+    "description": "Feb. 18 – Mar. 21, 2027"
   },
   {
     "title": "You Are Cordially Invited to the End of the World!",
@@ -1629,7 +1589,7 @@
     "source_name": "Seattle Rep 2026/27 Season",
     "source_url": "https://www.seattlerep.org/plays/202627-season",
     "official_url": "https://www.seattlerep.org/plays/202627-season/you-are-cordially-invited-to-the-end-of-the-world",
-    "description": ""
+    "description": "May 13 – June 13, 2027"
   },
   {
     "title": "Young Rep Productions",
@@ -1645,7 +1605,7 @@
     "source_name": "Seattle Rep 2026/27 Season",
     "source_url": "https://www.seattlerep.org/plays/202627-season",
     "official_url": "https://www.seattlerep.org/plays/202627-season/eureka-day",
-    "description": ""
+    "description": "Sept. 24 – Nov. 15, 2026"
   },
   {
     "title": "Freak The Mighty",
@@ -1653,6 +1613,6 @@
     "source_name": "Seattle Rep 2026/27 Season",
     "source_url": "https://www.seattlerep.org/plays/202627-season",
     "official_url": "https://www.seattlerep.org/plays/202627-season/freak-the-mighty",
-    "description": ""
+    "description": "Jul. 30 – Sept. 6, 2026"
   }
 ]
