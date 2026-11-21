@@ -556,7 +556,14 @@ def is_excluded_event(item):
         r"\bcasino\b",
         r"\bgambling\b",
     ]
-    if any(re.search(pattern, combined, re.IGNORECASE) for pattern in speakeasy_patterns):
+    # A casino/gambling reference in the title is a clear event-format signal;
+    # in descriptions, require a format phrase to avoid excluding a play just
+    # because its story happens to mention a casino.
+    if re.search(speakeasy_patterns[0], combined, re.IGNORECASE):
+        return True
+    if any(re.search(pattern, title, re.IGNORECASE) for pattern in speakeasy_patterns[1:]):
+        return True
+    if re.search(r"\bcasino\s+(?:night|format|style|themed|experience|event|party|games?)\b|\bgambling\s+(?:night|format|event|experience|party)\b", description, re.IGNORECASE):
         return True
 
     # Apply broad title-only exclusions such as tours and concerts.
