@@ -422,7 +422,7 @@ def extract(source):
                 "final_url": feed_response.url,
                 "bytes": len(feed_response.content),
                 "vevents": feed_text.count("BEGIN:VEVENT"),
-                "sample": re.sub(r"\\s+", " ", feed_text[:900])
+                "sample": feed_text[:900].replace("\r", " ").replace("\n", " ")
             }
         except Exception as exc:
             diagnostic["ai1ec_export"] = {"error": str(exc)[:240]}
