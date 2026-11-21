@@ -167,7 +167,11 @@ def extract(source):
         start = parse_date(raw_date)
         if not title or not start:
             continue
-        anchor = node.select_one("a[href]")
+        # Use the link attached to the event title, not the first link anywhere
+        # in a broad parent container (which can point to an unrelated event).
+        anchor = heading.select_one("a[href]") or heading.find_parent("a", href=True)
+        if not anchor:
+            anchor = node.select_one('[itemprop="url"][href], a.event-title[href], a.tribe-events-calendar-list__event-title-link[href]')
         venue_node = node.select_one('[itemprop="location"], .venue, .event-venue')
         desc_node = node.select_one('[itemprop="description"], .event-description')
         producer_node = node.select_one("[itemprop=organizer], .organizer, .presented-by, .producer")
@@ -175,7 +179,7 @@ def extract(source):
           "performance_dates":[start], "venue":clean(venue_node) if venue_node else "",
           "producer":clean(producer_node) if producer_node else "",
           "description":clean(desc_node)[:600] if desc_node else "",
-          "url":urljoin(source["url"], anchor["href"]) if anchor else source["url"],
+          "url":urljoin(source["url"], anchor["href"]) if anchor and anchor.get("href") else source["url"],
           "source":source["name"]})
     # Feed entries are discovery leads; published dates are not performance dates,
     # so they are not eligible until an event date is independently extracted.
