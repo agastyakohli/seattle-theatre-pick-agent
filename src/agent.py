@@ -6,7 +6,7 @@ import re
 import sys
 from difflib import SequenceMatcher
 from concurrent.futures import ThreadPoolExecutor, as_completed
-from datetime import date, datetime
+from datetime import date, datetime, timedelta
 from pathlib import Path
 from urllib.parse import urljoin, urlparse
 from zoneinfo import ZoneInfo
@@ -58,7 +58,7 @@ def parse_ical_value(value, params=None):
             parsed = datetime.strptime(value, "%Y%m%dT%H%M%S")
             tzid = params.get("TZID")
             try:
-                return parsed.replace(tzinfo=ZoneInfo(tzid)) .astimezone(TZ) if tzid else parsed.replace(tzinfo=TZ)
+                return parsed.replace(tzinfo=ZoneInfo(tzid)).astimezone(TZ) if tzid else parsed.replace(tzinfo=TZ)
             except Exception:
                 return parsed.replace(tzinfo=TZ)
         parsed = dateparser.parse(value)
@@ -74,7 +74,7 @@ def parse_ai1ec_ical(text, source):
     unfolded = re.sub(r"\r?\n[ \t]", "", text or "")
     events = re.findall(r"BEGIN:VEVENT(.*?)END:VEVENT", unfolded, flags=re.S | re.I)
     today = datetime.now(TZ).date()
-    horizon = today + __import__("datetime").timedelta(days=400)
+    horizon = today + timedelta(days=400)
     results = []
 
     for block in events:
