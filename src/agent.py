@@ -53,7 +53,7 @@ def title_tokens(value):
 
 
 def catalog_from_page(soup, source):
-    """Capture official show-page links and descriptions without inventing performance dates."""
+    """Collect only clearly linked, production-like titles from official producer pages."""
     producer = clean(source.get("producer", ""))
     if not producer:
         return []
@@ -61,20 +61,32 @@ def catalog_from_page(soup, source):
     base_host = urlparse(base_url).netloc.casefold().removeprefix("www.")
     entries = []
     seen = set()
-    generic = {"mainstage", "season", "current season", "upcoming", "shows", "productions",
-               "tickets", "get tickets", "buy tickets", "wip showcase", "co-productions and extras"}
-    for heading in soup.select("h1, h2, h3, h4"):
+    excluded_phrases = (
+        "follow us", "subscribe", "get involved", "about us", "contact",
+        "representation matters", "established emerging artists", "the power of story",
+        "center stage", "upcoming events", "filter by keyword", "change the way",
+        "event views navigation", "season overview", "current season",
+        "learn more", "read more", "buy tickets", "get tickets"
+    )
+    generic = {"mainstage", "season", "current season", "upcoming", "shows",
+               "productions", "tickets", "season 40", "2026 2027 season"}
+    for heading in soup.select("h2, h3, h4"):
         title = clean(heading.get_text(" ", strip=True))
-        if not title or title.casefold() in generic or len(title) < 4:
+        normalized = re.sub(r"[^a-z0-9 ]", "", title.casefold()).strip()
+        if not title or normalized in generic or len(title) < 5:
+            continue
+        if any(phrase in title.casefold() for phrase in excluded_phrases):
+            continue
+        if re.search(r"\\b(?:jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)[a-z]*\\.?\\s+\\d{1,2}\\b|\\b\\d{1,2}\\s*[–-]\\s*\\d{1,2}\\b|\\b20\\d{2}\\b", title, re.I):
             continue
         title_words = title_tokens(title)
-        if len(title_words) < 1:
+        if len(title_words) < 2:
             continue
+        # Restrict discovery to links whose visible label or URL slug actually
+        # corresponds to the heading. This prevents a season heading from
+        # inheriting an unrelated "Peter Pan" link elsewhere in its page section.
+        ancestors = [heading] + list(heading.parents)[:3]
         candidates = []
-        # A show's title may be linked directly, or its ticket/show link may sit
-        # beside the heading in the same card. Never promote an external ticket URL
-        # to the producer's official show URL.
-        ancestors = [heading] + list(heading.parents)[:4]
         for node in ancestors:
             if not getattr(node, "select", None):
                 continue
@@ -86,12 +98,19 @@ def catalog_from_page(soup, source):
                 label = clean(anchor.get_text(" ", strip=True))
                 if any(term in label.casefold() for term in ("ticket", "donate", "subscribe", "directions")):
                     continue
-                overlap = len(title_words & title_tokens(label))
-                candidates.append((overlap, href))
+                label_words = title_tokens(label)
+                slug_words = title_tokens(urlparse(href).path.replace("-", " "))
+                label_overlap = len(title_words & label_words) / len(title_words)
+                slug_overlap = len(title_words & slug_words) / len(title_words)
+                score = max(label_overlap, slug_overlap)
+                if score >= 0.5 and href.rstrip("/") != base_url.rstrip("/"):
+                    candidates.append((score, href))
             if candidates:
                 break
+        if not candidates:
+            continue
         candidates.sort(key=lambda value: (value[0], value[1]), reverse=True)
-        detail_url = candidates[0][1] if candidates and (candidates[0][0] > 0 or len(candidates) == 1) else base_url
+        detail_url = candidates[0][1]
         container_text = ""
         for node in ancestors[1:]:
             text_value = clean(node.get_text(" ", strip=True))
