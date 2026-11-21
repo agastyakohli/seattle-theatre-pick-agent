@@ -36,13 +36,14 @@
     "theatre",
     "theater",
     "musical",
-    "opera",
     "performance",
     "drama",
     "comedy",
     "improv",
     "puppet",
-    "fringe"
+    "fringe",
+    "sketch comedy",
+    "long-form improv"
   ],
   "exclude_title_terms": [
     "tour",
