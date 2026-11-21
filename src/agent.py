@@ -66,7 +66,8 @@ def catalog_from_page(soup, source):
         "representation matters", "established emerging artists", "the power of story",
         "center stage", "upcoming events", "filter by keyword", "change the way",
         "event views navigation", "season overview", "current season",
-        "learn more", "read more", "buy tickets", "get tickets"
+        "learn more", "read more", "buy tickets", "get tickets",
+        "season subscriptions", "subscriptions", "plan your visit"
     )
     generic = {"mainstage", "season", "current season", "upcoming", "shows",
                "productions", "tickets", "season 40", "2026 2027 season"}
@@ -77,7 +78,7 @@ def catalog_from_page(soup, source):
             continue
         if any(phrase in title.casefold() for phrase in excluded_phrases):
             continue
-        if re.search(r"\\b(?:jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)[a-z]*\\.?\\s+\\d{1,2}\\b|\\b\\d{1,2}\\s*[–-]\\s*\\d{1,2}\\b|\\b20\\d{2}\\b", title, re.I):
+        if re.search(r"\b(?:jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)[a-z]*\.?\s+\d{1,2}\b|\b\d{1,2}\s*[–-]\s*\d{1,2}\b|\b20\d{2}\b", title, re.I):
             continue
         title_words = title_tokens(title)
         if len(title_words) < 2:
@@ -114,10 +115,11 @@ def catalog_from_page(soup, source):
         container_text = ""
         for node in ancestors[1:]:
             text_value = clean(node.get_text(" ", strip=True))
-            if len(text_value) > len(title) + 35:
+            heading_count = len(node.select("h2, h3, h4"))
+            if len(title) + 20 < len(text_value) <= 500 and heading_count <= 1:
                 container_text = text_value
                 break
-        description = container_text.replace(title, "", 1).strip(" |—-:")[:700]
+        description = container_text.replace(title, "", 1).strip(" |—-:")[:600]
         key = (title.casefold(), detail_url)
         if key in seen:
             continue
