@@ -153,7 +153,7 @@ def event_links(event_url, fallback=None, item=None):
         producer_url = "https://www.curiouslevity.com/experiences"
     # If the calendar only exposes the producer homepage, look for a
     # production-specific page on that site (including its experiences/shows index).
-    if producer_url and item is not None and item.get("title"):
+    if producer_url and producer_url != event_url and item is not None and item.get("title"):
         try:
             title_words = {w for w in re.findall(r"[a-z0-9]+", clean(item["title"]).casefold()) if len(w) > 2}
             home = requests.get(producer_url, headers=HEADERS, timeout=10)
