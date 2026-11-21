@@ -23,11 +23,11 @@ HEADERS = {"User-Agent": "SeattleTheatrePickBot/1.0 (community theatre calendar)
 def clean(value):
     # Avoid parsing plain URLs as HTML; this also prevents noisy BeautifulSoup warnings.
     text = str(value or "")
-    if re.match(r"^https?://\\S+$", text.strip(), re.IGNORECASE):
+    if re.match(r"^https?://\S+$", text.strip(), re.IGNORECASE):
         return text.strip()
     for _ in range(2):
         text = BeautifulSoup(html.unescape(text), "html.parser").get_text(" ", strip=True)
-    return re.sub(r"\\s+", " ", text).strip()
+    return re.sub(r"\s+", " ", text).strip()
 def parse_date(value):
     if not value:
         return None
