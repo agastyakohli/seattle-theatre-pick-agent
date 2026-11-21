@@ -379,8 +379,27 @@ def extract(source):
         "iframes": [urljoin(response.url, node.get("src")) for node in soup.select("iframe[src]")][:10],
         "calendar_markers": {
             marker: response.text.casefold().count(marker)
-            for marker in ("tribe-events", "fullcalendar", "fc-event", "event-list", "calendar", "startdate", "data-date", "event-date", "wp-json")
+            for marker in ("tribe-events", "fullcalendar", "fc-event", "event-list", "calendar", "startdate", "data-date", "event-date", "wp-json", "ai1ec")
         },
+        "date_attributes": [
+            {"tag": node.name, "attrs": {key: str(value)[:180] for key, value in node.attrs.items()
+                                          if key in ("data-date", "data-start", "data-end", "data-event-id", "class", "href")},
+             "text": clean(node.get_text(" ", strip=True))[:180]}
+            for node in soup.select("[data-date], [data-start], [data-event-id]")
+        ][:20],
+        "jsonld_summaries": [
+            {"types": obj.get("@type"), "name": clean(obj.get("name", ""))[:140],
+             "startDate": obj.get("startDate"), "endDate": obj.get("endDate"),
+             "url": obj.get("url")}
+            for script in soup.select('script[type="application/ld+json"]')
+            for obj in ([json.loads(script.string or script.get_text())] if (script.string or script.get_text()).strip() else [])
+            if isinstance(obj, dict)
+        ][:10],
+        "calendar_inline_scripts": [
+            re.sub(r"\\s+", " ", node.get_text() or "")[:900]
+            for node in soup.select("script:not([src])")
+            if re.search(r"ai1ec|calendar|ajax|event|wp-json", node.get_text() or "", re.I)
+        ][:8],
     }
     results = []
     official_catalog = catalog_from_page(soup, source)
@@ -656,6 +675,9 @@ def main():
                     print("NWTHEATRE SCRIPTS:", json.dumps(diag.get("scripts", []), ensure_ascii=False))
                     print("NWTHEATRE IFRAMES:", json.dumps(diag.get("iframes", []), ensure_ascii=False))
                     print("NWTHEATRE CALENDAR MARKERS:", json.dumps(diag.get("calendar_markers", {}), ensure_ascii=False))
+                    print("NWTHEATRE DATE ELEMENTS:", json.dumps(diag.get("date_attributes", []), ensure_ascii=False))
+                    print("NWTHEATRE JSONLD:", json.dumps(diag.get("jsonld_summaries", []), ensure_ascii=False))
+                    print("NWTHEATRE INLINE CALENDAR DATA:", json.dumps(diag.get("calendar_inline_scripts", []), ensure_ascii=False))
                 print("EXTRACTION:", source["name"], "-", len(listings), "dated listings;", len(extracted["catalog"]), "official show pages catalogued")
                 for item in listings[:3]:
                     print("  LISTING:", clean(item.get("title", "(untitled)")), "| dates:", ", ".join(item.get("performance_dates") or ([item.get("start_date")] if item.get("start_date") else [])) or "(none)")
