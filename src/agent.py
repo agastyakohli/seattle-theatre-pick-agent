@@ -123,7 +123,23 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--dry-run", action="store_true")
     parser.add_argument("--publish", action="store_true")
+    parser.add_argument("--test-facebook", action="store_true")
     args = parser.parse_args()
+    if args.test_facebook:
+        import os
+        page_id = os.environ.get("FB_PAGE_ID")
+        token = os.environ.get("FB_PAGE_ACCESS_TOKEN")
+        if not page_id or not token:
+            raise RuntimeError("Missing FB_PAGE_ID or FB_PAGE_ACCESS_TOKEN secrets")
+        version = os.environ.get("META_GRAPH_VERSION", "v27.0")
+        response = requests.get("https://graph.facebook.com/" + version + "/" + page_id,
+            params={"fields": "id,name", "access_token": token}, timeout=30)
+        response.raise_for_status()
+        page = response.json()
+        if str(page.get("id")) != str(page_id):
+            raise RuntimeError("Facebook returned a Page ID that does not match FB_PAGE_ID")
+        print("FACEBOOK CONNECTION OK:", page.get("name"), "(", page.get("id"), ")")
+        return
     productions_path = DATA / "productions.json"
     featured_path = DATA / "featured.json"
     productions = json.loads(productions_path.read_text()) if productions_path.exists() else []
