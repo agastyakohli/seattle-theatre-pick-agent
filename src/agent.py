@@ -43,8 +43,8 @@ def identity(title, venue):
     raw = clean(title).casefold() + "|" + clean(venue).casefold()
     return hashlib.sha256(raw.encode()).hexdigest()[:16]
 
-def event_links(event_url, fallback=None):
-    """Prefer a producer's show page, then a ticketing page, then the calendar listing."""
+def event_links(event_url, fallback=None, item=None):
+    """Enrich event details and prefer producer page, ticketing page, then calendar listing."""
     fallback = fallback or event_url
     producer_url = ""
     ticket_url = ""
@@ -52,6 +52,23 @@ def event_links(event_url, fallback=None):
         response = requests.get(event_url, headers=HEADERS, timeout=15)
         response.raise_for_status()
         soup = BeautifulSoup(response.text, "html.parser")
+        if item is not None:
+            if not item.get("description"):
+                meta = soup.select_one('meta[property="og:description"], meta[name="description"]')
+                if meta:
+                    item["description"] = clean(meta.get("content"))[:600]
+                if not item.get("description"):
+                    desc = soup.select_one('[itemprop="description"], .event-description, .tribe-events-single-event-description')
+                    if desc:
+                        item["description"] = clean(desc)[:600]
+            if not item.get("venue"):
+                venue = soup.select_one('[itemprop="location"], .event-venue, .venue')
+                if venue:
+                    item["venue"] = clean(venue)
+            if not item.get("producer"):
+                organizer = soup.select_one('[itemprop="organizer"], .organizer, .presented-by, .producer, [class*="organizer"]')
+                if organizer:
+                    item["producer"] = clean(organizer)
         for script in soup.select('script[type="application/ld+json"]'):
             try:
                 payload = json.loads(script.string or script.get_text())
@@ -67,11 +84,22 @@ def event_links(event_url, fallback=None):
                     continue
                 stack.extend(obj.get("@graph", []) if isinstance(obj.get("@graph"), list) else [])
                 org = obj.get("organizer") or obj.get("producer")
-                if isinstance(org, list): org = org[0] if org else {}
-                if isinstance(org, dict) and org.get("url"):
-                    producer_url = urljoin(event_url, org["url"])
+                if isinstance(org, list):
+                    org = org[0] if org else {}
+                if isinstance(org, dict):
+                    if org.get("name") and item is not None and not item.get("producer"):
+                        item["producer"] = clean(org.get("name"))
+                    if org.get("url"):
+                        producer_url = urljoin(event_url, org["url"])
+                if item is not None and not item.get("description") and obj.get("description"):
+                    item["description"] = clean(obj.get("description"))[:600]
+                if item is not None and not item.get("venue"):
+                    loc = obj.get("location")
+                    if isinstance(loc, dict) and loc.get("name"):
+                        item["venue"] = clean(loc.get("name"))
                 offers = obj.get("offers") or []
-                if isinstance(offers, dict): offers = [offers]
+                if isinstance(offers, dict):
+                    offers = [offers]
                 for offer in offers:
                     if isinstance(offer, dict) and offer.get("url") and not ticket_url:
                         ticket_url = urljoin(event_url, offer["url"])
@@ -80,8 +108,10 @@ def event_links(event_url, fallback=None):
             href = urljoin(event_url, anchor.get("href", ""))
             label = clean(anchor.get_text(" ", strip=True)).casefold()
             host = urlparse(href).netloc.casefold()
-            if not href.startswith(("http://", "https://")): continue
-            if any(term in label for term in ("official website", "producer website", "company website", "show website")) and host and host != page_host:
+            if not href.startswith(("http://", "https://")) or not host:
+                continue
+            # Many TPS cards label the producer link simply "Website".
+            if any(term in label for term in ("official website", "producer website", "company website", "show website", "visit website", "website")) and host != page_host:
                 producer_url = href
             if not ticket_url and (any(term in host for term in ("eventbrite.", "ticketmaster.", "showclix.", "brownpapertickets.")) or any(term in label for term in ("buy tickets", "get tickets", "tickets"))):
                 ticket_url = href
@@ -157,7 +187,12 @@ def extract(source):
               "source":source["name"]})
     for item in results:
         event_url = item.get("event_url") or item.get("url") or source["url"]
-        preferred, producer_url, ticket_url = event_links(event_url, source["url"])
+        preferred, producer_url, ticket_url = event_links(event_url, source["url"], item)
+        item["source_priority"] = source.get("priority", 3)
+        if source.get("producer") and not item.get("producer"):
+            item["producer"] = source["producer"]
+        if source.get("producer_type"):
+            item["producer_type"] = source["producer_type"]
         item["event_url"] = event_url
         item["producer_url"] = item.get("producer_url") or producer_url
         item["ticket_url"] = item.get("ticket_url") or ticket_url
@@ -199,6 +234,16 @@ def is_excluded_event(item):
     # Apply broad title-only exclusions such as tours and concerts.
     return any(term.casefold() in title for term in CFG.get("exclude_title_terms", []))
 
+def producer_is_presenter(item):
+    if item.get("producer_type") == "presenter":
+        return True
+    text = clean(item.get("producer") or "").casefold()
+    venue = clean(item.get("venue") or "").casefold()
+    names = ("seattle theatre group", "broadway across america")
+    venues = ("paramount theatre", "moore theatre", "neptune theatre")
+    return any(name in text for name in names) or (not text and any(v in venue for v in venues))
+
+
 def producer_key(item):
     # Prefer explicit producer/organizer; venue is a fallback where unavailable.
     value = clean(item.get("producer") or item.get("venue") or item.get("source") or "")
@@ -225,7 +270,7 @@ def merge(existing, incoming):
             if prior["performance_dates"]:
                 prior["start_date"] = prior["performance_dates"][0]
                 prior["end_date"] = prior["performance_dates"][-1]
-            for key in ("venue", "producer", "description", "event_url", "producer_url", "ticket_url"):
+            for key in ("venue", "producer", "description", "event_url", "producer_url", "ticket_url", "source_priority", "producer_type"):
                 if item.get(key) and (not prior.get(key) or key in ("producer_url", "ticket_url")):
                     prior[key] = item[key]
             # Replace an older calendar URL with the best destination discovered now.
@@ -313,12 +358,12 @@ def main():
             print("SKIPPED FOR PRODUCER VARIETY:", p.get("title", "(untitled)"), "-", p.get("producer") or p.get("venue"))
             continue
         candidates.append(p)
-    candidates.sort(key=lambda p:(p["title"].casefold(), p.get("venue","").casefold()))
+    candidates.sort(key=lambda p:(1 if producer_is_presenter(p) else 0, p.get("source_priority", 3), p["title"].casefold(), p.get("venue","").casefold()))
     if not candidates:
         print("No validated future production found. No post will be published.")
     else:
         pick = candidates[0]
-        description = clean(pick.get("description")) or "Discover a Puget Sound theatre production."
+        description = clean(pick.get("description")) or ("A live theatre production from " + clean(pick.get("producer") or "a local theatre company") + ".")
         message = ("🎭 Seattle Theatre Pick of the Day: " + clean(pick["title"]) + "\n\n" +
           description + "\n\n" +
           "📍 " + (pick.get("venue") or "Puget Sound") + "\n🎟️ Details & tickets: " + pick["url"])
