@@ -7,6 +7,10 @@ on:
         description: "Do not publish; only show the selected post"
         required: true
         default: "true"
+      test_facebook:
+        description: "Check Page token and Page ID without publishing"
+        required: true
+        default: "false"
   schedule:
     - cron: "30 16 * * *" # dry-run only until Facebook publishing is explicitly enabled
 
@@ -27,8 +31,8 @@ jobs:
           FB_PAGE_ID: ${{ secrets.FB_PAGE_ID }}
           FB_PAGE_ACCESS_TOKEN: ${{ secrets.FB_PAGE_ACCESS_TOKEN }}
         run: |
-          if [ "${{ github.event_name }}" = "workflow_dispatch" ] && [ "${{ inputs.dry_run }}" = "true" ]; then
-            python -m src.agent --dry-run
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ] && [ "${{ inputs.test_facebook }}" = "true" ]; then
+            python -m src.agent --test-facebook
           else
             python -m src.agent --dry-run
           fi
