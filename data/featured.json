@@ -1,1 +1,28 @@
-[]
+[
+  {
+    "production_id": "c8c4a7dabd978b0c",
+    "title": "Table 17",
+    "venue": "Union Arts Center",
+    "co_producers": [],
+    "published_at": null,
+    "seeded_from_page_history": true
+  },
+  {
+    "production_id": "fa31c3ed8d81f4c1",
+    "title": "5 Lesbians Eating a Quiche",
+    "venue": "Pony World Theatre",
+    "co_producers": [],
+    "published_at": null,
+    "seeded_from_page_history": true
+  },
+  {
+    "production_id": "03404ce23cea0acf",
+    "title": "नेहा & Neel",
+    "venue": "Seattle Public Theater",
+    "co_producers": [
+      "Pratidhwani"
+    ],
+    "published_at": null,
+    "seeded_from_page_history": true
+  }
+]
