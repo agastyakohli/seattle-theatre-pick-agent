@@ -359,6 +359,18 @@ def extract(source):
     response = requests.get(source["url"], headers=HEADERS, timeout=15)
     response.raise_for_status()
     soup = BeautifulSoup(response.text, "html.parser")
+    # Capture lightweight response diagnostics so empty extraction can be
+    # distinguished from blocked, redirected, or unexpectedly small pages.
+    diagnostic = {
+        "status": response.status_code,
+        "final_url": response.url,
+        "bytes": len(response.content),
+        "page_title": clean(soup.title.get_text(" ", strip=True))[:140] if soup.title else "(no title)",
+        "jsonld_scripts": len(soup.select('script[type="application/ld+json"]')),
+        "event_nodes": len(soup.select('[itemtype*="Event"], article, .event, .tribe-events-calendar-list__event')),
+        "time_nodes": len(soup.select('[itemprop="startDate"], time[datetime], time')),
+        "links": len(soup.select("a[href]")),
+    }
     results = []
     official_catalog = catalog_from_page(soup, source)
     # JSON-LD is generally more reliable than guessing from arbitrary page markup.
@@ -441,7 +453,7 @@ def extract(source):
         item.setdefault("ticket_url", "")
         # Keep the discovered event link for now. Enrich only the selected pick.
         item["url"] = event_url
-    return {"productions": results, "catalog": official_catalog}
+    return {"productions": results, "catalog": official_catalog, "diagnostic": diagnostic}
 
 
 def is_excluded_event(item):
@@ -618,6 +630,17 @@ def main():
                 official_catalog.extend(extracted["catalog"])
                 dated = sum(1 for item in listings if item.get("performance_dates") or item.get("start_date"))
                 print("Fetched:", source["name"])
+                diag = extracted.get("diagnostic", {})
+                print("SOURCE RESPONSE:", source["name"],
+                      "| HTTP:", diag.get("status"),
+                      "| bytes:", diag.get("bytes"),
+                      "| final URL:", diag.get("final_url"),
+                      "| title:", diag.get("page_title"))
+                print("SOURCE MARKUP:", source["name"],
+                      "| JSON-LD:", diag.get("jsonld_scripts"),
+                      "| event-like nodes:", diag.get("event_nodes"),
+                      "| time nodes:", diag.get("time_nodes"),
+                      "| links:", diag.get("links"))
                 print("EXTRACTION:", source["name"], "-", len(listings), "dated listings;", len(extracted["catalog"]), "official show pages catalogued")
                 for item in listings[:3]:
                     print("  LISTING:", clean(item.get("title", "(untitled)")), "| dates:", ", ".join(item.get("performance_dates") or ([item.get("start_date")] if item.get("start_date") else [])) or "(none)")
