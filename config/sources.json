@@ -64,12 +64,20 @@
       "producer": "ArtsWest"
     },
     {
-      "name": "Intiman Theatre Season",
-      "url": "https://www.intiman.org/2026-27-season/",
+      "name": "Intiman Theatre Upcoming Productions",
+      "url": "https://www.intiman.org/",
       "type": "html",
       "enabled": true,
       "priority": 0,
       "producer": "Intiman Theatre"
+    },
+    {
+      "name": "Seattle Children's Theatre Calendar",
+      "url": "https://www.sct.org/tickets-shows/calendar/",
+      "type": "html",
+      "enabled": true,
+      "priority": 0,
+      "producer": "Seattle Children's Theatre"
     },
     {
       "name": "Unexpected Productions Events",
