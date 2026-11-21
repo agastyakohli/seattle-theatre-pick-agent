@@ -32,22 +32,6 @@
     "description": "July 7–August 14, 2027"
   },
   {
-    "title": "Starfish Project",
-    "producer": "Intiman Theatre",
-    "source_name": "Intiman Theatre Upcoming Productions",
-    "source_url": "https://www.intiman.org/",
-    "official_url": "https://www.intiman.org/starfish/",
-    "description": "After-school technical arts training program for middle and high school students. Learn More"
-  },
-  {
-    "title": "Intiman Cabaret",
-    "producer": "Intiman Theatre",
-    "source_name": "Intiman Theatre Upcoming Productions",
-    "source_url": "https://www.intiman.org/",
-    "official_url": "https://www.intiman.org/cabaret/",
-    "description": ""
-  },
-  {
     "title": "Improv Happy Hour",
     "producer": "Unexpected Productions",
     "source_name": "Unexpected Productions Events",
@@ -126,6 +110,22 @@
     "source_url": "https://www.unexpectedproductions.org/events/list/",
     "official_url": "https://www.unexpectedproductions.org/event/an-improvised-christmas-carol/2026-11-27/",
     "description": "November 27 @ 7:30 pm - 9:00 pm An Improvised Christmas Carol"
+  },
+  {
+    "title": "Starfish Project",
+    "producer": "Intiman Theatre",
+    "source_name": "Intiman Theatre Upcoming Productions",
+    "source_url": "https://www.intiman.org/",
+    "official_url": "https://www.intiman.org/starfish/",
+    "description": "After-school technical arts training program for middle and high school students. Learn More"
+  },
+  {
+    "title": "Intiman Cabaret",
+    "producer": "Intiman Theatre",
+    "source_name": "Intiman Theatre Upcoming Productions",
+    "source_url": "https://www.intiman.org/",
+    "official_url": "https://www.intiman.org/cabaret/",
+    "description": ""
   },
   {
     "title": "Peter Pan Goes Wrong",
