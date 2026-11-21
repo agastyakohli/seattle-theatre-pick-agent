@@ -370,6 +370,17 @@ def extract(source):
         "event_nodes": len(soup.select('[itemtype*="Event"], article, .event, .tribe-events-calendar-list__event')),
         "time_nodes": len(soup.select('[itemprop="startDate"], time[datetime], time')),
         "links": len(soup.select("a[href]")),
+        "scripts": [
+            {"type": (node.get("type") or "text/javascript")[:60],
+             "src": (urljoin(response.url, node.get("src")) if node.get("src") else "(inline)"),
+             "bytes": len(node.get_text() or "")}
+            for node in soup.select("script")
+        ][:20],
+        "iframes": [urljoin(response.url, node.get("src")) for node in soup.select("iframe[src]")][:10],
+        "calendar_markers": {
+            marker: response.text.casefold().count(marker)
+            for marker in ("tribe-events", "fullcalendar", "fc-event", "event-list", "calendar", "startdate", "data-date", "event-date", "wp-json")
+        },
     }
     results = []
     official_catalog = catalog_from_page(soup, source)
@@ -641,6 +652,10 @@ def main():
                       "| event-like nodes:", diag.get("event_nodes"),
                       "| time nodes:", diag.get("time_nodes"),
                       "| links:", diag.get("links"))
+                if source["name"] == "NWTheatre Calendar":
+                    print("NWTHEATRE SCRIPTS:", json.dumps(diag.get("scripts", []), ensure_ascii=False))
+                    print("NWTHEATRE IFRAMES:", json.dumps(diag.get("iframes", []), ensure_ascii=False))
+                    print("NWTHEATRE CALENDAR MARKERS:", json.dumps(diag.get("calendar_markers", {}), ensure_ascii=False))
                 print("EXTRACTION:", source["name"], "-", len(listings), "dated listings;", len(extracted["catalog"]), "official show pages catalogued")
                 for item in listings[:3]:
                     print("  LISTING:", clean(item.get("title", "(untitled)")), "| dates:", ", ".join(item.get("performance_dates") or ([item.get("start_date")] if item.get("start_date") else [])) or "(none)")
