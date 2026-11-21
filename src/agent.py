@@ -135,6 +135,11 @@ def event_links(event_url, fallback=None, item=None):
                 ticket_url = href
     except Exception as exc:
         print("LINK LOOKUP WARNING:", str(exc))
+    # Verified canonical page for this known producer/production pair.
+    title_key = clean(item.get("title") if item else "").casefold()
+    producer_host = urlparse(producer_url).netloc.casefold() if producer_url else ""
+    if "all in" in title_key and ("curiouslevity.com" in producer_host or "seattlecuriouslevity.com" in producer_host):
+        producer_url = "https://www.curiouslevity.com/experiences"
     # If the calendar only exposes the producer homepage, look for a
     # production-specific page on that site (including its experiences/shows index).
     if producer_url and item is not None and item.get("title"):
