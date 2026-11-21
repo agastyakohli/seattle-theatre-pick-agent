@@ -567,7 +567,11 @@ def parse_nwtheatre_run_end_dates(html_text, productions):
     have one unambiguous date-range listing on the page.
     """
     soup = BeautifulSoup(html_text or "", "html.parser")
-    lines = [clean(line) for line in soup.get_text("\n").splitlines()]
+    # Show/date pairs are normally rendered as individual paragraphs. Joining
+    # text nodes within each paragraph keeps the title beside its date range.
+    lines = [clean(node.get_text(" ", strip=True)) for node in soup.find_all(["p", "li"])]
+    if not lines:
+        lines = [clean(line) for line in soup.get_text("\n").splitlines()]
     lines = [line for line in lines if line]
     directory_dates = {}
     date_range = re.compile(
