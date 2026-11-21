@@ -133,6 +133,8 @@ def event_links(event_url, fallback=None, item=None):
                 producer_url = href
             if not ticket_url and (any(term in host for term in ("eventbrite.", "ticketmaster.", "showclix.", "brownpapertickets.")) or any(term in label for term in ("buy tickets", "get tickets", "tickets"))):
                 ticket_url = href
+    except Exception as exc:
+        print("LINK LOOKUP WARNING:", str(exc))
     # If the calendar only exposes the producer homepage, look for a
     # production-specific page on that site (including its experiences/shows index).
     if producer_url and item is not None and item.get("title"):
@@ -178,8 +180,6 @@ def event_links(event_url, fallback=None, item=None):
                         break
         except Exception as exc:
             print("PRODUCER PAGE LOOKUP WARNING:", str(exc))
-    except Exception as exc:
-        print("LINK LOOKUP WARNING:", str(exc))
     return producer_url or ticket_url or event_url or fallback, producer_url, ticket_url
 
 def extract(source):
