@@ -112,7 +112,9 @@ def event_links(event_url, fallback=None, item=None):
             if not href.startswith(("http://", "https://")) or not host:
                 continue
             # Many TPS cards label the producer link simply "Website".
-            if any(term in label for term in ("official website", "producer website", "company website", "show website", "visit website", "website")) and host != page_host:
+            context = clean(anchor.parent.get_text(" ", strip=True)).casefold() if anchor.parent else ""
+            if (any(term in label for term in ("official website", "producer website", "company website", "show website", "visit website", "website"))
+                    or context.startswith("website:") or context.startswith("website ")) and host != page_host:
                 producer_url = href
             if not ticket_url and (any(term in host for term in ("eventbrite.", "ticketmaster.", "showclix.", "brownpapertickets.")) or any(term in label for term in ("buy tickets", "get tickets", "tickets"))):
                 ticket_url = href
@@ -279,6 +281,12 @@ def merge(existing, incoming):
                 if item.get(key) and (not prior.get(key) or key in ("producer_url", "ticket_url", "source_priority", "producer_type")):
                     prior[key] = item[key]
             # Replace an older calendar URL with the best destination discovered now.
+            # Refresh stale event URLs from the current calendar extraction.
+            # Preserve a previously validated producer/ticket destination when present.
+            if item.get("event_url"):
+                prior["event_url"] = item["event_url"]
+                if not prior.get("producer_url") and not prior.get("ticket_url"):
+                    prior["url"] = item["event_url"]
             if item.get("url") and (item.get("producer_url") or item.get("ticket_url")):
                 prior["url"] = item["url"]
             prior.setdefault("sources", [])
