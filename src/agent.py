@@ -1,5 +1,6 @@
 import argparse
 import hashlib
+import html
 import json
 import re
 import sys
@@ -20,7 +21,12 @@ TZ = ZoneInfo(CFG.get("timezone", "America/Los_Angeles"))
 HEADERS = {"User-Agent": "SeattleTheatrePickBot/1.0 (community theatre calendar)"}
 
 def clean(value):
-    return re.sub(r"\s+", " ", BeautifulSoup(str(value or ""), "html.parser").get_text(" ", strip=True)).strip()
+    # Some event feeds HTML-encode their descriptions, so strip markup after
+    # decoding entities as well as handling ordinary HTML fragments.
+    text = str(value or "")
+    for _ in range(2):
+        text = BeautifulSoup(html.unescape(text), "html.parser").get_text(" ", strip=True)
+    return re.sub(r"\s+", " ", text).strip()
 
 def parse_date(value):
     if not value:
@@ -142,7 +148,17 @@ def merge(existing, incoming):
         item["id"] = pid
         prior = records.get(pid)
         if prior:
-            for key in ("start_date", "end_date", "venue", "description"):
+            # A calendar may expose one card per performance date. Preserve the
+            # full run so the production remains eligible until its final date.
+            incoming_start = item.get("start_date")
+            incoming_end = item.get("end_date") or incoming_start
+            prior_start = prior.get("start_date")
+            prior_end = prior.get("end_date") or prior_start
+            if incoming_start and (not prior_start or incoming_start < prior_start):
+                prior["start_date"] = incoming_start
+            if incoming_end and (not prior_end or incoming_end > prior_end):
+                prior["end_date"] = incoming_end
+            for key in ("venue", "description"):
                 if item.get(key) and not prior.get(key):
                     prior[key] = item[key]
             prior.setdefault("sources", [])
@@ -196,9 +212,12 @@ def main():
         if p.get("id") in already or p.get("featured") or not p.get("start_date"):
             continue
         try:
-            if date.fromisoformat(p.get("end_date") or p["start_date"]) < today:
+            # Compare against the final known performance date, not just the
+            # first performance. A run ending today remains eligible today.
+            final_date = date.fromisoformat(p.get("end_date") or p["start_date"])
+            if final_date < today:
                 continue
-        except ValueError:
+        except (TypeError, ValueError):
             continue
         if is_excluded_event(p):
             print("SKIPPED NON-PRODUCTION EVENT:", p.get("title", "(untitled)"))
