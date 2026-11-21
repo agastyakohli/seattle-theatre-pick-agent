@@ -24,7 +24,49 @@
     ],
     "producer": "Theatre Puget Sound",
     "event_url": "https://theatrepugetsound.org/event/rocky-horror-improv-show/2026-10-25/",
-    "source_priority": 1
+    "source_priority": 1,
+    "performance_occurrences": [
+      {
+        "date": "2026-12-06",
+        "event_url": "https://theatrepugetsound.org/event/rocky-horror-improv-show/2026-12-06/"
+      },
+      {
+        "date": "2026-12-05",
+        "event_url": "https://theatrepugetsound.org/event/rocky-horror-improv-show/2026-12-05/"
+      },
+      {
+        "date": "2026-11-29",
+        "event_url": "https://theatrepugetsound.org/event/rocky-horror-improv-show/2026-11-29/"
+      },
+      {
+        "date": "2026-11-28",
+        "event_url": "https://theatrepugetsound.org/event/rocky-horror-improv-show/2026-11-28/"
+      },
+      {
+        "date": "2026-11-22",
+        "event_url": "https://theatrepugetsound.org/event/rocky-horror-improv-show/2026-11-22/"
+      },
+      {
+        "date": "2026-11-07",
+        "event_url": "https://theatrepugetsound.org/event/rocky-horror-improv-show/2026-11-07/"
+      },
+      {
+        "date": "2026-11-01",
+        "event_url": "https://theatrepugetsound.org/event/rocky-horror-improv-show/2026-11-01/"
+      },
+      {
+        "date": "2026-10-31",
+        "event_url": "https://theatrepugetsound.org/event/rocky-horror-improv-show/2026-10-31/2/"
+      },
+      {
+        "date": "2026-10-31",
+        "event_url": "https://theatrepugetsound.org/event/rocky-horror-improv-show/2026-10-31/1/"
+      },
+      {
+        "date": "2026-10-25",
+        "event_url": "https://theatrepugetsound.org/event/rocky-horror-improv-show/2026-10-25/"
+      }
+    ]
   },
   {
     "title": "A Christmas Carol",
@@ -50,7 +92,53 @@
     ],
     "producer": "Theatre Puget Sound",
     "event_url": "https://theatrepugetsound.org/event/a-christmas-carol/2026-11-27/",
-    "source_priority": 1
+    "source_priority": 1,
+    "performance_occurrences": [
+      {
+        "date": "2026-12-06",
+        "event_url": "https://theatrepugetsound.org/event/a-christmas-carol/2026-12-06/2/"
+      },
+      {
+        "date": "2026-12-06",
+        "event_url": "https://theatrepugetsound.org/event/a-christmas-carol/2026-12-06/1/"
+      },
+      {
+        "date": "2026-12-05",
+        "event_url": "https://theatrepugetsound.org/event/a-christmas-carol/2026-12-05/2/"
+      },
+      {
+        "date": "2026-12-05",
+        "event_url": "https://theatrepugetsound.org/event/a-christmas-carol/2026-12-05/1/"
+      },
+      {
+        "date": "2026-12-04",
+        "event_url": "https://theatrepugetsound.org/event/a-christmas-carol/2026-12-04/"
+      },
+      {
+        "date": "2026-12-03",
+        "event_url": "https://theatrepugetsound.org/event/a-christmas-carol/2026-12-03/"
+      },
+      {
+        "date": "2026-12-02",
+        "event_url": "https://theatrepugetsound.org/event/a-christmas-carol/2026-12-02/"
+      },
+      {
+        "date": "2026-11-29",
+        "event_url": "https://theatrepugetsound.org/event/a-christmas-carol/2026-11-29/"
+      },
+      {
+        "date": "2026-11-28",
+        "event_url": "https://theatrepugetsound.org/event/a-christmas-carol/2026-11-28/2/"
+      },
+      {
+        "date": "2026-11-28",
+        "event_url": "https://theatrepugetsound.org/event/a-christmas-carol/2026-11-28/1/"
+      },
+      {
+        "date": "2026-11-27",
+        "event_url": "https://theatrepugetsound.org/event/a-christmas-carol/2026-11-27/"
+      }
+    ]
   },
   {
     "title": "Snowed In",
@@ -74,7 +162,37 @@
     ],
     "producer": "Theatre Puget Sound",
     "event_url": "https://theatrepugetsound.org/event/snowed-in/2026-11-28/",
-    "source_priority": 1
+    "source_priority": 1,
+    "performance_occurrences": [
+      {
+        "date": "2026-12-06",
+        "event_url": "https://theatrepugetsound.org/event/snowed-in/2026-12-06/"
+      },
+      {
+        "date": "2026-12-05",
+        "event_url": "https://theatrepugetsound.org/event/snowed-in/2026-12-05/2/"
+      },
+      {
+        "date": "2026-12-05",
+        "event_url": "https://theatrepugetsound.org/event/snowed-in/2026-12-05/1/"
+      },
+      {
+        "date": "2026-12-04",
+        "event_url": "https://theatrepugetsound.org/event/snowed-in/2026-12-04/"
+      },
+      {
+        "date": "2026-12-03",
+        "event_url": "https://theatrepugetsound.org/event/snowed-in/2026-12-03/"
+      },
+      {
+        "date": "2026-11-29",
+        "event_url": "https://theatrepugetsound.org/event/snowed-in/2026-11-29/"
+      },
+      {
+        "date": "2026-11-28",
+        "event_url": "https://theatrepugetsound.org/event/snowed-in/2026-11-28/"
+      }
+    ]
   },
   {
     "title": "A Klingon Christmas Carol",
@@ -95,7 +213,21 @@
     ],
     "producer": "Theatre Puget Sound",
     "event_url": "https://theatrepugetsound.org/event/a-klingon-christmas-carol-2/2026-12-04/",
-    "source_priority": 1
+    "source_priority": 1,
+    "performance_occurrences": [
+      {
+        "date": "2026-12-06",
+        "event_url": "https://theatrepugetsound.org/event/a-klingon-christmas-carol-2/2026-12-06/"
+      },
+      {
+        "date": "2026-12-05",
+        "event_url": "https://theatrepugetsound.org/event/a-klingon-christmas-carol-2/2026-12-05/"
+      },
+      {
+        "date": "2026-12-04",
+        "event_url": "https://theatrepugetsound.org/event/a-klingon-christmas-carol-2/2026-12-04/"
+      }
+    ]
   },
   {
     "title": "The Dina Martina Christmas Show",
@@ -116,7 +248,25 @@
     ],
     "producer": "Theatre Puget Sound",
     "event_url": "https://theatrepugetsound.org/event/the-dina-martina-christmas-show-2/2026-12-04/",
-    "source_priority": 1
+    "source_priority": 1,
+    "performance_occurrences": [
+      {
+        "date": "2026-12-06",
+        "event_url": "https://theatrepugetsound.org/event/the-dina-martina-christmas-show-2/2026-12-06/"
+      },
+      {
+        "date": "2026-12-05",
+        "event_url": "https://theatrepugetsound.org/event/the-dina-martina-christmas-show-2/2026-12-05/2/"
+      },
+      {
+        "date": "2026-12-05",
+        "event_url": "https://theatrepugetsound.org/event/the-dina-martina-christmas-show-2/2026-12-05/1/"
+      },
+      {
+        "date": "2026-12-04",
+        "event_url": "https://theatrepugetsound.org/event/the-dina-martina-christmas-show-2/2026-12-04/"
+      }
+    ]
   },
   {
     "title": "ALL IN: a speakeasy casino…with a supernatural twist!",
@@ -148,7 +298,57 @@
     "event_url": "https://theatrepugetsound.org/event/all-in-a-speakeasy-casino-with-a-supernatural-twist/2026-10-30/",
     "source_priority": 1,
     "producer_url": "https://www.curiouslevity.com/experiences",
-    "ticket_url": ""
+    "ticket_url": "",
+    "performance_occurrences": [
+      {
+        "date": "2026-12-05",
+        "event_url": "https://theatrepugetsound.org/event/all-in-a-speakeasy-casino-with-a-supernatural-twist/2026-12-05/"
+      },
+      {
+        "date": "2026-12-04",
+        "event_url": "https://theatrepugetsound.org/event/all-in-a-speakeasy-casino-with-a-supernatural-twist/2026-12-04/"
+      },
+      {
+        "date": "2026-11-28",
+        "event_url": "https://theatrepugetsound.org/event/all-in-a-speakeasy-casino-with-a-supernatural-twist/2026-11-28/"
+      },
+      {
+        "date": "2026-11-27",
+        "event_url": "https://theatrepugetsound.org/event/all-in-a-speakeasy-casino-with-a-supernatural-twist/2026-11-27/"
+      },
+      {
+        "date": "2026-11-21",
+        "event_url": "https://theatrepugetsound.org/event/all-in-a-speakeasy-casino-with-a-supernatural-twist/2026-11-21/"
+      },
+      {
+        "date": "2026-11-20",
+        "event_url": "https://theatrepugetsound.org/event/all-in-a-speakeasy-casino-with-a-supernatural-twist/2026-11-20/"
+      },
+      {
+        "date": "2026-11-14",
+        "event_url": "https://theatrepugetsound.org/event/all-in-a-speakeasy-casino-with-a-supernatural-twist/2026-11-14/"
+      },
+      {
+        "date": "2026-11-13",
+        "event_url": "https://theatrepugetsound.org/event/all-in-a-speakeasy-casino-with-a-supernatural-twist/2026-11-13/"
+      },
+      {
+        "date": "2026-11-07",
+        "event_url": "https://theatrepugetsound.org/event/all-in-a-speakeasy-casino-with-a-supernatural-twist/2026-11-07/"
+      },
+      {
+        "date": "2026-11-06",
+        "event_url": "https://theatrepugetsound.org/event/all-in-a-speakeasy-casino-with-a-supernatural-twist/2026-11-06/"
+      },
+      {
+        "date": "2026-10-31",
+        "event_url": "https://theatrepugetsound.org/event/all-in-a-speakeasy-casino-with-a-supernatural-twist/2026-10-31/"
+      },
+      {
+        "date": "2026-10-30",
+        "event_url": "https://theatrepugetsound.org/event/all-in-a-speakeasy-casino-with-a-supernatural-twist/2026-10-30/"
+      }
+    ]
   },
   {
     "title": "नेहा & Neel (Neha and Neel | नेहा और नील)",
@@ -186,7 +386,89 @@
     ],
     "producer": "Theatre Puget Sound",
     "event_url": "https://theatrepugetsound.org/event/%e0%a4%a8%e0%a5%87%e0%a4%b9%e0%a4%be-neel-neha-and-neel-%e0%a4%a8%e0%a5%87%e0%a4%b9%e0%a4%be-%e0%a4%94%e0%a4%b0-%e0%a4%a8%e0%a5%80%e0%a4%b2/2026-10-28/",
-    "source_priority": 1
+    "source_priority": 1,
+    "performance_occurrences": [
+      {
+        "date": "2026-12-05",
+        "event_url": "https://theatrepugetsound.org/event/%e0%a4%a8%e0%a5%87%e0%a4%b9%e0%a4%be-neel-neha-and-neel-%e0%a4%a8%e0%a5%87%e0%a4%b9%e0%a4%be-%e0%a4%94%e0%a4%b0-%e0%a4%a8%e0%a5%80%e0%a4%b2/2026-12-05/"
+      },
+      {
+        "date": "2026-12-04",
+        "event_url": "https://theatrepugetsound.org/event/%e0%a4%a8%e0%a5%87%e0%a4%b9%e0%a4%be-neel-neha-and-neel-%e0%a4%a8%e0%a5%87%e0%a4%b9%e0%a4%be-%e0%a4%94%e0%a4%b0-%e0%a4%a8%e0%a5%80%e0%a4%b2/2026-12-04/"
+      },
+      {
+        "date": "2026-12-03",
+        "event_url": "https://theatrepugetsound.org/event/%e0%a4%a8%e0%a5%87%e0%a4%b9%e0%a4%be-neel-neha-and-neel-%e0%a4%a8%e0%a5%87%e0%a4%b9%e0%a4%be-%e0%a4%94%e0%a4%b0-%e0%a4%a8%e0%a5%80%e0%a4%b2/2026-12-03/"
+      },
+      {
+        "date": "2026-11-28",
+        "event_url": "https://theatrepugetsound.org/event/%e0%a4%a8%e0%a5%87%e0%a4%b9%e0%a4%be-neel-neha-and-neel-%e0%a4%a8%e0%a5%87%e0%a4%b9%e0%a4%be-%e0%a4%94%e0%a4%b0-%e0%a4%a8%e0%a5%80%e0%a4%b2/2026-11-28/"
+      },
+      {
+        "date": "2026-11-27",
+        "event_url": "https://theatrepugetsound.org/event/%e0%a4%a8%e0%a5%87%e0%a4%b9%e0%a4%be-neel-neha-and-neel-%e0%a4%a8%e0%a5%87%e0%a4%b9%e0%a4%be-%e0%a4%94%e0%a4%b0-%e0%a4%a8%e0%a5%80%e0%a4%b2/2026-11-27/"
+      },
+      {
+        "date": "2026-11-26",
+        "event_url": "https://theatrepugetsound.org/event/%e0%a4%a8%e0%a5%87%e0%a4%b9%e0%a4%be-neel-neha-and-neel-%e0%a4%a8%e0%a5%87%e0%a4%b9%e0%a4%be-%e0%a4%94%e0%a4%b0-%e0%a4%a8%e0%a5%80%e0%a4%b2/2026-11-26/"
+      },
+      {
+        "date": "2026-11-21",
+        "event_url": "https://theatrepugetsound.org/event/%e0%a4%a8%e0%a5%87%e0%a4%b9%e0%a4%be-neel-neha-and-neel-%e0%a4%a8%e0%a5%87%e0%a4%b9%e0%a4%be-%e0%a4%94%e0%a4%b0-%e0%a4%a8%e0%a5%80%e0%a4%b2/2026-11-21/"
+      },
+      {
+        "date": "2026-11-20",
+        "event_url": "https://theatrepugetsound.org/event/%e0%a4%a8%e0%a5%87%e0%a4%b9%e0%a4%be-neel-neha-and-neel-%e0%a4%a8%e0%a5%87%e0%a4%b9%e0%a4%be-%e0%a4%94%e0%a4%b0-%e0%a4%a8%e0%a5%80%e0%a4%b2/2026-11-20/"
+      },
+      {
+        "date": "2026-11-19",
+        "event_url": "https://theatrepugetsound.org/event/%e0%a4%a8%e0%a5%87%e0%a4%b9%e0%a4%be-neel-neha-and-neel-%e0%a4%a8%e0%a5%87%e0%a4%b9%e0%a4%be-%e0%a4%94%e0%a4%b0-%e0%a4%a8%e0%a5%80%e0%a4%b2/2026-11-19/"
+      },
+      {
+        "date": "2026-11-14",
+        "event_url": "https://theatrepugetsound.org/event/%e0%a4%a8%e0%a5%87%e0%a4%b9%e0%a4%be-neel-neha-and-neel-%e0%a4%a8%e0%a5%87%e0%a4%b9%e0%a4%be-%e0%a4%94%e0%a4%b0-%e0%a4%a8%e0%a5%80%e0%a4%b2/2026-11-14/"
+      },
+      {
+        "date": "2026-11-13",
+        "event_url": "https://theatrepugetsound.org/event/%e0%a4%a8%e0%a5%87%e0%a4%b9%e0%a4%be-neel-neha-and-neel-%e0%a4%a8%e0%a5%87%e0%a4%b9%e0%a4%be-%e0%a4%94%e0%a4%b0-%e0%a4%a8%e0%a5%80%e0%a4%b2/2026-11-13/"
+      },
+      {
+        "date": "2026-11-12",
+        "event_url": "https://theatrepugetsound.org/event/%e0%a4%a8%e0%a5%87%e0%a4%b9%e0%a4%be-neel-neha-and-neel-%e0%a4%a8%e0%a5%87%e0%a4%b9%e0%a4%be-%e0%a4%94%e0%a4%b0-%e0%a4%a8%e0%a5%80%e0%a4%b2/2026-11-12/"
+      },
+      {
+        "date": "2026-11-08",
+        "event_url": "https://theatrepugetsound.org/event/%e0%a4%a8%e0%a5%87%e0%a4%b9%e0%a4%be-neel-neha-and-neel-%e0%a4%a8%e0%a5%87%e0%a4%b9%e0%a4%be-%e0%a4%94%e0%a4%b0-%e0%a4%a8%e0%a5%80%e0%a4%b2/2026-11-08/"
+      },
+      {
+        "date": "2026-11-07",
+        "event_url": "https://theatrepugetsound.org/event/%e0%a4%a8%e0%a5%87%e0%a4%b9%e0%a4%be-neel-neha-and-neel-%e0%a4%a8%e0%a5%87%e0%a4%b9%e0%a4%be-%e0%a4%94%e0%a4%b0-%e0%a4%a8%e0%a5%80%e0%a4%b2/2026-11-07/"
+      },
+      {
+        "date": "2026-11-06",
+        "event_url": "https://theatrepugetsound.org/event/%e0%a4%a8%e0%a5%87%e0%a4%b9%e0%a4%be-neel-neha-and-neel-%e0%a4%a8%e0%a5%87%e0%a4%b9%e0%a4%be-%e0%a4%94%e0%a4%b0-%e0%a4%a8%e0%a5%80%e0%a4%b2/2026-11-06/"
+      },
+      {
+        "date": "2026-11-05",
+        "event_url": "https://theatrepugetsound.org/event/%e0%a4%a8%e0%a5%87%e0%a4%b9%e0%a4%be-neel-neha-and-neel-%e0%a4%a8%e0%a5%87%e0%a4%b9%e0%a4%be-%e0%a4%94%e0%a4%b0-%e0%a4%a8%e0%a5%80%e0%a4%b2/2026-11-05/"
+      },
+      {
+        "date": "2026-11-01",
+        "event_url": "https://theatrepugetsound.org/event/%e0%a4%a8%e0%a5%87%e0%a4%b9%e0%a4%be-neel-neha-and-neel-%e0%a4%a8%e0%a5%87%e0%a4%b9%e0%a4%be-%e0%a4%94%e0%a4%b0-%e0%a4%a8%e0%a5%80%e0%a4%b2/2026-11-01/"
+      },
+      {
+        "date": "2026-10-30",
+        "event_url": "https://theatrepugetsound.org/event/%e0%a4%a8%e0%a5%87%e0%a4%b9%e0%a4%be-neel-neha-and-neel-%e0%a4%a8%e0%a5%87%e0%a4%b9%e0%a4%be-%e0%a4%94%e0%a4%b0-%e0%a4%a8%e0%a5%80%e0%a4%b2/2026-10-30/"
+      },
+      {
+        "date": "2026-10-29",
+        "event_url": "https://theatrepugetsound.org/event/%e0%a4%a8%e0%a5%87%e0%a4%b9%e0%a4%be-neel-neha-and-neel-%e0%a4%a8%e0%a5%87%e0%a4%b9%e0%a4%be-%e0%a4%94%e0%a4%b0-%e0%a4%a8%e0%a5%80%e0%a4%b2/2026-10-29/"
+      },
+      {
+        "date": "2026-10-28",
+        "event_url": "https://theatrepugetsound.org/event/%e0%a4%a8%e0%a5%87%e0%a4%b9%e0%a4%be-neel-neha-and-neel-%e0%a4%a8%e0%a5%87%e0%a4%b9%e0%a4%be-%e0%a4%94%e0%a4%b0-%e0%a4%a8%e0%a5%80%e0%a4%b2/2026-10-28/"
+      }
+    ]
   },
   {
     "title": "Poe Unexpected: Edgar Allan Poe Improvised",
@@ -216,7 +498,57 @@
     ],
     "producer": "Theatre Puget Sound",
     "event_url": "https://theatrepugetsound.org/event/poe-unexpected-edgar-allan-poe-improvised/2026-10-30/",
-    "source_priority": 1
+    "source_priority": 1,
+    "performance_occurrences": [
+      {
+        "date": "2026-12-05",
+        "event_url": "https://theatrepugetsound.org/event/poe-unexpected-edgar-allan-poe-improvised/2026-12-05/"
+      },
+      {
+        "date": "2026-12-04",
+        "event_url": "https://theatrepugetsound.org/event/poe-unexpected-edgar-allan-poe-improvised/2026-12-04/"
+      },
+      {
+        "date": "2026-11-28",
+        "event_url": "https://theatrepugetsound.org/event/poe-unexpected-edgar-allan-poe-improvised/2026-11-28/"
+      },
+      {
+        "date": "2026-11-27",
+        "event_url": "https://theatrepugetsound.org/event/poe-unexpected-edgar-allan-poe-improvised/2026-11-27/"
+      },
+      {
+        "date": "2026-11-21",
+        "event_url": "https://theatrepugetsound.org/event/poe-unexpected-edgar-allan-poe-improvised/2026-11-21/"
+      },
+      {
+        "date": "2026-11-20",
+        "event_url": "https://theatrepugetsound.org/event/poe-unexpected-edgar-allan-poe-improvised/2026-11-20/"
+      },
+      {
+        "date": "2026-11-14",
+        "event_url": "https://theatrepugetsound.org/event/poe-unexpected-edgar-allan-poe-improvised/2026-11-14/"
+      },
+      {
+        "date": "2026-11-13",
+        "event_url": "https://theatrepugetsound.org/event/poe-unexpected-edgar-allan-poe-improvised/2026-11-13/"
+      },
+      {
+        "date": "2026-11-07",
+        "event_url": "https://theatrepugetsound.org/event/poe-unexpected-edgar-allan-poe-improvised/2026-11-07/"
+      },
+      {
+        "date": "2026-11-06",
+        "event_url": "https://theatrepugetsound.org/event/poe-unexpected-edgar-allan-poe-improvised/2026-11-06/"
+      },
+      {
+        "date": "2026-10-31",
+        "event_url": "https://theatrepugetsound.org/event/poe-unexpected-edgar-allan-poe-improvised/2026-10-31/"
+      },
+      {
+        "date": "2026-10-30",
+        "event_url": "https://theatrepugetsound.org/event/poe-unexpected-edgar-allan-poe-improvised/2026-10-30/"
+      }
+    ]
   },
   {
     "title": "The Chinese Lady",
@@ -252,7 +584,81 @@
     ],
     "producer": "Theatre Puget Sound",
     "event_url": "https://theatrepugetsound.org/event/the-chinese-lady/2026-10-29/",
-    "source_priority": 1
+    "source_priority": 1,
+    "performance_occurrences": [
+      {
+        "date": "2026-12-05",
+        "event_url": "https://theatrepugetsound.org/event/the-chinese-lady/2026-12-05/"
+      },
+      {
+        "date": "2026-12-04",
+        "event_url": "https://theatrepugetsound.org/event/the-chinese-lady/2026-12-04/"
+      },
+      {
+        "date": "2026-12-03",
+        "event_url": "https://theatrepugetsound.org/event/the-chinese-lady/2026-12-03/"
+      },
+      {
+        "date": "2026-11-28",
+        "event_url": "https://theatrepugetsound.org/event/the-chinese-lady/2026-11-28/"
+      },
+      {
+        "date": "2026-11-27",
+        "event_url": "https://theatrepugetsound.org/event/the-chinese-lady/2026-11-27/"
+      },
+      {
+        "date": "2026-11-26",
+        "event_url": "https://theatrepugetsound.org/event/the-chinese-lady/2026-11-26/"
+      },
+      {
+        "date": "2026-11-21",
+        "event_url": "https://theatrepugetsound.org/event/the-chinese-lady/2026-11-21/"
+      },
+      {
+        "date": "2026-11-20",
+        "event_url": "https://theatrepugetsound.org/event/the-chinese-lady/2026-11-20/"
+      },
+      {
+        "date": "2026-11-19",
+        "event_url": "https://theatrepugetsound.org/event/the-chinese-lady/2026-11-19/"
+      },
+      {
+        "date": "2026-11-14",
+        "event_url": "https://theatrepugetsound.org/event/the-chinese-lady/2026-11-14/"
+      },
+      {
+        "date": "2026-11-13",
+        "event_url": "https://theatrepugetsound.org/event/the-chinese-lady/2026-11-13/"
+      },
+      {
+        "date": "2026-11-12",
+        "event_url": "https://theatrepugetsound.org/event/the-chinese-lady/2026-11-12/"
+      },
+      {
+        "date": "2026-11-07",
+        "event_url": "https://theatrepugetsound.org/event/the-chinese-lady/2026-11-07/"
+      },
+      {
+        "date": "2026-11-06",
+        "event_url": "https://theatrepugetsound.org/event/the-chinese-lady/2026-11-06/"
+      },
+      {
+        "date": "2026-11-05",
+        "event_url": "https://theatrepugetsound.org/event/the-chinese-lady/2026-11-05/"
+      },
+      {
+        "date": "2026-10-31",
+        "event_url": "https://theatrepugetsound.org/event/the-chinese-lady/2026-10-31/"
+      },
+      {
+        "date": "2026-10-30",
+        "event_url": "https://theatrepugetsound.org/event/the-chinese-lady/2026-10-30/"
+      },
+      {
+        "date": "2026-10-29",
+        "event_url": "https://theatrepugetsound.org/event/the-chinese-lady/2026-10-29/"
+      }
+    ]
   },
   {
     "title": "Nanay",
@@ -291,7 +697,97 @@
     ],
     "producer": "Theatre Puget Sound",
     "event_url": "https://theatrepugetsound.org/event/nanay/2026-10-30/",
-    "source_priority": 1
+    "source_priority": 1,
+    "performance_occurrences": [
+      {
+        "date": "2026-12-05",
+        "event_url": "https://theatrepugetsound.org/event/nanay/2026-12-05/"
+      },
+      {
+        "date": "2026-12-04",
+        "event_url": "https://theatrepugetsound.org/event/nanay/2026-12-04/"
+      },
+      {
+        "date": "2026-12-03",
+        "event_url": "https://theatrepugetsound.org/event/nanay/2026-12-03/"
+      },
+      {
+        "date": "2026-11-28",
+        "event_url": "https://theatrepugetsound.org/event/nanay/2026-11-28/"
+      },
+      {
+        "date": "2026-11-27",
+        "event_url": "https://theatrepugetsound.org/event/nanay/2026-11-27/"
+      },
+      {
+        "date": "2026-11-26",
+        "event_url": "https://theatrepugetsound.org/event/nanay/2026-11-26/"
+      },
+      {
+        "date": "2026-11-21",
+        "event_url": "https://theatrepugetsound.org/event/nanay/2026-11-21/"
+      },
+      {
+        "date": "2026-11-20",
+        "event_url": "https://theatrepugetsound.org/event/nanay/2026-11-20/"
+      },
+      {
+        "date": "2026-11-19",
+        "event_url": "https://theatrepugetsound.org/event/nanay/2026-11-19/"
+      },
+      {
+        "date": "2026-11-14",
+        "event_url": "https://theatrepugetsound.org/event/nanay/2026-11-14/2/"
+      },
+      {
+        "date": "2026-11-14",
+        "event_url": "https://theatrepugetsound.org/event/nanay/2026-11-14/1/"
+      },
+      {
+        "date": "2026-11-13",
+        "event_url": "https://theatrepugetsound.org/event/nanay/2026-11-13/"
+      },
+      {
+        "date": "2026-11-12",
+        "event_url": "https://theatrepugetsound.org/event/nanay/2026-11-12/"
+      },
+      {
+        "date": "2026-11-11",
+        "event_url": "https://theatrepugetsound.org/event/nanay/2026-11-11/"
+      },
+      {
+        "date": "2026-11-09",
+        "event_url": "https://theatrepugetsound.org/event/nanay/2026-11-09/"
+      },
+      {
+        "date": "2026-11-08",
+        "event_url": "https://theatrepugetsound.org/event/nanay/2026-11-08/"
+      },
+      {
+        "date": "2026-11-07",
+        "event_url": "https://theatrepugetsound.org/event/nanay/2026-11-07/"
+      },
+      {
+        "date": "2026-11-06",
+        "event_url": "https://theatrepugetsound.org/event/nanay/2026-11-06/"
+      },
+      {
+        "date": "2026-11-05",
+        "event_url": "https://theatrepugetsound.org/event/nanay/2026-11-05/"
+      },
+      {
+        "date": "2026-11-01",
+        "event_url": "https://theatrepugetsound.org/event/nanay/2026-11-01/"
+      },
+      {
+        "date": "2026-10-31",
+        "event_url": "https://theatrepugetsound.org/event/nanay/2026-10-31/"
+      },
+      {
+        "date": "2026-10-30",
+        "event_url": "https://theatrepugetsound.org/event/nanay/2026-10-30/"
+      }
+    ]
   },
   {
     "title": "THE DUMB WAITER by Harold Pinter",
@@ -318,7 +814,45 @@
     ],
     "producer": "Theatre Puget Sound",
     "event_url": "https://theatrepugetsound.org/event/the-dumb-waiter-by-harold-pinter/2026-10-29/",
-    "source_priority": 1
+    "source_priority": 1,
+    "performance_occurrences": [
+      {
+        "date": "2026-11-28",
+        "event_url": "https://theatrepugetsound.org/event/the-dumb-waiter-by-harold-pinter/2026-11-28/"
+      },
+      {
+        "date": "2026-11-27",
+        "event_url": "https://theatrepugetsound.org/event/the-dumb-waiter-by-harold-pinter/2026-11-27/"
+      },
+      {
+        "date": "2026-11-26",
+        "event_url": "https://theatrepugetsound.org/event/the-dumb-waiter-by-harold-pinter/2026-11-26/"
+      },
+      {
+        "date": "2026-11-14",
+        "event_url": "https://theatrepugetsound.org/event/the-dumb-waiter-by-harold-pinter/2026-11-14/"
+      },
+      {
+        "date": "2026-11-13",
+        "event_url": "https://theatrepugetsound.org/event/the-dumb-waiter-by-harold-pinter/2026-11-13/"
+      },
+      {
+        "date": "2026-11-12",
+        "event_url": "https://theatrepugetsound.org/event/the-dumb-waiter-by-harold-pinter/2026-11-12/"
+      },
+      {
+        "date": "2026-10-31",
+        "event_url": "https://theatrepugetsound.org/event/the-dumb-waiter-by-harold-pinter/2026-10-31/"
+      },
+      {
+        "date": "2026-10-30",
+        "event_url": "https://theatrepugetsound.org/event/the-dumb-waiter-by-harold-pinter/2026-10-30/"
+      },
+      {
+        "date": "2026-10-29",
+        "event_url": "https://theatrepugetsound.org/event/the-dumb-waiter-by-harold-pinter/2026-10-29/"
+      }
+    ]
   },
   {
     "title": "Come On-A My House",
@@ -337,7 +871,13 @@
     ],
     "producer": "Theatre Puget Sound",
     "event_url": "https://theatrepugetsound.org/event/come-on-a-my-house/",
-    "source_priority": 1
+    "source_priority": 1,
+    "performance_occurrences": [
+      {
+        "date": "2026-11-28",
+        "event_url": "https://theatrepugetsound.org/event/come-on-a-my-house/"
+      }
+    ]
   },
   {
     "title": "Cinema Unexpected: An Improvised Movie Live",
@@ -359,7 +899,25 @@
     ],
     "producer": "Theatre Puget Sound",
     "event_url": "https://theatrepugetsound.org/event/cinema-unexpected-an-improvised-movie-live/2026-11-01/",
-    "source_priority": 1
+    "source_priority": 1,
+    "performance_occurrences": [
+      {
+        "date": "2026-11-22",
+        "event_url": "https://theatrepugetsound.org/event/cinema-unexpected-an-improvised-movie-live/2026-11-22/"
+      },
+      {
+        "date": "2026-11-15",
+        "event_url": "https://theatrepugetsound.org/event/cinema-unexpected-an-improvised-movie-live/2026-11-15/"
+      },
+      {
+        "date": "2026-11-08",
+        "event_url": "https://theatrepugetsound.org/event/cinema-unexpected-an-improvised-movie-live/2026-11-08/"
+      },
+      {
+        "date": "2026-11-01",
+        "event_url": "https://theatrepugetsound.org/event/cinema-unexpected-an-improvised-movie-live/2026-11-01/"
+      }
+    ]
   },
   {
     "title": "St. Luke’s Theatre Company Presents “Working: A Musical”",
@@ -383,7 +941,41 @@
     ],
     "producer": "Theatre Puget Sound",
     "event_url": "https://theatrepugetsound.org/event/st-lukes-theatre-company-presents-working-a-musical/2026-11-13/",
-    "source_priority": 1
+    "source_priority": 1,
+    "performance_occurrences": [
+      {
+        "date": "2026-11-22",
+        "event_url": "https://theatrepugetsound.org/event/st-lukes-theatre-company-presents-working-a-musical/2026-11-22/"
+      },
+      {
+        "date": "2026-11-21",
+        "event_url": "https://theatrepugetsound.org/event/st-lukes-theatre-company-presents-working-a-musical/2026-11-21/2/"
+      },
+      {
+        "date": "2026-11-21",
+        "event_url": "https://theatrepugetsound.org/event/st-lukes-theatre-company-presents-working-a-musical/2026-11-21/1/"
+      },
+      {
+        "date": "2026-11-20",
+        "event_url": "https://theatrepugetsound.org/event/st-lukes-theatre-company-presents-working-a-musical/2026-11-20/"
+      },
+      {
+        "date": "2026-11-15",
+        "event_url": "https://theatrepugetsound.org/event/st-lukes-theatre-company-presents-working-a-musical/2026-11-15/"
+      },
+      {
+        "date": "2026-11-14",
+        "event_url": "https://theatrepugetsound.org/event/st-lukes-theatre-company-presents-working-a-musical/2026-11-14/2/"
+      },
+      {
+        "date": "2026-11-14",
+        "event_url": "https://theatrepugetsound.org/event/st-lukes-theatre-company-presents-working-a-musical/2026-11-14/1/"
+      },
+      {
+        "date": "2026-11-13",
+        "event_url": "https://theatrepugetsound.org/event/st-lukes-theatre-company-presents-working-a-musical/2026-11-13/"
+      }
+    ]
   },
   {
     "title": "Little Mermaid Original Musical Adaptation",
@@ -403,7 +995,17 @@
     ],
     "producer": "Theatre Puget Sound",
     "event_url": "https://theatrepugetsound.org/event/little-mermaid-original-musical-adaptation/2026-11-21/",
-    "source_priority": 1
+    "source_priority": 1,
+    "performance_occurrences": [
+      {
+        "date": "2026-11-22",
+        "event_url": "https://theatrepugetsound.org/event/little-mermaid-original-musical-adaptation/2026-11-22/"
+      },
+      {
+        "date": "2026-11-21",
+        "event_url": "https://theatrepugetsound.org/event/little-mermaid-original-musical-adaptation/2026-11-21/"
+      }
+    ]
   },
   {
     "title": "Kit, Cat and Caboodle: An Improvised Musical Retrospective",
@@ -426,7 +1028,29 @@
     ],
     "producer": "Theatre Puget Sound",
     "event_url": "https://theatrepugetsound.org/event/kit-cat-and-caboodle-an-improvised-musical-retrospective/2026-11-07/",
-    "source_priority": 1
+    "source_priority": 1,
+    "performance_occurrences": [
+      {
+        "date": "2026-11-21",
+        "event_url": "https://theatrepugetsound.org/event/kit-cat-and-caboodle-an-improvised-musical-retrospective/2026-11-21/"
+      },
+      {
+        "date": "2026-11-20",
+        "event_url": "https://theatrepugetsound.org/event/kit-cat-and-caboodle-an-improvised-musical-retrospective/2026-11-20/"
+      },
+      {
+        "date": "2026-11-14",
+        "event_url": "https://theatrepugetsound.org/event/kit-cat-and-caboodle-an-improvised-musical-retrospective/2026-11-14/"
+      },
+      {
+        "date": "2026-11-13",
+        "event_url": "https://theatrepugetsound.org/event/kit-cat-and-caboodle-an-improvised-musical-retrospective/2026-11-13/"
+      },
+      {
+        "date": "2026-11-07",
+        "event_url": "https://theatrepugetsound.org/event/kit-cat-and-caboodle-an-improvised-musical-retrospective/2026-11-07/"
+      }
+    ]
   },
   {
     "title": "Table 17",
@@ -459,7 +1083,93 @@
     ],
     "producer": "Theatre Puget Sound",
     "event_url": "https://theatrepugetsound.org/event/table-17/2026-10-28/",
-    "source_priority": 1
+    "source_priority": 1,
+    "performance_occurrences": [
+      {
+        "date": "2026-11-15",
+        "event_url": "https://theatrepugetsound.org/event/table-17/2026-11-15/"
+      },
+      {
+        "date": "2026-11-14",
+        "event_url": "https://theatrepugetsound.org/event/table-17/2026-11-14/2/"
+      },
+      {
+        "date": "2026-11-14",
+        "event_url": "https://theatrepugetsound.org/event/table-17/2026-11-14/1/"
+      },
+      {
+        "date": "2026-11-13",
+        "event_url": "https://theatrepugetsound.org/event/table-17/2026-11-13/"
+      },
+      {
+        "date": "2026-11-12",
+        "event_url": "https://theatrepugetsound.org/event/table-17/2026-11-12/2/"
+      },
+      {
+        "date": "2026-11-12",
+        "event_url": "https://theatrepugetsound.org/event/table-17/2026-11-12/1/"
+      },
+      {
+        "date": "2026-11-08",
+        "event_url": "https://theatrepugetsound.org/event/table-17/2026-11-08/2/"
+      },
+      {
+        "date": "2026-11-08",
+        "event_url": "https://theatrepugetsound.org/event/table-17/2026-11-08/1/"
+      },
+      {
+        "date": "2026-11-07",
+        "event_url": "https://theatrepugetsound.org/event/table-17/2026-11-07/2/"
+      },
+      {
+        "date": "2026-11-07",
+        "event_url": "https://theatrepugetsound.org/event/table-17/2026-11-07/1/"
+      },
+      {
+        "date": "2026-11-06",
+        "event_url": "https://theatrepugetsound.org/event/table-17/2026-11-06/"
+      },
+      {
+        "date": "2026-11-05",
+        "event_url": "https://theatrepugetsound.org/event/table-17/2026-11-05/"
+      },
+      {
+        "date": "2026-11-04",
+        "event_url": "https://theatrepugetsound.org/event/table-17/2026-11-04/"
+      },
+      {
+        "date": "2026-11-03",
+        "event_url": "https://theatrepugetsound.org/event/table-17/2026-11-03/"
+      },
+      {
+        "date": "2026-11-01",
+        "event_url": "https://theatrepugetsound.org/event/table-17/2026-11-01/2/"
+      },
+      {
+        "date": "2026-11-01",
+        "event_url": "https://theatrepugetsound.org/event/table-17/2026-11-01/1/"
+      },
+      {
+        "date": "2026-10-31",
+        "event_url": "https://theatrepugetsound.org/event/table-17/2026-10-31/2/"
+      },
+      {
+        "date": "2026-10-31",
+        "event_url": "https://theatrepugetsound.org/event/table-17/2026-10-31/1/"
+      },
+      {
+        "date": "2026-10-30",
+        "event_url": "https://theatrepugetsound.org/event/table-17/2026-10-30/"
+      },
+      {
+        "date": "2026-10-29",
+        "event_url": "https://theatrepugetsound.org/event/table-17/2026-10-29/"
+      },
+      {
+        "date": "2026-10-28",
+        "event_url": "https://theatrepugetsound.org/event/table-17/2026-10-28/"
+      }
+    ]
   },
   {
     "title": "Smoke on the Mountain",
@@ -489,7 +1199,57 @@
     ],
     "producer": "Theatre Puget Sound",
     "event_url": "https://theatrepugetsound.org/event/smoke-on-the-mountain/2026-10-28/",
-    "source_priority": 1
+    "source_priority": 1,
+    "performance_occurrences": [
+      {
+        "date": "2026-11-14",
+        "event_url": "https://theatrepugetsound.org/event/smoke-on-the-mountain/2026-11-14/"
+      },
+      {
+        "date": "2026-11-13",
+        "event_url": "https://theatrepugetsound.org/event/smoke-on-the-mountain/2026-11-13/"
+      },
+      {
+        "date": "2026-11-12",
+        "event_url": "https://theatrepugetsound.org/event/smoke-on-the-mountain/2026-11-12/"
+      },
+      {
+        "date": "2026-11-11",
+        "event_url": "https://theatrepugetsound.org/event/smoke-on-the-mountain/2026-11-11/"
+      },
+      {
+        "date": "2026-11-07",
+        "event_url": "https://theatrepugetsound.org/event/smoke-on-the-mountain/2026-11-07/"
+      },
+      {
+        "date": "2026-11-06",
+        "event_url": "https://theatrepugetsound.org/event/smoke-on-the-mountain/2026-11-06/"
+      },
+      {
+        "date": "2026-11-05",
+        "event_url": "https://theatrepugetsound.org/event/smoke-on-the-mountain/2026-11-05/"
+      },
+      {
+        "date": "2026-11-04",
+        "event_url": "https://theatrepugetsound.org/event/smoke-on-the-mountain/2026-11-04/"
+      },
+      {
+        "date": "2026-10-31",
+        "event_url": "https://theatrepugetsound.org/event/smoke-on-the-mountain/2026-10-31/"
+      },
+      {
+        "date": "2026-10-30",
+        "event_url": "https://theatrepugetsound.org/event/smoke-on-the-mountain/2026-10-30/"
+      },
+      {
+        "date": "2026-10-29",
+        "event_url": "https://theatrepugetsound.org/event/smoke-on-the-mountain/2026-10-29/"
+      },
+      {
+        "date": "2026-10-28",
+        "event_url": "https://theatrepugetsound.org/event/smoke-on-the-mountain/2026-10-28/"
+      }
+    ]
   },
   {
     "title": "Cold Reads/Cold Brews",
@@ -508,7 +1268,13 @@
     ],
     "producer": "Theatre Puget Sound",
     "event_url": "https://theatrepugetsound.org/event/cold-reads-cold-brews/2026-11-11/",
-    "source_priority": 1
+    "source_priority": 1,
+    "performance_occurrences": [
+      {
+        "date": "2026-11-11",
+        "event_url": "https://theatrepugetsound.org/event/cold-reads-cold-brews/2026-11-11/"
+      }
+    ]
   },
   {
     "title": "TPS Board Meeting",
@@ -526,7 +1292,13 @@
       "2026-11-10"
     ],
     "event_url": "https://theatrepugetsound.org/event/tps-board-meeting-2/2026-11-10/",
-    "source_priority": 1
+    "source_priority": 1,
+    "performance_occurrences": [
+      {
+        "date": "2026-11-10",
+        "event_url": "https://theatrepugetsound.org/event/tps-board-meeting-2/2026-11-10/"
+      }
+    ]
   },
   {
     "title": "Young Frankenstein",
@@ -551,7 +1323,41 @@
     ],
     "producer": "Theatre Puget Sound",
     "event_url": "https://theatrepugetsound.org/event/young-frankenstein/2026-10-30/",
-    "source_priority": 1
+    "source_priority": 1,
+    "performance_occurrences": [
+      {
+        "date": "2026-11-08",
+        "event_url": "https://theatrepugetsound.org/event/young-frankenstein/2026-11-08/"
+      },
+      {
+        "date": "2026-11-07",
+        "event_url": "https://theatrepugetsound.org/event/young-frankenstein/2026-11-07/2/"
+      },
+      {
+        "date": "2026-11-07",
+        "event_url": "https://theatrepugetsound.org/event/young-frankenstein/2026-11-07/1/"
+      },
+      {
+        "date": "2026-11-06",
+        "event_url": "https://theatrepugetsound.org/event/young-frankenstein/2026-11-06/"
+      },
+      {
+        "date": "2026-11-05",
+        "event_url": "https://theatrepugetsound.org/event/young-frankenstein/2026-11-05/"
+      },
+      {
+        "date": "2026-11-01",
+        "event_url": "https://theatrepugetsound.org/event/young-frankenstein/2026-11-01/"
+      },
+      {
+        "date": "2026-10-31",
+        "event_url": "https://theatrepugetsound.org/event/young-frankenstein/2026-10-31/"
+      },
+      {
+        "date": "2026-10-30",
+        "event_url": "https://theatrepugetsound.org/event/young-frankenstein/2026-10-30/"
+      }
+    ]
   },
   {
     "title": "Improv & Flow: Seattle Center",
@@ -570,7 +1376,13 @@
     ],
     "producer": "Theatre Puget Sound",
     "event_url": "https://theatrepugetsound.org/event/improv-flow-seattle-center/2026-11-08/",
-    "source_priority": 1
+    "source_priority": 1,
+    "performance_occurrences": [
+      {
+        "date": "2026-11-08",
+        "event_url": "https://theatrepugetsound.org/event/improv-flow-seattle-center/2026-11-08/"
+      }
+    ]
   },
   {
     "title": "Trouble Feature at Jules Maes Saloon",
@@ -591,7 +1403,21 @@
     ],
     "producer": "Theatre Puget Sound",
     "event_url": "https://theatrepugetsound.org/event/trouble-feature-at-jules-maes-saloon/2026-10-28/",
-    "source_priority": 1
+    "source_priority": 1,
+    "performance_occurrences": [
+      {
+        "date": "2026-11-01",
+        "event_url": "https://theatrepugetsound.org/event/trouble-feature-at-jules-maes-saloon/2026-11-01/"
+      },
+      {
+        "date": "2026-10-29",
+        "event_url": "https://theatrepugetsound.org/event/trouble-feature-at-jules-maes-saloon/2026-10-29/"
+      },
+      {
+        "date": "2026-10-28",
+        "event_url": "https://theatrepugetsound.org/event/trouble-feature-at-jules-maes-saloon/2026-10-28/"
+      }
+    ]
   },
   {
     "title": "The Guy Who Didn’t Like Musicals",
@@ -612,7 +1438,21 @@
     ],
     "producer": "Theatre Puget Sound",
     "event_url": "https://theatrepugetsound.org/event/the-guy-who-didnt-like-musicals/2026-10-30/",
-    "source_priority": 1
+    "source_priority": 1,
+    "performance_occurrences": [
+      {
+        "date": "2026-11-01",
+        "event_url": "https://theatrepugetsound.org/event/the-guy-who-didnt-like-musicals/2026-11-01/"
+      },
+      {
+        "date": "2026-10-31",
+        "event_url": "https://theatrepugetsound.org/event/the-guy-who-didnt-like-musicals/2026-10-31/"
+      },
+      {
+        "date": "2026-10-30",
+        "event_url": "https://theatrepugetsound.org/event/the-guy-who-didnt-like-musicals/2026-10-30/"
+      }
+    ]
   },
   {
     "title": "2026 Gregory Awards: A Grand Bacchanal",
@@ -630,7 +1470,13 @@
       "2026-10-26"
     ],
     "event_url": "https://theatrepugetsound.org/event/2026-gregory-awards-a-grand-bacchanal/",
-    "source_priority": 1
+    "source_priority": 1,
+    "performance_occurrences": [
+      {
+        "date": "2026-10-26",
+        "event_url": "https://theatrepugetsound.org/event/2026-gregory-awards-a-grand-bacchanal/"
+      }
+    ]
   },
   {
     "title": "Rocky Horror Improv Show",
@@ -656,7 +1502,45 @@
       "2026-12-06"
     ],
     "event_url": "https://theatrepugetsound.org/event/rocky-horror-improv-show/2026-12-06/",
-    "source_priority": 1
+    "source_priority": 1,
+    "performance_occurrences": [
+      {
+        "date": "2026-10-25",
+        "event_url": "https://theatrepugetsound.org/event/rocky-horror-improv-show/2026-10-25/"
+      },
+      {
+        "date": "2026-10-31",
+        "event_url": "https://theatrepugetsound.org/event/rocky-horror-improv-show/2026-10-31/2/"
+      },
+      {
+        "date": "2026-11-01",
+        "event_url": "https://theatrepugetsound.org/event/rocky-horror-improv-show/2026-11-01/"
+      },
+      {
+        "date": "2026-11-07",
+        "event_url": "https://theatrepugetsound.org/event/rocky-horror-improv-show/2026-11-07/"
+      },
+      {
+        "date": "2026-11-22",
+        "event_url": "https://theatrepugetsound.org/event/rocky-horror-improv-show/2026-11-22/"
+      },
+      {
+        "date": "2026-11-28",
+        "event_url": "https://theatrepugetsound.org/event/rocky-horror-improv-show/2026-11-28/"
+      },
+      {
+        "date": "2026-11-29",
+        "event_url": "https://theatrepugetsound.org/event/rocky-horror-improv-show/2026-11-29/"
+      },
+      {
+        "date": "2026-12-05",
+        "event_url": "https://theatrepugetsound.org/event/rocky-horror-improv-show/2026-12-05/"
+      },
+      {
+        "date": "2026-12-06",
+        "event_url": "https://theatrepugetsound.org/event/rocky-horror-improv-show/2026-12-06/"
+      }
+    ]
   },
   {
     "title": "2026 Gregory Awards: A Grand Bacchanal",
@@ -674,7 +1558,13 @@
       "2026-10-26"
     ],
     "event_url": "https://theatrepugetsound.org/event/2026-gregory-awards-a-grand-bacchanal/",
-    "source_priority": 1
+    "source_priority": 1,
+    "performance_occurrences": [
+      {
+        "date": "2026-10-26",
+        "event_url": "https://theatrepugetsound.org/event/2026-gregory-awards-a-grand-bacchanal/"
+      }
+    ]
   },
   {
     "title": "Smoke on the Mountain",
@@ -702,7 +1592,53 @@
       "2026-11-13"
     ],
     "event_url": "https://theatrepugetsound.org/event/smoke-on-the-mountain/2026-11-13/",
-    "source_priority": 1
+    "source_priority": 1,
+    "performance_occurrences": [
+      {
+        "date": "2026-10-28",
+        "event_url": "https://theatrepugetsound.org/event/smoke-on-the-mountain/2026-10-28/"
+      },
+      {
+        "date": "2026-10-29",
+        "event_url": "https://theatrepugetsound.org/event/smoke-on-the-mountain/2026-10-29/"
+      },
+      {
+        "date": "2026-10-30",
+        "event_url": "https://theatrepugetsound.org/event/smoke-on-the-mountain/2026-10-30/"
+      },
+      {
+        "date": "2026-10-31",
+        "event_url": "https://theatrepugetsound.org/event/smoke-on-the-mountain/2026-10-31/"
+      },
+      {
+        "date": "2026-11-04",
+        "event_url": "https://theatrepugetsound.org/event/smoke-on-the-mountain/2026-11-04/"
+      },
+      {
+        "date": "2026-11-05",
+        "event_url": "https://theatrepugetsound.org/event/smoke-on-the-mountain/2026-11-05/"
+      },
+      {
+        "date": "2026-11-06",
+        "event_url": "https://theatrepugetsound.org/event/smoke-on-the-mountain/2026-11-06/"
+      },
+      {
+        "date": "2026-11-07",
+        "event_url": "https://theatrepugetsound.org/event/smoke-on-the-mountain/2026-11-07/"
+      },
+      {
+        "date": "2026-11-11",
+        "event_url": "https://theatrepugetsound.org/event/smoke-on-the-mountain/2026-11-11/"
+      },
+      {
+        "date": "2026-11-12",
+        "event_url": "https://theatrepugetsound.org/event/smoke-on-the-mountain/2026-11-12/"
+      },
+      {
+        "date": "2026-11-13",
+        "event_url": "https://theatrepugetsound.org/event/smoke-on-the-mountain/2026-11-13/"
+      }
+    ]
   },
   {
     "title": "Table 17",
@@ -732,7 +1668,61 @@
       "2026-11-15"
     ],
     "event_url": "https://theatrepugetsound.org/event/table-17/2026-11-15/",
-    "source_priority": 1
+    "source_priority": 1,
+    "performance_occurrences": [
+      {
+        "date": "2026-10-28",
+        "event_url": "https://theatrepugetsound.org/event/table-17/2026-10-28/"
+      },
+      {
+        "date": "2026-10-29",
+        "event_url": "https://theatrepugetsound.org/event/table-17/2026-10-29/"
+      },
+      {
+        "date": "2026-10-31",
+        "event_url": "https://theatrepugetsound.org/event/table-17/2026-10-31/1/"
+      },
+      {
+        "date": "2026-11-01",
+        "event_url": "https://theatrepugetsound.org/event/table-17/2026-11-01/1/"
+      },
+      {
+        "date": "2026-11-03",
+        "event_url": "https://theatrepugetsound.org/event/table-17/2026-11-03/"
+      },
+      {
+        "date": "2026-11-04",
+        "event_url": "https://theatrepugetsound.org/event/table-17/2026-11-04/"
+      },
+      {
+        "date": "2026-11-05",
+        "event_url": "https://theatrepugetsound.org/event/table-17/2026-11-05/"
+      },
+      {
+        "date": "2026-11-06",
+        "event_url": "https://theatrepugetsound.org/event/table-17/2026-11-06/"
+      },
+      {
+        "date": "2026-11-07",
+        "event_url": "https://theatrepugetsound.org/event/table-17/2026-11-07/1/"
+      },
+      {
+        "date": "2026-11-08",
+        "event_url": "https://theatrepugetsound.org/event/table-17/2026-11-08/1/"
+      },
+      {
+        "date": "2026-11-12",
+        "event_url": "https://theatrepugetsound.org/event/table-17/2026-11-12/1/"
+      },
+      {
+        "date": "2026-11-14",
+        "event_url": "https://theatrepugetsound.org/event/table-17/2026-11-14/1/"
+      },
+      {
+        "date": "2026-11-15",
+        "event_url": "https://theatrepugetsound.org/event/table-17/2026-11-15/"
+      }
+    ]
   },
   {
     "title": "नेहा & Neel (Neha and Neel | नेहा और नील)",
@@ -751,7 +1741,17 @@
       "2026-11-19"
     ],
     "event_url": "https://theatrepugetsound.org/event/%e0%a4%a8%e0%a5%87%e0%a4%b9%e0%a4%be-neel-neha-and-neel-%e0%a4%a8%e0%a5%87%e0%a4%b9%e0%a4%be-%e0%a4%94%e0%a4%b0-%e0%a4%a8%e0%a5%80%e0%a4%b2/2026-11-19/",
-    "source_priority": 1
+    "source_priority": 1,
+    "performance_occurrences": [
+      {
+        "date": "2026-10-28",
+        "event_url": "https://theatrepugetsound.org/event/%e0%a4%a8%e0%a5%87%e0%a4%b9%e0%a4%be-neel-neha-and-neel-%e0%a4%a8%e0%a5%87%e0%a4%b9%e0%a4%be-%e0%a4%94%e0%a4%b0-%e0%a4%a8%e0%a5%80%e0%a4%b2/2026-10-28/"
+      },
+      {
+        "date": "2026-11-19",
+        "event_url": "https://theatrepugetsound.org/event/%e0%a4%a8%e0%a5%87%e0%a4%b9%e0%a4%be-neel-neha-and-neel-%e0%a4%a8%e0%a5%87%e0%a4%b9%e0%a4%be-%e0%a4%94%e0%a4%b0-%e0%a4%a8%e0%a5%80%e0%a4%b2/2026-11-19/"
+      }
+    ]
   },
   {
     "title": "THE DUMB WAITER by Harold Pinter",
@@ -775,7 +1775,37 @@
       "2026-11-28"
     ],
     "event_url": "https://theatrepugetsound.org/event/the-dumb-waiter-by-harold-pinter/2026-11-28/",
-    "source_priority": 1
+    "source_priority": 1,
+    "performance_occurrences": [
+      {
+        "date": "2026-10-29",
+        "event_url": "https://theatrepugetsound.org/event/the-dumb-waiter-by-harold-pinter/2026-10-29/"
+      },
+      {
+        "date": "2026-10-30",
+        "event_url": "https://theatrepugetsound.org/event/the-dumb-waiter-by-harold-pinter/2026-10-30/"
+      },
+      {
+        "date": "2026-11-12",
+        "event_url": "https://theatrepugetsound.org/event/the-dumb-waiter-by-harold-pinter/2026-11-12/"
+      },
+      {
+        "date": "2026-11-13",
+        "event_url": "https://theatrepugetsound.org/event/the-dumb-waiter-by-harold-pinter/2026-11-13/"
+      },
+      {
+        "date": "2026-11-26",
+        "event_url": "https://theatrepugetsound.org/event/the-dumb-waiter-by-harold-pinter/2026-11-26/"
+      },
+      {
+        "date": "2026-11-27",
+        "event_url": "https://theatrepugetsound.org/event/the-dumb-waiter-by-harold-pinter/2026-11-27/"
+      },
+      {
+        "date": "2026-11-28",
+        "event_url": "https://theatrepugetsound.org/event/the-dumb-waiter-by-harold-pinter/2026-11-28/"
+      }
+    ]
   },
   {
     "title": "Young Frankenstein",
@@ -796,7 +1826,25 @@
       "2026-11-07"
     ],
     "event_url": "https://theatrepugetsound.org/event/young-frankenstein/2026-11-07/1/",
-    "source_priority": 1
+    "source_priority": 1,
+    "performance_occurrences": [
+      {
+        "date": "2026-10-30",
+        "event_url": "https://theatrepugetsound.org/event/young-frankenstein/2026-10-30/"
+      },
+      {
+        "date": "2026-11-05",
+        "event_url": "https://theatrepugetsound.org/event/young-frankenstein/2026-11-05/"
+      },
+      {
+        "date": "2026-11-06",
+        "event_url": "https://theatrepugetsound.org/event/young-frankenstein/2026-11-06/"
+      },
+      {
+        "date": "2026-11-07",
+        "event_url": "https://theatrepugetsound.org/event/young-frankenstein/2026-11-07/1/"
+      }
+    ]
   },
   {
     "title": "The Guy Who Didn’t Like Musicals",
@@ -815,7 +1863,17 @@
       "2026-11-01"
     ],
     "event_url": "https://theatrepugetsound.org/event/the-guy-who-didnt-like-musicals/2026-11-01/",
-    "source_priority": 1
+    "source_priority": 1,
+    "performance_occurrences": [
+      {
+        "date": "2026-10-31",
+        "event_url": "https://theatrepugetsound.org/event/the-guy-who-didnt-like-musicals/2026-10-31/"
+      },
+      {
+        "date": "2026-11-01",
+        "event_url": "https://theatrepugetsound.org/event/the-guy-who-didnt-like-musicals/2026-11-01/"
+      }
+    ]
   },
   {
     "title": "Nanay",
@@ -843,7 +1901,53 @@
       "2026-12-04"
     ],
     "event_url": "https://theatrepugetsound.org/event/nanay/2026-12-04/",
-    "source_priority": 1
+    "source_priority": 1,
+    "performance_occurrences": [
+      {
+        "date": "2026-11-01",
+        "event_url": "https://theatrepugetsound.org/event/nanay/2026-11-01/"
+      },
+      {
+        "date": "2026-11-08",
+        "event_url": "https://theatrepugetsound.org/event/nanay/2026-11-08/"
+      },
+      {
+        "date": "2026-11-09",
+        "event_url": "https://theatrepugetsound.org/event/nanay/2026-11-09/"
+      },
+      {
+        "date": "2026-11-11",
+        "event_url": "https://theatrepugetsound.org/event/nanay/2026-11-11/"
+      },
+      {
+        "date": "2026-11-14",
+        "event_url": "https://theatrepugetsound.org/event/nanay/2026-11-14/1/"
+      },
+      {
+        "date": "2026-11-19",
+        "event_url": "https://theatrepugetsound.org/event/nanay/2026-11-19/"
+      },
+      {
+        "date": "2026-11-20",
+        "event_url": "https://theatrepugetsound.org/event/nanay/2026-11-20/"
+      },
+      {
+        "date": "2026-11-26",
+        "event_url": "https://theatrepugetsound.org/event/nanay/2026-11-26/"
+      },
+      {
+        "date": "2026-11-27",
+        "event_url": "https://theatrepugetsound.org/event/nanay/2026-11-27/"
+      },
+      {
+        "date": "2026-12-03",
+        "event_url": "https://theatrepugetsound.org/event/nanay/2026-12-03/"
+      },
+      {
+        "date": "2026-12-04",
+        "event_url": "https://theatrepugetsound.org/event/nanay/2026-12-04/"
+      }
+    ]
   },
   {
     "title": "Improv & Flow: Seattle Center",
@@ -861,7 +1965,13 @@
       "2026-11-08"
     ],
     "event_url": "https://theatrepugetsound.org/event/improv-flow-seattle-center/2026-11-08/",
-    "source_priority": 1
+    "source_priority": 1,
+    "performance_occurrences": [
+      {
+        "date": "2026-11-08",
+        "event_url": "https://theatrepugetsound.org/event/improv-flow-seattle-center/2026-11-08/"
+      }
+    ]
   },
   {
     "title": "Cold Reads/Cold Brews",
@@ -879,7 +1989,13 @@
       "2026-11-11"
     ],
     "event_url": "https://theatrepugetsound.org/event/cold-reads-cold-brews/2026-11-11/",
-    "source_priority": 1
+    "source_priority": 1,
+    "performance_occurrences": [
+      {
+        "date": "2026-11-11",
+        "event_url": "https://theatrepugetsound.org/event/cold-reads-cold-brews/2026-11-11/"
+      }
+    ]
   },
   {
     "title": "St. Luke’s Theatre Company Presents “Working: A Musical”",
@@ -902,7 +2018,37 @@
       "2026-11-22"
     ],
     "event_url": "https://theatrepugetsound.org/event/st-lukes-theatre-company-presents-working-a-musical/2026-11-22/",
-    "source_priority": 1
+    "source_priority": 1,
+    "performance_occurrences": [
+      {
+        "date": "2026-11-13",
+        "event_url": "https://theatrepugetsound.org/event/st-lukes-theatre-company-presents-working-a-musical/2026-11-13/"
+      },
+      {
+        "date": "2026-11-14",
+        "event_url": "https://theatrepugetsound.org/event/st-lukes-theatre-company-presents-working-a-musical/2026-11-14/1/"
+      },
+      {
+        "date": "2026-11-15",
+        "event_url": "https://theatrepugetsound.org/event/st-lukes-theatre-company-presents-working-a-musical/2026-11-15/"
+      },
+      {
+        "date": "2026-11-20",
+        "event_url": "https://theatrepugetsound.org/event/st-lukes-theatre-company-presents-working-a-musical/2026-11-20/"
+      },
+      {
+        "date": "2026-11-21",
+        "event_url": "https://theatrepugetsound.org/event/st-lukes-theatre-company-presents-working-a-musical/2026-11-21/1/"
+      },
+      {
+        "date": "2026-11-21",
+        "event_url": "https://theatrepugetsound.org/event/st-lukes-theatre-company-presents-working-a-musical/2026-11-21/2/"
+      },
+      {
+        "date": "2026-11-22",
+        "event_url": "https://theatrepugetsound.org/event/st-lukes-theatre-company-presents-working-a-musical/2026-11-22/"
+      }
+    ]
   },
   {
     "title": "Cinema Unexpected: An Improvised Movie Live",
@@ -921,7 +2067,17 @@
       "2026-11-22"
     ],
     "event_url": "https://theatrepugetsound.org/event/cinema-unexpected-an-improvised-movie-live/2026-11-22/",
-    "source_priority": 1
+    "source_priority": 1,
+    "performance_occurrences": [
+      {
+        "date": "2026-11-15",
+        "event_url": "https://theatrepugetsound.org/event/cinema-unexpected-an-improvised-movie-live/2026-11-15/"
+      },
+      {
+        "date": "2026-11-22",
+        "event_url": "https://theatrepugetsound.org/event/cinema-unexpected-an-improvised-movie-live/2026-11-22/"
+      }
+    ]
   },
   {
     "title": "The Chinese Lady",
@@ -942,7 +2098,25 @@
       "2026-12-03"
     ],
     "event_url": "https://theatrepugetsound.org/event/the-chinese-lady/2026-12-03/",
-    "source_priority": 1
+    "source_priority": 1,
+    "performance_occurrences": [
+      {
+        "date": "2026-11-19",
+        "event_url": "https://theatrepugetsound.org/event/the-chinese-lady/2026-11-19/"
+      },
+      {
+        "date": "2026-11-20",
+        "event_url": "https://theatrepugetsound.org/event/the-chinese-lady/2026-11-20/"
+      },
+      {
+        "date": "2026-11-26",
+        "event_url": "https://theatrepugetsound.org/event/the-chinese-lady/2026-11-26/"
+      },
+      {
+        "date": "2026-12-03",
+        "event_url": "https://theatrepugetsound.org/event/the-chinese-lady/2026-12-03/"
+      }
+    ]
   },
   {
     "title": "Little Mermaid Original Musical Adaptation",
@@ -961,7 +2135,17 @@
       "2026-11-22"
     ],
     "event_url": "https://theatrepugetsound.org/event/little-mermaid-original-musical-adaptation/2026-11-22/",
-    "source_priority": 1
+    "source_priority": 1,
+    "performance_occurrences": [
+      {
+        "date": "2026-11-21",
+        "event_url": "https://theatrepugetsound.org/event/little-mermaid-original-musical-adaptation/2026-11-21/"
+      },
+      {
+        "date": "2026-11-22",
+        "event_url": "https://theatrepugetsound.org/event/little-mermaid-original-musical-adaptation/2026-11-22/"
+      }
+    ]
   },
   {
     "title": "A Christmas Carol",
@@ -986,7 +2170,41 @@
       "2026-12-06"
     ],
     "event_url": "https://theatrepugetsound.org/event/a-christmas-carol/2026-12-06/1/",
-    "source_priority": 1
+    "source_priority": 1,
+    "performance_occurrences": [
+      {
+        "date": "2026-11-27",
+        "event_url": "https://theatrepugetsound.org/event/a-christmas-carol/2026-11-27/"
+      },
+      {
+        "date": "2026-11-28",
+        "event_url": "https://theatrepugetsound.org/event/a-christmas-carol/2026-11-28/1/"
+      },
+      {
+        "date": "2026-11-29",
+        "event_url": "https://theatrepugetsound.org/event/a-christmas-carol/2026-11-29/"
+      },
+      {
+        "date": "2026-12-02",
+        "event_url": "https://theatrepugetsound.org/event/a-christmas-carol/2026-12-02/"
+      },
+      {
+        "date": "2026-12-03",
+        "event_url": "https://theatrepugetsound.org/event/a-christmas-carol/2026-12-03/"
+      },
+      {
+        "date": "2026-12-04",
+        "event_url": "https://theatrepugetsound.org/event/a-christmas-carol/2026-12-04/"
+      },
+      {
+        "date": "2026-12-05",
+        "event_url": "https://theatrepugetsound.org/event/a-christmas-carol/2026-12-05/1/"
+      },
+      {
+        "date": "2026-12-06",
+        "event_url": "https://theatrepugetsound.org/event/a-christmas-carol/2026-12-06/1/"
+      }
+    ]
   },
   {
     "title": "Come On-A My House",
@@ -1004,7 +2222,13 @@
       "2026-11-28"
     ],
     "event_url": "https://theatrepugetsound.org/event/come-on-a-my-house/",
-    "source_priority": 1
+    "source_priority": 1,
+    "performance_occurrences": [
+      {
+        "date": "2026-11-28",
+        "event_url": "https://theatrepugetsound.org/event/come-on-a-my-house/"
+      }
+    ]
   },
   {
     "title": "Snowed In",
@@ -1023,7 +2247,17 @@
       "2026-12-05"
     ],
     "event_url": "https://theatrepugetsound.org/event/snowed-in/2026-12-05/1/",
-    "source_priority": 1
+    "source_priority": 1,
+    "performance_occurrences": [
+      {
+        "date": "2026-11-29",
+        "event_url": "https://theatrepugetsound.org/event/snowed-in/2026-11-29/"
+      },
+      {
+        "date": "2026-12-05",
+        "event_url": "https://theatrepugetsound.org/event/snowed-in/2026-12-05/1/"
+      }
+    ]
   },
   {
     "title": "A Klingon Christmas Carol",
@@ -1042,7 +2276,17 @@
       "2026-12-06"
     ],
     "event_url": "https://theatrepugetsound.org/event/a-klingon-christmas-carol-2/2026-12-06/",
-    "source_priority": 1
+    "source_priority": 1,
+    "performance_occurrences": [
+      {
+        "date": "2026-12-04",
+        "event_url": "https://theatrepugetsound.org/event/a-klingon-christmas-carol-2/2026-12-04/"
+      },
+      {
+        "date": "2026-12-06",
+        "event_url": "https://theatrepugetsound.org/event/a-klingon-christmas-carol-2/2026-12-06/"
+      }
+    ]
   },
   {
     "title": "The Dina Martina Christmas Show",
@@ -1061,7 +2305,17 @@
       "2026-12-06"
     ],
     "event_url": "https://theatrepugetsound.org/event/the-dina-martina-christmas-show-2/2026-12-06/",
-    "source_priority": 1
+    "source_priority": 1,
+    "performance_occurrences": [
+      {
+        "date": "2026-12-05",
+        "event_url": "https://theatrepugetsound.org/event/the-dina-martina-christmas-show-2/2026-12-05/1/"
+      },
+      {
+        "date": "2026-12-06",
+        "event_url": "https://theatrepugetsound.org/event/the-dina-martina-christmas-show-2/2026-12-06/"
+      }
+    ]
   },
   {
     "title": "Free Neptune Tour",
@@ -1080,7 +2334,13 @@
     ],
     "event_url": "https://www.stgpresents.org/events/free-neptune-tour/",
     "source_priority": 5,
-    "producer_type": "presenter"
+    "producer_type": "presenter",
+    "performance_occurrences": [
+      {
+        "date": "2026-11-21",
+        "event_url": "https://www.stgpresents.org/events/free-neptune-tour/"
+      }
+    ]
   },
   {
     "title": "Adult Ballet with Mark Haim – Fall",
@@ -1102,7 +2362,25 @@
     ],
     "event_url": "https://www.stgpresents.org/events/adult-ballet-with-mark-haim-fall/",
     "source_priority": 5,
-    "producer_type": "presenter"
+    "producer_type": "presenter",
+    "performance_occurrences": [
+      {
+        "date": "2026-11-21",
+        "event_url": "https://www.stgpresents.org/events/adult-ballet-with-mark-haim-fall/"
+      },
+      {
+        "date": "2026-11-07",
+        "event_url": "https://www.stgpresents.org/events/adult-ballet-with-mark-haim-fall/"
+      },
+      {
+        "date": "2026-11-14",
+        "event_url": "https://www.stgpresents.org/events/adult-ballet-with-mark-haim-fall/"
+      },
+      {
+        "date": "2026-12-05",
+        "event_url": "https://www.stgpresents.org/events/adult-ballet-with-mark-haim-fall/"
+      }
+    ]
   },
   {
     "title": "Josh Johnson’s Comedy Band Camp",
@@ -1123,7 +2401,21 @@
     ],
     "event_url": "https://www.stgpresents.org/events/josh-johnsons-comedy-band-camp/",
     "source_priority": 5,
-    "producer_type": "presenter"
+    "producer_type": "presenter",
+    "performance_occurrences": [
+      {
+        "date": "2026-11-21",
+        "event_url": "https://www.stgpresents.org/events/josh-johnsons-comedy-band-camp/"
+      },
+      {
+        "date": "2026-11-22",
+        "event_url": "https://www.stgpresents.org/events/josh-johnsons-comedy-band-camp/"
+      },
+      {
+        "date": "2026-11-20",
+        "event_url": "https://www.stgpresents.org/events/josh-johnsons-comedy-band-camp/"
+      }
+    ]
   },
   {
     "title": "Emily Catalano",
@@ -1142,7 +2434,13 @@
     ],
     "event_url": "https://www.stgpresents.org/events/emily-catalano/",
     "source_priority": 5,
-    "producer_type": "presenter"
+    "producer_type": "presenter",
+    "performance_occurrences": [
+      {
+        "date": "2026-11-21",
+        "event_url": "https://www.stgpresents.org/events/emily-catalano/"
+      }
+    ]
   },
   {
     "title": "Switchfoot",
@@ -1161,7 +2459,13 @@
     ],
     "event_url": "https://www.stgpresents.org/events/switchfoot/",
     "source_priority": 5,
-    "producer_type": "presenter"
+    "producer_type": "presenter",
+    "performance_occurrences": [
+      {
+        "date": "2026-11-21",
+        "event_url": "https://www.stgpresents.org/events/switchfoot/"
+      }
+    ]
   },
   {
     "title": "Nutcracker! Magical Christmas Ballet",
@@ -1180,7 +2484,13 @@
     ],
     "event_url": "https://www.stgpresents.org/events/nutcracker-magical-christmas-ballet/",
     "source_priority": 5,
-    "producer_type": "presenter"
+    "producer_type": "presenter",
+    "performance_occurrences": [
+      {
+        "date": "2026-11-22",
+        "event_url": "https://www.stgpresents.org/events/nutcracker-magical-christmas-ballet/"
+      }
+    ]
   },
   {
     "title": "The Music of Hey Arnold! Live!",
@@ -1199,7 +2509,13 @@
     ],
     "event_url": "https://www.stgpresents.org/events/the-music-of-hey-arnold-live/",
     "source_priority": 5,
-    "producer_type": "presenter"
+    "producer_type": "presenter",
+    "performance_occurrences": [
+      {
+        "date": "2026-11-22",
+        "event_url": "https://www.stgpresents.org/events/the-music-of-hey-arnold-live/"
+      }
+    ]
   },
   {
     "title": "Broadway Inclusion Program @ Summit – Disney’s Beauty and The Beast",
@@ -1222,7 +2538,29 @@
     ],
     "event_url": "https://www.stgpresents.org/events/broadway-inclusion-program-summit-disneys-beauty-and-the-beast/",
     "source_priority": 5,
-    "producer_type": "presenter"
+    "producer_type": "presenter",
+    "performance_occurrences": [
+      {
+        "date": "2026-11-02",
+        "event_url": "https://www.stgpresents.org/events/broadway-inclusion-program-summit-disneys-beauty-and-the-beast/"
+      },
+      {
+        "date": "2026-11-09",
+        "event_url": "https://www.stgpresents.org/events/broadway-inclusion-program-summit-disneys-beauty-and-the-beast/"
+      },
+      {
+        "date": "2026-11-16",
+        "event_url": "https://www.stgpresents.org/events/broadway-inclusion-program-summit-disneys-beauty-and-the-beast/"
+      },
+      {
+        "date": "2026-11-23",
+        "event_url": "https://www.stgpresents.org/events/broadway-inclusion-program-summit-disneys-beauty-and-the-beast/"
+      },
+      {
+        "date": "2026-11-30",
+        "event_url": "https://www.stgpresents.org/events/broadway-inclusion-program-summit-disneys-beauty-and-the-beast/"
+      }
+    ]
   },
   {
     "title": "STG Dance for PD® at PNB",
@@ -1244,7 +2582,25 @@
     ],
     "event_url": "https://www.stgpresents.org/events/stg-dance-for-pd-at-pnb/",
     "source_priority": 5,
-    "producer_type": "presenter"
+    "producer_type": "presenter",
+    "performance_occurrences": [
+      {
+        "date": "2026-11-02",
+        "event_url": "https://www.stgpresents.org/events/stg-dance-for-pd-at-pnb/"
+      },
+      {
+        "date": "2026-11-09",
+        "event_url": "https://www.stgpresents.org/events/stg-dance-for-pd-at-pnb/"
+      },
+      {
+        "date": "2026-11-16",
+        "event_url": "https://www.stgpresents.org/events/stg-dance-for-pd-at-pnb/"
+      },
+      {
+        "date": "2026-11-30",
+        "event_url": "https://www.stgpresents.org/events/stg-dance-for-pd-at-pnb/"
+      }
+    ]
   },
   {
     "title": "Party Dances with Amy O’Neal",
@@ -1266,7 +2622,25 @@
     ],
     "event_url": "https://www.stgpresents.org/events/party-dances-with-amy-oneal/",
     "source_priority": 5,
-    "producer_type": "presenter"
+    "producer_type": "presenter",
+    "performance_occurrences": [
+      {
+        "date": "2026-11-02",
+        "event_url": "https://www.stgpresents.org/events/party-dances-with-amy-oneal/"
+      },
+      {
+        "date": "2026-11-09",
+        "event_url": "https://www.stgpresents.org/events/party-dances-with-amy-oneal/"
+      },
+      {
+        "date": "2026-11-16",
+        "event_url": "https://www.stgpresents.org/events/party-dances-with-amy-oneal/"
+      },
+      {
+        "date": "2026-11-23",
+        "event_url": "https://www.stgpresents.org/events/party-dances-with-amy-oneal/"
+      }
+    ]
   },
   {
     "title": "Seattle Theatre Group Archive",
@@ -1289,7 +2663,29 @@
     ],
     "event_url": "https://www.stgpresents.org/events/seattle-theatre-group-archive/",
     "source_priority": 5,
-    "producer_type": "presenter"
+    "producer_type": "presenter",
+    "performance_occurrences": [
+      {
+        "date": "2026-11-03",
+        "event_url": "https://www.stgpresents.org/events/seattle-theatre-group-archive/"
+      },
+      {
+        "date": "2026-11-10",
+        "event_url": "https://www.stgpresents.org/events/seattle-theatre-group-archive/"
+      },
+      {
+        "date": "2026-11-17",
+        "event_url": "https://www.stgpresents.org/events/seattle-theatre-group-archive/"
+      },
+      {
+        "date": "2026-11-24",
+        "event_url": "https://www.stgpresents.org/events/seattle-theatre-group-archive/"
+      },
+      {
+        "date": "2026-12-01",
+        "event_url": "https://www.stgpresents.org/events/seattle-theatre-group-archive/"
+      }
+    ]
   },
   {
     "title": "Mini Music Makers Fall #2 Session",
@@ -1312,7 +2708,29 @@
     ],
     "event_url": "https://www.stgpresents.org/events/mini-music-makers-fall-2-session/",
     "source_priority": 5,
-    "producer_type": "presenter"
+    "producer_type": "presenter",
+    "performance_occurrences": [
+      {
+        "date": "2026-11-03",
+        "event_url": "https://www.stgpresents.org/events/mini-music-makers-fall-2-session/"
+      },
+      {
+        "date": "2026-11-10",
+        "event_url": "https://www.stgpresents.org/events/mini-music-makers-fall-2-session/"
+      },
+      {
+        "date": "2026-11-17",
+        "event_url": "https://www.stgpresents.org/events/mini-music-makers-fall-2-session/"
+      },
+      {
+        "date": "2026-11-24",
+        "event_url": "https://www.stgpresents.org/events/mini-music-makers-fall-2-session/"
+      },
+      {
+        "date": "2026-12-01",
+        "event_url": "https://www.stgpresents.org/events/mini-music-makers-fall-2-session/"
+      }
+    ]
   },
   {
     "title": "Kerry Hall Fiber Club",
@@ -1333,7 +2751,21 @@
     ],
     "event_url": "https://www.stgpresents.org/events/kerry-hall-fiber-club/",
     "source_priority": 5,
-    "producer_type": "presenter"
+    "producer_type": "presenter",
+    "performance_occurrences": [
+      {
+        "date": "2026-11-03",
+        "event_url": "https://www.stgpresents.org/events/kerry-hall-fiber-club/"
+      },
+      {
+        "date": "2026-11-17",
+        "event_url": "https://www.stgpresents.org/events/kerry-hall-fiber-club/"
+      },
+      {
+        "date": "2026-12-01",
+        "event_url": "https://www.stgpresents.org/events/kerry-hall-fiber-club/"
+      }
+    ]
   },
   {
     "title": "STG’s Local Vocals Choir Class",
@@ -1356,7 +2788,29 @@
     ],
     "event_url": "https://www.stgpresents.org/events/stgs-local-vocals-choir-class/",
     "source_priority": 5,
-    "producer_type": "presenter"
+    "producer_type": "presenter",
+    "performance_occurrences": [
+      {
+        "date": "2026-11-03",
+        "event_url": "https://www.stgpresents.org/events/stgs-local-vocals-choir-class/"
+      },
+      {
+        "date": "2026-11-10",
+        "event_url": "https://www.stgpresents.org/events/stgs-local-vocals-choir-class/"
+      },
+      {
+        "date": "2026-11-17",
+        "event_url": "https://www.stgpresents.org/events/stgs-local-vocals-choir-class/"
+      },
+      {
+        "date": "2026-11-24",
+        "event_url": "https://www.stgpresents.org/events/stgs-local-vocals-choir-class/"
+      },
+      {
+        "date": "2026-12-01",
+        "event_url": "https://www.stgpresents.org/events/stgs-local-vocals-choir-class/"
+      }
+    ]
   },
   {
     "title": "Oh, Mary!",
@@ -1380,7 +2834,33 @@
     ],
     "event_url": "https://www.stgpresents.org/events/oh-mary/",
     "source_priority": 5,
-    "producer_type": "presenter"
+    "producer_type": "presenter",
+    "performance_occurrences": [
+      {
+        "date": "2026-11-03",
+        "event_url": "https://www.stgpresents.org/events/oh-mary/"
+      },
+      {
+        "date": "2026-11-04",
+        "event_url": "https://www.stgpresents.org/events/oh-mary/"
+      },
+      {
+        "date": "2026-11-05",
+        "event_url": "https://www.stgpresents.org/events/oh-mary/"
+      },
+      {
+        "date": "2026-11-06",
+        "event_url": "https://www.stgpresents.org/events/oh-mary/"
+      },
+      {
+        "date": "2026-11-07",
+        "event_url": "https://www.stgpresents.org/events/oh-mary/"
+      },
+      {
+        "date": "2026-11-08",
+        "event_url": "https://www.stgpresents.org/events/oh-mary/"
+      }
+    ]
   },
   {
     "title": "The Aces (RESCHEDULED)",
@@ -1399,7 +2879,13 @@
     ],
     "event_url": "https://www.stgpresents.org/events/the-aces/",
     "source_priority": 5,
-    "producer_type": "presenter"
+    "producer_type": "presenter",
+    "performance_occurrences": [
+      {
+        "date": "2026-11-03",
+        "event_url": "https://www.stgpresents.org/events/the-aces/"
+      }
+    ]
   },
   {
     "title": "STG Dance for PD® at Kerry Hall",
@@ -1420,7 +2906,21 @@
     ],
     "event_url": "https://www.stgpresents.org/events/stg-dance-for-pd-at-kerry-hall/",
     "source_priority": 5,
-    "producer_type": "presenter"
+    "producer_type": "presenter",
+    "performance_occurrences": [
+      {
+        "date": "2026-11-04",
+        "event_url": "https://www.stgpresents.org/events/stg-dance-for-pd-at-kerry-hall/"
+      },
+      {
+        "date": "2026-11-18",
+        "event_url": "https://www.stgpresents.org/events/stg-dance-for-pd-at-kerry-hall/"
+      },
+      {
+        "date": "2026-12-02",
+        "event_url": "https://www.stgpresents.org/events/stg-dance-for-pd-at-kerry-hall/"
+      }
+    ]
   },
   {
     "title": "Broadway Inclusion Program @ Northshore – Disney’s Beauty and The Beast",
@@ -1443,7 +2943,29 @@
     ],
     "event_url": "https://www.stgpresents.org/events/broadway-inclusion-program-northshore-disneys-beauty-and-the-beast/",
     "source_priority": 5,
-    "producer_type": "presenter"
+    "producer_type": "presenter",
+    "performance_occurrences": [
+      {
+        "date": "2026-11-04",
+        "event_url": "https://www.stgpresents.org/events/broadway-inclusion-program-northshore-disneys-beauty-and-the-beast/"
+      },
+      {
+        "date": "2026-11-11",
+        "event_url": "https://www.stgpresents.org/events/broadway-inclusion-program-northshore-disneys-beauty-and-the-beast/"
+      },
+      {
+        "date": "2026-11-18",
+        "event_url": "https://www.stgpresents.org/events/broadway-inclusion-program-northshore-disneys-beauty-and-the-beast/"
+      },
+      {
+        "date": "2026-11-25",
+        "event_url": "https://www.stgpresents.org/events/broadway-inclusion-program-northshore-disneys-beauty-and-the-beast/"
+      },
+      {
+        "date": "2026-12-02",
+        "event_url": "https://www.stgpresents.org/events/broadway-inclusion-program-northshore-disneys-beauty-and-the-beast/"
+      }
+    ]
   },
   {
     "title": "Gone Guys Film Screening & Community Conversation",
@@ -1462,7 +2984,13 @@
     ],
     "event_url": "https://www.stgpresents.org/events/gone-guys-film-screening-community-conversation/",
     "source_priority": 5,
-    "producer_type": "presenter"
+    "producer_type": "presenter",
+    "performance_occurrences": [
+      {
+        "date": "2026-11-04",
+        "event_url": "https://www.stgpresents.org/events/gone-guys-film-screening-community-conversation/"
+      }
+    ]
   },
   {
     "title": "The Best One Yet",
@@ -1481,7 +3009,13 @@
     ],
     "event_url": "https://www.stgpresents.org/events/the-best-one-yet/",
     "source_priority": 5,
-    "producer_type": "presenter"
+    "producer_type": "presenter",
+    "performance_occurrences": [
+      {
+        "date": "2026-11-04",
+        "event_url": "https://www.stgpresents.org/events/the-best-one-yet/"
+      }
+    ]
   },
   {
     "title": "Big Star Quintet",
@@ -1500,7 +3034,13 @@
     ],
     "event_url": "https://www.stgpresents.org/events/big-star-quintet/",
     "source_priority": 5,
-    "producer_type": "presenter"
+    "producer_type": "presenter",
+    "performance_occurrences": [
+      {
+        "date": "2026-11-04",
+        "event_url": "https://www.stgpresents.org/events/big-star-quintet/"
+      }
+    ]
   },
   {
     "title": "Int/Adv Contemporary Explorations with Amy O’Neal",
@@ -1521,7 +3061,21 @@
     ],
     "event_url": "https://www.stgpresents.org/events/int-adv-contemporary-explorations-with-amy-oneal/",
     "source_priority": 5,
-    "producer_type": "presenter"
+    "producer_type": "presenter",
+    "performance_occurrences": [
+      {
+        "date": "2026-11-05",
+        "event_url": "https://www.stgpresents.org/events/int-adv-contemporary-explorations-with-amy-oneal/"
+      },
+      {
+        "date": "2026-11-12",
+        "event_url": "https://www.stgpresents.org/events/int-adv-contemporary-explorations-with-amy-oneal/"
+      },
+      {
+        "date": "2026-11-19",
+        "event_url": "https://www.stgpresents.org/events/int-adv-contemporary-explorations-with-amy-oneal/"
+      }
+    ]
   },
   {
     "title": "STG Dance for PD® at Garfield Community Center",
@@ -1543,7 +3097,25 @@
     ],
     "event_url": "https://www.stgpresents.org/events/stg-dance-for-pd-at-garfield-community-center/",
     "source_priority": 5,
-    "producer_type": "presenter"
+    "producer_type": "presenter",
+    "performance_occurrences": [
+      {
+        "date": "2026-11-05",
+        "event_url": "https://www.stgpresents.org/events/stg-dance-for-pd-at-garfield-community-center/"
+      },
+      {
+        "date": "2026-11-12",
+        "event_url": "https://www.stgpresents.org/events/stg-dance-for-pd-at-garfield-community-center/"
+      },
+      {
+        "date": "2026-11-19",
+        "event_url": "https://www.stgpresents.org/events/stg-dance-for-pd-at-garfield-community-center/"
+      },
+      {
+        "date": "2026-12-03",
+        "event_url": "https://www.stgpresents.org/events/stg-dance-for-pd-at-garfield-community-center/"
+      }
+    ]
   },
   {
     "title": "Broadway Inclusion Program @ Kerry Hall – Disney’s Beauty and The Beast",
@@ -1566,7 +3138,29 @@
     ],
     "event_url": "https://www.stgpresents.org/events/broadway-inclusion-program-kerry-hall-disneys-beauty-and-the-beast/",
     "source_priority": 5,
-    "producer_type": "presenter"
+    "producer_type": "presenter",
+    "performance_occurrences": [
+      {
+        "date": "2026-11-05",
+        "event_url": "https://www.stgpresents.org/events/broadway-inclusion-program-kerry-hall-disneys-beauty-and-the-beast/"
+      },
+      {
+        "date": "2026-11-12",
+        "event_url": "https://www.stgpresents.org/events/broadway-inclusion-program-kerry-hall-disneys-beauty-and-the-beast/"
+      },
+      {
+        "date": "2026-11-19",
+        "event_url": "https://www.stgpresents.org/events/broadway-inclusion-program-kerry-hall-disneys-beauty-and-the-beast/"
+      },
+      {
+        "date": "2026-11-26",
+        "event_url": "https://www.stgpresents.org/events/broadway-inclusion-program-kerry-hall-disneys-beauty-and-the-beast/"
+      },
+      {
+        "date": "2026-12-03",
+        "event_url": "https://www.stgpresents.org/events/broadway-inclusion-program-kerry-hall-disneys-beauty-and-the-beast/"
+      }
+    ]
   },
   {
     "title": "Samba and Afro-Bahian with Deise Costa",
@@ -1587,7 +3181,21 @@
     ],
     "event_url": "https://www.stgpresents.org/events/samba-and-afro-bahian-with-deise-costa/",
     "source_priority": 5,
-    "producer_type": "presenter"
+    "producer_type": "presenter",
+    "performance_occurrences": [
+      {
+        "date": "2026-11-05",
+        "event_url": "https://www.stgpresents.org/events/samba-and-afro-bahian-with-deise-costa/"
+      },
+      {
+        "date": "2026-11-12",
+        "event_url": "https://www.stgpresents.org/events/samba-and-afro-bahian-with-deise-costa/"
+      },
+      {
+        "date": "2026-11-19",
+        "event_url": "https://www.stgpresents.org/events/samba-and-afro-bahian-with-deise-costa/"
+      }
+    ]
   },
   {
     "title": "Marc Broussard",
@@ -1606,7 +3214,13 @@
     ],
     "event_url": "https://www.stgpresents.org/events/marc-broussard/",
     "source_priority": 5,
-    "producer_type": "presenter"
+    "producer_type": "presenter",
+    "performance_occurrences": [
+      {
+        "date": "2026-11-05",
+        "event_url": "https://www.stgpresents.org/events/marc-broussard/"
+      }
+    ]
   },
   {
     "title": "STG Dance for PD® Virtual Sessions",
@@ -1628,7 +3242,25 @@
     ],
     "event_url": "https://www.stgpresents.org/events/stg-dance-for-pd-virtual-sessions/",
     "source_priority": 5,
-    "producer_type": "presenter"
+    "producer_type": "presenter",
+    "performance_occurrences": [
+      {
+        "date": "2026-11-06",
+        "event_url": "https://www.stgpresents.org/events/stg-dance-for-pd-virtual-sessions/"
+      },
+      {
+        "date": "2026-11-13",
+        "event_url": "https://www.stgpresents.org/events/stg-dance-for-pd-virtual-sessions/"
+      },
+      {
+        "date": "2026-11-20",
+        "event_url": "https://www.stgpresents.org/events/stg-dance-for-pd-virtual-sessions/"
+      },
+      {
+        "date": "2026-12-04",
+        "event_url": "https://www.stgpresents.org/events/stg-dance-for-pd-virtual-sessions/"
+      }
+    ]
   },
   {
     "title": "Periphery",
@@ -1647,7 +3279,13 @@
     ],
     "event_url": "https://www.stgpresents.org/events/periphery/",
     "source_priority": 5,
-    "producer_type": "presenter"
+    "producer_type": "presenter",
+    "performance_occurrences": [
+      {
+        "date": "2026-11-06",
+        "event_url": "https://www.stgpresents.org/events/periphery/"
+      }
+    ]
   },
   {
     "title": "John Scofield Electrospective",
@@ -1666,7 +3304,13 @@
     ],
     "event_url": "https://www.stgpresents.org/events/john-scofield-electrospective/",
     "source_priority": 5,
-    "producer_type": "presenter"
+    "producer_type": "presenter",
+    "performance_occurrences": [
+      {
+        "date": "2026-11-06",
+        "event_url": "https://www.stgpresents.org/events/john-scofield-electrospective/"
+      }
+    ]
   },
   {
     "title": "Free Paramount Tour",
@@ -1686,7 +3330,17 @@
     ],
     "event_url": "https://www.stgpresents.org/events/free-paramount-tour/",
     "source_priority": 5,
-    "producer_type": "presenter"
+    "producer_type": "presenter",
+    "performance_occurrences": [
+      {
+        "date": "2026-11-07",
+        "event_url": "https://www.stgpresents.org/events/free-paramount-tour/"
+      },
+      {
+        "date": "2026-12-05",
+        "event_url": "https://www.stgpresents.org/events/free-paramount-tour/"
+      }
+    ]
   },
   {
     "title": "Kerry Hall Theatre Classes – Youth Theatre Singing",
@@ -1705,7 +3359,13 @@
     ],
     "event_url": "https://www.stgpresents.org/events/kerry-hall-theatre-classes-youth-theatre-singing/",
     "source_priority": 5,
-    "producer_type": "presenter"
+    "producer_type": "presenter",
+    "performance_occurrences": [
+      {
+        "date": "2026-11-07",
+        "event_url": "https://www.stgpresents.org/events/kerry-hall-theatre-classes-youth-theatre-singing/"
+      }
+    ]
   },
   {
     "title": "BROADWAY VOCAL PERFORMANCE WORKSHOP SERIES",
@@ -1725,7 +3385,17 @@
     ],
     "event_url": "https://www.stgpresents.org/events/broadway-vocal-performance-workshop-series/",
     "source_priority": 5,
-    "producer_type": "presenter"
+    "producer_type": "presenter",
+    "performance_occurrences": [
+      {
+        "date": "2026-11-07",
+        "event_url": "https://www.stgpresents.org/events/broadway-vocal-performance-workshop-series/"
+      },
+      {
+        "date": "2026-12-05",
+        "event_url": "https://www.stgpresents.org/events/broadway-vocal-performance-workshop-series/"
+      }
+    ]
   },
   {
     "title": "OH, MARY! Acting Workshop",
@@ -1744,7 +3414,13 @@
     ],
     "event_url": "https://www.stgpresents.org/events/oh-mary-acting-workshop/",
     "source_priority": 5,
-    "producer_type": "presenter"
+    "producer_type": "presenter",
+    "performance_occurrences": [
+      {
+        "date": "2026-11-07",
+        "event_url": "https://www.stgpresents.org/events/oh-mary-acting-workshop/"
+      }
+    ]
   },
   {
     "title": "Kerry Hall Theatre Classes – Adult Theatre Singing, Beyond the Basics",
@@ -1763,7 +3439,13 @@
     ],
     "event_url": "https://www.stgpresents.org/events/kerry-hall-theatre-classes-adult-theatre-singing-beyond-the-basics/",
     "source_priority": 5,
-    "producer_type": "presenter"
+    "producer_type": "presenter",
+    "performance_occurrences": [
+      {
+        "date": "2026-11-07",
+        "event_url": "https://www.stgpresents.org/events/kerry-hall-theatre-classes-adult-theatre-singing-beyond-the-basics/"
+      }
+    ]
   },
   {
     "title": "Kevonstage",
@@ -1782,7 +3464,13 @@
     ],
     "event_url": "https://www.stgpresents.org/events/kevonstage/",
     "source_priority": 5,
-    "producer_type": "presenter"
+    "producer_type": "presenter",
+    "performance_occurrences": [
+      {
+        "date": "2026-11-07",
+        "event_url": "https://www.stgpresents.org/events/kevonstage/"
+      }
+    ]
   },
   {
     "title": "Outlander in Concert",
@@ -1801,7 +3489,13 @@
     ],
     "event_url": "https://www.stgpresents.org/events/outlander-in-concert/",
     "source_priority": 5,
-    "producer_type": "presenter"
+    "producer_type": "presenter",
+    "performance_occurrences": [
+      {
+        "date": "2026-11-07",
+        "event_url": "https://www.stgpresents.org/events/outlander-in-concert/"
+      }
+    ]
   },
   {
     "title": "OH! MARY! Touch Tour",
@@ -1820,7 +3514,13 @@
     ],
     "event_url": "https://www.stgpresents.org/events/oh-mary-touch-tour/",
     "source_priority": 5,
-    "producer_type": "presenter"
+    "producer_type": "presenter",
+    "performance_occurrences": [
+      {
+        "date": "2026-11-08",
+        "event_url": "https://www.stgpresents.org/events/oh-mary-touch-tour/"
+      }
+    ]
   },
   {
     "title": "Educator Social",
@@ -1839,7 +3539,13 @@
     ],
     "event_url": "https://www.stgpresents.org/events/educator-social/",
     "source_priority": 5,
-    "producer_type": "presenter"
+    "producer_type": "presenter",
+    "performance_occurrences": [
+      {
+        "date": "2026-11-08",
+        "event_url": "https://www.stgpresents.org/events/educator-social/"
+      }
+    ]
   },
   {
     "title": "Neil deGrasse Tyson",
@@ -1858,7 +3564,13 @@
     ],
     "event_url": "https://www.stgpresents.org/events/neil-degrasse-tyson-nov-8-2026/",
     "source_priority": 5,
-    "producer_type": "presenter"
+    "producer_type": "presenter",
+    "performance_occurrences": [
+      {
+        "date": "2026-11-08",
+        "event_url": "https://www.stgpresents.org/events/neil-degrasse-tyson-nov-8-2026/"
+      }
+    ]
   },
   {
     "title": "Taylor Mac in Concert: Tender Heart Revolution",
@@ -1877,7 +3589,13 @@
     ],
     "event_url": "https://www.stgpresents.org/events/taylor-mac/",
     "source_priority": 5,
-    "producer_type": "presenter"
+    "producer_type": "presenter",
+    "performance_occurrences": [
+      {
+        "date": "2026-11-08",
+        "event_url": "https://www.stgpresents.org/events/taylor-mac/"
+      }
+    ]
   },
   {
     "title": "Aterciopelados",
@@ -1896,7 +3614,13 @@
     ],
     "event_url": "https://www.stgpresents.org/events/aterciopelados/",
     "source_priority": 5,
-    "producer_type": "presenter"
+    "producer_type": "presenter",
+    "performance_occurrences": [
+      {
+        "date": "2026-11-08",
+        "event_url": "https://www.stgpresents.org/events/aterciopelados/"
+      }
+    ]
   },
   {
     "title": "Industry Dance Series",
@@ -1916,7 +3640,17 @@
     ],
     "event_url": "https://www.stgpresents.org/events/industry-dance-series/",
     "source_priority": 5,
-    "producer_type": "presenter"
+    "producer_type": "presenter",
+    "performance_occurrences": [
+      {
+        "date": "2026-11-09",
+        "event_url": "https://www.stgpresents.org/events/industry-dance-series/"
+      },
+      {
+        "date": "2026-11-23",
+        "event_url": "https://www.stgpresents.org/events/industry-dance-series/"
+      }
+    ]
   },
   {
     "title": "Isaiah Rashad",
@@ -1935,7 +3669,13 @@
     ],
     "event_url": "https://www.stgpresents.org/events/isaiah-rashad/",
     "source_priority": 5,
-    "producer_type": "presenter"
+    "producer_type": "presenter",
+    "performance_occurrences": [
+      {
+        "date": "2026-11-10",
+        "event_url": "https://www.stgpresents.org/events/isaiah-rashad/"
+      }
+    ]
   },
   {
     "title": "SYD",
@@ -1954,7 +3694,13 @@
     ],
     "event_url": "https://www.stgpresents.org/events/syd/",
     "source_priority": 5,
-    "producer_type": "presenter"
+    "producer_type": "presenter",
+    "performance_occurrences": [
+      {
+        "date": "2026-11-10",
+        "event_url": "https://www.stgpresents.org/events/syd/"
+      }
+    ]
   },
   {
     "title": "National Park After Dark (Postponed)",
@@ -1973,7 +3719,13 @@
     ],
     "event_url": "https://www.stgpresents.org/events/national-park-after-dark/",
     "source_priority": 5,
-    "producer_type": "presenter"
+    "producer_type": "presenter",
+    "performance_occurrences": [
+      {
+        "date": "2026-11-11",
+        "event_url": "https://www.stgpresents.org/events/national-park-after-dark/"
+      }
+    ]
   },
   {
     "title": "Not For Radio",
@@ -1993,7 +3745,17 @@
     ],
     "event_url": "https://www.stgpresents.org/events/not-for-radio-2026/",
     "source_priority": 5,
-    "producer_type": "presenter"
+    "producer_type": "presenter",
+    "performance_occurrences": [
+      {
+        "date": "2026-11-11",
+        "event_url": "https://www.stgpresents.org/events/not-for-radio-2026/"
+      },
+      {
+        "date": "2026-11-12",
+        "event_url": "https://www.stgpresents.org/events/not-for-radio-2026/"
+      }
+    ]
   },
   {
     "title": "Brett Goldstein",
@@ -2013,7 +3775,17 @@
     ],
     "event_url": "https://www.stgpresents.org/events/brett-goldstein/",
     "source_priority": 5,
-    "producer_type": "presenter"
+    "producer_type": "presenter",
+    "performance_occurrences": [
+      {
+        "date": "2026-11-12",
+        "event_url": "https://www.stgpresents.org/events/brett-goldstein/"
+      },
+      {
+        "date": "2026-11-13",
+        "event_url": "https://www.stgpresents.org/events/brett-goldstein/"
+      }
+    ]
   },
   {
     "title": "The Residency",
@@ -2032,7 +3804,13 @@
     ],
     "event_url": "https://www.stgpresents.org/events/the-residency/",
     "source_priority": 5,
-    "producer_type": "presenter"
+    "producer_type": "presenter",
+    "performance_occurrences": [
+      {
+        "date": "2026-11-12",
+        "event_url": "https://www.stgpresents.org/events/the-residency/"
+      }
+    ]
   },
   {
     "title": "Try/Step/Trip",
@@ -2052,7 +3830,17 @@
     ],
     "event_url": "https://www.stgpresents.org/events/try-step-trip/",
     "source_priority": 5,
-    "producer_type": "presenter"
+    "producer_type": "presenter",
+    "performance_occurrences": [
+      {
+        "date": "2026-11-12",
+        "event_url": "https://www.stgpresents.org/events/try-step-trip/"
+      },
+      {
+        "date": "2026-11-13",
+        "event_url": "https://www.stgpresents.org/events/try-step-trip/"
+      }
+    ]
   },
   {
     "title": "Foy Vance",
@@ -2071,7 +3859,13 @@
     ],
     "event_url": "https://www.stgpresents.org/events/foy-vance/",
     "source_priority": 5,
-    "producer_type": "presenter"
+    "producer_type": "presenter",
+    "performance_occurrences": [
+      {
+        "date": "2026-11-13",
+        "event_url": "https://www.stgpresents.org/events/foy-vance/"
+      }
+    ]
   },
   {
     "title": "World Ballet Company – Swan Lake",
@@ -2090,7 +3884,13 @@
     ],
     "event_url": "https://www.stgpresents.org/events/world-ballet-company-swan-lake/",
     "source_priority": 5,
-    "producer_type": "presenter"
+    "producer_type": "presenter",
+    "performance_occurrences": [
+      {
+        "date": "2026-11-13",
+        "event_url": "https://www.stgpresents.org/events/world-ballet-company-swan-lake/"
+      }
+    ]
   },
   {
     "title": "Free Moore Tour",
@@ -2109,7 +3909,13 @@
     ],
     "event_url": "https://www.stgpresents.org/events/free-moore-tour/",
     "source_priority": 5,
-    "producer_type": "presenter"
+    "producer_type": "presenter",
+    "performance_occurrences": [
+      {
+        "date": "2026-11-14",
+        "event_url": "https://www.stgpresents.org/events/free-moore-tour/"
+      }
+    ]
   },
   {
     "title": "Storytellers: Portraits of Resilience with Thanh Tan",
@@ -2128,7 +3934,13 @@
     ],
     "event_url": "https://www.stgpresents.org/events/storytellers-portraits-of-resilience-with-thanh-tan/",
     "source_priority": 5,
-    "producer_type": "presenter"
+    "producer_type": "presenter",
+    "performance_occurrences": [
+      {
+        "date": "2026-11-14",
+        "event_url": "https://www.stgpresents.org/events/storytellers-portraits-of-resilience-with-thanh-tan/"
+      }
+    ]
   },
   {
     "title": "Ron Funches",
@@ -2147,7 +3959,13 @@
     ],
     "event_url": "https://www.stgpresents.org/events/ron-funches/",
     "source_priority": 5,
-    "producer_type": "presenter"
+    "producer_type": "presenter",
+    "performance_occurrences": [
+      {
+        "date": "2026-11-14",
+        "event_url": "https://www.stgpresents.org/events/ron-funches/"
+      }
+    ]
   },
   {
     "title": "Jovino Santos Neto Quarteto Mais Que Tudo",
@@ -2166,7 +3984,13 @@
     ],
     "event_url": "https://www.stgpresents.org/events/jovino-santos-neto-quarteto-mais-que-tudo/",
     "source_priority": 5,
-    "producer_type": "presenter"
+    "producer_type": "presenter",
+    "performance_occurrences": [
+      {
+        "date": "2026-11-14",
+        "event_url": "https://www.stgpresents.org/events/jovino-santos-neto-quarteto-mais-que-tudo/"
+      }
+    ]
   },
   {
     "title": "Houndmouth",
@@ -2185,7 +4009,13 @@
     ],
     "event_url": "https://www.stgpresents.org/events/houndmouth/",
     "source_priority": 5,
-    "producer_type": "presenter"
+    "producer_type": "presenter",
+    "performance_occurrences": [
+      {
+        "date": "2026-11-14",
+        "event_url": "https://www.stgpresents.org/events/houndmouth/"
+      }
+    ]
   },
   {
     "title": "Broadway + Performing Arts Workshop Series: Sankai Juku",
@@ -2204,7 +4034,13 @@
     ],
     "event_url": "https://www.stgpresents.org/events/broadway-performing-arts-workshop-series-sankai-juku/",
     "source_priority": 5,
-    "producer_type": "presenter"
+    "producer_type": "presenter",
+    "performance_occurrences": [
+      {
+        "date": "2026-11-15",
+        "event_url": "https://www.stgpresents.org/events/broadway-performing-arts-workshop-series-sankai-juku/"
+      }
+    ]
   },
   {
     "title": "Songwriters Rooms",
@@ -2223,7 +4059,13 @@
     ],
     "event_url": "https://www.stgpresents.org/events/songwriters-rooms/",
     "source_priority": 5,
-    "producer_type": "presenter"
+    "producer_type": "presenter",
+    "performance_occurrences": [
+      {
+        "date": "2026-11-15",
+        "event_url": "https://www.stgpresents.org/events/songwriters-rooms/"
+      }
+    ]
   },
   {
     "title": "Eivør",
@@ -2242,7 +4084,13 @@
     ],
     "event_url": "https://www.stgpresents.org/events/eivor/",
     "source_priority": 5,
-    "producer_type": "presenter"
+    "producer_type": "presenter",
+    "performance_occurrences": [
+      {
+        "date": "2026-11-15",
+        "event_url": "https://www.stgpresents.org/events/eivor/"
+      }
+    ]
   },
   {
     "title": "Underoath",
@@ -2261,7 +4109,13 @@
     ],
     "event_url": "https://www.stgpresents.org/events/underoath/",
     "source_priority": 5,
-    "producer_type": "presenter"
+    "producer_type": "presenter",
+    "performance_occurrences": [
+      {
+        "date": "2026-11-16",
+        "event_url": "https://www.stgpresents.org/events/underoath/"
+      }
+    ]
   },
   {
     "title": "Sankai Juku “KOSA”",
@@ -2280,7 +4134,13 @@
     ],
     "event_url": "https://www.stgpresents.org/events/sankai-juku/",
     "source_priority": 5,
-    "producer_type": "presenter"
+    "producer_type": "presenter",
+    "performance_occurrences": [
+      {
+        "date": "2026-11-17",
+        "event_url": "https://www.stgpresents.org/events/sankai-juku/"
+      }
+    ]
   },
   {
     "title": "Francisca Valenzuela – RESCHEDULED 7/18",
@@ -2299,7 +4159,13 @@
     ],
     "event_url": "https://www.stgpresents.org/events/francisca-valenzuela/",
     "source_priority": 5,
-    "producer_type": "presenter"
+    "producer_type": "presenter",
+    "performance_occurrences": [
+      {
+        "date": "2026-11-17",
+        "event_url": "https://www.stgpresents.org/events/francisca-valenzuela/"
+      }
+    ]
   },
   {
     "title": "RHYE",
@@ -2318,7 +4184,13 @@
     ],
     "event_url": "https://www.stgpresents.org/events/rhye/",
     "source_priority": 5,
-    "producer_type": "presenter"
+    "producer_type": "presenter",
+    "performance_occurrences": [
+      {
+        "date": "2026-11-17",
+        "event_url": "https://www.stgpresents.org/events/rhye/"
+      }
+    ]
   },
   {
     "title": "Tyla",
@@ -2337,7 +4209,13 @@
     ],
     "event_url": "https://www.stgpresents.org/events/tyla/",
     "source_priority": 5,
-    "producer_type": "presenter"
+    "producer_type": "presenter",
+    "performance_occurrences": [
+      {
+        "date": "2026-11-17",
+        "event_url": "https://www.stgpresents.org/events/tyla/"
+      }
+    ]
   },
   {
     "title": "Todd Rundgren",
@@ -2356,7 +4234,13 @@
     ],
     "event_url": "https://www.stgpresents.org/events/todd-rundgren/",
     "source_priority": 5,
-    "producer_type": "presenter"
+    "producer_type": "presenter",
+    "performance_occurrences": [
+      {
+        "date": "2026-11-18",
+        "event_url": "https://www.stgpresents.org/events/todd-rundgren/"
+      }
+    ]
   },
   {
     "title": "Straight No Chaser",
@@ -2375,7 +4259,13 @@
     ],
     "event_url": "https://www.stgpresents.org/events/straight-no-chaser/",
     "source_priority": 5,
-    "producer_type": "presenter"
+    "producer_type": "presenter",
+    "performance_occurrences": [
+      {
+        "date": "2026-11-19",
+        "event_url": "https://www.stgpresents.org/events/straight-no-chaser/"
+      }
+    ]
   },
   {
     "title": "Rodrigo y Gabriela",
@@ -2394,7 +4284,13 @@
     ],
     "event_url": "https://www.stgpresents.org/events/rodrigo-y-gabriela/",
     "source_priority": 5,
-    "producer_type": "presenter"
+    "producer_type": "presenter",
+    "performance_occurrences": [
+      {
+        "date": "2026-11-19",
+        "event_url": "https://www.stgpresents.org/events/rodrigo-y-gabriela/"
+      }
+    ]
   },
   {
     "title": "Gary Numan",
@@ -2413,7 +4309,13 @@
     ],
     "event_url": "https://www.stgpresents.org/events/gary-numan/",
     "source_priority": 5,
-    "producer_type": "presenter"
+    "producer_type": "presenter",
+    "performance_occurrences": [
+      {
+        "date": "2026-11-19",
+        "event_url": "https://www.stgpresents.org/events/gary-numan/"
+      }
+    ]
   },
   {
     "title": "Phoebe Robinson",
@@ -2432,7 +4334,13 @@
     ],
     "event_url": "https://www.stgpresents.org/events/phoebe-robinson/",
     "source_priority": 5,
-    "producer_type": "presenter"
+    "producer_type": "presenter",
+    "performance_occurrences": [
+      {
+        "date": "2026-11-20",
+        "event_url": "https://www.stgpresents.org/events/phoebe-robinson/"
+      }
+    ]
   },
   {
     "title": "Senses Fail",
@@ -2451,7 +4359,13 @@
     ],
     "event_url": "https://www.stgpresents.org/events/senses-fail/",
     "source_priority": 5,
-    "producer_type": "presenter"
+    "producer_type": "presenter",
+    "performance_occurrences": [
+      {
+        "date": "2026-11-24",
+        "event_url": "https://www.stgpresents.org/events/senses-fail/"
+      }
+    ]
   },
   {
     "title": "Prateek Kuhad – CANCELED",
@@ -2470,7 +4384,13 @@
     ],
     "event_url": "https://www.stgpresents.org/events/prateek-kuhad/",
     "source_priority": 5,
-    "producer_type": "presenter"
+    "producer_type": "presenter",
+    "performance_occurrences": [
+      {
+        "date": "2026-11-24",
+        "event_url": "https://www.stgpresents.org/events/prateek-kuhad/"
+      }
+    ]
   },
   {
     "title": "Scott Bradlee’s Postmodern Jukebox",
@@ -2489,7 +4409,13 @@
     ],
     "event_url": "https://www.stgpresents.org/events/scott-bradlees-postmodern-jukebox/",
     "source_priority": 5,
-    "producer_type": "presenter"
+    "producer_type": "presenter",
+    "performance_occurrences": [
+      {
+        "date": "2026-11-24",
+        "event_url": "https://www.stgpresents.org/events/scott-bradlees-postmodern-jukebox/"
+      }
+    ]
   },
   {
     "title": "Alter Bridge",
@@ -2508,7 +4434,13 @@
     ],
     "event_url": "https://www.stgpresents.org/events/alter-bridge/",
     "source_priority": 5,
-    "producer_type": "presenter"
+    "producer_type": "presenter",
+    "performance_occurrences": [
+      {
+        "date": "2026-11-25",
+        "event_url": "https://www.stgpresents.org/events/alter-bridge/"
+      }
+    ]
   },
   {
     "title": "The Outsiders",
@@ -2534,7 +4466,41 @@
     ],
     "event_url": "https://www.stgpresents.org/events/the-outsiders/",
     "source_priority": 5,
-    "producer_type": "presenter"
+    "producer_type": "presenter",
+    "performance_occurrences": [
+      {
+        "date": "2026-11-27",
+        "event_url": "https://www.stgpresents.org/events/the-outsiders/"
+      },
+      {
+        "date": "2026-11-28",
+        "event_url": "https://www.stgpresents.org/events/the-outsiders/"
+      },
+      {
+        "date": "2026-11-29",
+        "event_url": "https://www.stgpresents.org/events/the-outsiders/"
+      },
+      {
+        "date": "2026-12-01",
+        "event_url": "https://www.stgpresents.org/events/the-outsiders/"
+      },
+      {
+        "date": "2026-12-02",
+        "event_url": "https://www.stgpresents.org/events/the-outsiders/"
+      },
+      {
+        "date": "2026-12-03",
+        "event_url": "https://www.stgpresents.org/events/the-outsiders/"
+      },
+      {
+        "date": "2026-12-04",
+        "event_url": "https://www.stgpresents.org/events/the-outsiders/"
+      },
+      {
+        "date": "2026-12-05",
+        "event_url": "https://www.stgpresents.org/events/the-outsiders/"
+      }
+    ]
   },
   {
     "title": "Haley Heynderickx",
@@ -2553,7 +4519,13 @@
     ],
     "event_url": "https://www.stgpresents.org/events/haley-heynderickx/",
     "source_priority": 5,
-    "producer_type": "presenter"
+    "producer_type": "presenter",
+    "performance_occurrences": [
+      {
+        "date": "2026-11-27",
+        "event_url": "https://www.stgpresents.org/events/haley-heynderickx/"
+      }
+    ]
   },
   {
     "title": "Seattle’s Tribute to The Last Waltz",
@@ -2572,7 +4544,13 @@
     ],
     "event_url": "https://www.stgpresents.org/events/seattles-tribute-to-the-last-waltz/",
     "source_priority": 5,
-    "producer_type": "presenter"
+    "producer_type": "presenter",
+    "performance_occurrences": [
+      {
+        "date": "2026-11-28",
+        "event_url": "https://www.stgpresents.org/events/seattles-tribute-to-the-last-waltz/"
+      }
+    ]
   },
   {
     "title": "The Rewatchables Live!",
@@ -2591,7 +4569,13 @@
     ],
     "event_url": "https://www.stgpresents.org/events/the-rewatchables-live/",
     "source_priority": 5,
-    "producer_type": "presenter"
+    "producer_type": "presenter",
+    "performance_occurrences": [
+      {
+        "date": "2026-12-01",
+        "event_url": "https://www.stgpresents.org/events/the-rewatchables-live/"
+      }
+    ]
   },
   {
     "title": "Dweezil Zappa",
@@ -2610,7 +4594,13 @@
     ],
     "event_url": "https://www.stgpresents.org/events/dweezil-zappa/",
     "source_priority": 5,
-    "producer_type": "presenter"
+    "producer_type": "presenter",
+    "performance_occurrences": [
+      {
+        "date": "2026-12-01",
+        "event_url": "https://www.stgpresents.org/events/dweezil-zappa/"
+      }
+    ]
   },
   {
     "title": "A John Waters Christmas",
@@ -2629,7 +4619,13 @@
     ],
     "event_url": "https://www.stgpresents.org/events/a-john-waters-christmas/",
     "source_priority": 5,
-    "producer_type": "presenter"
+    "producer_type": "presenter",
+    "performance_occurrences": [
+      {
+        "date": "2026-12-02",
+        "event_url": "https://www.stgpresents.org/events/a-john-waters-christmas/"
+      }
+    ]
   },
   {
     "title": "THE OUTSIDERS (STUDENT MATINEE)",
@@ -2648,7 +4644,13 @@
     ],
     "event_url": "https://www.stgpresents.org/events/the-outsiders-student-matinee/",
     "source_priority": 5,
-    "producer_type": "presenter"
+    "producer_type": "presenter",
+    "performance_occurrences": [
+      {
+        "date": "2026-12-03",
+        "event_url": "https://www.stgpresents.org/events/the-outsiders-student-matinee/"
+      }
+    ]
   },
   {
     "title": "Matt Rogers",
@@ -2667,7 +4669,13 @@
     ],
     "event_url": "https://www.stgpresents.org/events/matt-rogers/",
     "source_priority": 5,
-    "producer_type": "presenter"
+    "producer_type": "presenter",
+    "performance_occurrences": [
+      {
+        "date": "2026-12-03",
+        "event_url": "https://www.stgpresents.org/events/matt-rogers/"
+      }
+    ]
   },
   {
     "title": "The Fab Four",
@@ -2686,7 +4694,13 @@
     ],
     "event_url": "https://www.stgpresents.org/events/the-fab-four/",
     "source_priority": 5,
-    "producer_type": "presenter"
+    "producer_type": "presenter",
+    "performance_occurrences": [
+      {
+        "date": "2026-12-04",
+        "event_url": "https://www.stgpresents.org/events/the-fab-four/"
+      }
+    ]
   },
   {
     "title": "The Jayhawks",
@@ -2705,7 +4719,13 @@
     ],
     "event_url": "https://www.stgpresents.org/events/the-jayhawks/",
     "source_priority": 5,
-    "producer_type": "presenter"
+    "producer_type": "presenter",
+    "performance_occurrences": [
+      {
+        "date": "2026-12-04",
+        "event_url": "https://www.stgpresents.org/events/the-jayhawks/"
+      }
+    ]
   },
   {
     "title": "Amber Autry",
@@ -2724,7 +4744,13 @@
     ],
     "event_url": "https://www.stgpresents.org/events/amber-autry/",
     "source_priority": 5,
-    "producer_type": "presenter"
+    "producer_type": "presenter",
+    "performance_occurrences": [
+      {
+        "date": "2026-12-05",
+        "event_url": "https://www.stgpresents.org/events/amber-autry/"
+      }
+    ]
   },
   {
     "title": "Choir! Choir! Choir!",
@@ -2743,6 +4769,12 @@
     ],
     "event_url": "https://www.stgpresents.org/events/choir-choir-choir/",
     "source_priority": 5,
-    "producer_type": "presenter"
+    "producer_type": "presenter",
+    "performance_occurrences": [
+      {
+        "date": "2026-12-05",
+        "event_url": "https://www.stgpresents.org/events/choir-choir-choir/"
+      }
+    ]
   }
 ]
