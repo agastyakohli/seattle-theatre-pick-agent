@@ -6,7 +6,7 @@ import re
 import sys
 from datetime import date, datetime
 from pathlib import Path
-from urllib.parse import urljoin
+from urllib.parse import urljoin, urlparse
 from zoneinfo import ZoneInfo
 
 import feedparser
@@ -43,6 +43,52 @@ def identity(title, venue):
     raw = clean(title).casefold() + "|" + clean(venue).casefold()
     return hashlib.sha256(raw.encode()).hexdigest()[:16]
 
+def event_links(event_url, fallback=None):
+    """Prefer a producer's show page, then a ticketing page, then the calendar listing."""
+    fallback = fallback or event_url
+    producer_url = ""
+    ticket_url = ""
+    try:
+        response = requests.get(event_url, headers=HEADERS, timeout=15)
+        response.raise_for_status()
+        soup = BeautifulSoup(response.text, "html.parser")
+        for script in soup.select('script[type="application/ld+json"]'):
+            try:
+                payload = json.loads(script.string or script.get_text())
+            except Exception:
+                continue
+            stack = payload if isinstance(payload, list) else [payload]
+            while stack:
+                obj = stack.pop()
+                if isinstance(obj, list):
+                    stack.extend(obj)
+                    continue
+                if not isinstance(obj, dict):
+                    continue
+                stack.extend(obj.get("@graph", []) if isinstance(obj.get("@graph"), list) else [])
+                org = obj.get("organizer") or obj.get("producer")
+                if isinstance(org, list): org = org[0] if org else {}
+                if isinstance(org, dict) and org.get("url"):
+                    producer_url = urljoin(event_url, org["url"])
+                offers = obj.get("offers") or []
+                if isinstance(offers, dict): offers = [offers]
+                for offer in offers:
+                    if isinstance(offer, dict) and offer.get("url") and not ticket_url:
+                        ticket_url = urljoin(event_url, offer["url"])
+        page_host = urlparse(event_url).netloc.casefold()
+        for anchor in soup.select("a[href]"):
+            href = urljoin(event_url, anchor.get("href", ""))
+            label = clean(anchor.get_text(" ", strip=True)).casefold()
+            host = urlparse(href).netloc.casefold()
+            if not href.startswith(("http://", "https://")): continue
+            if any(term in label for term in ("official website", "producer website", "company website", "show website")) and host and host != page_host:
+                producer_url = href
+            if not ticket_url and (any(term in host for term in ("eventbrite.", "ticketmaster.", "showclix.", "brownpapertickets.")) or any(term in label for term in ("buy tickets", "get tickets", "tickets"))):
+                ticket_url = href
+    except Exception as exc:
+        print("LINK LOOKUP WARNING:", str(exc))
+    return producer_url or ticket_url or event_url or fallback, producer_url, ticket_url
+
 def extract(source):
     response = requests.get(source["url"], headers=HEADERS, timeout=25)
     response.raise_for_status()
@@ -78,7 +124,7 @@ def extract(source):
                         results.append({"title":clean(obj["name"]), "start_date":start, "end_date":end,
                           "performance_dates":[start], "venue":clean(venue), "producer":clean(producer),
                           "description":clean(obj.get("description"))[:600],
-                          "url":link, "source":source["name"]})
+                          "url":link, "event_url":link, "source":source["name"]})
     # Generic event cards: deliberately low-confidence fallback.
     for node in soup.select('[itemtype*="Event"], article, .event, .tribe-events-calendar-list__event'):
         heading = node.select_one('[itemprop="name"], h1, h2, h3, h4, .event-title')
@@ -109,6 +155,13 @@ def extract(source):
             results.append({"title":clean(entry.get("title")), "start_date":None, "end_date":None,
               "performance_dates":[], "venue":"", "producer":"", "description":summary[:600], "url":entry.get("link", source["url"]),
               "source":source["name"]})
+    for item in results:
+        event_url = item.get("event_url") or item.get("url") or source["url"]
+        preferred, producer_url, ticket_url = event_links(event_url, source["url"])
+        item["event_url"] = event_url
+        item["producer_url"] = item.get("producer_url") or producer_url
+        item["ticket_url"] = item.get("ticket_url") or ticket_url
+        item["url"] = preferred
     return results
 
 
@@ -172,7 +225,7 @@ def merge(existing, incoming):
             if prior["performance_dates"]:
                 prior["start_date"] = prior["performance_dates"][0]
                 prior["end_date"] = prior["performance_dates"][-1]
-            for key in ("venue", "producer", "description"):
+            for key in ("venue", "producer", "description", "event_url", "producer_url", "ticket_url"):
                 if item.get(key) and not prior.get(key):
                     prior[key] = item[key]
             prior.setdefault("sources", [])
