@@ -41,6 +41,24 @@ def parse_date(value):
     except Exception:
         return None
 
+
+def explicit_run_end_date(item):
+    """Return a closing date only when an explicit multi-day run is stated."""
+    if item.get("run_end_date"):
+        return item["run_end_date"]
+    description = clean(item.get("description", ""))
+    patterns = [
+        r"\b[A-Za-z]{3,9}\.?\s+\d{1,2}\s*[–—-]\s*([A-Za-z]{3,9}\.?\s+\d{1,2},?\s+20\d{2})",
+        r"\b[A-Za-z]{3,9}\.?\s+\d{1,2},?\s+20\d{2}\s*[–—-]\s*([A-Za-z]{3,9}\.?\s+\d{1,2},?\s+20\d{2})"
+    ]
+    for pattern in patterns:
+        match = re.search(pattern, description, re.I)
+        if match:
+            closing = parse_date(match.group(1))
+            if closing:
+                return closing
+    return None
+
 def identity(title, producer_or_venue):
     # Prefer producer identity so the same production from multiple calendars
     # merges even when one source names the company and another names its venue.
@@ -332,6 +350,9 @@ def event_links(event_url, fallback=None, item=None):
         producer_url = official.get("official_url") or producer_url
         if item is not None and official.get("description"):
             item["description"] = official["description"][:600]
+            closing_date = explicit_run_end_date(item)
+            if closing_date:
+                item["run_end_date"] = closing_date
     return producer_url or ticket_url or event_url or fallback, producer_url, ticket_url
 
 def extract(source):
@@ -367,10 +388,13 @@ def extract(source):
                         if isinstance(organizer, list):
                             organizer = organizer[0] if organizer else {}
                         producer = organizer.get("name", "") if isinstance(organizer, dict) else clean(organizer)
-                        results.append({"title":clean(obj["name"]), "start_date":start, "end_date":end,
+                        event_item = {"title":clean(obj["name"]), "start_date":start, "end_date":end,
                           "performance_dates":[start], "venue":clean(venue), "producer":clean(producer),
                           "description":clean(obj.get("description"))[:600],
-                          "url":link, "event_url":link, "source":source["name"]})
+                          "url":link, "event_url":link, "source":source["name"]}
+                        if end and start and end > start:
+                            event_item["run_end_date"] = end
+                        results.append(event_item)
     # Generic event cards: deliberately low-confidence fallback.
     for node in soup.select('[itemtype*="Event"], article, .event, .tribe-events-calendar-list__event'):
         heading = node.select_one('[itemprop="name"], h1, h2, h3, h4, .event-title')
@@ -526,6 +550,8 @@ def merge(existing, incoming):
             if prior["performance_dates"]:
                 prior["start_date"] = prior["performance_dates"][0]
                 prior["end_date"] = prior["performance_dates"][-1]
+            if item.get("run_end_date") and (not prior.get("run_end_date") or item["run_end_date"] > prior["run_end_date"]):
+                prior["run_end_date"] = item["run_end_date"]
             for key in ("venue", "producer", "description", "event_url", "producer_url", "ticket_url", "source_priority", "producer_type"):
                 if item.get(key) and (not prior.get(key) or key in ("producer_url", "ticket_url", "source_priority", "producer_type")):
                     prior[key] = item[key]
@@ -647,7 +673,11 @@ def main():
             print("SKIPPED FOR PRODUCER VARIETY:", p.get("title", "(untitled)"), "-", p.get("producer") or p.get("venue"))
             continue
         candidates.append(p)
-    candidates.sort(key=lambda p:(1 if producer_is_presenter(p) else 0, p.get("source_priority", 3), p["title"].casefold(), p.get("venue","").casefold()))
+    # A verified earlier closing date wins; unknown closing dates sort after known dates.
+    # Existing presenter/source priorities break ties between equally urgent shows.
+    candidates.sort(key=lambda p:(p.get("run_end_date") or "9999-12-31",
+      1 if producer_is_presenter(p) else 0, p.get("source_priority", 3),
+      p["title"].casefold(), p.get("venue","").casefold()))
     if not candidates:
         print("No validated future production found. No post will be published.")
     else:
