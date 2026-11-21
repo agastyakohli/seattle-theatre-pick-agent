@@ -5,7 +5,6 @@ import json
 import re
 import sys
 from difflib import SequenceMatcher
-from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import date, datetime, timedelta
 from pathlib import Path
 from urllib.parse import urljoin, urlparse
@@ -770,45 +769,42 @@ def main():
     official_catalog = []
     successful_sources = set()
     enabled_sources = [source for source in CFG["sources"] if source.get("enabled")]
-    # Fetch calendars concurrently so one slow site does not hold up every other source.
-    with ThreadPoolExecutor(max_workers=5) as pool:
-        jobs = {pool.submit(extract, source): source for source in enabled_sources}
-        for job in as_completed(jobs):
-            source = jobs[job]
-            try:
-                extracted = job.result()
-                successful_sources.add(source["name"])
-                listings = extracted["productions"]
-                found.extend(listings)
-                official_catalog.extend(extracted["catalog"])
-                dated = sum(1 for item in listings if item.get("performance_dates") or item.get("start_date"))
-                print("Fetched:", source["name"])
-                diag = extracted.get("diagnostic", {})
-                print("SOURCE RESPONSE:", source["name"],
-                      "| HTTP:", diag.get("status"),
-                      "| bytes:", diag.get("bytes"),
-                      "| final URL:", diag.get("final_url"),
-                      "| title:", diag.get("page_title"))
-                print("SOURCE MARKUP:", source["name"],
-                      "| JSON-LD:", diag.get("jsonld_scripts"),
-                      "| event-like nodes:", diag.get("event_nodes"),
-                      "| time nodes:", diag.get("time_nodes"),
-                      "| links:", diag.get("links"))
-                if source["name"] == "NWTheatre Calendar":
-                    print("NWTHEATRE SCRIPTS:", json.dumps(diag.get("scripts", []), ensure_ascii=False))
-                    print("NWTHEATRE IFRAMES:", json.dumps(diag.get("iframes", []), ensure_ascii=False))
-                    print("NWTHEATRE CALENDAR MARKERS:", json.dumps(diag.get("calendar_markers", {}), ensure_ascii=False))
-                    print("NWTHEATRE DATE ELEMENTS:", json.dumps(diag.get("date_attributes", []), ensure_ascii=False))
-                    print("NWTHEATRE JSONLD:", json.dumps(diag.get("jsonld_summaries", []), ensure_ascii=False))
-                    print("NWTHEATRE INLINE CALENDAR DATA:", json.dumps(diag.get("calendar_inline_scripts", []), ensure_ascii=False))
-                    print("NWTHEATRE AI1EC EXPORT:", json.dumps(diag.get("ai1ec_export", {}), ensure_ascii=False))
-                print("EXTRACTION:", source["name"], "-", len(listings), "dated listings;", len(extracted["catalog"]), "official show pages catalogued")
-                for item in listings[:3]:
-                    print("  LISTING:", clean(item.get("title", "(untitled)")), "| dates:", ", ".join(item.get("performance_dates") or ([item.get("start_date")] if item.get("start_date") else [])) or "(none)")
-                for item in extracted["catalog"][:3]:
-                    print("  OFFICIAL SHOW:", clean(item.get("title")), "|", item.get("official_url"))
-            except Exception as exc:
-                print("SOURCE ERROR", source["name"], str(exc), file=sys.stderr)
+    # Fetch calendars concurrently so one slow site does not hol    # Fetch calendars sequentially to reduce bursts that may trigger source-side throttling.
+    for source in enabled_sources:
+        try:
+            extracted = job.result()
+            successful_sources.add(source["name"])
+            listings = extracted["productions"]
+            found.extend(listings)
+            official_catalog.extend(extracted["catalog"])
+            dated = sum(1 for item in listings if item.get("performance_dates") or item.get("start_date"))
+            print("Fetched:", source["name"])
+            diag = extracted.get("diagnostic", {})
+            print("SOURCE RESPONSE:", source["name"],
+                  "| HTTP:", diag.get("status"),
+                  "| bytes:", diag.get("bytes"),
+                  "| final URL:", diag.get("final_url"),
+                  "| title:", diag.get("page_title"))
+            print("SOURCE MARKUP:", source["name"],
+                  "| JSON-LD:", diag.get("jsonld_scripts"),
+                  "| event-like nodes:", diag.get("event_nodes"),
+                  "| time nodes:", diag.get("time_nodes"),
+                  "| links:", diag.get("links"))
+            if source["name"] == "NWTheatre Calendar":
+                print("NWTHEATRE SCRIPTS:", json.dumps(diag.get("scripts", []), ensure_ascii=False))
+                print("NWTHEATRE IFRAMES:", json.dumps(diag.get("iframes", []), ensure_ascii=False))
+                print("NWTHEATRE CALENDAR MARKERS:", json.dumps(diag.get("calendar_markers", {}), ensure_ascii=False))
+                print("NWTHEATRE DATE ELEMENTS:", json.dumps(diag.get("date_attributes", []), ensure_ascii=False))
+                print("NWTHEATRE JSONLD:", json.dumps(diag.get("jsonld_summaries", []), ensure_ascii=False))
+                print("NWTHEATRE INLINE CALENDAR DATA:", json.dumps(diag.get("calendar_inline_scripts", []), ensure_ascii=False))
+                print("NWTHEATRE AI1EC EXPORT:", json.dumps(diag.get("ai1ec_export", {}), ensure_ascii=False))
+            print("EXTRACTION:", source["name"], "-", len(listings), "dated listings;", len(extracted["catalog"]), "official show pages catalogued")
+            for item in listings[:3]:
+                print("  LISTING:", clean(item.get("title", "(untitled)")), "| dates:", ", ".join(item.get("performance_dates") or ([item.get("start_date")] if item.get("start_date") else [])) or "(none)")
+            for item in extracted["catalog"][:3]:
+                print("  OFFICIAL SHOW:", clean(item.get("title")), "|", item.get("official_url"))
+        except Exception as exc:
+            print("SOURCE ERROR", source["name"], str(exc), file=sys.stderr)
     productions = merge(productions, found)
     # Replace each source's previous catalogue snapshot with this run's results.
     catalog_by_source = {entry["source_name"]: [] for entry in official_catalog}
