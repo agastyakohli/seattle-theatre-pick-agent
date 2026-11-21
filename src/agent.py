@@ -4,7 +4,6 @@ import html
 import json
 import re
 import sys
-from difflib import SequenceMatcher
 from datetime import date, datetime, timedelta
 from pathlib import Path
 from urllib.parse import urljoin, urlparse
@@ -142,23 +141,6 @@ def parse_ai1ec_ical(text, source):
         })
     return results
 
-
-def explicit_run_end_date(item):
-    """Return a closing date only when an explicit multi-day run is stated."""
-    if item.get("run_end_date"):
-        return item["run_end_date"]
-    description = clean(item.get("description", ""))
-    patterns = [
-        r"\b[A-Za-z]{3,9}\.?\s+\d{1,2}\s*[–—-]\s*([A-Za-z]{3,9}\.?\s+\d{1,2},?\s+20\d{2})",
-        r"\b[A-Za-z]{3,9}\.?\s+\d{1,2},?\s+20\d{2}\s*[–—-]\s*([A-Za-z]{3,9}\.?\s+\d{1,2},?\s+20\d{2})"
-    ]
-    for pattern in patterns:
-        match = re.search(pattern, description, re.I)
-        if match:
-            closing = parse_date(match.group(1))
-            if closing:
-                return closing
-    return None
 
 def identity(title, producer_or_venue):
     # Prefer producer identity so the same production from multiple calendars
