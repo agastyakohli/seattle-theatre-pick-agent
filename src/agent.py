@@ -566,53 +566,30 @@ def parse_nwtheatre_run_end_dates(html_text, productions):
     """Attach independent directory closing dates to already-discovered shows only.
 
     This directory is validation metadata, never a source of candidate shows
-    or performance dates. A title must match exactly after normalization and
-    have one unambiguous date-range listing on the page.
+    or performance dates. A title must match exactly before one date range.
     """
     soup = BeautifulSoup(html_text or "", "html.parser")
-    # Show/date pairs are normally rendered as individual paragraphs. Joining
-    # text nodes within each paragraph keeps the title beside its date range.
-    lines = [clean(node.get_text(" ", strip=True)) for node in soup.find_all(["p", "li"])]
-    if not lines:
-        lines = [clean(line) for line in soup.get_text("\n").splitlines()]
-    lines = [line for line in lines if line]
-    directory_dates = {}
-    date_range = re.compile(
-        r"\((\d{1,2})/(\d{1,2})\s*[-–]\s*(\d{1,2})/(\d{1,2})(?:/(\d{4}))?\)"
-    )
-
-    def normalized(value):
-        return " ".join(re.findall(r"[a-z0-9]+", clean(value).casefold()))
-
-    for line in lines:
-        match = date_range.search(line)
-        if not match:
-            continue
-        month, day, end_month, end_day, end_year = match.groups()
-        year = int(end_year or "2026")
-        try:
-            start = date(year, int(month), int(day))
-            finish_year = year + (1 if int(end_month) < int(month) else 0)
-            finish = date(finish_year, int(end_month), int(end_day))
-        except ValueError:
-            continue
-        before_range = line[:match.start()].strip()
-        # Remove company/venue suffixes only after title matching; directory
-        # line starts with the show title in the page's text representation.
-        line_key = normalized(before_range)
-        if not line_key:
-            continue
-        for production in productions:
-            title_key = normalized(production.get("title", ""))
-            if not title_key:
-                continue
-            if line_key == title_key or line_key.startswith(title_key + " "):
-                directory_dates.setdefault(production.get("id") or title_key, []).append(finish.isoformat())
+    page_text = clean(soup.get_text(" ", strip=True))
+    date_pattern = r"\\((\\d{1,2})/(\\d{1,2})\\s*[-–]\\s*(\\d{1,2})/(\\d{1,2})(?:/(\\d{4}))?\\)"
 
     for production in productions:
-        key = production.get("id") or normalized(production.get("title", ""))
-        dates = directory_dates.get(key, [])
-        unique_dates = sorted(set(dates))
+        title = clean(production.get("title", ""))
+        if not title:
+            continue
+        pattern = re.compile(re.escape(title) + r"\\s*" + date_pattern, re.IGNORECASE)
+        matches = list(pattern.finditer(page_text))
+        parsed_dates = []
+        for match in matches:
+            month, day, end_month, end_day, end_year = match.groups()
+            year = int(end_year or "2026")
+            try:
+                date(year, int(month), int(day))
+                finish_year = year + (1 if int(end_month) < int(month) else 0)
+                finish = date(finish_year, int(end_month), int(end_day))
+            except ValueError:
+                continue
+            parsed_dates.append(finish.isoformat())
+        unique_dates = sorted(set(parsed_dates))
         if len(unique_dates) == 1:
             production["run_end_date"] = unique_dates[0]
             production["run_end_source"] = "NWTheatre 2026 Shows directory"
