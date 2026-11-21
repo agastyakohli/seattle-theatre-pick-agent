@@ -570,13 +570,13 @@ def parse_nwtheatre_run_end_dates(html_text, productions):
     """
     soup = BeautifulSoup(html_text or "", "html.parser")
     page_text = clean(soup.get_text(" ", strip=True))
-    date_pattern = r"\\((\\d{1,2})/(\\d{1,2})\\s*[-–]\\s*(\\d{1,2})/(\\d{1,2})(?:/(\\d{4}))?\\)"
+    date_pattern = r"\((\d{1,2})/(\d{1,2})\s*[-–]\s*(\d{1,2})/(\d{1,2})(?:/(\d{4}))?\)"
 
     for production in productions:
         title = clean(production.get("title", ""))
         if not title:
             continue
-        pattern = re.compile(re.escape(title) + r"\\s*" + date_pattern, re.IGNORECASE)
+        pattern = re.compile(re.escape(title) + r"\s*" + date_pattern, re.IGNORECASE)
         matches = list(pattern.finditer(page_text))
         parsed_dates = []
         for match in matches:
