@@ -1,205 +1,5 @@
 [
   {
-    "title": "Get Involved",
-    "producer": "Taproot Theatre",
-    "source_name": "Taproot Theatre Performances",
-    "source_url": "https://taproottheatre.org/performances/",
-    "official_url": "https://taproottheatre.org/get-involved/",
-    "description": "Donors, volunteers, artists, technicians, interns… there are many ways for you to get involved! Your time and talents are a large part of what has made us successful—we thank you!"
-  },
-  {
-    "title": "About Us",
-    "producer": "Taproot Theatre",
-    "source_name": "Taproot Theatre Performances",
-    "source_url": "https://taproottheatre.org/performances/",
-    "official_url": "https://taproottheatre.org/contact/",
-    "description": "Founded in 1976, Taproot Theatre Company tells stories of hope, serving the Pacific Northwest through live theatre and educational programs. We value faith. We respect people. We celebrate theatre."
-  },
-  {
-    "title": "Touring",
-    "producer": "Taproot Theatre",
-    "source_name": "Taproot Theatre Performances",
-    "source_url": "https://taproottheatre.org/performances/",
-    "official_url": "https://taproottheatre.org/touring/school/",
-    "description": "Taproot’s touring programs offer engaging performances, assemblies, and improv shows designed to inspire, educate, and connect. Choose from a variety of options tailored for classrooms, holiday gatherings, church services, and special events."
-  },
-  {
-    "title": "Where stories begin.",
-    "producer": "Taproot Theatre",
-    "source_name": "Taproot Theatre Performances",
-    "source_url": "https://taproottheatre.org/performances/",
-    "official_url": "https://taproottheatre.org/performances/",
-    "description": "From youth and adult classes to residencies and ESML programs, explore creative experiences that spark imagination and build community."
-  },
-  {
-    "title": "Stories of hope.",
-    "producer": "Taproot Theatre",
-    "source_name": "Taproot Theatre Performances",
-    "source_url": "https://taproottheatre.org/performances/",
-    "official_url": "https://taproottheatre.org/performances/",
-    "description": "Experience the joy of live theatre, from powerful Jewell Mainstage productions to improv shows and holiday favorites. Explore what’s on stage, get tickets, and plan your visit."
-  },
-  {
-    "title": "Performances",
-    "producer": "Taproot Theatre",
-    "source_name": "Taproot Theatre Performances",
-    "source_url": "https://taproottheatre.org/performances/",
-    "official_url": "https://taproottheatre.org/performances/",
-    "description": ""
-  },
-  {
-    "title": "Louisa May Alcott’s Little Women",
-    "producer": "Taproot Theatre",
-    "source_name": "Taproot Theatre Performances",
-    "source_url": "https://taproottheatre.org/performances/",
-    "official_url": "https://taproottheatre.org/2026/little-women/",
-    "description": "November 18–December 26, 2026  December 3–26, 2026 A Charlie Brown Christmas January 20–February 20, 2027 FANNIE: The Music and Life of Fannie Lou Hamer March 17–April 24, 2027 Sense and Sensibility May 12–June 12, 2027 House of India July 7–August 14, 2027 Peril in the Alps September 15–October 23, 2027 The 25th Annual Putnam County Spelling Bee"
-  },
-  {
-    "title": "A Charlie Brown Christmas",
-    "producer": "Taproot Theatre",
-    "source_name": "Taproot Theatre Performances",
-    "source_url": "https://taproottheatre.org/performances/",
-    "official_url": "https://taproottheatre.org/2026/charlie-brown-christmas/",
-    "description": "November 18–December 26, 2026 Louisa May Alcott’s Little Women December 3–26, 2026  January 20–February 20, 2027 FANNIE: The Music and Life of Fannie Lou Hamer March 17–April 24, 2027 Sense and Sensibility May 12–June 12, 2027 House of India July 7–August 14, 2027 Peril in the Alps September 15–October 23, 2027 The 25th Annual Putnam County Spelling Bee"
-  },
-  {
-    "title": "FANNIE: The Music and Life of Fannie Lou Hamer",
-    "producer": "Taproot Theatre",
-    "source_name": "Taproot Theatre Performances",
-    "source_url": "https://taproottheatre.org/performances/",
-    "official_url": "https://taproottheatre.org/2027/fannie/",
-    "description": "November 18–December 26, 2026 Louisa May Alcott’s Little Women December 3–26, 2026 A Charlie Brown Christmas January 20–February 20, 2027  March 17–April 24, 2027 Sense and Sensibility May 12–June 12, 2027 House of India July 7–August 14, 2027 Peril in the Alps September 15–October 23, 2027 The 25th Annual Putnam County Spelling Bee"
-  },
-  {
-    "title": "Sense and Sensibility",
-    "producer": "Taproot Theatre",
-    "source_name": "Taproot Theatre Performances",
-    "source_url": "https://taproottheatre.org/performances/",
-    "official_url": "https://taproottheatre.org/2027/sensibility/",
-    "description": "November 18–December 26, 2026 Louisa May Alcott’s Little Women December 3–26, 2026 A Charlie Brown Christmas January 20–February 20, 2027 FANNIE: The Music and Life of Fannie Lou Hamer March 17–April 24, 2027  May 12–June 12, 2027 House of India July 7–August 14, 2027 Peril in the Alps September 15–October 23, 2027 The 25th Annual Putnam County Spelling Bee"
-  },
-  {
-    "title": "House of India",
-    "producer": "Taproot Theatre",
-    "source_name": "Taproot Theatre Performances",
-    "source_url": "https://taproottheatre.org/performances/",
-    "official_url": "https://taproottheatre.org/2027/house-of-india/",
-    "description": "November 18–December 26, 2026 Louisa May Alcott’s Little Women December 3–26, 2026 A Charlie Brown Christmas January 20–February 20, 2027 FANNIE: The Music and Life of Fannie Lou Hamer March 17–April 24, 2027 Sense and Sensibility May 12–June 12, 2027  July 7–August 14, 2027 Peril in the Alps September 15–October 23, 2027 The 25th Annual Putnam County Spelling Bee"
-  },
-  {
-    "title": "Peril in the Alps",
-    "producer": "Taproot Theatre",
-    "source_name": "Taproot Theatre Performances",
-    "source_url": "https://taproottheatre.org/performances/",
-    "official_url": "https://taproottheatre.org/2027/peril-in-the-alps/",
-    "description": "November 18–December 26, 2026 Louisa May Alcott’s Little Women December 3–26, 2026 A Charlie Brown Christmas January 20–February 20, 2027 FANNIE: The Music and Life of Fannie Lou Hamer March 17–April 24, 2027 Sense and Sensibility May 12–June 12, 2027 House of India July 7–August 14, 2027  September 15–October 23, 2027 The 25th Annual Putnam County Spelling Bee"
-  },
-  {
-    "title": "The 25th Annual Putnam County Spelling Bee",
-    "producer": "Taproot Theatre",
-    "source_name": "Taproot Theatre Performances",
-    "source_url": "https://taproottheatre.org/performances/",
-    "official_url": "https://taproottheatre.org/2027/spelling-bee/",
-    "description": "November 18–December 26, 2026 Louisa May Alcott’s Little Women December 3–26, 2026 A Charlie Brown Christmas January 20–February 20, 2027 FANNIE: The Music and Life of Fannie Lou Hamer March 17–April 24, 2027 Sense and Sensibility May 12–June 12, 2027 House of India July 7–August 14, 2027 Peril in the Alps September 15–October 23, 2027"
-  },
-  {
-    "title": "Explore our Theatres",
-    "producer": "Taproot Theatre",
-    "source_name": "Taproot Theatre Performances",
-    "source_url": "https://taproottheatre.org/performances/",
-    "official_url": "https://taproottheatre.org/performances/",
-    "description": "Taproot Theatre is home to two unique performance spaces in the heart of Greenwood. From the grand tradition of the Jewell Mainstage Theatre to the creative energy of the Isaac Studio Theatre, each offers an intimate setting where stories come alive and connection thrives."
-  },
-  {
-    "title": "Jewell Mainstage Theatre",
-    "producer": "Taproot Theatre",
-    "source_name": "Taproot Theatre Performances",
-    "source_url": "https://taproottheatre.org/performances/",
-    "official_url": "https://taproottheatre.org/performances/",
-    "description": "Taproot’s 226-seat Jewell Mainstage Theatre has a thrust stage that brings powerful stories to life just steps from every seat. With main floor and balcony seating, patrons are never more than 30 feet from the stage. Each Jewell Mainstage Season features a mix of heartfelt comedies, thought-provoking dramas, and timeless favorites, all staged with Taproot’s signature blend of artistry and authenticity."
-  },
-  {
-    "title": "Isaac Studio Theatre",
-    "producer": "Taproot Theatre",
-    "source_name": "Taproot Theatre Performances",
-    "source_url": "https://taproottheatre.org/performances/",
-    "official_url": "https://taproottheatre.org/performances/",
-    "description": "Nestled just across the hall from the Jewell Mainstage Theatre, the Isaac Studio Theatre is Taproot’s creative laboratory—a flexible black box space for new works, improv performances, and special events. With reconfigurable seating for up to 120, it offers an up-close experience that’s full of energy and surprise. From emerging voices to community favorites like A Charlie Brown Christmas , the Isaac Studio is where bold ideas take root and grow."
-  },
-  {
-    "title": "Ways to Attend",
-    "producer": "Taproot Theatre",
-    "source_name": "Taproot Theatre Performances",
-    "source_url": "https://taproottheatre.org/performances/",
-    "official_url": "https://taproottheatre.org/performances/",
-    "description": "Whether you’re seeing your very first show or every show of the season, there’s a way to experience Taproot that fits your schedule—and your budget."
-  },
-  {
-    "title": "Season Subscriptions",
-    "producer": "Taproot Theatre",
-    "source_name": "Taproot Theatre Performances",
-    "source_url": "https://taproottheatre.org/performances/",
-    "official_url": "https://taproottheatre.org/subscriptions",
-    "description": "Enjoy the full year of storytelling with guaranteed seats, flexible exchanges, and exclusive savings. Subscribers get the best value—and the best seats in the house. Learn more >"
-  },
-  {
-    "title": "Single Tickets",
-    "producer": "Taproot Theatre",
-    "source_name": "Taproot Theatre Performances",
-    "source_url": "https://taproottheatre.org/performances/",
-    "official_url": "https://taproottheatre.org/performances",
-    "description": "Choose your performance and seat, then join us for an evening of theatre that will stay with you long after the curtain falls. Learn more >"
-  },
-  {
-    "title": "Discounts & Special Offers",
-    "producer": "Taproot Theatre",
-    "source_name": "Taproot Theatre Performances",
-    "source_url": "https://taproottheatre.org/performances/",
-    "official_url": "https://taproottheatre.org/ticketing",
-    "description": "Taproot offers accessible pricing for students, seniors, groups, and early buyers, along with Pay What You Can performances and rush tickets. Learn more >"
-  },
-  {
-    "title": "\"For me, the Taproot experience is always one of excellence, warmth, and delightful entertainment. When I’m able to be in attendance, it never disappoints. Taproot is an essential part of the theatre community.”",
-    "producer": "Taproot Theatre",
-    "source_name": "Taproot Theatre Performances",
-    "source_url": "https://taproottheatre.org/performances/",
-    "official_url": "https://taproottheatre.org/performances/",
-    "description": ""
-  },
-  {
-    "title": "We Recommend",
-    "producer": "Taproot Theatre",
-    "source_name": "Taproot Theatre Performances",
-    "source_url": "https://taproottheatre.org/performances/",
-    "official_url": "https://taproottheatre.org/performances/",
-    "description": ""
-  },
-  {
-    "title": "Ticket Information",
-    "producer": "Taproot Theatre",
-    "source_name": "Taproot Theatre Performances",
-    "source_url": "https://taproottheatre.org/performances/",
-    "official_url": "https://taproottheatre.org/performances/",
-    "description": ""
-  },
-  {
-    "title": "Plan Your Visit",
-    "producer": "Taproot Theatre",
-    "source_name": "Taproot Theatre Performances",
-    "source_url": "https://taproottheatre.org/performances/",
-    "official_url": "https://taproottheatre.org/performances/kbyg/",
-    "description": ""
-  },
-  {
-    "title": "Support",
-    "producer": "Taproot Theatre",
-    "source_name": "Taproot Theatre Performances",
-    "source_url": "https://taproottheatre.org/performances/",
-    "official_url": "https://taproottheatre.org/donate/",
-    "description": ""
-  },
-  {
     "title": "2026 - 2027 Season",
     "producer": "ArtsWest",
     "source_name": "ArtsWest",
@@ -1344,286 +1144,6 @@
     "description": "Amy Thone (she/her) is so deeply pleased to once again be collaborating with Sheila “Horfey” Daniels, with whom she’s worked on King Lear (Kent), Midsummer (Titania), The Winter’s Tale (Paulina), Much Ado (Beatrice), My Name is Asher Lev (Rivkeh), The Bridge at San Luis Rey (Nun), The Normal Heart (Dr. Emma Brookner), Macbeth (co-workshop leaders–UW), plus years of collaborating as teachers at Cornish College of the Arts. Previously at Intiman, Amy appeared in: A Question of Mercy, Measure for Measure, and The Diary of Anne Frank. She is a proud core company member at ACT, where she has played both Marley and Scrooge in A Christmas Carol, the Nurse in Romeo and Juliet, and just recently, an "
   },
   {
-    "title": "Events",
-    "producer": "Unexpected Productions",
-    "source_name": "Unexpected Productions Events",
-    "source_url": "https://www.unexpectedproductions.org/events/list/",
-    "official_url": "https://www.unexpectedproductions.org/events/list/",
-    "description": "Events Search and Views Navigation Search Enter Keyword. Search for Events by Keyword. Find Events Event Views Navigation List List Month Day Today Now Now - 2026-11-27 November 27 Select date."
-  },
-  {
-    "title": "Events Search and Views Navigation",
-    "producer": "Unexpected Productions",
-    "source_name": "Unexpected Productions Events",
-    "source_url": "https://www.unexpectedproductions.org/events/list/",
-    "official_url": "https://www.unexpectedproductions.org/events/list/",
-    "description": "Search Enter Keyword. Search for Events by Keyword. Find Events Event Views Navigation List List Month Day"
-  },
-  {
-    "title": "Event Views Navigation",
-    "producer": "Unexpected Productions",
-    "source_name": "Unexpected Productions Events",
-    "source_url": "https://www.unexpectedproductions.org/events/list/",
-    "official_url": "https://www.unexpectedproductions.org/events/list/",
-    "description": "Events Search and Views Navigation Search Enter Keyword. Search for Events by Keyword. Find Events  List List Month Day"
-  },
-  {
-    "title": "November 2026",
-    "producer": "Unexpected Productions",
-    "source_name": "Unexpected Productions Events",
-    "source_url": "https://www.unexpectedproductions.org/events/list/",
-    "official_url": "https://www.unexpectedproductions.org/series/seattle-theatresports-2026/",
-    "description": "Sat 21 Improv Happy Hour November 21 @ 6:00 pm - 7:00 pm Improv Happy Hour Unexpected Productions 1428 Post Alley at the Gum Wall in Pike Place Market, Seattle, WA, United States Join us for Improv Happy Hour, where comedy is unscripted, unpredictable, and unbelievably fun! From movie mashups to literary spoofs and bold, experimental comedy, our quick-thinking performers turn your suggestions... Sat 21 Kit, Cat and Caboodle: An Improvised Musical Retrospective November 21 @ 7:30 pm - 8:45 pm Kit, Cat and Caboodle: An Improvised Musical Retrospective Unexpected Productions 1428 Post Alley at the Gum Wall in Pike Place Market, Seattle, WA, United States A completely improvised musical about th"
-  },
-  {
-    "title": "Improv Happy Hour",
-    "producer": "Unexpected Productions",
-    "source_name": "Unexpected Productions Events",
-    "source_url": "https://www.unexpectedproductions.org/events/list/",
-    "official_url": "https://www.unexpectedproductions.org/event/improv-happy-hour/2026-11-21/",
-    "description": "November 21 @ 6:00 pm - 7:00 pm Improv Happy Hour Unexpected Productions 1428 Post Alley at the Gum Wall in Pike Place Market, Seattle, WA, United States"
-  },
-  {
-    "title": "Kit, Cat and Caboodle: An Improvised Musical Retrospective",
-    "producer": "Unexpected Productions",
-    "source_name": "Unexpected Productions Events",
-    "source_url": "https://www.unexpectedproductions.org/events/list/",
-    "official_url": "https://www.unexpectedproductions.org/event/kit-cat-and-caboodle-an-improvised-musical-retrospective-2/2026-11-21/",
-    "description": "November 21 @ 7:30 pm - 8:45 pm Kit, Cat and Caboodle: An Improvised Musical Retrospective Unexpected Productions 1428 Post Alley at the Gum Wall in Pike Place Market, Seattle, WA, United States"
-  },
-  {
-    "title": "Seattle Theatresports 2026",
-    "producer": "Unexpected Productions",
-    "source_name": "Unexpected Productions Events",
-    "source_url": "https://www.unexpectedproductions.org/events/list/",
-    "official_url": "https://www.unexpectedproductions.org/event/seattle-theatresports-2026-3/2026-11-21/",
-    "description": "November 21 @ 9:30 pm - 11:00 pm Seattle Theatresports 2026 Unexpected Productions 1428 Post Alley at the Gum Wall in Pike Place Market, Seattle, WA, United States"
-  },
-  {
-    "title": "Cinema Unexpected: An Improvised Movie Live",
-    "producer": "Unexpected Productions",
-    "source_name": "Unexpected Productions Events",
-    "source_url": "https://www.unexpectedproductions.org/events/list/",
-    "official_url": "https://www.unexpectedproductions.org/event/cinema-unexpected-an-improvised-movie-live/2026-11-22/",
-    "description": "November 22 @ 7:30 pm - 8:45 pm Cinema Unexpected: An Improvised Movie Live Unexpected Productions 1428 Post Alley at the Gum Wall in Pike Place Market, Seattle, WA, United States"
-  },
-  {
-    "title": "Hogan Cup Teen Improv Tournament",
-    "producer": "Unexpected Productions",
-    "source_name": "Unexpected Productions Events",
-    "source_url": "https://www.unexpectedproductions.org/events/list/",
-    "official_url": "https://www.unexpectedproductions.org/event/hogan-cup-teen-improv-tournament/",
-    "description": "November 23 @ 7:00 pm - 9:30 pm Unexpected Productions 1428 Post Alley at the Gum Wall in Pike Place Market, Seattle, WA, United States"
-  },
-  {
-    "title": "Fall Improv Student Showcase",
-    "producer": "Unexpected Productions",
-    "source_name": "Unexpected Productions Events",
-    "source_url": "https://www.unexpectedproductions.org/events/list/",
-    "official_url": "https://www.unexpectedproductions.org/event/fall-improv-student-showcase/",
-    "description": "November 24 @ 6:00 pm - 10:00 pm Unexpected Productions 1428 Post Alley at the Gum Wall in Pike Place Market, Seattle, WA, United States"
-  },
-  {
-    "title": "Fall Student Showcase",
-    "producer": "Unexpected Productions",
-    "source_name": "Unexpected Productions Events",
-    "source_url": "https://www.unexpectedproductions.org/events/list/",
-    "official_url": "https://www.unexpectedproductions.org/event/fall-student-showcase/",
-    "description": "November 24 @ 6:00 pm - 10:00 pm Unexpected Productions 1428 Post Alley at the Gum Wall in Pike Place Market, Seattle, WA, United States"
-  },
-  {
-    "title": "Improv Unexpected at Jules Maes in Georgetown",
-    "producer": "Unexpected Productions",
-    "source_name": "Unexpected Productions Events",
-    "source_url": "https://www.unexpectedproductions.org/events/list/",
-    "official_url": "https://www.unexpectedproductions.org/event/improv-unexpected-at-jules-maes-in-georgetown/2026-11-24/",
-    "description": "November 24 @ 9:00 pm - 10:00 pm Improv Unexpected at Jules Maes in Georgetown Jules Maes Saloon 1428 Post Alley5919 Airport Way S, Seattle, WA, United States"
-  },
-  {
-    "title": "Duo Comedy Showcase 2026",
-    "producer": "Unexpected Productions",
-    "source_name": "Unexpected Productions Events",
-    "source_url": "https://www.unexpectedproductions.org/events/list/",
-    "official_url": "https://www.unexpectedproductions.org/event/duo-comedy-showcase-2026/2026-11-25/",
-    "description": "November 25 @ 8:00 pm - 9:30 pm Duo Comedy Showcase 2026 Unexpected Productions 1428 Post Alley at the Gum Wall in Pike Place Market, Seattle, WA, United States"
-  },
-  {
-    "title": "Thanksgiving Day",
-    "producer": "Unexpected Productions",
-    "source_name": "Unexpected Productions Events",
-    "source_url": "https://www.unexpectedproductions.org/events/list/",
-    "official_url": "https://www.unexpectedproductions.org/event/thanksgiving-day/",
-    "description": "November 26 @ 12:00 am Unexpected Productions 1428 Post Alley at the Gum Wall in Pike Place Market, Seattle, WA, United States"
-  },
-  {
-    "title": "Improv Happy Hour",
-    "producer": "Unexpected Productions",
-    "source_name": "Unexpected Productions Events",
-    "source_url": "https://www.unexpectedproductions.org/events/list/",
-    "official_url": "https://www.unexpectedproductions.org/event/improv-happy-hour/2026-11-27/",
-    "description": "November 27 @ 6:00 pm - 7:00 pm Improv Happy Hour Unexpected Productions 1428 Post Alley at the Gum Wall in Pike Place Market, Seattle, WA, United States"
-  },
-  {
-    "title": "An Improvised Christmas Carol",
-    "producer": "Unexpected Productions",
-    "source_name": "Unexpected Productions Events",
-    "source_url": "https://www.unexpectedproductions.org/events/list/",
-    "official_url": "https://www.unexpectedproductions.org/event/an-improvised-christmas-carol/2026-11-27/",
-    "description": "November 27 @ 7:30 pm - 9:00 pm An Improvised Christmas Carol"
-  },
-  {
-    "title": "UP Partners and Grant Providers",
-    "producer": "Unexpected Productions",
-    "source_name": "Unexpected Productions Events",
-    "source_url": "https://www.unexpectedproductions.org/events/list/",
-    "official_url": "https://www.unexpectedproductions.org/events/list/",
-    "description": "4Culture ArtsFund Seattle Office of Arts & Culture ArtsWA National Endowment for the Arts"
-  },
-  {
-    "title": "Donate to UP",
-    "producer": "Unexpected Productions",
-    "source_name": "Unexpected Productions Events",
-    "source_url": "https://www.unexpectedproductions.org/events/list/",
-    "official_url": "https://www.unexpectedproductions.org/events/list/",
-    "description": "Many thanks to UP's donors. So many people in the Seattle community have been so generous and we appreciate everyone who has contributed to make our theater a special place! Donate Now"
-  },
-  {
-    "title": "UP Newsletter",
-    "producer": "Unexpected Productions",
-    "source_name": "Unexpected Productions Events",
-    "source_url": "https://www.unexpectedproductions.org/events/list/",
-    "official_url": "https://www.unexpectedproductions.org/events/list/",
-    "description": "Are you interested in learning more about Unexpected Productions or staying up to date on upcoming shows and events? Then sign up for our newsletter! Sign Up!"
-  },
-  {
-    "title": "Follow us on:",
-    "producer": "Seattle Rep",
-    "source_name": "Seattle Rep 2026/27 Season",
-    "source_url": "https://www.seattlerep.org/plays/202627-season",
-    "official_url": "https://www.seattlerep.org/support/ways-to-give-and-contact-us",
-    "description": "Search our site Plays & Tickets 2026/27 Season Subscribe Calendar Ticket Finder Ticket Info & Discounts Group Tickets Student Matinees Gift Certificates Past Seasons Plan Your Visit Hours & Venue Info Getting Here & Parking Accessible Options Our Lobby Bringing a Group Health Protocols For Families FAQ Events Education For Youth For Adults For Teachers For Businesses New Works A Guide to the New Works Process Upcoming Presentations New Works in Development New Works History Support Corporate & Institutional Partnerships Donor Benefits & Events Giving Opportunities Ways to Give & Contact Us About Us Who We Are Inside Seattle Rep Staff & Board Volunteer Employment Financials Land Acknowledgmen"
-  },
-  {
-    "title": "2026/27 Season",
-    "producer": "Seattle Rep",
-    "source_name": "Seattle Rep 2026/27 Season",
-    "source_url": "https://www.seattlerep.org/plays/202627-season",
-    "official_url": "https://www.seattlerep.org/plays/202627-season/peter-pan-goes-wrong",
-    "description": "Home Plays & Tickets 2026/27 Season The Power of Story, Center Stage. Seattle Rep's 2026/27 Season celebrates the power of stories to shape who we are. From hilarious misadventures to deeply moving and urgently relevant dramas, each production explores identity, community, and what it means to claim your own voice. The best Seattle Rep experience is the one of a subscriber. Subscribers lock in pricing and guarantee seats to our hottest hit shows, get free exchanges if plans change, save on additional single tickets for friends and family with an exclusive subscriber discount , and other great perks . Don't miss a moment—subscribe today! subscribe » Peter Pan Goes Wrong Nov. 27, 2026 – Jan. 3"
-  },
-  {
-    "title": "The Power of Story, Center Stage.",
-    "producer": "Seattle Rep",
-    "source_name": "Seattle Rep 2026/27 Season",
-    "source_url": "https://www.seattlerep.org/plays/202627-season",
-    "official_url": "https://www.seattlerep.org/plays/subscribe/subscription-benefits",
-    "description": "Seattle Rep's 2026/27 Season celebrates the power of stories to shape who we are. From hilarious misadventures to deeply moving and urgently relevant dramas, each production explores identity, community, and what it means to claim your own voice. The best Seattle Rep experience is the one of a subscriber. Subscribers lock in pricing and guarantee seats to our hottest hit shows, get free exchanges if plans change, save on additional single tickets for friends and family with an exclusive subscriber discount , and other great perks . Don't miss a moment—subscribe today! subscribe »"
-  },
-  {
-    "title": "Peter Pan Goes Wrong",
-    "producer": "Seattle Rep",
-    "source_name": "Seattle Rep 2026/27 Season",
-    "source_url": "https://www.seattlerep.org/plays/202627-season",
-    "official_url": "https://www.seattlerep.org/plays/202627-season/peter-pan-goes-wrong",
-    "description": "Nov. 27, 2026 – Jan. 3, 2027 John Proctor Is the Villain Jan. 21 – Feb. 21, 2027 Intimate Apparel Feb. 18 – Mar. 21, 2027 Amadeus Apr. 8 – May 9, 2027 You Are Cordially Invited to the End of the World! May 13 – June 13, 2027"
-  },
-  {
-    "title": "John Proctor Is the Villain",
-    "producer": "Seattle Rep",
-    "source_name": "Seattle Rep 2026/27 Season",
-    "source_url": "https://www.seattlerep.org/plays/202627-season",
-    "official_url": "https://www.seattlerep.org/plays/202627-season/john-proctor-is-the-villain",
-    "description": "Peter Pan Goes Wrong Nov. 27, 2026 – Jan. 3, 2027  Jan. 21 – Feb. 21, 2027 Intimate Apparel Feb. 18 – Mar. 21, 2027 Amadeus Apr. 8 – May 9, 2027 You Are Cordially Invited to the End of the World! May 13 – June 13, 2027"
-  },
-  {
-    "title": "Intimate Apparel",
-    "producer": "Seattle Rep",
-    "source_name": "Seattle Rep 2026/27 Season",
-    "source_url": "https://www.seattlerep.org/plays/202627-season",
-    "official_url": "https://www.seattlerep.org/plays/202627-season/intimate-apparel",
-    "description": "Peter Pan Goes Wrong Nov. 27, 2026 – Jan. 3, 2027 John Proctor Is the Villain Jan. 21 – Feb. 21, 2027  Feb. 18 – Mar. 21, 2027 Amadeus Apr. 8 – May 9, 2027 You Are Cordially Invited to the End of the World! May 13 – June 13, 2027"
-  },
-  {
-    "title": "Amadeus",
-    "producer": "Seattle Rep",
-    "source_name": "Seattle Rep 2026/27 Season",
-    "source_url": "https://www.seattlerep.org/plays/202627-season",
-    "official_url": "https://www.seattlerep.org/plays/202627-season/amadeus",
-    "description": "Peter Pan Goes Wrong Nov. 27, 2026 – Jan. 3, 2027 John Proctor Is the Villain Jan. 21 – Feb. 21, 2027 Intimate Apparel Feb. 18 – Mar. 21, 2027  Apr. 8 – May 9, 2027 You Are Cordially Invited to the End of the World! May 13 – June 13, 2027"
-  },
-  {
-    "title": "You Are Cordially Invited to the End of the World!",
-    "producer": "Seattle Rep",
-    "source_name": "Seattle Rep 2026/27 Season",
-    "source_url": "https://www.seattlerep.org/plays/202627-season",
-    "official_url": "https://www.seattlerep.org/plays/202627-season/you-are-cordially-invited-to-the-end-of-the-world",
-    "description": "Peter Pan Goes Wrong Nov. 27, 2026 – Jan. 3, 2027 John Proctor Is the Villain Jan. 21 – Feb. 21, 2027 Intimate Apparel Feb. 18 – Mar. 21, 2027 Amadeus Apr. 8 – May 9, 2027  May 13 – June 13, 2027"
-  },
-  {
-    "title": "Special Presentations",
-    "producer": "Seattle Rep",
-    "source_name": "Seattle Rep 2026/27 Season",
-    "source_url": "https://www.seattlerep.org/plays/202627-season",
-    "official_url": "https://www.seattlerep.org/plays/202627-season",
-    "description": "The Power of Story, Center Stage. Seattle Rep's 2026/27 Season celebrates the power of stories to shape who we are. From hilarious misadventures to deeply moving and urgently relevant dramas, each production explores identity, community, and what it means to claim your own voice. The best Seattle Rep experience is the one of a subscriber. Subscribers lock in pricing and guarantee seats to our hottest hit shows, get free exchanges if plans change, save on additional single tickets for friends and family with an exclusive subscriber discount , and other great perks . Don't miss a moment—subscribe today! subscribe » Peter Pan Goes Wrong Nov. 27, 2026 – Jan. 3, 2027 John Proctor Is the Villain J"
-  },
-  {
-    "title": "Special Season Engagement: EULOGY",
-    "producer": "Seattle Rep",
-    "source_name": "Seattle Rep 2026/27 Season",
-    "source_url": "https://www.seattlerep.org/plays/202627-season",
-    "official_url": "https://www.seattlerep.org/plays/202627-season",
-    "description": "Sept. 24–Oct. 11, 2026 | PONCHO Forum  Eulogy, or How to Plan Your Own Funeral (and have fun doing it!) is Brendan Healy's true story about living with a terminal illness, accompanied by tips for planning your own funeral. Tip number one: Make it a funeral worth dying for."
-  },
-  {
-    "title": "Young Rep Productions",
-    "producer": "Seattle Rep",
-    "source_name": "Seattle Rep 2026/27 Season",
-    "source_url": "https://www.seattlerep.org/plays/202627-season",
-    "official_url": "https://www.seattlerep.org/education/for-youth",
-    "description": "Check out our 2026 Young Rep productions, starring the next generation of theater makers in fully produced shows on the Leo K. stage"
-  },
-  {
-    "title": "The Best Christmas Pageant Ever",
-    "producer": "Seattle Rep",
-    "source_name": "Seattle Rep 2026/27 Season",
-    "source_url": "https://www.seattlerep.org/plays/202627-season",
-    "official_url": "https://www.seattlerep.org/events/special-events/the-best-christmas-pageant-ever",
-    "description": "Dec. 11–20, 2026 | Leo K. Theater  When the unruly Herdman kids take over the town pageant, chaos leads to unexpected heart in this joyful, hilarious holiday celebration of belonging. Starring a Young Rep cast ages 8–20."
-  },
-  {
-    "title": "Previously in this season",
-    "producer": "Seattle Rep",
-    "source_name": "Seattle Rep 2026/27 Season",
-    "source_url": "https://www.seattlerep.org/plays/202627-season",
-    "official_url": "https://www.seattlerep.org/plays/202627-season",
-    "description": "Eureka Day Sept. 24 – Nov. 15, 2026 Freak The Mighty Jul. 30 – Sept. 6, 2026"
-  },
-  {
-    "title": "Eureka Day",
-    "producer": "Seattle Rep",
-    "source_name": "Seattle Rep 2026/27 Season",
-    "source_url": "https://www.seattlerep.org/plays/202627-season",
-    "official_url": "https://www.seattlerep.org/plays/202627-season/eureka-day",
-    "description": "Sept. 24 – Nov. 15, 2026 Freak The Mighty Jul. 30 – Sept. 6, 2026"
-  },
-  {
-    "title": "Freak The Mighty",
-    "producer": "Seattle Rep",
-    "source_name": "Seattle Rep 2026/27 Season",
-    "source_url": "https://www.seattlerep.org/plays/202627-season",
-    "official_url": "https://www.seattlerep.org/plays/202627-season/freak-the-mighty",
-    "description": "Eureka Day Sept. 24 – Nov. 15, 2026  Jul. 30 – Sept. 6, 2026"
-  },
-  {
-    "title": "Seattle Rep",
-    "producer": "Seattle Rep",
-    "source_name": "Seattle Rep 2026/27 Season",
-    "source_url": "https://www.seattlerep.org/plays/202627-season",
-    "official_url": "https://www.seattlerep.org/plays/202627-season",
-    "description": "Facebook Tiktok Instagram YouTube Dámaso Rodríguez Artistic Director Jeffrey Herrmann Managing Director Box Office: 206.443.2222 Administrative Offices: 206.443.2210 155 Mercer Street PO Box 900923 | Seattle, WA 98109"
-  },
-  {
     "title": "Upcoming Events",
     "producer": "Union Arts Center",
     "source_name": "Union Arts Center Events",
@@ -1925,6 +1445,214 @@
     "source_name": "Annex Theatre Productions",
     "source_url": "https://www.annextheatre.org/season-40-overview/",
     "official_url": "https://www.annextheatre.org/season-40-overview/",
+    "description": ""
+  },
+  {
+    "title": "A Charlie Brown Christmas",
+    "producer": "Taproot Theatre",
+    "source_name": "Taproot Theatre Performances",
+    "source_url": "https://taproottheatre.org/performances/",
+    "official_url": "https://taproottheatre.org/2026/charlie-brown-christmas/",
+    "description": "November 18–December 26, 2026 Louisa May Alcott’s Little Women December 3–26, 2026  January 20–February 20, 2027 FANNIE: The Music and Life of Fannie Lou Hamer March 17–April 24, 2027 Sense and Sensibility May 12–June 12, 2027 House of India July 7–August 14, 2027 Peril in the Alps September 15–October 23, 2027 The 25th Annual Putnam County Spelling Bee"
+  },
+  {
+    "title": "Sense and Sensibility",
+    "producer": "Taproot Theatre",
+    "source_name": "Taproot Theatre Performances",
+    "source_url": "https://taproottheatre.org/performances/",
+    "official_url": "https://taproottheatre.org/2027/sensibility/",
+    "description": "November 18–December 26, 2026 Louisa May Alcott’s Little Women December 3–26, 2026 A Charlie Brown Christmas January 20–February 20, 2027 FANNIE: The Music and Life of Fannie Lou Hamer March 17–April 24, 2027  May 12–June 12, 2027 House of India July 7–August 14, 2027 Peril in the Alps September 15–October 23, 2027 The 25th Annual Putnam County Spelling Bee"
+  },
+  {
+    "title": "House of India",
+    "producer": "Taproot Theatre",
+    "source_name": "Taproot Theatre Performances",
+    "source_url": "https://taproottheatre.org/performances/",
+    "official_url": "https://taproottheatre.org/2027/house-of-india/",
+    "description": "November 18–December 26, 2026 Louisa May Alcott’s Little Women December 3–26, 2026 A Charlie Brown Christmas January 20–February 20, 2027 FANNIE: The Music and Life of Fannie Lou Hamer March 17–April 24, 2027 Sense and Sensibility May 12–June 12, 2027  July 7–August 14, 2027 Peril in the Alps September 15–October 23, 2027 The 25th Annual Putnam County Spelling Bee"
+  },
+  {
+    "title": "Peril in the Alps",
+    "producer": "Taproot Theatre",
+    "source_name": "Taproot Theatre Performances",
+    "source_url": "https://taproottheatre.org/performances/",
+    "official_url": "https://taproottheatre.org/2027/peril-in-the-alps/",
+    "description": "November 18–December 26, 2026 Louisa May Alcott’s Little Women December 3–26, 2026 A Charlie Brown Christmas January 20–February 20, 2027 FANNIE: The Music and Life of Fannie Lou Hamer March 17–April 24, 2027 Sense and Sensibility May 12–June 12, 2027 House of India July 7–August 14, 2027  September 15–October 23, 2027 The 25th Annual Putnam County Spelling Bee"
+  },
+  {
+    "title": "Season Subscriptions",
+    "producer": "Taproot Theatre",
+    "source_name": "Taproot Theatre Performances",
+    "source_url": "https://taproottheatre.org/performances/",
+    "official_url": "https://taproottheatre.org/subscriptions",
+    "description": "Enjoy the full year of storytelling with guaranteed seats, flexible exchanges, and exclusive savings. Subscribers get the best value—and the best seats in the house. Learn more >"
+  },
+  {
+    "title": "Plan Your Visit",
+    "producer": "Taproot Theatre",
+    "source_name": "Taproot Theatre Performances",
+    "source_url": "https://taproottheatre.org/performances/",
+    "official_url": "https://taproottheatre.org/performances/kbyg/",
+    "description": ""
+  },
+  {
+    "title": "November 2026",
+    "producer": "Unexpected Productions",
+    "source_name": "Unexpected Productions Events",
+    "source_url": "https://www.unexpectedproductions.org/events/list/",
+    "official_url": "https://www.unexpectedproductions.org/series/seattle-theatresports-2026/",
+    "description": "Sat 21 Improv Happy Hour November 21 @ 6:00 pm - 7:00 pm Improv Happy Hour Unexpected Productions 1428 Post Alley at the Gum Wall in Pike Place Market, Seattle, WA, United States Join us for Improv Happy Hour, where comedy is unscripted, unpredictable, and unbelievably fun! From movie mashups to literary spoofs and bold, experimental comedy, our quick-thinking performers turn your suggestions... Sat 21 Kit, Cat and Caboodle: An Improvised Musical Retrospective November 21 @ 7:30 pm - 8:45 pm Kit, Cat and Caboodle: An Improvised Musical Retrospective Unexpected Productions 1428 Post Alley at the Gum Wall in Pike Place Market, Seattle, WA, United States A completely improvised musical about th"
+  },
+  {
+    "title": "Improv Happy Hour",
+    "producer": "Unexpected Productions",
+    "source_name": "Unexpected Productions Events",
+    "source_url": "https://www.unexpectedproductions.org/events/list/",
+    "official_url": "https://www.unexpectedproductions.org/event/improv-happy-hour/2026-11-21/",
+    "description": "November 21 @ 6:00 pm - 7:00 pm Improv Happy Hour Unexpected Productions 1428 Post Alley at the Gum Wall in Pike Place Market, Seattle, WA, United States"
+  },
+  {
+    "title": "Kit, Cat and Caboodle: An Improvised Musical Retrospective",
+    "producer": "Unexpected Productions",
+    "source_name": "Unexpected Productions Events",
+    "source_url": "https://www.unexpectedproductions.org/events/list/",
+    "official_url": "https://www.unexpectedproductions.org/event/kit-cat-and-caboodle-an-improvised-musical-retrospective-2/2026-11-21/",
+    "description": "November 21 @ 7:30 pm - 8:45 pm Kit, Cat and Caboodle: An Improvised Musical Retrospective Unexpected Productions 1428 Post Alley at the Gum Wall in Pike Place Market, Seattle, WA, United States"
+  },
+  {
+    "title": "Seattle Theatresports 2026",
+    "producer": "Unexpected Productions",
+    "source_name": "Unexpected Productions Events",
+    "source_url": "https://www.unexpectedproductions.org/events/list/",
+    "official_url": "https://www.unexpectedproductions.org/event/seattle-theatresports-2026-3/2026-11-21/",
+    "description": "November 21 @ 9:30 pm - 11:00 pm Seattle Theatresports 2026 Unexpected Productions 1428 Post Alley at the Gum Wall in Pike Place Market, Seattle, WA, United States"
+  },
+  {
+    "title": "Cinema Unexpected: An Improvised Movie Live",
+    "producer": "Unexpected Productions",
+    "source_name": "Unexpected Productions Events",
+    "source_url": "https://www.unexpectedproductions.org/events/list/",
+    "official_url": "https://www.unexpectedproductions.org/event/cinema-unexpected-an-improvised-movie-live/2026-11-22/",
+    "description": "November 22 @ 7:30 pm - 8:45 pm Cinema Unexpected: An Improvised Movie Live Unexpected Productions 1428 Post Alley at the Gum Wall in Pike Place Market, Seattle, WA, United States"
+  },
+  {
+    "title": "Hogan Cup Teen Improv Tournament",
+    "producer": "Unexpected Productions",
+    "source_name": "Unexpected Productions Events",
+    "source_url": "https://www.unexpectedproductions.org/events/list/",
+    "official_url": "https://www.unexpectedproductions.org/event/hogan-cup-teen-improv-tournament/",
+    "description": "November 23 @ 7:00 pm - 9:30 pm Unexpected Productions 1428 Post Alley at the Gum Wall in Pike Place Market, Seattle, WA, United States"
+  },
+  {
+    "title": "Fall Improv Student Showcase",
+    "producer": "Unexpected Productions",
+    "source_name": "Unexpected Productions Events",
+    "source_url": "https://www.unexpectedproductions.org/events/list/",
+    "official_url": "https://www.unexpectedproductions.org/event/fall-improv-student-showcase/",
+    "description": "November 24 @ 6:00 pm - 10:00 pm Unexpected Productions 1428 Post Alley at the Gum Wall in Pike Place Market, Seattle, WA, United States"
+  },
+  {
+    "title": "Fall Student Showcase",
+    "producer": "Unexpected Productions",
+    "source_name": "Unexpected Productions Events",
+    "source_url": "https://www.unexpectedproductions.org/events/list/",
+    "official_url": "https://www.unexpectedproductions.org/event/fall-student-showcase/",
+    "description": "November 24 @ 6:00 pm - 10:00 pm Unexpected Productions 1428 Post Alley at the Gum Wall in Pike Place Market, Seattle, WA, United States"
+  },
+  {
+    "title": "Improv Unexpected at Jules Maes in Georgetown",
+    "producer": "Unexpected Productions",
+    "source_name": "Unexpected Productions Events",
+    "source_url": "https://www.unexpectedproductions.org/events/list/",
+    "official_url": "https://www.unexpectedproductions.org/event/improv-unexpected-at-jules-maes-in-georgetown/2026-11-24/",
+    "description": "November 24 @ 9:00 pm - 10:00 pm Improv Unexpected at Jules Maes in Georgetown Jules Maes Saloon 1428 Post Alley5919 Airport Way S, Seattle, WA, United States"
+  },
+  {
+    "title": "Duo Comedy Showcase 2026",
+    "producer": "Unexpected Productions",
+    "source_name": "Unexpected Productions Events",
+    "source_url": "https://www.unexpectedproductions.org/events/list/",
+    "official_url": "https://www.unexpectedproductions.org/event/duo-comedy-showcase-2026/2026-11-25/",
+    "description": "November 25 @ 8:00 pm - 9:30 pm Duo Comedy Showcase 2026 Unexpected Productions 1428 Post Alley at the Gum Wall in Pike Place Market, Seattle, WA, United States"
+  },
+  {
+    "title": "Thanksgiving Day",
+    "producer": "Unexpected Productions",
+    "source_name": "Unexpected Productions Events",
+    "source_url": "https://www.unexpectedproductions.org/events/list/",
+    "official_url": "https://www.unexpectedproductions.org/event/thanksgiving-day/",
+    "description": "November 26 @ 12:00 am Unexpected Productions 1428 Post Alley at the Gum Wall in Pike Place Market, Seattle, WA, United States"
+  },
+  {
+    "title": "Improv Happy Hour",
+    "producer": "Unexpected Productions",
+    "source_name": "Unexpected Productions Events",
+    "source_url": "https://www.unexpectedproductions.org/events/list/",
+    "official_url": "https://www.unexpectedproductions.org/event/improv-happy-hour/2026-11-27/",
+    "description": "November 27 @ 6:00 pm - 7:00 pm Improv Happy Hour Unexpected Productions 1428 Post Alley at the Gum Wall in Pike Place Market, Seattle, WA, United States"
+  },
+  {
+    "title": "An Improvised Christmas Carol",
+    "producer": "Unexpected Productions",
+    "source_name": "Unexpected Productions Events",
+    "source_url": "https://www.unexpectedproductions.org/events/list/",
+    "official_url": "https://www.unexpectedproductions.org/event/an-improvised-christmas-carol/2026-11-27/",
+    "description": "November 27 @ 7:30 pm - 9:00 pm An Improvised Christmas Carol"
+  },
+  {
+    "title": "Peter Pan Goes Wrong",
+    "producer": "Seattle Rep",
+    "source_name": "Seattle Rep 2026/27 Season",
+    "source_url": "https://www.seattlerep.org/plays/202627-season",
+    "official_url": "https://www.seattlerep.org/plays/202627-season/peter-pan-goes-wrong",
+    "description": ""
+  },
+  {
+    "title": "John Proctor Is the Villain",
+    "producer": "Seattle Rep",
+    "source_name": "Seattle Rep 2026/27 Season",
+    "source_url": "https://www.seattlerep.org/plays/202627-season",
+    "official_url": "https://www.seattlerep.org/plays/202627-season/john-proctor-is-the-villain",
+    "description": ""
+  },
+  {
+    "title": "Intimate Apparel",
+    "producer": "Seattle Rep",
+    "source_name": "Seattle Rep 2026/27 Season",
+    "source_url": "https://www.seattlerep.org/plays/202627-season",
+    "official_url": "https://www.seattlerep.org/plays/202627-season/intimate-apparel",
+    "description": ""
+  },
+  {
+    "title": "You Are Cordially Invited to the End of the World!",
+    "producer": "Seattle Rep",
+    "source_name": "Seattle Rep 2026/27 Season",
+    "source_url": "https://www.seattlerep.org/plays/202627-season",
+    "official_url": "https://www.seattlerep.org/plays/202627-season/you-are-cordially-invited-to-the-end-of-the-world",
+    "description": ""
+  },
+  {
+    "title": "Young Rep Productions",
+    "producer": "Seattle Rep",
+    "source_name": "Seattle Rep 2026/27 Season",
+    "source_url": "https://www.seattlerep.org/plays/202627-season",
+    "official_url": "https://www.seattlerep.org/education/for-youth",
+    "description": "Check out our 2026 Young Rep productions, starring the next generation of theater makers in fully produced shows on the Leo K. stage"
+  },
+  {
+    "title": "Eureka Day",
+    "producer": "Seattle Rep",
+    "source_name": "Seattle Rep 2026/27 Season",
+    "source_url": "https://www.seattlerep.org/plays/202627-season",
+    "official_url": "https://www.seattlerep.org/plays/202627-season/eureka-day",
+    "description": ""
+  },
+  {
+    "title": "Freak The Mighty",
+    "producer": "Seattle Rep",
+    "source_name": "Seattle Rep 2026/27 Season",
+    "source_url": "https://www.seattlerep.org/plays/202627-season",
+    "official_url": "https://www.seattlerep.org/plays/202627-season/freak-the-mighty",
     "description": ""
   }
 ]
