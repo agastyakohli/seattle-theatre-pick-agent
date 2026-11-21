@@ -91,7 +91,7 @@ def catalog_from_page(soup, source):
             if candidates:
                 break
         candidates.sort(key=lambda value: (value[0], value[1]), reverse=True)
-        detail_url = candidates[0][1] if candidates and candidates[0][0] else base_url
+        detail_url = candidates[0][1] if candidates and (candidates[0][0] > 0 or len(candidates) == 1) else base_url
         container_text = ""
         for node in ancestors[1:]:
             text_value = clean(node.get_text(" ", strip=True))
@@ -116,14 +116,19 @@ def catalog_match(title, producer, catalog):
     ranked = []
     for entry in catalog:
         entry_producer = clean(entry.get("producer", "")).casefold()
-        if producer and entry_producer and entry_producer != clean(producer).casefold():
+        producer_words = title_tokens(producer)
+        entry_producer_words = title_tokens(entry_producer)
+        if producer_words and entry_producer_words and not (producer_words & entry_producer_words):
             continue
         candidate = title_tokens(entry.get("title", ""))
         if not candidate:
             continue
-        coverage = len(target & candidate) / max(len(target), len(candidate))
+        target_coverage = len(target & candidate) / len(target)
+        candidate_coverage = len(target & candidate) / len(candidate)
         ratio = SequenceMatcher(None, clean(title).casefold(), clean(entry.get("title", "")).casefold()).ratio()
-        score = max(coverage, ratio)
+        score = max(target_coverage, candidate_coverage, ratio)
+        if len(target) == 1 and score < 1.0:
+            continue
         if score >= 0.72:
             ranked.append((score, entry))
     ranked.sort(key=lambda pair: pair[0], reverse=True)
