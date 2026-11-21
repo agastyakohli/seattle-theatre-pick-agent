@@ -2,7 +2,7 @@
   {
     "title": "Rocky Horror Improv Show",
     "start_date": "2026-10-25",
-    "end_date": "2026-12-07",
+    "end_date": "2026-12-06",
     "venue": "Theatre Puget Sound",
     "description": "<p>The Rocky Horror Improv Show mashes up the cult-classic chaos of The Rocky Horror Picture Show with the anything-goes magic of live improv. Every performance is a wild, one-night-only rock […]</p>\\n",
     "url": "https://theatrepugetsound.org/event/rocky-horror-improv-show/2026-12-06/",
@@ -10,7 +10,21 @@
     "sources": [
       "Theatre Puget Sound Community Events Calendar"
     ],
-    "featured": false
+    "featured": false,
+    "performance_dates": [
+      "2026-10-25",
+      "2026-10-31",
+      "2026-11-01",
+      "2026-11-07",
+      "2026-11-22",
+      "2026-11-28",
+      "2026-11-29",
+      "2026-12-05",
+      "2026-12-06"
+    ],
+    "producer": "Theatre Puget Sound",
+    "event_url": "https://theatrepugetsound.org/event/rocky-horror-improv-show/2026-12-06/",
+    "source_priority": 1
   },
   {
     "title": "A Christmas Carol",
@@ -23,7 +37,20 @@
     "sources": [
       "Theatre Puget Sound Community Events Calendar"
     ],
-    "featured": false
+    "featured": false,
+    "performance_dates": [
+      "2026-11-27",
+      "2026-11-28",
+      "2026-11-29",
+      "2026-12-02",
+      "2026-12-03",
+      "2026-12-04",
+      "2026-12-05",
+      "2026-12-06"
+    ],
+    "producer": "Theatre Puget Sound",
+    "event_url": "https://theatrepugetsound.org/event/a-christmas-carol/2026-12-06/2/",
+    "source_priority": 1
   },
   {
     "title": "Snowed In",
@@ -36,7 +63,18 @@
     "sources": [
       "Theatre Puget Sound Community Events Calendar"
     ],
-    "featured": false
+    "featured": false,
+    "performance_dates": [
+      "2026-11-28",
+      "2026-11-29",
+      "2026-12-03",
+      "2026-12-04",
+      "2026-12-05",
+      "2026-12-06"
+    ],
+    "producer": "Theatre Puget Sound",
+    "event_url": "https://theatrepugetsound.org/event/snowed-in/2026-12-06/",
+    "source_priority": 1
   },
   {
     "title": "A Klingon Christmas Carol",
@@ -49,7 +87,15 @@
     "sources": [
       "Theatre Puget Sound Community Events Calendar"
     ],
-    "featured": false
+    "featured": false,
+    "performance_dates": [
+      "2026-12-04",
+      "2026-12-05",
+      "2026-12-06"
+    ],
+    "producer": "Theatre Puget Sound",
+    "event_url": "https://theatrepugetsound.org/event/a-klingon-christmas-carol-2/2026-12-06/",
+    "source_priority": 1
   },
   {
     "title": "The Dina Martina Christmas Show",
@@ -62,7 +108,15 @@
     "sources": [
       "Theatre Puget Sound Community Events Calendar"
     ],
-    "featured": false
+    "featured": false,
+    "performance_dates": [
+      "2026-12-04",
+      "2026-12-05",
+      "2026-12-06"
+    ],
+    "producer": "Theatre Puget Sound",
+    "event_url": "https://theatrepugetsound.org/event/the-dina-martina-christmas-show-2/2026-12-06/",
+    "source_priority": 1
   },
   {
     "title": "ALL IN: a speakeasy casino…with a supernatural twist!",
@@ -70,12 +124,31 @@
     "end_date": "2026-12-05",
     "venue": "1907 3rd Avenue",
     "description": "<p>ALL IN is an immersive, interactive open-world theater experience set inside a secret speakeasy casino run by mysterious supernatural forces. Rather than watching the story from a seat, you’re free […]</p>\\n",
-    "url": "https://theatrepugetsound.org/event/all-in-a-speakeasy-casino-with-a-supernatural-twist/2026-12-05/",
+    "url": "https://programs.theatrepugetsound.org/gregory-awards-ceremony/?_gl=1*mp6mwq*_ga*NTczMDcwMTgxLjE2OTUwNjgwMTc.*_ga_HJM5YRCJ2G*czE3OTEyMjQ5OTMkbzY1JGcwJHQxNzkxMjI0OTkzJGo2MCRsMCRoMA..",
     "id": "62a34a538b38d66f",
     "sources": [
       "Theatre Puget Sound Community Events Calendar"
     ],
-    "featured": false
+    "featured": false,
+    "performance_dates": [
+      "2026-10-30",
+      "2026-10-31",
+      "2026-11-06",
+      "2026-11-07",
+      "2026-11-13",
+      "2026-11-14",
+      "2026-11-20",
+      "2026-11-21",
+      "2026-11-27",
+      "2026-11-28",
+      "2026-12-04",
+      "2026-12-05"
+    ],
+    "producer": "Theatre Puget Sound",
+    "event_url": "https://theatrepugetsound.org/event/all-in-a-speakeasy-casino-with-a-supernatural-twist/2026-12-05/",
+    "source_priority": 1,
+    "producer_url": "",
+    "ticket_url": "https://programs.theatrepugetsound.org/gregory-awards-ceremony/?_gl=1*mp6mwq*_ga*NTczMDcwMTgxLjE2OTUwNjgwMTc.*_ga_HJM5YRCJ2G*czE3OTEyMjQ5OTMkbzY1JGcwJHQxNzkxMjI0OTkzJGo2MCRsMCRoMA.."
   },
   {
     "title": "नेहा & Neel (Neha and Neel | नेहा और नील)",
@@ -88,7 +161,32 @@
     "sources": [
       "Theatre Puget Sound Community Events Calendar"
     ],
-    "featured": false
+    "featured": false,
+    "performance_dates": [
+      "2026-10-28",
+      "2026-10-29",
+      "2026-10-30",
+      "2026-11-01",
+      "2026-11-05",
+      "2026-11-06",
+      "2026-11-07",
+      "2026-11-08",
+      "2026-11-12",
+      "2026-11-13",
+      "2026-11-14",
+      "2026-11-19",
+      "2026-11-20",
+      "2026-11-21",
+      "2026-11-26",
+      "2026-11-27",
+      "2026-11-28",
+      "2026-12-03",
+      "2026-12-04",
+      "2026-12-05"
+    ],
+    "producer": "Theatre Puget Sound",
+    "event_url": "https://theatrepugetsound.org/event/%e0%a4%a8%e0%a5%87%e0%a4%b9%e0%a4%be-neel-neha-and-neel-%e0%a4%a8%e0%a5%87%e0%a4%b9%e0%a4%be-%e0%a4%94%e0%a4%b0-%e0%a4%a8%e0%a5%80%e0%a4%b2/2026-12-05/",
+    "source_priority": 1
   },
   {
     "title": "Poe Unexpected: Edgar Allan Poe Improvised",
@@ -101,7 +199,24 @@
     "sources": [
       "Theatre Puget Sound Community Events Calendar"
     ],
-    "featured": false
+    "featured": false,
+    "performance_dates": [
+      "2026-10-30",
+      "2026-10-31",
+      "2026-11-06",
+      "2026-11-07",
+      "2026-11-13",
+      "2026-11-14",
+      "2026-11-20",
+      "2026-11-21",
+      "2026-11-27",
+      "2026-11-28",
+      "2026-12-04",
+      "2026-12-05"
+    ],
+    "producer": "Theatre Puget Sound",
+    "event_url": "https://theatrepugetsound.org/event/poe-unexpected-edgar-allan-poe-improvised/2026-12-05/",
+    "source_priority": 1
   },
   {
     "title": "The Chinese Lady",
@@ -114,7 +229,30 @@
     "sources": [
       "Theatre Puget Sound Community Events Calendar"
     ],
-    "featured": false
+    "featured": false,
+    "performance_dates": [
+      "2026-10-29",
+      "2026-10-30",
+      "2026-10-31",
+      "2026-11-05",
+      "2026-11-06",
+      "2026-11-07",
+      "2026-11-12",
+      "2026-11-13",
+      "2026-11-14",
+      "2026-11-19",
+      "2026-11-20",
+      "2026-11-21",
+      "2026-11-26",
+      "2026-11-27",
+      "2026-11-28",
+      "2026-12-03",
+      "2026-12-04",
+      "2026-12-05"
+    ],
+    "producer": "Theatre Puget Sound",
+    "event_url": "https://theatrepugetsound.org/event/the-chinese-lady/2026-12-05/",
+    "source_priority": 1
   },
   {
     "title": "Nanay",
@@ -127,7 +265,33 @@
     "sources": [
       "Theatre Puget Sound Community Events Calendar"
     ],
-    "featured": false
+    "featured": false,
+    "performance_dates": [
+      "2026-10-30",
+      "2026-10-31",
+      "2026-11-01",
+      "2026-11-05",
+      "2026-11-06",
+      "2026-11-07",
+      "2026-11-08",
+      "2026-11-09",
+      "2026-11-11",
+      "2026-11-12",
+      "2026-11-13",
+      "2026-11-14",
+      "2026-11-19",
+      "2026-11-20",
+      "2026-11-21",
+      "2026-11-26",
+      "2026-11-27",
+      "2026-11-28",
+      "2026-12-03",
+      "2026-12-04",
+      "2026-12-05"
+    ],
+    "producer": "Theatre Puget Sound",
+    "event_url": "https://theatrepugetsound.org/event/nanay/2026-12-05/",
+    "source_priority": 1
   },
   {
     "title": "THE DUMB WAITER by Harold Pinter",
@@ -140,7 +304,21 @@
     "sources": [
       "Theatre Puget Sound Community Events Calendar"
     ],
-    "featured": false
+    "featured": false,
+    "performance_dates": [
+      "2026-10-29",
+      "2026-10-30",
+      "2026-10-31",
+      "2026-11-12",
+      "2026-11-13",
+      "2026-11-14",
+      "2026-11-26",
+      "2026-11-27",
+      "2026-11-28"
+    ],
+    "producer": "Theatre Puget Sound",
+    "event_url": "https://theatrepugetsound.org/event/the-dumb-waiter-by-harold-pinter/2026-11-28/",
+    "source_priority": 1
   },
   {
     "title": "Come On-A My House",
@@ -153,7 +331,13 @@
     "sources": [
       "Theatre Puget Sound Community Events Calendar"
     ],
-    "featured": false
+    "featured": false,
+    "performance_dates": [
+      "2026-11-28"
+    ],
+    "producer": "Theatre Puget Sound",
+    "event_url": "https://theatrepugetsound.org/event/come-on-a-my-house/",
+    "source_priority": 1
   },
   {
     "title": "Cinema Unexpected: An Improvised Movie Live",
@@ -166,7 +350,16 @@
     "sources": [
       "Theatre Puget Sound Community Events Calendar"
     ],
-    "featured": false
+    "featured": false,
+    "performance_dates": [
+      "2026-11-01",
+      "2026-11-08",
+      "2026-11-15",
+      "2026-11-22"
+    ],
+    "producer": "Theatre Puget Sound",
+    "event_url": "https://theatrepugetsound.org/event/cinema-unexpected-an-improvised-movie-live/2026-11-22/",
+    "source_priority": 1
   },
   {
     "title": "St. Luke’s Theatre Company Presents “Working: A Musical”",
@@ -179,7 +372,18 @@
     "sources": [
       "Theatre Puget Sound Community Events Calendar"
     ],
-    "featured": false
+    "featured": false,
+    "performance_dates": [
+      "2026-11-13",
+      "2026-11-14",
+      "2026-11-15",
+      "2026-11-20",
+      "2026-11-21",
+      "2026-11-22"
+    ],
+    "producer": "Theatre Puget Sound",
+    "event_url": "https://theatrepugetsound.org/event/st-lukes-theatre-company-presents-working-a-musical/2026-11-22/",
+    "source_priority": 1
   },
   {
     "title": "Little Mermaid Original Musical Adaptation",
@@ -192,7 +396,14 @@
     "sources": [
       "Theatre Puget Sound Community Events Calendar"
     ],
-    "featured": false
+    "featured": false,
+    "performance_dates": [
+      "2026-11-21",
+      "2026-11-22"
+    ],
+    "producer": "Theatre Puget Sound",
+    "event_url": "https://theatrepugetsound.org/event/little-mermaid-original-musical-adaptation/2026-11-22/",
+    "source_priority": 1
   },
   {
     "title": "Kit, Cat and Caboodle: An Improvised Musical Retrospective",
@@ -205,7 +416,17 @@
     "sources": [
       "Theatre Puget Sound Community Events Calendar"
     ],
-    "featured": false
+    "featured": false,
+    "performance_dates": [
+      "2026-11-07",
+      "2026-11-13",
+      "2026-11-14",
+      "2026-11-20",
+      "2026-11-21"
+    ],
+    "producer": "Theatre Puget Sound",
+    "event_url": "https://theatrepugetsound.org/event/kit-cat-and-caboodle-an-improvised-musical-retrospective/2026-11-21/",
+    "source_priority": 1
   },
   {
     "title": "Table 17",
@@ -218,7 +439,27 @@
     "sources": [
       "Theatre Puget Sound Community Events Calendar"
     ],
-    "featured": false
+    "featured": false,
+    "performance_dates": [
+      "2026-10-28",
+      "2026-10-29",
+      "2026-10-30",
+      "2026-10-31",
+      "2026-11-01",
+      "2026-11-03",
+      "2026-11-04",
+      "2026-11-05",
+      "2026-11-06",
+      "2026-11-07",
+      "2026-11-08",
+      "2026-11-12",
+      "2026-11-13",
+      "2026-11-14",
+      "2026-11-15"
+    ],
+    "producer": "Theatre Puget Sound",
+    "event_url": "https://theatrepugetsound.org/event/table-17/2026-11-15/",
+    "source_priority": 1
   },
   {
     "title": "Smoke on the Mountain",
@@ -231,7 +472,24 @@
     "sources": [
       "Theatre Puget Sound Community Events Calendar"
     ],
-    "featured": false
+    "featured": false,
+    "performance_dates": [
+      "2026-10-28",
+      "2026-10-29",
+      "2026-10-30",
+      "2026-10-31",
+      "2026-11-04",
+      "2026-11-05",
+      "2026-11-06",
+      "2026-11-07",
+      "2026-11-11",
+      "2026-11-12",
+      "2026-11-13",
+      "2026-11-14"
+    ],
+    "producer": "Theatre Puget Sound",
+    "event_url": "https://theatrepugetsound.org/event/smoke-on-the-mountain/2026-11-14/",
+    "source_priority": 1
   },
   {
     "title": "Cold Reads/Cold Brews",
@@ -244,7 +502,13 @@
     "sources": [
       "Theatre Puget Sound Community Events Calendar"
     ],
-    "featured": false
+    "featured": false,
+    "performance_dates": [
+      "2026-11-11"
+    ],
+    "producer": "Theatre Puget Sound",
+    "event_url": "https://theatrepugetsound.org/event/cold-reads-cold-brews/2026-11-11/",
+    "source_priority": 1
   },
   {
     "title": "TPS Board Meeting",
@@ -257,7 +521,12 @@
     "sources": [
       "Theatre Puget Sound Community Events Calendar"
     ],
-    "featured": false
+    "featured": false,
+    "performance_dates": [
+      "2026-11-10"
+    ],
+    "event_url": "https://theatrepugetsound.org/event/tps-board-meeting-2/2026-11-10/",
+    "source_priority": 1
   },
   {
     "title": "Young Frankenstein",
@@ -270,7 +539,19 @@
     "sources": [
       "Theatre Puget Sound Community Events Calendar"
     ],
-    "featured": false
+    "featured": false,
+    "performance_dates": [
+      "2026-10-30",
+      "2026-10-31",
+      "2026-11-01",
+      "2026-11-05",
+      "2026-11-06",
+      "2026-11-07",
+      "2026-11-08"
+    ],
+    "producer": "Theatre Puget Sound",
+    "event_url": "https://theatrepugetsound.org/event/young-frankenstein/2026-11-08/",
+    "source_priority": 1
   },
   {
     "title": "Improv & Flow: Seattle Center",
@@ -283,7 +564,13 @@
     "sources": [
       "Theatre Puget Sound Community Events Calendar"
     ],
-    "featured": false
+    "featured": false,
+    "performance_dates": [
+      "2026-11-08"
+    ],
+    "producer": "Theatre Puget Sound",
+    "event_url": "https://theatrepugetsound.org/event/improv-flow-seattle-center/2026-11-08/",
+    "source_priority": 1
   },
   {
     "title": "Trouble Feature at Jules Maes Saloon",
@@ -296,7 +583,15 @@
     "sources": [
       "Theatre Puget Sound Community Events Calendar"
     ],
-    "featured": false
+    "featured": false,
+    "performance_dates": [
+      "2026-10-28",
+      "2026-10-29",
+      "2026-11-01"
+    ],
+    "producer": "Theatre Puget Sound",
+    "event_url": "https://theatrepugetsound.org/event/trouble-feature-at-jules-maes-saloon/2026-11-01/",
+    "source_priority": 1
   },
   {
     "title": "The Guy Who Didn’t Like Musicals",
@@ -309,7 +604,15 @@
     "sources": [
       "Theatre Puget Sound Community Events Calendar"
     ],
-    "featured": false
+    "featured": false,
+    "performance_dates": [
+      "2026-10-30",
+      "2026-10-31",
+      "2026-11-01"
+    ],
+    "producer": "Theatre Puget Sound",
+    "event_url": "https://theatrepugetsound.org/event/the-guy-who-didnt-like-musicals/2026-11-01/",
+    "source_priority": 1
   },
   {
     "title": "2026 Gregory Awards: A Grand Bacchanal",
@@ -322,7 +625,12 @@
     "sources": [
       "Theatre Puget Sound Community Events Calendar"
     ],
-    "featured": false
+    "featured": false,
+    "performance_dates": [
+      "2026-10-26"
+    ],
+    "event_url": "https://theatrepugetsound.org/event/2026-gregory-awards-a-grand-bacchanal/",
+    "source_priority": 1
   },
   {
     "title": "Rocky Horror Improv Show",
@@ -335,7 +643,20 @@
     "sources": [
       "Theatre Puget Sound Community Events Calendar"
     ],
-    "featured": false
+    "featured": false,
+    "performance_dates": [
+      "2026-10-25",
+      "2026-10-31",
+      "2026-11-01",
+      "2026-11-07",
+      "2026-11-22",
+      "2026-11-28",
+      "2026-11-29",
+      "2026-12-05",
+      "2026-12-06"
+    ],
+    "event_url": "https://theatrepugetsound.org/series/rocky-horror-improv-show/",
+    "source_priority": 1
   },
   {
     "title": "2026 Gregory Awards: A Grand Bacchanal",
@@ -348,7 +669,12 @@
     "sources": [
       "Theatre Puget Sound Community Events Calendar"
     ],
-    "featured": false
+    "featured": false,
+    "performance_dates": [
+      "2026-10-26"
+    ],
+    "event_url": "https://theatrepugetsound.org/event/2026-gregory-awards-a-grand-bacchanal/",
+    "source_priority": 1
   },
   {
     "title": "Smoke on the Mountain",
@@ -361,7 +687,22 @@
     "sources": [
       "Theatre Puget Sound Community Events Calendar"
     ],
-    "featured": false
+    "featured": false,
+    "performance_dates": [
+      "2026-10-28",
+      "2026-10-29",
+      "2026-10-30",
+      "2026-10-31",
+      "2026-11-04",
+      "2026-11-05",
+      "2026-11-06",
+      "2026-11-07",
+      "2026-11-11",
+      "2026-11-12",
+      "2026-11-13"
+    ],
+    "event_url": "https://theatrepugetsound.org/series/smoke-on-the-mountain/",
+    "source_priority": 1
   },
   {
     "title": "Table 17",
@@ -374,7 +715,24 @@
     "sources": [
       "Theatre Puget Sound Community Events Calendar"
     ],
-    "featured": false
+    "featured": false,
+    "performance_dates": [
+      "2026-10-28",
+      "2026-10-29",
+      "2026-10-31",
+      "2026-11-01",
+      "2026-11-03",
+      "2026-11-04",
+      "2026-11-05",
+      "2026-11-06",
+      "2026-11-07",
+      "2026-11-08",
+      "2026-11-12",
+      "2026-11-14",
+      "2026-11-15"
+    ],
+    "event_url": "https://theatrepugetsound.org/series/table-17/",
+    "source_priority": 1
   },
   {
     "title": "नेहा & Neel (Neha and Neel | नेहा और नील)",
@@ -387,7 +745,13 @@
     "sources": [
       "Theatre Puget Sound Community Events Calendar"
     ],
-    "featured": false
+    "featured": false,
+    "performance_dates": [
+      "2026-10-28",
+      "2026-11-19"
+    ],
+    "event_url": "https://theatrepugetsound.org/series/%e0%a4%a8%e0%a5%87%e0%a4%b9%e0%a4%be-neel-neha-and-neel-%e0%a4%a8%e0%a5%87%e0%a4%b9%e0%a4%be-%e0%a4%94%e0%a4%b0-%e0%a4%a8%e0%a5%80%e0%a4%b2/",
+    "source_priority": 1
   },
   {
     "title": "THE DUMB WAITER by Harold Pinter",
@@ -400,7 +764,18 @@
     "sources": [
       "Theatre Puget Sound Community Events Calendar"
     ],
-    "featured": false
+    "featured": false,
+    "performance_dates": [
+      "2026-10-29",
+      "2026-10-30",
+      "2026-11-12",
+      "2026-11-13",
+      "2026-11-26",
+      "2026-11-27",
+      "2026-11-28"
+    ],
+    "event_url": "https://theatrepugetsound.org/series/the-dumb-waiter-by-harold-pinter/",
+    "source_priority": 1
   },
   {
     "title": "Young Frankenstein",
@@ -413,7 +788,15 @@
     "sources": [
       "Theatre Puget Sound Community Events Calendar"
     ],
-    "featured": false
+    "featured": false,
+    "performance_dates": [
+      "2026-10-30",
+      "2026-11-05",
+      "2026-11-06",
+      "2026-11-07"
+    ],
+    "event_url": "https://theatrepugetsound.org/series/young-frankenstein/",
+    "source_priority": 1
   },
   {
     "title": "The Guy Who Didn’t Like Musicals",
@@ -426,7 +809,13 @@
     "sources": [
       "Theatre Puget Sound Community Events Calendar"
     ],
-    "featured": false
+    "featured": false,
+    "performance_dates": [
+      "2026-10-31",
+      "2026-11-01"
+    ],
+    "event_url": "https://theatrepugetsound.org/series/the-guy-who-didnt-like-musicals/",
+    "source_priority": 1
   },
   {
     "title": "Nanay",
@@ -439,7 +828,22 @@
     "sources": [
       "Theatre Puget Sound Community Events Calendar"
     ],
-    "featured": false
+    "featured": false,
+    "performance_dates": [
+      "2026-11-01",
+      "2026-11-08",
+      "2026-11-09",
+      "2026-11-11",
+      "2026-11-14",
+      "2026-11-19",
+      "2026-11-20",
+      "2026-11-26",
+      "2026-11-27",
+      "2026-12-03",
+      "2026-12-04"
+    ],
+    "event_url": "https://theatrepugetsound.org/series/nanay/",
+    "source_priority": 1
   },
   {
     "title": "Improv & Flow: Seattle Center",
@@ -452,7 +856,12 @@
     "sources": [
       "Theatre Puget Sound Community Events Calendar"
     ],
-    "featured": false
+    "featured": false,
+    "performance_dates": [
+      "2026-11-08"
+    ],
+    "event_url": "https://theatrepugetsound.org/series/improv-flow-seattle-center/",
+    "source_priority": 1
   },
   {
     "title": "Cold Reads/Cold Brews",
@@ -465,7 +874,12 @@
     "sources": [
       "Theatre Puget Sound Community Events Calendar"
     ],
-    "featured": false
+    "featured": false,
+    "performance_dates": [
+      "2026-11-11"
+    ],
+    "event_url": "https://theatrepugetsound.org/event/cold-reads-cold-brews/2026-11-11/",
+    "source_priority": 1
   },
   {
     "title": "St. Luke’s Theatre Company Presents “Working: A Musical”",
@@ -478,7 +892,17 @@
     "sources": [
       "Theatre Puget Sound Community Events Calendar"
     ],
-    "featured": false
+    "featured": false,
+    "performance_dates": [
+      "2026-11-13",
+      "2026-11-14",
+      "2026-11-15",
+      "2026-11-20",
+      "2026-11-21",
+      "2026-11-22"
+    ],
+    "event_url": "https://theatrepugetsound.org/series/st-lukes-theatre-company-presents-working-a-musical/",
+    "source_priority": 1
   },
   {
     "title": "Cinema Unexpected: An Improvised Movie Live",
@@ -491,7 +915,13 @@
     "sources": [
       "Theatre Puget Sound Community Events Calendar"
     ],
-    "featured": false
+    "featured": false,
+    "performance_dates": [
+      "2026-11-15",
+      "2026-11-22"
+    ],
+    "event_url": "https://theatrepugetsound.org/series/cinema-unexpected-an-improvised-movie-live/",
+    "source_priority": 1
   },
   {
     "title": "The Chinese Lady",
@@ -504,7 +934,15 @@
     "sources": [
       "Theatre Puget Sound Community Events Calendar"
     ],
-    "featured": false
+    "featured": false,
+    "performance_dates": [
+      "2026-11-19",
+      "2026-11-20",
+      "2026-11-26",
+      "2026-12-03"
+    ],
+    "event_url": "https://theatrepugetsound.org/series/the-chinese-lady/",
+    "source_priority": 1
   },
   {
     "title": "Little Mermaid Original Musical Adaptation",
@@ -517,7 +955,13 @@
     "sources": [
       "Theatre Puget Sound Community Events Calendar"
     ],
-    "featured": false
+    "featured": false,
+    "performance_dates": [
+      "2026-11-21",
+      "2026-11-22"
+    ],
+    "event_url": "https://theatrepugetsound.org/series/little-mermaid-original-musical-adaptation/",
+    "source_priority": 1
   },
   {
     "title": "A Christmas Carol",
@@ -530,7 +974,19 @@
     "sources": [
       "Theatre Puget Sound Community Events Calendar"
     ],
-    "featured": false
+    "featured": false,
+    "performance_dates": [
+      "2026-11-27",
+      "2026-11-28",
+      "2026-11-29",
+      "2026-12-02",
+      "2026-12-03",
+      "2026-12-04",
+      "2026-12-05",
+      "2026-12-06"
+    ],
+    "event_url": "https://theatrepugetsound.org/series/a-christmas-carol/",
+    "source_priority": 1
   },
   {
     "title": "Come On-A My House",
@@ -543,7 +999,12 @@
     "sources": [
       "Theatre Puget Sound Community Events Calendar"
     ],
-    "featured": false
+    "featured": false,
+    "performance_dates": [
+      "2026-11-28"
+    ],
+    "event_url": "https://theatrepugetsound.org/event/come-on-a-my-house/",
+    "source_priority": 1
   },
   {
     "title": "Snowed In",
@@ -556,7 +1017,13 @@
     "sources": [
       "Theatre Puget Sound Community Events Calendar"
     ],
-    "featured": false
+    "featured": false,
+    "performance_dates": [
+      "2026-11-29",
+      "2026-12-05"
+    ],
+    "event_url": "https://theatrepugetsound.org/series/snowed-in/",
+    "source_priority": 1
   },
   {
     "title": "A Klingon Christmas Carol",
@@ -569,7 +1036,13 @@
     "sources": [
       "Theatre Puget Sound Community Events Calendar"
     ],
-    "featured": false
+    "featured": false,
+    "performance_dates": [
+      "2026-12-04",
+      "2026-12-06"
+    ],
+    "event_url": "https://theatrepugetsound.org/series/a-klingon-christmas-carol-2/",
+    "source_priority": 1
   },
   {
     "title": "The Dina Martina Christmas Show",
@@ -582,7 +1055,13 @@
     "sources": [
       "Theatre Puget Sound Community Events Calendar"
     ],
-    "featured": false
+    "featured": false,
+    "performance_dates": [
+      "2026-12-05",
+      "2026-12-06"
+    ],
+    "event_url": "https://theatrepugetsound.org/series/the-dina-martina-christmas-show-2/",
+    "source_priority": 1
   },
   {
     "title": "Free Neptune Tour",
@@ -595,7 +1074,13 @@
     "sources": [
       "Seattle Theatre Group Calendar"
     ],
-    "featured": false
+    "featured": false,
+    "performance_dates": [
+      "2026-11-21"
+    ],
+    "event_url": "https://www.stgpresents.org/events/free-neptune-tour/",
+    "source_priority": 5,
+    "producer_type": "presenter"
   },
   {
     "title": "Adult Ballet with Mark Haim – Fall",
@@ -608,7 +1093,16 @@
     "sources": [
       "Seattle Theatre Group Calendar"
     ],
-    "featured": false
+    "featured": false,
+    "performance_dates": [
+      "2026-11-07",
+      "2026-11-14",
+      "2026-11-21",
+      "2026-12-05"
+    ],
+    "event_url": "https://www.stgpresents.org/events/adult-ballet-with-mark-haim-fall/",
+    "source_priority": 5,
+    "producer_type": "presenter"
   },
   {
     "title": "Josh Johnson’s Comedy Band Camp",
@@ -621,7 +1115,15 @@
     "sources": [
       "Seattle Theatre Group Calendar"
     ],
-    "featured": false
+    "featured": false,
+    "performance_dates": [
+      "2026-11-20",
+      "2026-11-21",
+      "2026-11-22"
+    ],
+    "event_url": "https://www.stgpresents.org/events/josh-johnsons-comedy-band-camp/",
+    "source_priority": 5,
+    "producer_type": "presenter"
   },
   {
     "title": "Emily Catalano",
@@ -634,7 +1136,13 @@
     "sources": [
       "Seattle Theatre Group Calendar"
     ],
-    "featured": false
+    "featured": false,
+    "performance_dates": [
+      "2026-11-21"
+    ],
+    "event_url": "https://www.stgpresents.org/events/emily-catalano/",
+    "source_priority": 5,
+    "producer_type": "presenter"
   },
   {
     "title": "Switchfoot",
@@ -647,7 +1155,13 @@
     "sources": [
       "Seattle Theatre Group Calendar"
     ],
-    "featured": false
+    "featured": false,
+    "performance_dates": [
+      "2026-11-21"
+    ],
+    "event_url": "https://www.stgpresents.org/events/switchfoot/",
+    "source_priority": 5,
+    "producer_type": "presenter"
   },
   {
     "title": "Nutcracker! Magical Christmas Ballet",
@@ -660,7 +1174,13 @@
     "sources": [
       "Seattle Theatre Group Calendar"
     ],
-    "featured": false
+    "featured": false,
+    "performance_dates": [
+      "2026-11-22"
+    ],
+    "event_url": "https://www.stgpresents.org/events/nutcracker-magical-christmas-ballet/",
+    "source_priority": 5,
+    "producer_type": "presenter"
   },
   {
     "title": "The Music of Hey Arnold! Live!",
@@ -673,7 +1193,13 @@
     "sources": [
       "Seattle Theatre Group Calendar"
     ],
-    "featured": false
+    "featured": false,
+    "performance_dates": [
+      "2026-11-22"
+    ],
+    "event_url": "https://www.stgpresents.org/events/the-music-of-hey-arnold-live/",
+    "source_priority": 5,
+    "producer_type": "presenter"
   },
   {
     "title": "Broadway Inclusion Program @ Summit – Disney’s Beauty and The Beast",
@@ -686,7 +1212,17 @@
     "sources": [
       "Seattle Theatre Group Calendar"
     ],
-    "featured": false
+    "featured": false,
+    "performance_dates": [
+      "2026-11-02",
+      "2026-11-09",
+      "2026-11-16",
+      "2026-11-23",
+      "2026-11-30"
+    ],
+    "event_url": "https://www.stgpresents.org/events/broadway-inclusion-program-summit-disneys-beauty-and-the-beast/",
+    "source_priority": 5,
+    "producer_type": "presenter"
   },
   {
     "title": "STG Dance for PD® at PNB",
@@ -699,7 +1235,16 @@
     "sources": [
       "Seattle Theatre Group Calendar"
     ],
-    "featured": false
+    "featured": false,
+    "performance_dates": [
+      "2026-11-02",
+      "2026-11-09",
+      "2026-11-16",
+      "2026-11-30"
+    ],
+    "event_url": "https://www.stgpresents.org/events/stg-dance-for-pd-at-pnb/",
+    "source_priority": 5,
+    "producer_type": "presenter"
   },
   {
     "title": "Party Dances with Amy O’Neal",
@@ -712,7 +1257,16 @@
     "sources": [
       "Seattle Theatre Group Calendar"
     ],
-    "featured": false
+    "featured": false,
+    "performance_dates": [
+      "2026-11-02",
+      "2026-11-09",
+      "2026-11-16",
+      "2026-11-23"
+    ],
+    "event_url": "https://www.stgpresents.org/events/party-dances-with-amy-oneal/",
+    "source_priority": 5,
+    "producer_type": "presenter"
   },
   {
     "title": "Seattle Theatre Group Archive",
@@ -725,7 +1279,17 @@
     "sources": [
       "Seattle Theatre Group Calendar"
     ],
-    "featured": false
+    "featured": false,
+    "performance_dates": [
+      "2026-11-03",
+      "2026-11-10",
+      "2026-11-17",
+      "2026-11-24",
+      "2026-12-01"
+    ],
+    "event_url": "https://www.stgpresents.org/events/seattle-theatre-group-archive/",
+    "source_priority": 5,
+    "producer_type": "presenter"
   },
   {
     "title": "Mini Music Makers Fall #2 Session",
@@ -738,7 +1302,17 @@
     "sources": [
       "Seattle Theatre Group Calendar"
     ],
-    "featured": false
+    "featured": false,
+    "performance_dates": [
+      "2026-11-03",
+      "2026-11-10",
+      "2026-11-17",
+      "2026-11-24",
+      "2026-12-01"
+    ],
+    "event_url": "https://www.stgpresents.org/events/mini-music-makers-fall-2-session/",
+    "source_priority": 5,
+    "producer_type": "presenter"
   },
   {
     "title": "Kerry Hall Fiber Club",
@@ -751,7 +1325,15 @@
     "sources": [
       "Seattle Theatre Group Calendar"
     ],
-    "featured": false
+    "featured": false,
+    "performance_dates": [
+      "2026-11-03",
+      "2026-11-17",
+      "2026-12-01"
+    ],
+    "event_url": "https://www.stgpresents.org/events/kerry-hall-fiber-club/",
+    "source_priority": 5,
+    "producer_type": "presenter"
   },
   {
     "title": "STG’s Local Vocals Choir Class",
@@ -764,7 +1346,17 @@
     "sources": [
       "Seattle Theatre Group Calendar"
     ],
-    "featured": false
+    "featured": false,
+    "performance_dates": [
+      "2026-11-03",
+      "2026-11-10",
+      "2026-11-17",
+      "2026-11-24",
+      "2026-12-01"
+    ],
+    "event_url": "https://www.stgpresents.org/events/stgs-local-vocals-choir-class/",
+    "source_priority": 5,
+    "producer_type": "presenter"
   },
   {
     "title": "Oh, Mary!",
@@ -777,7 +1369,18 @@
     "sources": [
       "Seattle Theatre Group Calendar"
     ],
-    "featured": false
+    "featured": false,
+    "performance_dates": [
+      "2026-11-03",
+      "2026-11-04",
+      "2026-11-05",
+      "2026-11-06",
+      "2026-11-07",
+      "2026-11-08"
+    ],
+    "event_url": "https://www.stgpresents.org/events/oh-mary/",
+    "source_priority": 5,
+    "producer_type": "presenter"
   },
   {
     "title": "The Aces (RESCHEDULED)",
@@ -790,7 +1393,13 @@
     "sources": [
       "Seattle Theatre Group Calendar"
     ],
-    "featured": false
+    "featured": false,
+    "performance_dates": [
+      "2026-11-03"
+    ],
+    "event_url": "https://www.stgpresents.org/events/the-aces/",
+    "source_priority": 5,
+    "producer_type": "presenter"
   },
   {
     "title": "STG Dance for PD® at Kerry Hall",
@@ -803,7 +1412,15 @@
     "sources": [
       "Seattle Theatre Group Calendar"
     ],
-    "featured": false
+    "featured": false,
+    "performance_dates": [
+      "2026-11-04",
+      "2026-11-18",
+      "2026-12-02"
+    ],
+    "event_url": "https://www.stgpresents.org/events/stg-dance-for-pd-at-kerry-hall/",
+    "source_priority": 5,
+    "producer_type": "presenter"
   },
   {
     "title": "Broadway Inclusion Program @ Northshore – Disney’s Beauty and The Beast",
@@ -816,7 +1433,17 @@
     "sources": [
       "Seattle Theatre Group Calendar"
     ],
-    "featured": false
+    "featured": false,
+    "performance_dates": [
+      "2026-11-04",
+      "2026-11-11",
+      "2026-11-18",
+      "2026-11-25",
+      "2026-12-02"
+    ],
+    "event_url": "https://www.stgpresents.org/events/broadway-inclusion-program-northshore-disneys-beauty-and-the-beast/",
+    "source_priority": 5,
+    "producer_type": "presenter"
   },
   {
     "title": "Gone Guys Film Screening & Community Conversation",
@@ -829,7 +1456,13 @@
     "sources": [
       "Seattle Theatre Group Calendar"
     ],
-    "featured": false
+    "featured": false,
+    "performance_dates": [
+      "2026-11-04"
+    ],
+    "event_url": "https://www.stgpresents.org/events/gone-guys-film-screening-community-conversation/",
+    "source_priority": 5,
+    "producer_type": "presenter"
   },
   {
     "title": "The Best One Yet",
@@ -842,7 +1475,13 @@
     "sources": [
       "Seattle Theatre Group Calendar"
     ],
-    "featured": false
+    "featured": false,
+    "performance_dates": [
+      "2026-11-04"
+    ],
+    "event_url": "https://www.stgpresents.org/events/the-best-one-yet/",
+    "source_priority": 5,
+    "producer_type": "presenter"
   },
   {
     "title": "Big Star Quintet",
@@ -855,7 +1494,13 @@
     "sources": [
       "Seattle Theatre Group Calendar"
     ],
-    "featured": false
+    "featured": false,
+    "performance_dates": [
+      "2026-11-04"
+    ],
+    "event_url": "https://www.stgpresents.org/events/big-star-quintet/",
+    "source_priority": 5,
+    "producer_type": "presenter"
   },
   {
     "title": "Int/Adv Contemporary Explorations with Amy O’Neal",
@@ -868,7 +1513,15 @@
     "sources": [
       "Seattle Theatre Group Calendar"
     ],
-    "featured": false
+    "featured": false,
+    "performance_dates": [
+      "2026-11-05",
+      "2026-11-12",
+      "2026-11-19"
+    ],
+    "event_url": "https://www.stgpresents.org/events/int-adv-contemporary-explorations-with-amy-oneal/",
+    "source_priority": 5,
+    "producer_type": "presenter"
   },
   {
     "title": "STG Dance for PD® at Garfield Community Center",
@@ -881,7 +1534,16 @@
     "sources": [
       "Seattle Theatre Group Calendar"
     ],
-    "featured": false
+    "featured": false,
+    "performance_dates": [
+      "2026-11-05",
+      "2026-11-12",
+      "2026-11-19",
+      "2026-12-03"
+    ],
+    "event_url": "https://www.stgpresents.org/events/stg-dance-for-pd-at-garfield-community-center/",
+    "source_priority": 5,
+    "producer_type": "presenter"
   },
   {
     "title": "Broadway Inclusion Program @ Kerry Hall – Disney’s Beauty and The Beast",
@@ -894,7 +1556,17 @@
     "sources": [
       "Seattle Theatre Group Calendar"
     ],
-    "featured": false
+    "featured": false,
+    "performance_dates": [
+      "2026-11-05",
+      "2026-11-12",
+      "2026-11-19",
+      "2026-11-26",
+      "2026-12-03"
+    ],
+    "event_url": "https://www.stgpresents.org/events/broadway-inclusion-program-kerry-hall-disneys-beauty-and-the-beast/",
+    "source_priority": 5,
+    "producer_type": "presenter"
   },
   {
     "title": "Samba and Afro-Bahian with Deise Costa",
@@ -907,7 +1579,15 @@
     "sources": [
       "Seattle Theatre Group Calendar"
     ],
-    "featured": false
+    "featured": false,
+    "performance_dates": [
+      "2026-11-05",
+      "2026-11-12",
+      "2026-11-19"
+    ],
+    "event_url": "https://www.stgpresents.org/events/samba-and-afro-bahian-with-deise-costa/",
+    "source_priority": 5,
+    "producer_type": "presenter"
   },
   {
     "title": "Marc Broussard",
@@ -920,7 +1600,13 @@
     "sources": [
       "Seattle Theatre Group Calendar"
     ],
-    "featured": false
+    "featured": false,
+    "performance_dates": [
+      "2026-11-05"
+    ],
+    "event_url": "https://www.stgpresents.org/events/marc-broussard/",
+    "source_priority": 5,
+    "producer_type": "presenter"
   },
   {
     "title": "STG Dance for PD® Virtual Sessions",
@@ -933,7 +1619,16 @@
     "sources": [
       "Seattle Theatre Group Calendar"
     ],
-    "featured": false
+    "featured": false,
+    "performance_dates": [
+      "2026-11-06",
+      "2026-11-13",
+      "2026-11-20",
+      "2026-12-04"
+    ],
+    "event_url": "https://www.stgpresents.org/events/stg-dance-for-pd-virtual-sessions/",
+    "source_priority": 5,
+    "producer_type": "presenter"
   },
   {
     "title": "Periphery",
@@ -946,7 +1641,13 @@
     "sources": [
       "Seattle Theatre Group Calendar"
     ],
-    "featured": false
+    "featured": false,
+    "performance_dates": [
+      "2026-11-06"
+    ],
+    "event_url": "https://www.stgpresents.org/events/periphery/",
+    "source_priority": 5,
+    "producer_type": "presenter"
   },
   {
     "title": "John Scofield Electrospective",
@@ -959,7 +1660,13 @@
     "sources": [
       "Seattle Theatre Group Calendar"
     ],
-    "featured": false
+    "featured": false,
+    "performance_dates": [
+      "2026-11-06"
+    ],
+    "event_url": "https://www.stgpresents.org/events/john-scofield-electrospective/",
+    "source_priority": 5,
+    "producer_type": "presenter"
   },
   {
     "title": "Free Paramount Tour",
@@ -972,7 +1679,14 @@
     "sources": [
       "Seattle Theatre Group Calendar"
     ],
-    "featured": false
+    "featured": false,
+    "performance_dates": [
+      "2026-11-07",
+      "2026-12-05"
+    ],
+    "event_url": "https://www.stgpresents.org/events/free-paramount-tour/",
+    "source_priority": 5,
+    "producer_type": "presenter"
   },
   {
     "title": "Kerry Hall Theatre Classes – Youth Theatre Singing",
@@ -985,7 +1699,13 @@
     "sources": [
       "Seattle Theatre Group Calendar"
     ],
-    "featured": false
+    "featured": false,
+    "performance_dates": [
+      "2026-11-07"
+    ],
+    "event_url": "https://www.stgpresents.org/events/kerry-hall-theatre-classes-youth-theatre-singing/",
+    "source_priority": 5,
+    "producer_type": "presenter"
   },
   {
     "title": "BROADWAY VOCAL PERFORMANCE WORKSHOP SERIES",
@@ -998,7 +1718,14 @@
     "sources": [
       "Seattle Theatre Group Calendar"
     ],
-    "featured": false
+    "featured": false,
+    "performance_dates": [
+      "2026-11-07",
+      "2026-12-05"
+    ],
+    "event_url": "https://www.stgpresents.org/events/broadway-vocal-performance-workshop-series/",
+    "source_priority": 5,
+    "producer_type": "presenter"
   },
   {
     "title": "OH, MARY! Acting Workshop",
@@ -1011,7 +1738,13 @@
     "sources": [
       "Seattle Theatre Group Calendar"
     ],
-    "featured": false
+    "featured": false,
+    "performance_dates": [
+      "2026-11-07"
+    ],
+    "event_url": "https://www.stgpresents.org/events/oh-mary-acting-workshop/",
+    "source_priority": 5,
+    "producer_type": "presenter"
   },
   {
     "title": "Kerry Hall Theatre Classes – Adult Theatre Singing, Beyond the Basics",
@@ -1024,7 +1757,13 @@
     "sources": [
       "Seattle Theatre Group Calendar"
     ],
-    "featured": false
+    "featured": false,
+    "performance_dates": [
+      "2026-11-07"
+    ],
+    "event_url": "https://www.stgpresents.org/events/kerry-hall-theatre-classes-adult-theatre-singing-beyond-the-basics/",
+    "source_priority": 5,
+    "producer_type": "presenter"
   },
   {
     "title": "Kevonstage",
@@ -1037,7 +1776,13 @@
     "sources": [
       "Seattle Theatre Group Calendar"
     ],
-    "featured": false
+    "featured": false,
+    "performance_dates": [
+      "2026-11-07"
+    ],
+    "event_url": "https://www.stgpresents.org/events/kevonstage/",
+    "source_priority": 5,
+    "producer_type": "presenter"
   },
   {
     "title": "Outlander in Concert",
@@ -1050,7 +1795,13 @@
     "sources": [
       "Seattle Theatre Group Calendar"
     ],
-    "featured": false
+    "featured": false,
+    "performance_dates": [
+      "2026-11-07"
+    ],
+    "event_url": "https://www.stgpresents.org/events/outlander-in-concert/",
+    "source_priority": 5,
+    "producer_type": "presenter"
   },
   {
     "title": "OH! MARY! Touch Tour",
@@ -1063,7 +1814,13 @@
     "sources": [
       "Seattle Theatre Group Calendar"
     ],
-    "featured": false
+    "featured": false,
+    "performance_dates": [
+      "2026-11-08"
+    ],
+    "event_url": "https://www.stgpresents.org/events/oh-mary-touch-tour/",
+    "source_priority": 5,
+    "producer_type": "presenter"
   },
   {
     "title": "Educator Social",
@@ -1076,7 +1833,13 @@
     "sources": [
       "Seattle Theatre Group Calendar"
     ],
-    "featured": false
+    "featured": false,
+    "performance_dates": [
+      "2026-11-08"
+    ],
+    "event_url": "https://www.stgpresents.org/events/educator-social/",
+    "source_priority": 5,
+    "producer_type": "presenter"
   },
   {
     "title": "Neil deGrasse Tyson",
@@ -1089,7 +1852,13 @@
     "sources": [
       "Seattle Theatre Group Calendar"
     ],
-    "featured": false
+    "featured": false,
+    "performance_dates": [
+      "2026-11-08"
+    ],
+    "event_url": "https://www.stgpresents.org/events/neil-degrasse-tyson-nov-8-2026/",
+    "source_priority": 5,
+    "producer_type": "presenter"
   },
   {
     "title": "Taylor Mac in Concert: Tender Heart Revolution",
@@ -1102,7 +1871,13 @@
     "sources": [
       "Seattle Theatre Group Calendar"
     ],
-    "featured": false
+    "featured": false,
+    "performance_dates": [
+      "2026-11-08"
+    ],
+    "event_url": "https://www.stgpresents.org/events/taylor-mac/",
+    "source_priority": 5,
+    "producer_type": "presenter"
   },
   {
     "title": "Aterciopelados",
@@ -1115,7 +1890,13 @@
     "sources": [
       "Seattle Theatre Group Calendar"
     ],
-    "featured": false
+    "featured": false,
+    "performance_dates": [
+      "2026-11-08"
+    ],
+    "event_url": "https://www.stgpresents.org/events/aterciopelados/",
+    "source_priority": 5,
+    "producer_type": "presenter"
   },
   {
     "title": "Industry Dance Series",
@@ -1128,7 +1909,14 @@
     "sources": [
       "Seattle Theatre Group Calendar"
     ],
-    "featured": false
+    "featured": false,
+    "performance_dates": [
+      "2026-11-09",
+      "2026-11-23"
+    ],
+    "event_url": "https://www.stgpresents.org/events/industry-dance-series/",
+    "source_priority": 5,
+    "producer_type": "presenter"
   },
   {
     "title": "Isaiah Rashad",
@@ -1141,7 +1929,13 @@
     "sources": [
       "Seattle Theatre Group Calendar"
     ],
-    "featured": false
+    "featured": false,
+    "performance_dates": [
+      "2026-11-10"
+    ],
+    "event_url": "https://www.stgpresents.org/events/isaiah-rashad/",
+    "source_priority": 5,
+    "producer_type": "presenter"
   },
   {
     "title": "SYD",
@@ -1154,7 +1948,13 @@
     "sources": [
       "Seattle Theatre Group Calendar"
     ],
-    "featured": false
+    "featured": false,
+    "performance_dates": [
+      "2026-11-10"
+    ],
+    "event_url": "https://www.stgpresents.org/events/syd/",
+    "source_priority": 5,
+    "producer_type": "presenter"
   },
   {
     "title": "National Park After Dark (Postponed)",
@@ -1167,7 +1967,13 @@
     "sources": [
       "Seattle Theatre Group Calendar"
     ],
-    "featured": false
+    "featured": false,
+    "performance_dates": [
+      "2026-11-11"
+    ],
+    "event_url": "https://www.stgpresents.org/events/national-park-after-dark/",
+    "source_priority": 5,
+    "producer_type": "presenter"
   },
   {
     "title": "Not For Radio",
@@ -1180,7 +1986,14 @@
     "sources": [
       "Seattle Theatre Group Calendar"
     ],
-    "featured": false
+    "featured": false,
+    "performance_dates": [
+      "2026-11-11",
+      "2026-11-12"
+    ],
+    "event_url": "https://www.stgpresents.org/events/not-for-radio-2026/",
+    "source_priority": 5,
+    "producer_type": "presenter"
   },
   {
     "title": "Brett Goldstein",
@@ -1193,7 +2006,14 @@
     "sources": [
       "Seattle Theatre Group Calendar"
     ],
-    "featured": false
+    "featured": false,
+    "performance_dates": [
+      "2026-11-12",
+      "2026-11-13"
+    ],
+    "event_url": "https://www.stgpresents.org/events/brett-goldstein/",
+    "source_priority": 5,
+    "producer_type": "presenter"
   },
   {
     "title": "The Residency",
@@ -1206,7 +2026,13 @@
     "sources": [
       "Seattle Theatre Group Calendar"
     ],
-    "featured": false
+    "featured": false,
+    "performance_dates": [
+      "2026-11-12"
+    ],
+    "event_url": "https://www.stgpresents.org/events/the-residency/",
+    "source_priority": 5,
+    "producer_type": "presenter"
   },
   {
     "title": "Try/Step/Trip",
@@ -1219,7 +2045,14 @@
     "sources": [
       "Seattle Theatre Group Calendar"
     ],
-    "featured": false
+    "featured": false,
+    "performance_dates": [
+      "2026-11-12",
+      "2026-11-13"
+    ],
+    "event_url": "https://www.stgpresents.org/events/try-step-trip/",
+    "source_priority": 5,
+    "producer_type": "presenter"
   },
   {
     "title": "Foy Vance",
@@ -1232,7 +2065,13 @@
     "sources": [
       "Seattle Theatre Group Calendar"
     ],
-    "featured": false
+    "featured": false,
+    "performance_dates": [
+      "2026-11-13"
+    ],
+    "event_url": "https://www.stgpresents.org/events/foy-vance/",
+    "source_priority": 5,
+    "producer_type": "presenter"
   },
   {
     "title": "World Ballet Company – Swan Lake",
@@ -1245,7 +2084,13 @@
     "sources": [
       "Seattle Theatre Group Calendar"
     ],
-    "featured": false
+    "featured": false,
+    "performance_dates": [
+      "2026-11-13"
+    ],
+    "event_url": "https://www.stgpresents.org/events/world-ballet-company-swan-lake/",
+    "source_priority": 5,
+    "producer_type": "presenter"
   },
   {
     "title": "Free Moore Tour",
@@ -1258,7 +2103,13 @@
     "sources": [
       "Seattle Theatre Group Calendar"
     ],
-    "featured": false
+    "featured": false,
+    "performance_dates": [
+      "2026-11-14"
+    ],
+    "event_url": "https://www.stgpresents.org/events/free-moore-tour/",
+    "source_priority": 5,
+    "producer_type": "presenter"
   },
   {
     "title": "Storytellers: Portraits of Resilience with Thanh Tan",
@@ -1271,7 +2122,13 @@
     "sources": [
       "Seattle Theatre Group Calendar"
     ],
-    "featured": false
+    "featured": false,
+    "performance_dates": [
+      "2026-11-14"
+    ],
+    "event_url": "https://www.stgpresents.org/events/storytellers-portraits-of-resilience-with-thanh-tan/",
+    "source_priority": 5,
+    "producer_type": "presenter"
   },
   {
     "title": "Ron Funches",
@@ -1284,7 +2141,13 @@
     "sources": [
       "Seattle Theatre Group Calendar"
     ],
-    "featured": false
+    "featured": false,
+    "performance_dates": [
+      "2026-11-14"
+    ],
+    "event_url": "https://www.stgpresents.org/events/ron-funches/",
+    "source_priority": 5,
+    "producer_type": "presenter"
   },
   {
     "title": "Jovino Santos Neto Quarteto Mais Que Tudo",
@@ -1297,7 +2160,13 @@
     "sources": [
       "Seattle Theatre Group Calendar"
     ],
-    "featured": false
+    "featured": false,
+    "performance_dates": [
+      "2026-11-14"
+    ],
+    "event_url": "https://www.stgpresents.org/events/jovino-santos-neto-quarteto-mais-que-tudo/",
+    "source_priority": 5,
+    "producer_type": "presenter"
   },
   {
     "title": "Houndmouth",
@@ -1310,7 +2179,13 @@
     "sources": [
       "Seattle Theatre Group Calendar"
     ],
-    "featured": false
+    "featured": false,
+    "performance_dates": [
+      "2026-11-14"
+    ],
+    "event_url": "https://www.stgpresents.org/events/houndmouth/",
+    "source_priority": 5,
+    "producer_type": "presenter"
   },
   {
     "title": "Broadway + Performing Arts Workshop Series: Sankai Juku",
@@ -1323,7 +2198,13 @@
     "sources": [
       "Seattle Theatre Group Calendar"
     ],
-    "featured": false
+    "featured": false,
+    "performance_dates": [
+      "2026-11-15"
+    ],
+    "event_url": "https://www.stgpresents.org/events/broadway-performing-arts-workshop-series-sankai-juku/",
+    "source_priority": 5,
+    "producer_type": "presenter"
   },
   {
     "title": "Songwriters Rooms",
@@ -1336,7 +2217,13 @@
     "sources": [
       "Seattle Theatre Group Calendar"
     ],
-    "featured": false
+    "featured": false,
+    "performance_dates": [
+      "2026-11-15"
+    ],
+    "event_url": "https://www.stgpresents.org/events/songwriters-rooms/",
+    "source_priority": 5,
+    "producer_type": "presenter"
   },
   {
     "title": "Eivør",
@@ -1349,7 +2236,13 @@
     "sources": [
       "Seattle Theatre Group Calendar"
     ],
-    "featured": false
+    "featured": false,
+    "performance_dates": [
+      "2026-11-15"
+    ],
+    "event_url": "https://www.stgpresents.org/events/eivor/",
+    "source_priority": 5,
+    "producer_type": "presenter"
   },
   {
     "title": "Underoath",
@@ -1362,7 +2255,13 @@
     "sources": [
       "Seattle Theatre Group Calendar"
     ],
-    "featured": false
+    "featured": false,
+    "performance_dates": [
+      "2026-11-16"
+    ],
+    "event_url": "https://www.stgpresents.org/events/underoath/",
+    "source_priority": 5,
+    "producer_type": "presenter"
   },
   {
     "title": "Sankai Juku “KOSA”",
@@ -1375,7 +2274,13 @@
     "sources": [
       "Seattle Theatre Group Calendar"
     ],
-    "featured": false
+    "featured": false,
+    "performance_dates": [
+      "2026-11-17"
+    ],
+    "event_url": "https://www.stgpresents.org/events/sankai-juku/",
+    "source_priority": 5,
+    "producer_type": "presenter"
   },
   {
     "title": "Francisca Valenzuela – RESCHEDULED 7/18",
@@ -1388,7 +2293,13 @@
     "sources": [
       "Seattle Theatre Group Calendar"
     ],
-    "featured": false
+    "featured": false,
+    "performance_dates": [
+      "2026-11-17"
+    ],
+    "event_url": "https://www.stgpresents.org/events/francisca-valenzuela/",
+    "source_priority": 5,
+    "producer_type": "presenter"
   },
   {
     "title": "RHYE",
@@ -1401,7 +2312,13 @@
     "sources": [
       "Seattle Theatre Group Calendar"
     ],
-    "featured": false
+    "featured": false,
+    "performance_dates": [
+      "2026-11-17"
+    ],
+    "event_url": "https://www.stgpresents.org/events/rhye/",
+    "source_priority": 5,
+    "producer_type": "presenter"
   },
   {
     "title": "Tyla",
@@ -1414,7 +2331,13 @@
     "sources": [
       "Seattle Theatre Group Calendar"
     ],
-    "featured": false
+    "featured": false,
+    "performance_dates": [
+      "2026-11-17"
+    ],
+    "event_url": "https://www.stgpresents.org/events/tyla/",
+    "source_priority": 5,
+    "producer_type": "presenter"
   },
   {
     "title": "Todd Rundgren",
@@ -1427,7 +2350,13 @@
     "sources": [
       "Seattle Theatre Group Calendar"
     ],
-    "featured": false
+    "featured": false,
+    "performance_dates": [
+      "2026-11-18"
+    ],
+    "event_url": "https://www.stgpresents.org/events/todd-rundgren/",
+    "source_priority": 5,
+    "producer_type": "presenter"
   },
   {
     "title": "Straight No Chaser",
@@ -1440,7 +2369,13 @@
     "sources": [
       "Seattle Theatre Group Calendar"
     ],
-    "featured": false
+    "featured": false,
+    "performance_dates": [
+      "2026-11-19"
+    ],
+    "event_url": "https://www.stgpresents.org/events/straight-no-chaser/",
+    "source_priority": 5,
+    "producer_type": "presenter"
   },
   {
     "title": "Rodrigo y Gabriela",
@@ -1453,7 +2388,13 @@
     "sources": [
       "Seattle Theatre Group Calendar"
     ],
-    "featured": false
+    "featured": false,
+    "performance_dates": [
+      "2026-11-19"
+    ],
+    "event_url": "https://www.stgpresents.org/events/rodrigo-y-gabriela/",
+    "source_priority": 5,
+    "producer_type": "presenter"
   },
   {
     "title": "Gary Numan",
@@ -1466,7 +2407,13 @@
     "sources": [
       "Seattle Theatre Group Calendar"
     ],
-    "featured": false
+    "featured": false,
+    "performance_dates": [
+      "2026-11-19"
+    ],
+    "event_url": "https://www.stgpresents.org/events/gary-numan/",
+    "source_priority": 5,
+    "producer_type": "presenter"
   },
   {
     "title": "Phoebe Robinson",
@@ -1479,7 +2426,13 @@
     "sources": [
       "Seattle Theatre Group Calendar"
     ],
-    "featured": false
+    "featured": false,
+    "performance_dates": [
+      "2026-11-20"
+    ],
+    "event_url": "https://www.stgpresents.org/events/phoebe-robinson/",
+    "source_priority": 5,
+    "producer_type": "presenter"
   },
   {
     "title": "Senses Fail",
@@ -1492,7 +2445,13 @@
     "sources": [
       "Seattle Theatre Group Calendar"
     ],
-    "featured": false
+    "featured": false,
+    "performance_dates": [
+      "2026-11-24"
+    ],
+    "event_url": "https://www.stgpresents.org/events/senses-fail/",
+    "source_priority": 5,
+    "producer_type": "presenter"
   },
   {
     "title": "Prateek Kuhad – CANCELED",
@@ -1505,7 +2464,13 @@
     "sources": [
       "Seattle Theatre Group Calendar"
     ],
-    "featured": false
+    "featured": false,
+    "performance_dates": [
+      "2026-11-24"
+    ],
+    "event_url": "https://www.stgpresents.org/events/prateek-kuhad/",
+    "source_priority": 5,
+    "producer_type": "presenter"
   },
   {
     "title": "Scott Bradlee’s Postmodern Jukebox",
@@ -1518,7 +2483,13 @@
     "sources": [
       "Seattle Theatre Group Calendar"
     ],
-    "featured": false
+    "featured": false,
+    "performance_dates": [
+      "2026-11-24"
+    ],
+    "event_url": "https://www.stgpresents.org/events/scott-bradlees-postmodern-jukebox/",
+    "source_priority": 5,
+    "producer_type": "presenter"
   },
   {
     "title": "Alter Bridge",
@@ -1531,7 +2502,13 @@
     "sources": [
       "Seattle Theatre Group Calendar"
     ],
-    "featured": false
+    "featured": false,
+    "performance_dates": [
+      "2026-11-25"
+    ],
+    "event_url": "https://www.stgpresents.org/events/alter-bridge/",
+    "source_priority": 5,
+    "producer_type": "presenter"
   },
   {
     "title": "The Outsiders",
@@ -1544,7 +2521,20 @@
     "sources": [
       "Seattle Theatre Group Calendar"
     ],
-    "featured": false
+    "featured": false,
+    "performance_dates": [
+      "2026-11-27",
+      "2026-11-28",
+      "2026-11-29",
+      "2026-12-01",
+      "2026-12-02",
+      "2026-12-03",
+      "2026-12-04",
+      "2026-12-05"
+    ],
+    "event_url": "https://www.stgpresents.org/events/the-outsiders/",
+    "source_priority": 5,
+    "producer_type": "presenter"
   },
   {
     "title": "Haley Heynderickx",
@@ -1557,7 +2547,13 @@
     "sources": [
       "Seattle Theatre Group Calendar"
     ],
-    "featured": false
+    "featured": false,
+    "performance_dates": [
+      "2026-11-27"
+    ],
+    "event_url": "https://www.stgpresents.org/events/haley-heynderickx/",
+    "source_priority": 5,
+    "producer_type": "presenter"
   },
   {
     "title": "Seattle’s Tribute to The Last Waltz",
@@ -1570,7 +2566,13 @@
     "sources": [
       "Seattle Theatre Group Calendar"
     ],
-    "featured": false
+    "featured": false,
+    "performance_dates": [
+      "2026-11-28"
+    ],
+    "event_url": "https://www.stgpresents.org/events/seattles-tribute-to-the-last-waltz/",
+    "source_priority": 5,
+    "producer_type": "presenter"
   },
   {
     "title": "The Rewatchables Live!",
@@ -1583,7 +2585,13 @@
     "sources": [
       "Seattle Theatre Group Calendar"
     ],
-    "featured": false
+    "featured": false,
+    "performance_dates": [
+      "2026-12-01"
+    ],
+    "event_url": "https://www.stgpresents.org/events/the-rewatchables-live/",
+    "source_priority": 5,
+    "producer_type": "presenter"
   },
   {
     "title": "Dweezil Zappa",
@@ -1596,7 +2604,13 @@
     "sources": [
       "Seattle Theatre Group Calendar"
     ],
-    "featured": false
+    "featured": false,
+    "performance_dates": [
+      "2026-12-01"
+    ],
+    "event_url": "https://www.stgpresents.org/events/dweezil-zappa/",
+    "source_priority": 5,
+    "producer_type": "presenter"
   },
   {
     "title": "A John Waters Christmas",
@@ -1609,7 +2623,13 @@
     "sources": [
       "Seattle Theatre Group Calendar"
     ],
-    "featured": false
+    "featured": false,
+    "performance_dates": [
+      "2026-12-02"
+    ],
+    "event_url": "https://www.stgpresents.org/events/a-john-waters-christmas/",
+    "source_priority": 5,
+    "producer_type": "presenter"
   },
   {
     "title": "THE OUTSIDERS (STUDENT MATINEE)",
@@ -1622,7 +2642,13 @@
     "sources": [
       "Seattle Theatre Group Calendar"
     ],
-    "featured": false
+    "featured": false,
+    "performance_dates": [
+      "2026-12-03"
+    ],
+    "event_url": "https://www.stgpresents.org/events/the-outsiders-student-matinee/",
+    "source_priority": 5,
+    "producer_type": "presenter"
   },
   {
     "title": "Matt Rogers",
@@ -1635,7 +2661,13 @@
     "sources": [
       "Seattle Theatre Group Calendar"
     ],
-    "featured": false
+    "featured": false,
+    "performance_dates": [
+      "2026-12-03"
+    ],
+    "event_url": "https://www.stgpresents.org/events/matt-rogers/",
+    "source_priority": 5,
+    "producer_type": "presenter"
   },
   {
     "title": "The Fab Four",
@@ -1648,7 +2680,13 @@
     "sources": [
       "Seattle Theatre Group Calendar"
     ],
-    "featured": false
+    "featured": false,
+    "performance_dates": [
+      "2026-12-04"
+    ],
+    "event_url": "https://www.stgpresents.org/events/the-fab-four/",
+    "source_priority": 5,
+    "producer_type": "presenter"
   },
   {
     "title": "The Jayhawks",
@@ -1661,7 +2699,13 @@
     "sources": [
       "Seattle Theatre Group Calendar"
     ],
-    "featured": false
+    "featured": false,
+    "performance_dates": [
+      "2026-12-04"
+    ],
+    "event_url": "https://www.stgpresents.org/events/the-jayhawks/",
+    "source_priority": 5,
+    "producer_type": "presenter"
   },
   {
     "title": "Amber Autry",
@@ -1674,7 +2718,13 @@
     "sources": [
       "Seattle Theatre Group Calendar"
     ],
-    "featured": false
+    "featured": false,
+    "performance_dates": [
+      "2026-12-05"
+    ],
+    "event_url": "https://www.stgpresents.org/events/amber-autry/",
+    "source_priority": 5,
+    "producer_type": "presenter"
   },
   {
     "title": "Choir! Choir! Choir!",
@@ -1687,6 +2737,12 @@
     "sources": [
       "Seattle Theatre Group Calendar"
     ],
-    "featured": false
+    "featured": false,
+    "performance_dates": [
+      "2026-12-05"
+    ],
+    "event_url": "https://www.stgpresents.org/events/choir-choir-choir/",
+    "source_priority": 5,
+    "producer_type": "presenter"
   }
 ]
