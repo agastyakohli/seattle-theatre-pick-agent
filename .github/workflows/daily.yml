@@ -6,12 +6,12 @@ on:
       dry_run:
         description: "Do not publish; only show the selected post"
         required: true
-        default: "true"
+        default: true
         type: boolean
       test_facebook:
         description: "Check Page token and Page ID without publishing"
         required: true
-        default: "false"
+        default: false
         type: boolean
   schedule:
     - cron: "30 16 * * *" # Daily at 08:30 Pacific Standard Time / 09:30 Pacific Daylight Time
