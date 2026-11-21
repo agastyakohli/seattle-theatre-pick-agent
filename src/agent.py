@@ -20,7 +20,7 @@ TZ = ZoneInfo(CFG.get("timezone", "America/Los_Angeles"))
 HEADERS = {"User-Agent": "SeattleTheatrePickBot/1.0 (community theatre calendar)"}
 
 def clean(value):
-    return re.sub(r"\\s+", " ", BeautifulSoup(str(value or ""), "html.parser").get_text(" ", strip=True)).strip()
+    return re.sub(r"\s+", " ", BeautifulSoup(str(value or ""), "html.parser").get_text(" ", strip=True)).strip()
 
 def parse_date(value):
     if not value:
@@ -98,6 +98,31 @@ def extract(source):
               "source":source["name"]})
     return results
 
+
+def is_excluded_event(item):
+    """Reject non-production listings such as classes, workshops and lessons."""
+    title = clean(item.get("title", "")).casefold()
+    description = clean(item.get("description", "")).casefold()
+    combined = title + " " + description
+
+    # These phrases identify instructional or participatory listings, not performances.
+    instructional_patterns = [
+        r"\\bclass(?:es)?\\b",
+        r"\\bworkshops?\\b",
+        r"\\bmaster\\s*class(?:es)?\\b",
+        r"\\blessons?\\b",
+        r"\\bcourses?\\b",
+        r"\\btraining\\b",
+        r"\\bcamps?\\b",
+        r"\\bauditions?\\b",
+    ]
+    if any(re.search(pattern, combined, re.IGNORECASE) for pattern in instructional_patterns):
+        return True
+
+    # Preserve the existing title exclusions, without excluding dance/ballet performances
+    # merely because they are dance-related.
+    return any(term.casefold() in title for term in CFG.get("exclude_title_terms", []))
+
 def merge(existing, incoming):
     records = {p["id"]:p for p in existing if p.get("id")}
     for item in incoming:
@@ -165,7 +190,8 @@ def main():
                 continue
         except ValueError:
             continue
-        if any(term in p["title"].casefold() for term in CFG.get("exclude_title_terms", [])):
+        if is_excluded_event(p):
+            print("SKIPPED NON-PRODUCTION EVENT:", p.get("title", "(untitled)"))
             continue
         candidates.append(p)
     candidates.sort(key=lambda p:(p["start_date"], p["title"].casefold()))
