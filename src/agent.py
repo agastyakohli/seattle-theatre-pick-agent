@@ -672,6 +672,13 @@ def main():
         if key and key in recent_producers:
             print("SKIPPED FOR PRODUCER VARIETY:", p.get("title", "(untitled)"), "-", p.get("producer") or p.get("venue"))
             continue
+        # Pull an explicit closing date from the matched official show page
+        # before ranking; link enrichment happens only after the pick is selected.
+        official = catalog_match(p.get("title", ""), p.get("producer", ""), combined_catalog)
+        if official and official.get("description"):
+            closing_date = explicit_run_end_date({"description": official["description"]})
+            if closing_date:
+                p["run_end_date"] = closing_date
         candidates.append(p)
     # A verified earlier closing date wins; unknown closing dates sort after known dates.
     # Existing presenter/source priorities break ties between equally urgent shows.
