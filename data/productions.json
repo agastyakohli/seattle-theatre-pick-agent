@@ -2056,17 +2056,18 @@
     "end_date": "2026-11-22",
     "venue": "",
     "description": "",
-    "url": "https://theatrepugetsound.org/event/cinema-unexpected-an-improvised-movie-live/2026-11-22/",
+    "url": "https://www.unexpectedproductions.org/event/cinema-unexpected-an-improvised-movie-live/2026-11-22/",
     "id": "f0a50a426d67f029",
     "sources": [
-      "Theatre Puget Sound Community Events Calendar"
+      "Theatre Puget Sound Community Events Calendar",
+      "Unexpected Productions Events"
     ],
     "featured": false,
     "performance_dates": [
       "2026-11-15",
       "2026-11-22"
     ],
-    "event_url": "https://theatrepugetsound.org/event/cinema-unexpected-an-improvised-movie-live/2026-11-22/",
+    "event_url": "https://www.unexpectedproductions.org/event/cinema-unexpected-an-improvised-movie-live/2026-11-22/",
     "source_priority": 1,
     "performance_occurrences": [
       {
@@ -2076,8 +2077,13 @@
       {
         "date": "2026-11-22",
         "event_url": "https://theatrepugetsound.org/event/cinema-unexpected-an-improvised-movie-live/2026-11-22/"
+      },
+      {
+        "date": "2026-11-22",
+        "event_url": "https://www.unexpectedproductions.org/event/cinema-unexpected-an-improvised-movie-live/2026-11-22/"
       }
-    ]
+    ],
+    "producer": "Unexpected Productions"
   },
   {
     "title": "The Chinese Lady",
@@ -4776,5 +4782,559 @@
         "event_url": "https://www.stgpresents.org/events/choir-choir-choir/"
       }
     ]
+  },
+  {
+    "title": "An Improvised Christmas Carol",
+    "start_date": "2026-11-27",
+    "end_date": "2026-11-27",
+    "performance_dates": [
+      "2026-11-27"
+    ],
+    "venue": "",
+    "producer": "Unexpected Productions",
+    "description": "It\\'s heartwarming, it\\'s side-splitting, and it\\'s the perfect holiday tradition for the whole family! An Improvised Christmas Carol takes Dickens’ classic holiday tale and turns it into a fast-paced, laugh-out-loud adventure... \\n",
+    "url": "https://www.unexpectedproductions.org/event/an-improvised-christmas-carol/2026-11-27/",
+    "event_url": "https://www.unexpectedproductions.org/event/an-improvised-christmas-carol/2026-11-27/",
+    "source_priority": 0,
+    "producer_url": "",
+    "ticket_url": "",
+    "id": "7644bd644ff9946f",
+    "performance_occurrences": [
+      {
+        "date": "2026-11-27",
+        "event_url": "https://www.eventbrite.com/e/1984491097293?aff=oddtdtcreator"
+      },
+      {
+        "date": "2026-11-27",
+        "event_url": "https://www.unexpectedproductions.org/event/an-improvised-christmas-carol/2026-11-27/"
+      }
+    ],
+    "sources": [
+      "Unexpected Productions Events"
+    ],
+    "featured": false
+  },
+  {
+    "title": "Improv Happy Hour",
+    "start_date": "2026-11-21",
+    "end_date": "2026-11-27",
+    "performance_dates": [
+      "2026-11-21",
+      "2026-11-27"
+    ],
+    "venue": "Unexpected Productions",
+    "producer": "Unexpected Productions",
+    "description": "Join us for Improv Happy Hour, where comedy is unscripted, unpredictable, and unbelievably fun! From movie mashups to literary spoofs and bold, experimental comedy, our quick-thinking performers turn your suggestions... \\n",
+    "url": "https://www.eventbrite.com/e/1977544308260?aff=oddtdtcreator",
+    "event_url": "https://www.eventbrite.com/e/1977544308260?aff=oddtdtcreator",
+    "source_priority": 0,
+    "producer_url": "",
+    "ticket_url": "",
+    "id": "7ba2443200790f97",
+    "performance_occurrences": [
+      {
+        "date": "2026-11-27",
+        "event_url": "https://www.eventbrite.com/e/1977544308260?aff=oddtdtcreator"
+      },
+      {
+        "date": "2026-11-21",
+        "event_url": "https://www.eventbrite.com/e/1977544308260?aff=oddtdtcreator"
+      }
+    ],
+    "sources": [
+      "Unexpected Productions Events"
+    ],
+    "featured": false
+  },
+  {
+    "title": "Thanksgiving Day",
+    "start_date": "2026-11-26",
+    "end_date": "2026-11-26",
+    "performance_dates": [
+      "2026-11-26"
+    ],
+    "venue": "Unexpected Productions",
+    "producer": "Unexpected Productions",
+    "description": "",
+    "url": "https://www.unexpectedproductions.org/event/thanksgiving-day/",
+    "event_url": "https://www.unexpectedproductions.org/event/thanksgiving-day/",
+    "source_priority": 0,
+    "producer_url": "",
+    "ticket_url": "",
+    "id": "18e58a17fef3aa6f",
+    "performance_occurrences": [
+      {
+        "date": "2026-11-26",
+        "event_url": "https://www.unexpectedproductions.org/event/thanksgiving-day/"
+      }
+    ],
+    "sources": [
+      "Unexpected Productions Events"
+    ],
+    "featured": false
+  },
+  {
+    "title": "Duo Comedy Showcase 2026",
+    "start_date": "2026-11-25",
+    "end_date": "2026-11-25",
+    "performance_dates": [
+      "2026-11-25"
+    ],
+    "venue": "Unexpected Productions",
+    "producer": "Unexpected Productions",
+    "description": "Seattle’s one and only open mic dedicated to two-person improv teams! Every week at Unexpected Productions, two-person teams take the stage to create hilarious, fast-paced, totally unscripted comedy right before your eyes.... \\n",
+    "url": "https://www.eventbrite.com/e/1976782224848?aff=oddtdtcreator",
+    "event_url": "https://www.eventbrite.com/e/1976782224848?aff=oddtdtcreator",
+    "source_priority": 0,
+    "producer_url": "",
+    "ticket_url": "",
+    "id": "becf6c62fbf0d934",
+    "performance_occurrences": [
+      {
+        "date": "2026-11-25",
+        "event_url": "https://www.eventbrite.com/e/1976782224848?aff=oddtdtcreator"
+      }
+    ],
+    "sources": [
+      "Unexpected Productions Events"
+    ],
+    "featured": false
+  },
+  {
+    "title": "Improv Unexpected at Jules Maes in Georgetown",
+    "start_date": "2026-11-24",
+    "end_date": "2026-11-24",
+    "performance_dates": [
+      "2026-11-24"
+    ],
+    "venue": "Jules Maes Saloon",
+    "producer": "Unexpected Productions",
+    "description": "Improv comes to Georgetown! Seattle’s legendary improv company, Unexpected Productions, brings you the Improv Unexpected. The talented cast members take your suggestions and spontaneously create hilarious stories, zany scenes, and... \\n",
+    "url": "https://tickets.venuepilot.com/e/improv-unexpected-2026-07-28-jules-maes-seattle-97f9e6",
+    "event_url": "https://tickets.venuepilot.com/e/improv-unexpected-2026-07-28-jules-maes-seattle-97f9e6",
+    "source_priority": 0,
+    "producer_url": "",
+    "ticket_url": "",
+    "id": "8c66cd187380626a",
+    "performance_occurrences": [
+      {
+        "date": "2026-11-24",
+        "event_url": "https://tickets.venuepilot.com/e/improv-unexpected-2026-07-28-jules-maes-seattle-97f9e6"
+      }
+    ],
+    "sources": [
+      "Unexpected Productions Events"
+    ],
+    "featured": false
+  },
+  {
+    "title": "Fall Student Showcase",
+    "start_date": "2026-11-24",
+    "end_date": "2026-11-24",
+    "performance_dates": [
+      "2026-11-24"
+    ],
+    "venue": "Unexpected Productions",
+    "producer": "Unexpected Productions",
+    "description": "",
+    "url": "https://www.eventbrite.com/e/1986229176936?aff=oddtdtcreator",
+    "event_url": "https://www.eventbrite.com/e/1986229176936?aff=oddtdtcreator",
+    "source_priority": 0,
+    "producer_url": "",
+    "ticket_url": "",
+    "id": "92083cda230e6d5c",
+    "performance_occurrences": [
+      {
+        "date": "2026-11-24",
+        "event_url": "https://www.eventbrite.com/e/1986229176936?aff=oddtdtcreator"
+      }
+    ],
+    "sources": [
+      "Unexpected Productions Events"
+    ],
+    "featured": false
+  },
+  {
+    "title": "Fall Improv Student Showcase",
+    "start_date": "2026-11-24",
+    "end_date": "2026-11-24",
+    "performance_dates": [
+      "2026-11-24"
+    ],
+    "venue": "Unexpected Productions",
+    "producer": "Unexpected Productions",
+    "description": "Come see the improv stars of the future debut the skills they\\'ve learned in Unexpected Productions\\' Improv School. Join us tonight at Unexpected Productions\\' Market Theater for the Fall Student Showcase! Watch as... \\n",
+    "url": "https://www.eventbrite.com/e/1988258105516?aff=oddtdtcreator",
+    "event_url": "https://www.eventbrite.com/e/1988258105516?aff=oddtdtcreator",
+    "source_priority": 0,
+    "producer_url": "",
+    "ticket_url": "",
+    "id": "4f7b458316106ab7",
+    "performance_occurrences": [
+      {
+        "date": "2026-11-24",
+        "event_url": "https://www.eventbrite.com/e/1988258105516?aff=oddtdtcreator"
+      }
+    ],
+    "sources": [
+      "Unexpected Productions Events"
+    ],
+    "featured": false
+  },
+  {
+    "title": "Hogan Cup Teen Improv Tournament",
+    "start_date": "2026-11-23",
+    "end_date": "2026-11-23",
+    "performance_dates": [
+      "2026-11-23"
+    ],
+    "venue": "Unexpected Productions",
+    "producer": "Unexpected Productions",
+    "description": "Unexpected Productions has been nurturing the next generation of improvisers through dynamic, hands-on training for over two decades. The stage is set for the ultimate improv showdown as high school... \\n",
+    "url": "https://www.eventbrite.com/e/1988258105516?aff=oddtdtcreator",
+    "event_url": "https://www.eventbrite.com/e/1988258105516?aff=oddtdtcreator",
+    "source_priority": 0,
+    "producer_url": "",
+    "ticket_url": "",
+    "id": "7c476db54dfa7fc9",
+    "performance_occurrences": [
+      {
+        "date": "2026-11-23",
+        "event_url": "https://www.eventbrite.com/e/1988258105516?aff=oddtdtcreator"
+      }
+    ],
+    "sources": [
+      "Unexpected Productions Events"
+    ],
+    "featured": false
+  },
+  {
+    "title": "Cinema Unexpected: An Improvised Movie Live",
+    "start_date": "2026-11-22",
+    "end_date": "2026-11-22",
+    "performance_dates": [
+      "2026-11-22"
+    ],
+    "venue": "Unexpected Productions",
+    "producer": "Unexpected Productions",
+    "description": "Local Improv talent meets local filmmakers in this magical comedy show Cinema Unexpected is a one-of-a-kind movie experience where local improv talent and filmmakers come together to create a film... \\n",
+    "url": "https://www.eventbrite.com/e/cinema-unexpected-an-improvised-movie-live-tickets-1988212742835?aff=oddtdtcreator",
+    "event_url": "https://www.eventbrite.com/e/cinema-unexpected-an-improvised-movie-live-tickets-1988212742835?aff=oddtdtcreator",
+    "source_priority": 0,
+    "producer_url": "",
+    "ticket_url": "",
+    "id": "4da9ad159c5584c6",
+    "performance_occurrences": [
+      {
+        "date": "2026-11-22",
+        "event_url": "https://www.eventbrite.com/e/cinema-unexpected-an-improvised-movie-live-tickets-1988212742835?aff=oddtdtcreator"
+      }
+    ],
+    "sources": [
+      "Unexpected Productions Events"
+    ],
+    "featured": false
+  },
+  {
+    "title": "Seattle Theatresports 2026",
+    "start_date": "2026-11-21",
+    "end_date": "2026-11-21",
+    "performance_dates": [
+      "2026-11-21"
+    ],
+    "venue": "Unexpected Productions",
+    "producer": "Unexpected Productions",
+    "description": "Seattle’s high-energy improv battle where your suggestions shape every scene. Fast, funny, unpredictable comedy Fri. & Sat. 9:30 Welcome to Seattle’s funnest improv comedy show, a high-energy, no-rules showdown where... \\n",
+    "url": "https://www.eventbrite.com/e/1976760857939?aff=oddtdtcreator",
+    "event_url": "https://www.eventbrite.com/e/1976760857939?aff=oddtdtcreator",
+    "source_priority": 0,
+    "producer_url": "",
+    "ticket_url": "",
+    "id": "ffa2f38064c975f3",
+    "performance_occurrences": [
+      {
+        "date": "2026-11-21",
+        "event_url": "https://www.eventbrite.com/e/1976760857939?aff=oddtdtcreator"
+      }
+    ],
+    "sources": [
+      "Unexpected Productions Events"
+    ],
+    "featured": false
+  },
+  {
+    "title": "Kit, Cat and Caboodle: An Improvised Musical Retrospective",
+    "start_date": "2026-11-21",
+    "end_date": "2026-11-21",
+    "performance_dates": [
+      "2026-11-21"
+    ],
+    "venue": "Unexpected Productions",
+    "producer": "Unexpected Productions",
+    "description": "A completely improvised musical about the rise, drama, and legendary songs of the world’s most iconic trio. Every legendary group has a story. The meteoric rise. The backstage drama. The... \\n",
+    "url": "https://www.eventbrite.com/e/1984485488517?aff=oddtdtcreator",
+    "event_url": "https://www.eventbrite.com/e/1984485488517?aff=oddtdtcreator",
+    "source_priority": 0,
+    "producer_url": "",
+    "ticket_url": "",
+    "id": "fc5d56ea17cb8570",
+    "performance_occurrences": [
+      {
+        "date": "2026-11-21",
+        "event_url": "https://www.eventbrite.com/e/1984485488517?aff=oddtdtcreator"
+      }
+    ],
+    "sources": [
+      "Unexpected Productions Events"
+    ],
+    "featured": false
+  },
+  {
+    "title": "Improv Happy Hour",
+    "start_date": "2026-11-21",
+    "end_date": "2026-11-27",
+    "performance_dates": [
+      "2026-11-21",
+      "2026-11-27"
+    ],
+    "venue": "Unexpected Productions Market Theater",
+    "producer": "Unexpected Productions",
+    "description": "Eventbrite - Unexpected Productions Improv presents Improv Happy Hour - Saturday, January 3, 2026 at Unexpected Productions Market Theater, Seattle, WA. Find event and ticket information.",
+    "url": "https://www.eventbrite.com/e/improv-happy-hour-tickets-1977544308260?aff=ebdsoporgprofile",
+    "source_priority": 0,
+    "event_url": "https://www.unexpectedproductions.org/event/improv-happy-hour/2026-11-27/",
+    "producer_url": "https://www.eventbrite.com/e/improv-happy-hour-tickets-1977544308260?aff=ebdsoporgprofile",
+    "ticket_url": "https://www.eventbrite.com/e/improv-happy-hour-tickets-1977544308260",
+    "id": "a1ef0d3627ecd28d",
+    "performance_occurrences": [
+      {
+        "date": "2026-11-21",
+        "event_url": "https://www.unexpectedproductions.org/event/improv-happy-hour/2026-11-21/"
+      },
+      {
+        "date": "2026-11-27",
+        "event_url": "https://www.unexpectedproductions.org/event/improv-happy-hour/2026-11-27/"
+      }
+    ],
+    "sources": [
+      "Unexpected Productions Events"
+    ],
+    "featured": false
+  },
+  {
+    "title": "Kit, Cat and Caboodle: An Improvised Musical Retrospective",
+    "start_date": "2026-11-21",
+    "end_date": "2026-11-21",
+    "performance_dates": [
+      "2026-11-21"
+    ],
+    "venue": "",
+    "producer": "Unexpected Productions",
+    "description": "",
+    "url": "https://www.unexpectedproductions.org/event/kit-cat-and-caboodle-an-improvised-musical-retrospective-2/2026-11-21/",
+    "source_priority": 0,
+    "event_url": "https://www.unexpectedproductions.org/event/kit-cat-and-caboodle-an-improvised-musical-retrospective-2/2026-11-21/",
+    "producer_url": "",
+    "ticket_url": "",
+    "id": "e53627b6a82cb7da",
+    "performance_occurrences": [
+      {
+        "date": "2026-11-21",
+        "event_url": "https://www.unexpectedproductions.org/event/kit-cat-and-caboodle-an-improvised-musical-retrospective-2/2026-11-21/"
+      }
+    ],
+    "sources": [
+      "Unexpected Productions Events"
+    ],
+    "featured": false
+  },
+  {
+    "title": "Seattle Theatresports 2026",
+    "start_date": "2026-11-21",
+    "end_date": "2026-11-21",
+    "performance_dates": [
+      "2026-11-21"
+    ],
+    "venue": "",
+    "producer": "Unexpected Productions",
+    "description": "",
+    "url": "https://www.unexpectedproductions.org/event/seattle-theatresports-2026-3/2026-11-21/",
+    "source_priority": 0,
+    "event_url": "https://www.unexpectedproductions.org/event/seattle-theatresports-2026-3/2026-11-21/",
+    "producer_url": "",
+    "ticket_url": "",
+    "id": "7a0e69d7fd040a35",
+    "performance_occurrences": [
+      {
+        "date": "2026-11-21",
+        "event_url": "https://www.unexpectedproductions.org/event/seattle-theatresports-2026-3/2026-11-21/"
+      }
+    ],
+    "sources": [
+      "Unexpected Productions Events"
+    ],
+    "featured": false
+  },
+  {
+    "title": "Hogan Cup Teen Improv Tournament",
+    "start_date": "2026-11-23",
+    "end_date": "2026-11-23",
+    "performance_dates": [
+      "2026-11-23"
+    ],
+    "venue": "",
+    "producer": "Unexpected Productions",
+    "description": "",
+    "url": "https://www.unexpectedproductions.org/event/hogan-cup-teen-improv-tournament/",
+    "source_priority": 0,
+    "event_url": "https://www.unexpectedproductions.org/event/hogan-cup-teen-improv-tournament/",
+    "producer_url": "",
+    "ticket_url": "",
+    "id": "ae4708c4c5907455",
+    "performance_occurrences": [
+      {
+        "date": "2026-11-23",
+        "event_url": "https://www.unexpectedproductions.org/event/hogan-cup-teen-improv-tournament/"
+      }
+    ],
+    "sources": [
+      "Unexpected Productions Events"
+    ],
+    "featured": false
+  },
+  {
+    "title": "Fall Improv Student Showcase",
+    "start_date": "2026-11-24",
+    "end_date": "2026-11-24",
+    "performance_dates": [
+      "2026-11-24"
+    ],
+    "venue": "",
+    "producer": "Unexpected Productions",
+    "description": "",
+    "url": "https://www.unexpectedproductions.org/event/fall-improv-student-showcase/",
+    "source_priority": 0,
+    "event_url": "https://www.unexpectedproductions.org/event/fall-improv-student-showcase/",
+    "producer_url": "",
+    "ticket_url": "",
+    "id": "a0615f69185e4700",
+    "performance_occurrences": [
+      {
+        "date": "2026-11-24",
+        "event_url": "https://www.unexpectedproductions.org/event/fall-improv-student-showcase/"
+      }
+    ],
+    "sources": [
+      "Unexpected Productions Events"
+    ],
+    "featured": false
+  },
+  {
+    "title": "Fall Student Showcase",
+    "start_date": "2026-11-24",
+    "end_date": "2026-11-24",
+    "performance_dates": [
+      "2026-11-24"
+    ],
+    "venue": "",
+    "producer": "Unexpected Productions",
+    "description": "",
+    "url": "https://www.unexpectedproductions.org/event/fall-student-showcase/",
+    "source_priority": 0,
+    "event_url": "https://www.unexpectedproductions.org/event/fall-student-showcase/",
+    "producer_url": "",
+    "ticket_url": "",
+    "id": "231d6d9772d11949",
+    "performance_occurrences": [
+      {
+        "date": "2026-11-24",
+        "event_url": "https://www.unexpectedproductions.org/event/fall-student-showcase/"
+      }
+    ],
+    "sources": [
+      "Unexpected Productions Events"
+    ],
+    "featured": false
+  },
+  {
+    "title": "Improv Unexpected at Jules Maes in Georgetown",
+    "start_date": "2026-11-24",
+    "end_date": "2026-11-24",
+    "performance_dates": [
+      "2026-11-24"
+    ],
+    "venue": "",
+    "producer": "Unexpected Productions",
+    "description": "",
+    "url": "https://www.unexpectedproductions.org/event/improv-unexpected-at-jules-maes-in-georgetown/2026-11-24/",
+    "source_priority": 0,
+    "event_url": "https://www.unexpectedproductions.org/event/improv-unexpected-at-jules-maes-in-georgetown/2026-11-24/",
+    "producer_url": "",
+    "ticket_url": "",
+    "id": "9d215f52edc41d76",
+    "performance_occurrences": [
+      {
+        "date": "2026-11-24",
+        "event_url": "https://www.unexpectedproductions.org/event/improv-unexpected-at-jules-maes-in-georgetown/2026-11-24/"
+      }
+    ],
+    "sources": [
+      "Unexpected Productions Events"
+    ],
+    "featured": false
+  },
+  {
+    "title": "Duo Comedy Showcase 2026",
+    "start_date": "2026-11-25",
+    "end_date": "2026-11-25",
+    "performance_dates": [
+      "2026-11-25"
+    ],
+    "venue": "",
+    "producer": "Unexpected Productions",
+    "description": "",
+    "url": "https://www.unexpectedproductions.org/event/duo-comedy-showcase-2026/2026-11-25/",
+    "source_priority": 0,
+    "event_url": "https://www.unexpectedproductions.org/event/duo-comedy-showcase-2026/2026-11-25/",
+    "producer_url": "",
+    "ticket_url": "",
+    "id": "6be0e2086cc63937",
+    "performance_occurrences": [
+      {
+        "date": "2026-11-25",
+        "event_url": "https://www.unexpectedproductions.org/event/duo-comedy-showcase-2026/2026-11-25/"
+      }
+    ],
+    "sources": [
+      "Unexpected Productions Events"
+    ],
+    "featured": false
+  },
+  {
+    "title": "Thanksgiving Day",
+    "start_date": "2026-11-26",
+    "end_date": "2026-11-26",
+    "performance_dates": [
+      "2026-11-26"
+    ],
+    "venue": "",
+    "producer": "Unexpected Productions",
+    "description": "",
+    "url": "https://www.unexpectedproductions.org/event/thanksgiving-day/",
+    "source_priority": 0,
+    "event_url": "https://www.unexpectedproductions.org/event/thanksgiving-day/",
+    "producer_url": "",
+    "ticket_url": "",
+    "id": "3f9fd237cb686a59",
+    "performance_occurrences": [
+      {
+        "date": "2026-11-26",
+        "event_url": "https://www.unexpectedproductions.org/event/thanksgiving-day/"
+      }
+    ],
+    "sources": [
+      "Unexpected Productions Events"
+    ],
+    "featured": false
   }
 ]
