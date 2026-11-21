@@ -282,7 +282,10 @@ def event_links(event_url, fallback=None, item=None):
     # production-specific page on that site (including its experiences/shows index).
     if producer_url and producer_url != event_url and item is not None and item.get("title"):
         try:
-            title_words = {w for w in re.findall(r"[a-z0-9]+", clean(item["title"]).casefold()) if len(w) > 2}
+            title_words = {
+                w for w in re.findall(r"[a-z0-9]+", clean(item["title"]).casefold())
+                if len(w) > 2 and w not in {"all", "the", "show", "play", "production", "experience"}
+            }
             home = requests.get(producer_url, headers=HEADERS, timeout=10)
             home.raise_for_status()
             home_soup = BeautifulSoup(home.text, "html.parser")
@@ -295,7 +298,7 @@ def event_links(event_url, fallback=None, item=None):
                     if overlap:
                         candidates.append((overlap, href))
             candidates.sort(reverse=True)
-            min_overlap = min(2, len(title_words))
+            min_overlap = min(2, len(title_words)) if title_words else 999
             if candidates and candidates[0][0] >= min_overlap:
                 producer_url = candidates[0][1]
             else:
