@@ -7,15 +7,21 @@ on:
         description: "Do not publish; only show the selected post"
         required: true
         default: "true"
+        type: boolean
       test_facebook:
         description: "Check Page token and Page ID without publishing"
         required: true
         default: "false"
+        type: boolean
   schedule:
-    - cron: "30 16 * * *" # dry-run only until Facebook publishing is explicitly enabled
+    - cron: "30 16 * * *" # Daily at 08:30 Pacific Standard Time / 09:30 Pacific Daylight Time
 
 permissions:
   contents: write
+
+concurrency:
+  group: daily-seattle-theatre-pick
+  cancel-in-progress: false
 
 jobs:
   pick:
@@ -31,11 +37,14 @@ jobs:
           FB_PAGE_ID: ${{ secrets.FB_PAGE_ID }}
           FB_PAGE_ACCESS_TOKEN: ${{ secrets.FB_PAGE_ACCESS_TOKEN }}
         run: |
+          set -euo pipefail
           python -m py_compile src/agent.py
           if [ "${{ github.event_name }}" = "workflow_dispatch" ] && [ "${{ inputs.test_facebook }}" = "true" ]; then
             python -m src.agent --test-facebook
-          else
+          elif [ "${{ github.event_name }}" = "workflow_dispatch" ] && [ "${{ inputs.dry_run }}" = "true" ]; then
             python -m src.agent --dry-run
+          else
+            python -m src.agent --publish
           fi
       - name: Commit updated production history
         run: |
