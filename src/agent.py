@@ -228,8 +228,9 @@ def main():
         print("No validated future production found. No post will be published.")
     else:
         pick = candidates[0]
-        message = ("🎭 Seattle Theatre Pick of the Day: " + pick["title"] + "\n\n" +
-          (pick.get("description") or "Discover a Puget Sound theatre production.") + "\n\n" +
+        description = clean(pick.get("description")) or "Discover a Puget Sound theatre production."
+        message = ("🎭 Seattle Theatre Pick of the Day: " + clean(pick["title"]) + "\n\n" +
+          description + "\n\n" +
           "📍 " + (pick.get("venue") or "Puget Sound") + "\n🎟️ Details & tickets: " + pick["url"])
         print("PROPOSED PICK:", pick["title"])
         print(message)
