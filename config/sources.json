@@ -1,0 +1,60 @@
+{
+  "region": "Puget Sound",
+  "timezone": "America/Los_Angeles",
+  "sources": [
+    {
+      "name": "Theatre Puget Sound Community Events Calendar",
+      "url": "https://theatrepugetsound.org/community-events-calendar/",
+      "type": "html",
+      "enabled": true,
+      "priority": 1
+    },
+    {
+      "name": "NWTheatre Calendar",
+      "url": "https://www.nwtheatre.org/calendar/",
+      "type": "html",
+      "enabled": true,
+      "priority": 1
+    },
+    {
+      "name": "Seattle Theatre Group Calendar",
+      "url": "https://www.stgpresents.org/calendar/",
+      "type": "html",
+      "enabled": true,
+      "priority": 2
+    },
+    {
+      "name": "5th Avenue Theatre",
+      "url": "https://www.5thavenue.org/events/",
+      "type": "html",
+      "enabled": true,
+      "priority": 2
+    }
+  ],
+  "include_categories": [
+    "play",
+    "theatre",
+    "theater",
+    "musical",
+    "opera",
+    "performance",
+    "drama",
+    "comedy",
+    "improv",
+    "puppet",
+    "fringe"
+  ],
+  "exclude_title_terms": [
+    "tour",
+    "class",
+    "workshop",
+    "audition",
+    "camp",
+    "ballet class",
+    "dance class",
+    "concert",
+    "meet and greet",
+    "open house"
+  ],
+  "minimum_confidence": 0.72
+}
