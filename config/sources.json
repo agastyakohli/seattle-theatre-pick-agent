@@ -86,6 +86,46 @@
       "enabled": true,
       "priority": 0,
       "producer": "Union Arts Center"
+    },
+    {
+      "name": "Seattle Rep 2026/27 Season",
+      "url": "https://www.seattlerep.org/plays/202627-season",
+      "type": "html",
+      "enabled": true,
+      "priority": 0,
+      "producer": "Seattle Rep"
+    },
+    {
+      "name": "Annex Theatre Productions",
+      "url": "https://www.annextheatre.org/",
+      "type": "html",
+      "enabled": true,
+      "priority": 0,
+      "producer": "Annex Theatre"
+    },
+    {
+      "name": "Reboot Theatre Productions",
+      "url": "https://reboottheatre.org/",
+      "type": "html",
+      "enabled": true,
+      "priority": 0,
+      "producer": "Reboot Theatre Company"
+    },
+    {
+      "name": "Washington Ensemble Theatre Season 23",
+      "url": "https://washingtonensemble.org/season-23/",
+      "type": "html",
+      "enabled": true,
+      "priority": 0,
+      "producer": "Washington Ensemble Theatre"
+    },
+    {
+      "name": "Union Arts Center Official 2026/27 Season",
+      "url": "https://www.unionartscenter.org/2026-27-season/",
+      "type": "html",
+      "enabled": true,
+      "priority": 0,
+      "producer": "Union Arts Center"
     }
   ],
   "include_categories": [
