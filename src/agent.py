@@ -153,6 +153,14 @@ def title_tokens(value):
     return {word for word in re.findall(r"[a-z0-9]+", clean(value).casefold()) if len(word) > 1 and word not in ignored}
 
 
+def is_ticketing_host(host):
+    host = (host or "").casefold().removeprefix("www.")
+    return any(domain in host for domain in (
+        "eventbrite.", "ticketmaster.", "showclix.", "brownpapertickets.",
+        "ticketweb.", "tixr.", "universe.com", "etix.com", "seetickets."
+    ))
+
+
 def event_links(event_url, fallback=None, item=None):
     """Enrich the selected calendar pick; prefer producer page, ticketing page, then calendar listing."""
     fallback = fallback or event_url
@@ -163,7 +171,9 @@ def event_links(event_url, fallback=None, item=None):
         response.raise_for_status()
         soup = BeautifulSoup(response.text, "html.parser")
         page_description = ""
-        if item is not None:
+        event_host = urlparse(event_url).netloc.casefold()
+        event_is_ticketing = is_ticketing_host(event_host)
+        if item is not None and not event_is_ticketing:
             # The selected occurrence page is more authoritative than snippets
             # inherited from aggregator cards or older Eventbrite occurrences.
             meta = soup.select_one('meta[property="og:description"], meta[name="description"]')
@@ -198,8 +208,12 @@ def event_links(event_url, fallback=None, item=None):
                     if org.get("name") and item is not None and not item.get("producer"):
                         item["producer"] = clean(org.get("name"))
                     if org.get("url"):
-                        producer_url = urljoin(event_url, org["url"])
-                if item is not None and obj.get("description") and any("Event" in t for t in (obj.get("@type", []) if isinstance(obj.get("@type"), list) else [obj.get("@type", "")])):
+                        organizer_url = urljoin(event_url, org["url"])
+                        organizer_host = urlparse(organizer_url).netloc.casefold()
+                        # Ticketing-platform organizer profiles are not producer websites.
+                        if not is_ticketing_host(organizer_host):
+                            producer_url = organizer_url
+                if item is not None and not event_is_ticketing and obj.get("description") and any("Event" in t for t in (obj.get("@type", []) if isinstance(obj.get("@type"), list) else [obj.get("@type", "")])):
                     page_description = clean(obj.get("description"))
                 if item is not None and not item.get("venue"):
                     loc = obj.get("location")
@@ -255,6 +269,15 @@ def event_links(event_url, fallback=None, item=None):
                 break
     except Exception as exc:
         print("LINK LOOKUP WARNING:", str(exc))
+    # A dated event page on a non-calendar, non-ticketing domain is itself
+    # the producer's specific show page (e.g. Unexpected Productions).
+    calendar_hosts = {
+        urlparse(source.get("url", "")).netloc.casefold().removeprefix("www.")
+        for source in CFG.get("sources", [])
+    }
+    event_host = urlparse(event_url).netloc.casefold().removeprefix("www.")
+    if event_host and event_host not in calendar_hosts and not is_ticketing_host(event_host):
+        producer_url = event_url
     # Verified canonical page for this known producer/production pair.
     title_key = clean(item.get("title") if item else "").casefold()
     producer_host = urlparse(producer_url).netloc.casefold() if producer_url else ""
@@ -741,9 +764,18 @@ def main():
             for source in CFG.get("sources", [])
             if source.get("producer") and clean(source.get("producer")).casefold() == clean(pick.get("producer")).casefold()
         }
+        calendar_hosts = {
+            urlparse(source.get("url", "")).netloc.casefold().removeprefix("www.")
+            for source in CFG.get("sources", [])
+        }
         def occurrence_rank(occurrence):
             host = urlparse(occurrence.get("event_url", "")).netloc.casefold().removeprefix("www.")
-            return (0 if host in preferred_hosts else 1, occurrence.get("event_url", ""))
+            is_calendar = host in calendar_hosts
+            is_ticket = is_ticketing_host(host)
+            is_known_producer = host in preferred_hosts
+            # Prefer a producer's dated event page over a ticketing URL or aggregator listing.
+            return (0 if is_known_producer or (not is_calendar and not is_ticket) else 1,
+                    1 if is_ticket else 0, occurrence.get("event_url", ""))
         event_url = (sorted(todays_occurrences, key=occurrence_rank)[0].get("event_url") if todays_occurrences
                      else pick.get("event_url") or pick.get("url"))
         print("CONFIRMED PERFORMANCE DATE:", today)
