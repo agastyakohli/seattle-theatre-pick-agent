@@ -100,12 +100,12 @@ def extract(source):
 
 
 def is_excluded_event(item):
-    """Reject non-production listings such as classes, workshops and lessons."""
+    """Reject listings outside the page's editorial scope."""
     title = clean(item.get("title", "")).casefold()
     description = clean(item.get("description", "")).casefold()
     combined = title + " " + description
 
-    # These phrases identify instructional or participatory listings, not performances.
+    # Exclude instructional/participatory listings rather than public performances.
     instructional_patterns = [
         r"(?<![\w-])class(?:es)?(?![\w-])",
         r"\bworkshops?\b",
@@ -119,8 +119,18 @@ def is_excluded_event(item):
     if any(re.search(pattern, combined, re.IGNORECASE) for pattern in instructional_patterns):
         return True
 
-    # Preserve the existing title exclusions, without excluding dance/ballet performances
-    # merely because they are dance-related.
+    # Exclude ballet and opera, plus explicitly identified stand-up comedy.
+    # Keep sketch comedy, improv, plays and musicals eligible.
+    out_of_scope_patterns = [
+        r"\bballet\b",
+        r"\bopera\b",
+        r"\bstand[ -]?up\b",
+        r"\bstandup\b",
+    ]
+    if any(re.search(pattern, combined, re.IGNORECASE) for pattern in out_of_scope_patterns):
+        return True
+
+    # Apply broad title-only exclusions such as tours and concerts.
     return any(term.casefold() in title for term in CFG.get("exclude_title_terms", []))
 
 def merge(existing, incoming):
