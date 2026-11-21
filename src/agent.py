@@ -71,8 +71,13 @@ def extract(source):
                     end = parse_date(obj.get("endDate")) or start
                     link = urljoin(source["url"], obj.get("url") or source["url"])
                     if obj.get("name") and start:
+                        organizer = obj.get("organizer") or obj.get("producer") or {}
+                        if isinstance(organizer, list):
+                            organizer = organizer[0] if organizer else {}
+                        producer = organizer.get("name", "") if isinstance(organizer, dict) else clean(organizer)
                         results.append({"title":clean(obj["name"]), "start_date":start, "end_date":end,
-                          "venue":clean(venue), "description":clean(obj.get("description"))[:600],
+                          "performance_dates":[start], "venue":clean(venue), "producer":clean(producer),
+                          "description":clean(obj.get("description"))[:600],
                           "url":link, "source":source["name"]})
     # Generic event cards: deliberately low-confidence fallback.
     for node in soup.select('[itemtype*="Event"], article, .event, .tribe-events-calendar-list__event'):
@@ -88,8 +93,10 @@ def extract(source):
         anchor = node.select_one("a[href]")
         venue_node = node.select_one('[itemprop="location"], .venue, .event-venue')
         desc_node = node.select_one('[itemprop="description"], .event-description')
+        producer_node = node.select_one("[itemprop=organizer], .organizer, .presented-by, .producer")
         results.append({"title":title, "start_date":start, "end_date":start,
-          "venue":clean(venue_node) if venue_node else "",
+          "performance_dates":[start], "venue":clean(venue_node) if venue_node else "",
+          "producer":clean(producer_node) if producer_node else "",
           "description":clean(desc_node)[:600] if desc_node else "",
           "url":urljoin(source["url"], anchor["href"]) if anchor else source["url"],
           "source":source["name"]})
@@ -100,7 +107,7 @@ def extract(source):
         for entry in feed.entries:
             summary = clean(entry.get("summary", ""))
             results.append({"title":clean(entry.get("title")), "start_date":None, "end_date":None,
-              "venue":"", "description":summary[:600], "url":entry.get("link", source["url"]),
+              "performance_dates":[], "venue":"", "producer":"", "description":summary[:600], "url":entry.get("link", source["url"]),
               "source":source["name"]})
     return results
 
@@ -139,6 +146,12 @@ def is_excluded_event(item):
     # Apply broad title-only exclusions such as tours and concerts.
     return any(term.casefold() in title for term in CFG.get("exclude_title_terms", []))
 
+def producer_key(item):
+    # Prefer explicit producer/organizer; venue is a fallback where unavailable.
+    value = clean(item.get("producer") or item.get("venue") or item.get("source") or "")
+    return re.sub(r"\\s+", " ", value).casefold()
+
+
 def merge(existing, incoming):
     records = {p["id"]:p for p in existing if p.get("id")}
     for item in incoming:
@@ -146,29 +159,32 @@ def merge(existing, incoming):
             continue
         pid = identity(item["title"], item.get("venue", ""))
         item["id"] = pid
+        item_dates = set(item.get("performance_dates") or [])
+        if item.get("start_date"):
+            item_dates.add(item["start_date"])
         prior = records.get(pid)
         if prior:
-            # A calendar may expose one card per performance date. Preserve the
-            # full run so the production remains eligible until its final date.
-            incoming_start = item.get("start_date")
-            incoming_end = item.get("end_date") or incoming_start
-            prior_start = prior.get("start_date")
-            prior_end = prior.get("end_date") or prior_start
-            if incoming_start and (not prior_start or incoming_start < prior_start):
-                prior["start_date"] = incoming_start
-            if incoming_end and (not prior_end or incoming_end > prior_end):
-                prior["end_date"] = incoming_end
-            for key in ("venue", "description"):
+            # Preserve exact listed dates; never infer that a production runs daily.
+            known = set(prior.get("performance_dates") or [])
+            if prior.get("start_date"):
+                known.add(prior["start_date"])
+            prior["performance_dates"] = sorted(known | item_dates)
+            if prior["performance_dates"]:
+                prior["start_date"] = prior["performance_dates"][0]
+                prior["end_date"] = prior["performance_dates"][-1]
+            for key in ("venue", "producer", "description"):
                 if item.get(key) and not prior.get(key):
                     prior[key] = item[key]
             prior.setdefault("sources", [])
             if item["source"] not in prior["sources"]:
                 prior["sources"].append(item["source"])
         else:
+            item["performance_dates"] = sorted(item_dates)
             item["sources"] = [item.pop("source")]
             item["featured"] = False
             records[pid] = item
     return list(records.values())
+
 
 def main():
     parser = argparse.ArgumentParser()
@@ -206,24 +222,42 @@ def main():
             print("SOURCE ERROR", source["name"], str(exc), file=sys.stderr)
     productions = merge(productions, found)
     already = {x.get("production_id") for x in featured}
-    today = datetime.now(TZ).date()
+    today = datetime.now(TZ).date().isoformat()
     candidates = []
-    for p in productions:
-        if p.get("id") in already or p.get("featured") or not p.get("start_date"):
+    # One pick per producer within a rolling seven-day window.
+    recent_cutoff = datetime.now(TZ).date().toordinal() - 7
+    recent_producers = set()
+    for entry in featured:
+        published = entry.get("published_at")
+        if not published:
             continue
         try:
-            # Compare against the final known performance date, not just the
-            # first performance. A run ending today remains eligible today.
-            final_date = date.fromisoformat(p.get("end_date") or p["start_date"])
-            if final_date < today:
-                continue
-        except (TypeError, ValueError):
+            published_date = dateparser.parse(published).date()
+        except Exception:
+            continue
+        if published_date.toordinal() >= recent_cutoff:
+            key = producer_key(entry)
+            if key:
+                recent_producers.add(key)
+
+    for p in productions:
+        if p.get("id") in already or p.get("featured"):
+            continue
+        # A pick must have a performance explicitly listed for today.
+        performance_dates = set(p.get("performance_dates") or [])
+        if not performance_dates and p.get("start_date"):
+            performance_dates.add(p["start_date"])
+        if today not in performance_dates:
             continue
         if is_excluded_event(p):
             print("SKIPPED NON-PRODUCTION EVENT:", p.get("title", "(untitled)"))
             continue
+        key = producer_key(p)
+        if key and key in recent_producers:
+            print("SKIPPED FOR PRODUCER VARIETY:", p.get("title", "(untitled)"), "-", p.get("producer") or p.get("venue"))
+            continue
         candidates.append(p)
-    candidates.sort(key=lambda p:(p["start_date"], p["title"].casefold()))
+    candidates.sort(key=lambda p:(p["title"].casefold(), p.get("venue","").casefold()))
     if not candidates:
         print("No validated future production found. No post will be published.")
     else:
@@ -244,6 +278,7 @@ def main():
               data={"message":message, "link":pick["url"], "access_token":token}, timeout=30)
             response.raise_for_status()
             featured.append({"production_id":pick["id"], "title":pick["title"],
+              "producer":pick.get("producer") or "", "venue":pick.get("venue") or "",
               "published_at":datetime.now(TZ).isoformat(), "url":pick["url"]})
             pick["featured"] = True
             featured_path.write_text(json.dumps(featured, indent=2) + "\n")
