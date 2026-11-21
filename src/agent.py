@@ -278,11 +278,6 @@ def event_links(event_url, fallback=None, item=None):
     event_host = urlparse(event_url).netloc.casefold().removeprefix("www.")
     if event_host and event_host not in calendar_hosts and not is_ticketing_host(event_host):
         producer_url = event_url
-    # Verified canonical page for this known producer/production pair.
-    title_key = clean(item.get("title") if item else "").casefold()
-    producer_host = urlparse(producer_url).netloc.casefold() if producer_url else ""
-    if "all in" in title_key and ("curiouslevity.com" in producer_host or "seattlecuriouslevity.com" in producer_host):
-        producer_url = "https://www.curiouslevity.com/experiences"
     # If the calendar only exposes the producer homepage, look for a
     # production-specific page on that site (including its experiences/shows index).
     if producer_url and producer_url != event_url and item is not None and item.get("title"):
@@ -300,7 +295,8 @@ def event_links(event_url, fallback=None, item=None):
                     if overlap:
                         candidates.append((overlap, href))
             candidates.sort(reverse=True)
-            if candidates and candidates[0][0] >= 1:
+            min_overlap = min(2, len(title_words))
+            if candidates and candidates[0][0] >= min_overlap:
                 producer_url = candidates[0][1]
             else:
                 # Follow one likely portfolio/experiences index and match the show title there.
@@ -323,9 +319,16 @@ def event_links(event_url, fallback=None, item=None):
                         if overlap and href.startswith(("http://", "https://")) and urlparse(href).netloc.casefold() == urlparse(index.url).netloc.casefold():
                             matches.append((overlap, href))
                     matches.sort(reverse=True)
-                    if matches and matches[0][0] >= 1:
+                    if matches and matches[0][0] >= min_overlap:
                         producer_url = matches[0][1]
                         break
+            # Do not publish a generic company homepage or portfolio index as
+            # though it were the production page. The dated calendar listing
+            # remains the safe fallback when no show-specific page is found.
+            if producer_url and producer_url != event_url:
+                final_path = urlparse(producer_url).path.rstrip("/")
+                if not final_path or final_path.casefold() in ("/experiences", "/shows", "/productions", "/work"):
+                    producer_url = ""
         except Exception as exc:
             print("PRODUCER PAGE LOOKUP WARNING:", str(exc))
     # Read show-specific descriptive metadata from the official producer page,
@@ -543,8 +546,70 @@ def is_excluded_event(item):
     if any(re.search(pattern, combined, re.IGNORECASE) for pattern in out_of_scope_patterns):
         return True
 
+    # Exclude speakeasy/casino-format events regardless of whether they
+    # describe themselves as immersive. Immersive plays remain eligible.
+    speakeasy_patterns = [
+        r"\\bspeakeas(?:y|ies)\\b",
+        r"\\bcasino\\b",
+        r"\\bgambling\\b",
+    ]
+    if any(re.search(pattern, combined, re.IGNORECASE) for pattern in speakeasy_patterns):
+        return True
+
     # Apply broad title-only exclusions such as tours and concerts.
     return any(term.casefold() in title for term in CFG.get("exclude_title_terms", []))
+
+def parse_nwtheatre_run_end_dates(html_text, productions):
+    """Attach independent directory closing dates to already-discovered shows only.
+
+    This directory is validation metadata, never a source of candidate shows
+    or performance dates. A title must match exactly after normalization and
+    have one unambiguous date-range listing on the page.
+    """
+    soup = BeautifulSoup(html_text or "", "html.parser")
+    lines = [clean(line) for line in soup.get_text("\\n").splitlines()]
+    lines = [line for line in lines if line]
+    directory_dates = {}
+    date_range = re.compile(
+        r"\\((\\d{1,2})/(\\d{1,2})\\s*[-–]\\s*(\\d{1,2})/(\\d{1,2})(?:/(\\d{4}))?\\)"
+    )
+
+    def normalized(value):
+        return " ".join(re.findall(r"[a-z0-9]+", clean(value).casefold()))
+
+    for line in lines:
+        match = date_range.search(line)
+        if not match:
+            continue
+        month, day, end_month, end_day, end_year = match.groups()
+        year = int(end_year or "2026")
+        try:
+            start = date(year, int(month), int(day))
+            finish_year = year + (1 if int(end_month) < int(month) else 0)
+            finish = date(finish_year, int(end_month), int(end_day))
+        except ValueError:
+            continue
+        before_range = line[:match.start()].strip()
+        # Remove company/venue suffixes only after title matching; directory
+        # line starts with the show title in the page's text representation.
+        line_key = normalized(before_range)
+        if not line_key:
+            continue
+        for production in productions:
+            title_key = normalized(production.get("title", ""))
+            if not title_key:
+                continue
+            if line_key == title_key or line_key.startswith(title_key + " "):
+                directory_dates.setdefault(production.get("id") or title_key, []).append(finish.isoformat())
+
+    for production in productions:
+        key = production.get("id") or normalized(production.get("title", ""))
+        dates = directory_dates.get(key, [])
+        unique_dates = sorted(set(dates))
+        if len(unique_dates) == 1:
+            production["run_end_date"] = unique_dates[0]
+            production["run_end_source"] = "NWTheatre 2026 Shows directory"
+    return productions
 
 def producer_is_presenter(item):
     if item.get("producer_type") == "presenter":
@@ -704,6 +769,21 @@ def main():
         except Exception as exc:
             print("SOURCE ERROR", source["name"], str(exc), file=sys.stderr)
     productions = merge(productions, found)
+
+    # Independent run-end cross-check: metadata only. This source cannot add
+    # productions or performance dates; it can only validate a closing date
+    # for a title already present in the calendar-derived inventory.
+    try:
+        directory_url = "https://www.nwtheatre.org/shows2026/"
+        directory_response = requests.get(directory_url, headers=HEADERS, timeout=15)
+        directory_response.raise_for_status()
+        before_count = len(productions)
+        productions = parse_nwtheatre_run_end_dates(directory_response.text, productions)
+        validated = [p for p in productions if p.get("run_end_source") == "NWTheatre 2026 Shows directory"]
+        print("RUN-END CROSS-CHECK:", len(validated), "existing productions matched; inventory unchanged:", len(productions) == before_count)
+    except Exception as exc:
+        print("RUN-END CROSS-CHECK WARNING:", str(exc))
+
     already = {x.get("production_id") for x in featured}
     # Title-level suppression preserves historical featured entries across
     # the identity-key migration from venue-based to producer-based IDs.
@@ -734,6 +814,11 @@ def main():
         if not performance_dates and p.get("start_date"):
             performance_dates.add(p["start_date"])
         if today not in performance_dates:
+            continue
+        # Reject stale calendar occurrences only when an independent directory
+        # explicitly confirms that the production closed before today.
+        if p.get("run_end_source") == "NWTheatre 2026 Shows directory" and p.get("run_end_date") and p["run_end_date"] < today:
+            print("SKIPPED CLOSED PRODUCTION:", p.get("title"), "- run ended", p["run_end_date"])
             continue
         if is_excluded_event(p):
             print("SKIPPED NON-PRODUCTION EVENT:", p.get("title", "(untitled)"))
