@@ -5134,5 +5134,582 @@
       "Theatre Puget Sound Community Events Calendar"
     ],
     "featured": false
+  },
+  {
+    "title": "Cold Reads/Cold Brews – Latitude Theatre @ Halcyon Brewing Co. (Seattle – Greenwood)",
+    "start_date": "2026-12-09",
+    "end_date": "2026-12-09",
+    "performance_dates": [
+      "2026-12-09"
+    ],
+    "venue": "",
+    "producer": "",
+    "description": "Monthly gathering of people interested in reading plays while quaffing a beverage of choice at a local public house. Different play each month, with discussion after. Held on 2nd Wednesdays. Free, no tickets needed. Info here.",
+    "categories": "Free & Pay What You Choose,Talks & Events",
+    "url": "https://www.nwtheatre.org/event/cold-reads-cold-brews-latitude-theatre-seattle-halcyon-7/",
+    "event_url": "https://www.nwtheatre.org/event/cold-reads-cold-brews-latitude-theatre-seattle-halcyon-7/",
+    "source_priority": 1,
+    "producer_url": "",
+    "ticket_url": "",
+    "id": "63589e8b0267cc26",
+    "performance_occurrences": [
+      {
+        "date": "2026-12-09",
+        "event_url": "https://www.nwtheatre.org/event/cold-reads-cold-brews-latitude-theatre-seattle-halcyon-7/"
+      }
+    ],
+    "sources": [
+      "NWTheatre Calendar"
+    ],
+    "featured": false
+  },
+  {
+    "title": "A Christmas Carol @ Union Arts Center (Seattle – Downtown)",
+    "start_date": "2026-11-27",
+    "end_date": "2026-11-27",
+    "performance_dates": [
+      "2026-11-27"
+    ],
+    "venue": "",
+    "producer": "",
+    "description": "Seattle’s decades-running holiday tradition returns in this beloved adaptation of Scrooge and his ghosts. Adapted by ACT founder Gregory A. Falls, from Charles Dickens’ classic story. Tickets here.",
+    "categories": "* Theatre (Plays, Musicals & Opera),Plays (Drama & Comedy)",
+    "url": "https://www.nwtheatre.org/event/christmas-carol-2026-union-arts-center-seattle-730/",
+    "event_url": "https://www.nwtheatre.org/event/christmas-carol-2026-union-arts-center-seattle-730/",
+    "source_priority": 1,
+    "producer_url": "",
+    "ticket_url": "",
+    "id": "3fd6fa530ad9ae90",
+    "performance_occurrences": [
+      {
+        "date": "2026-11-27",
+        "event_url": "https://www.nwtheatre.org/event/christmas-carol-2026-union-arts-center-seattle-730/"
+      }
+    ],
+    "sources": [
+      "NWTheatre Calendar"
+    ],
+    "featured": false
+  },
+  {
+    "title": "The Wizard of Oz @ The 5th Avenue Theatre (Seattle – Downtown)",
+    "start_date": "2026-11-27",
+    "end_date": "2026-11-27",
+    "performance_dates": [
+      "2026-11-27"
+    ],
+    "venue": "",
+    "producer": "",
+    "description": "Based on the enchanting classic, Dorothy’s journey reminds there’s no place like home — especially during the holidays. By L. Frank Baum, with music & lyrics by Harold Arlen & E.Y. Harburg; directed by Bill Berry. Tickets here.",
+    "categories": "* Theatre (Plays, Musicals & Opera),Musicals & Opera",
+    "url": "https://www.nwtheatre.org/event/wizard-of-oz-5th-avenue-theatre-seattle-730/",
+    "event_url": "https://www.nwtheatre.org/event/wizard-of-oz-5th-avenue-theatre-seattle-730/",
+    "source_priority": 1,
+    "producer_url": "",
+    "ticket_url": "",
+    "id": "e7abc759d9753ca3",
+    "performance_occurrences": [
+      {
+        "date": "2026-11-27",
+        "event_url": "https://www.nwtheatre.org/event/wizard-of-oz-5th-avenue-theatre-seattle-730/"
+      }
+    ],
+    "sources": [
+      "NWTheatre Calendar"
+    ],
+    "featured": false
+  },
+  {
+    "title": "Snowed In @ ArtsWest (West Seattle)",
+    "start_date": "2026-11-28",
+    "end_date": "2026-11-28",
+    "performance_dates": [
+      "2026-11-28"
+    ],
+    "venue": "",
+    "producer": "",
+    "description": "Seattle’s new holiday tradition digs out the true meaning of the holidays, as four local actors try to write the perfect holiday musical but wind up stuck instead. By Corinne Park-Buffelen & Mathew Wright, with music by Alma David Taylor. Tickets here.",
+    "categories": "* Theatre (Plays, Musicals & Opera),Musicals & Opera",
+    "url": "https://www.nwtheatre.org/event/snowed-in-2026-artswest-seattle-730/",
+    "event_url": "https://www.nwtheatre.org/event/snowed-in-2026-artswest-seattle-730/",
+    "source_priority": 1,
+    "producer_url": "",
+    "ticket_url": "",
+    "id": "1ecc23989478bb14",
+    "performance_occurrences": [
+      {
+        "date": "2026-11-28",
+        "event_url": "https://www.nwtheatre.org/event/snowed-in-2026-artswest-seattle-730/"
+      }
+    ],
+    "sources": [
+      "NWTheatre Calendar"
+    ],
+    "featured": false
+  },
+  {
+    "title": "Scrooge! – a puppet-driven musical @ Renton Civic Theatre (Renton)",
+    "start_date": "2026-12-04",
+    "end_date": "2026-12-19",
+    "performance_dates": [
+      "2026-12-04",
+      "2026-12-05",
+      "2026-12-10",
+      "2026-12-11",
+      "2026-12-12",
+      "2026-12-17",
+      "2026-12-18",
+      "2026-12-19"
+    ],
+    "venue": "",
+    "producer": "",
+    "description": "This magical, puppet-driven musical adaptation of A Christmas Carol transforms Dickens’ beloved tale into a visually stunning world where humans and puppets share the stage. By Leslie Bricusse (book, music, and lyrics); direction and puppets by Matthew Posner. Tickets here.",
+    "categories": "* Theatre (Plays, Musicals & Opera),Musicals & Opera",
+    "url": "https://www.nwtheatre.org/event/scrooge-puppet-musical-renton-civic-theatre-730/",
+    "event_url": "https://www.nwtheatre.org/event/scrooge-puppet-musical-renton-civic-theatre-730/",
+    "source_priority": 1,
+    "producer_url": "",
+    "ticket_url": "",
+    "id": "7927c7021ddb3e99",
+    "performance_occurrences": [
+      {
+        "date": "2026-12-04",
+        "event_url": "https://www.nwtheatre.org/event/scrooge-puppet-musical-renton-civic-theatre-730/"
+      },
+      {
+        "date": "2026-12-05",
+        "event_url": "https://www.nwtheatre.org/event/scrooge-puppet-musical-renton-civic-theatre-730/"
+      },
+      {
+        "date": "2026-12-10",
+        "event_url": "https://www.nwtheatre.org/event/scrooge-puppet-musical-renton-civic-theatre-730/"
+      },
+      {
+        "date": "2026-12-11",
+        "event_url": "https://www.nwtheatre.org/event/scrooge-puppet-musical-renton-civic-theatre-730/"
+      },
+      {
+        "date": "2026-12-12",
+        "event_url": "https://www.nwtheatre.org/event/scrooge-puppet-musical-renton-civic-theatre-730/"
+      },
+      {
+        "date": "2026-12-17",
+        "event_url": "https://www.nwtheatre.org/event/scrooge-puppet-musical-renton-civic-theatre-730/"
+      },
+      {
+        "date": "2026-12-18",
+        "event_url": "https://www.nwtheatre.org/event/scrooge-puppet-musical-renton-civic-theatre-730/"
+      },
+      {
+        "date": "2026-12-19",
+        "event_url": "https://www.nwtheatre.org/event/scrooge-puppet-musical-renton-civic-theatre-730/"
+      }
+    ],
+    "sources": [
+      "NWTheatre Calendar"
+    ],
+    "featured": false
+  },
+  {
+    "title": "The Dina Martina Christmas Show @ Union Arts Center (Seattle – Downtown)",
+    "start_date": "2026-12-04",
+    "end_date": "2026-12-04",
+    "performance_dates": [
+      "2026-12-04"
+    ],
+    "venue": "",
+    "producer": "",
+    "description": "It’s chaos for Christmas in this beloved long-running comedic cabaret, featuring drag queen Dina Martina and music by Chris Jeffries. Tickets here.",
+    "categories": "* Theatre (Plays, Musicals & Opera),Variety (Circus, Burlesque & More)",
+    "url": "https://www.nwtheatre.org/event/dina-martina-christmas-2026-union-arts-center-seattle-8/",
+    "event_url": "https://www.nwtheatre.org/event/dina-martina-christmas-2026-union-arts-center-seattle-8/",
+    "source_priority": 1,
+    "producer_url": "",
+    "ticket_url": "",
+    "id": "3179c12f778f47c6",
+    "performance_occurrences": [
+      {
+        "date": "2026-12-04",
+        "event_url": "https://www.nwtheatre.org/event/dina-martina-christmas-2026-union-arts-center-seattle-8/"
+      }
+    ],
+    "sources": [
+      "NWTheatre Calendar"
+    ],
+    "featured": false
+  },
+  {
+    "title": "Scrooge! – a puppet-driven musical (matinee) @ Renton Civic Theatre (Renton)",
+    "start_date": "2026-12-06",
+    "end_date": "2026-12-20",
+    "performance_dates": [
+      "2026-12-06",
+      "2026-12-13",
+      "2026-12-20"
+    ],
+    "venue": "",
+    "producer": "",
+    "description": "This magical, puppet-driven musical adaptation of A Christmas Carol transforms Dickens’ beloved tale into a visually stunning world where humans and puppets share the stage. By Leslie Bricusse (book, music, and lyrics); direction and puppets by Matthew Posner. Tickets here.",
+    "categories": "* Theatre (Plays, Musicals & Opera),Musicals & Opera",
+    "url": "https://www.nwtheatre.org/event/scrooge-puppet-musical-renton-civic-theatre-2/",
+    "event_url": "https://www.nwtheatre.org/event/scrooge-puppet-musical-renton-civic-theatre-2/",
+    "source_priority": 1,
+    "producer_url": "",
+    "ticket_url": "",
+    "id": "efbb0c97f06e98b5",
+    "performance_occurrences": [
+      {
+        "date": "2026-12-06",
+        "event_url": "https://www.nwtheatre.org/event/scrooge-puppet-musical-renton-civic-theatre-2/"
+      },
+      {
+        "date": "2026-12-13",
+        "event_url": "https://www.nwtheatre.org/event/scrooge-puppet-musical-renton-civic-theatre-2/"
+      },
+      {
+        "date": "2026-12-20",
+        "event_url": "https://www.nwtheatre.org/event/scrooge-puppet-musical-renton-civic-theatre-2/"
+      }
+    ],
+    "sources": [
+      "NWTheatre Calendar"
+    ],
+    "featured": false
+  },
+  {
+    "title": "Scrooge! – a puppet-driven musical @ Renton Civic Theatre (Renton) (pay-what-you-choose performance)",
+    "start_date": "2026-12-14",
+    "end_date": "2026-12-14",
+    "performance_dates": [
+      "2026-12-14"
+    ],
+    "venue": "",
+    "producer": "",
+    "description": "This magical, puppet-driven musical adaptation of A Christmas Carol transforms Dickens’ beloved tale into a visually stunning world where humans and puppets share the stage. By Leslie Bricusse (book, music, and lyrics); direction and puppets by Matthew Posner. Pay-what-you-choose tickets offered for this performance. Tickets here.",
+    "categories": "* Theatre (Plays, Musicals & Opera),Free & Pay What You Choose,Musicals & Opera",
+    "url": "https://www.nwtheatre.org/event/scrooge-puppet-musical-renton-civic-theatre-pwyc-730/",
+    "event_url": "https://www.nwtheatre.org/event/scrooge-puppet-musical-renton-civic-theatre-pwyc-730/",
+    "source_priority": 1,
+    "producer_url": "",
+    "ticket_url": "",
+    "id": "63b7561f9c78d564",
+    "performance_occurrences": [
+      {
+        "date": "2026-12-14",
+        "event_url": "https://www.nwtheatre.org/event/scrooge-puppet-musical-renton-civic-theatre-pwyc-730/"
+      }
+    ],
+    "sources": [
+      "NWTheatre Calendar"
+    ],
+    "featured": false
+  },
+  {
+    "title": "Red @ ArtsWest (West Seattle)",
+    "start_date": "2027-02-04",
+    "end_date": "2027-02-04",
+    "performance_dates": [
+      "2027-02-04"
+    ],
+    "venue": "",
+    "producer": "",
+    "description": "An artist’s ambition and vulnerability are laid bare when he squares off with his assistant, as abstract expressionist Mark Rothko’s paintings are created live on stage. By John Logan. Tickets here.",
+    "categories": "* Theatre (Plays, Musicals & Opera),Plays (Drama & Comedy)",
+    "url": "https://www.nwtheatre.org/event/red-artswest-seattle-730/",
+    "event_url": "https://www.nwtheatre.org/event/red-artswest-seattle-730/",
+    "source_priority": 1,
+    "producer_url": "",
+    "ticket_url": "",
+    "id": "9202e8be79b2901f",
+    "performance_occurrences": [
+      {
+        "date": "2027-02-04",
+        "event_url": "https://www.nwtheatre.org/event/red-artswest-seattle-730/"
+      }
+    ],
+    "sources": [
+      "NWTheatre Calendar"
+    ],
+    "featured": false
+  },
+  {
+    "title": "Meteor Shower @ Union Arts Center (Seattle – Downtown)",
+    "start_date": "2027-02-06",
+    "end_date": "2027-02-06",
+    "performance_dates": [
+      "2027-02-06"
+    ],
+    "venue": "",
+    "producer": "",
+    "description": "A quiet evening under the stars turns into glorious chaos in this unpredictable comedy. By Steve Martin; directed by Adrienne Mackey. Tickets here.",
+    "categories": "* Theatre (Plays, Musicals & Opera),Plays (Drama & Comedy)",
+    "url": "https://www.nwtheatre.org/event/meteor-shower-union-arts-center-seattle-730/",
+    "event_url": "https://www.nwtheatre.org/event/meteor-shower-union-arts-center-seattle-730/",
+    "source_priority": 1,
+    "producer_url": "",
+    "ticket_url": "",
+    "id": "8287839befba688f",
+    "performance_occurrences": [
+      {
+        "date": "2027-02-06",
+        "event_url": "https://www.nwtheatre.org/event/meteor-shower-union-arts-center-seattle-730/"
+      }
+    ],
+    "sources": [
+      "NWTheatre Calendar"
+    ],
+    "featured": false
+  },
+  {
+    "title": "Operation Mincemeat – touring @ The 5th Avenue Theatre (Seattle – Downtown)",
+    "start_date": "2027-02-10",
+    "end_date": "2027-02-10",
+    "performance_dates": [
+      "2027-02-10"
+    ],
+    "venue": "",
+    "producer": "",
+    "description": "It’s 1943, and the Allies are on the ropes — but they’re about to turn the tides with a secret mission and a stolen corpse. By David Cumming, Felix Hagan, Natasha Hodgson, & Zoë Roberts (book, music, & lyrics); directed by Robert Hastie. First national tour, co-presented by Seattle Theatre Group and The 5th. Tickets on sale in fall. Info here.",
+    "categories": "* Theatre (Plays, Musicals & Opera),Musicals & Opera",
+    "url": "https://www.nwtheatre.org/event/operation-mincemeat-tour-5th-avenue-theatre-seattle-730/",
+    "event_url": "https://www.nwtheatre.org/event/operation-mincemeat-tour-5th-avenue-theatre-seattle-730/",
+    "source_priority": 1,
+    "producer_url": "",
+    "ticket_url": "",
+    "id": "c01526aa836fec63",
+    "performance_occurrences": [
+      {
+        "date": "2027-02-10",
+        "event_url": "https://www.nwtheatre.org/event/operation-mincemeat-tour-5th-avenue-theatre-seattle-730/"
+      }
+    ],
+    "sources": [
+      "NWTheatre Calendar"
+    ],
+    "featured": false
+  },
+  {
+    "title": "Sense and Sensibility @ Taproot Theatre (Seattle – Greenwood)",
+    "start_date": "2027-03-17",
+    "end_date": "2027-03-17",
+    "performance_dates": [
+      "2027-03-17"
+    ],
+    "venue": "",
+    "producer": "",
+    "description": "In an uncertain world of reputation and romance, two sisters must learn whether sense or sensibility should guide them. Adapted by Jessica Swale, based on Jane Austen’s classic novel. Tickets on sale in winter. Info here.",
+    "categories": "* Theatre (Plays, Musicals & Opera),Plays (Drama & Comedy)",
+    "url": "https://www.nwtheatre.org/event/sense-and-sensibility-taproot-theatre-seattle-730/",
+    "event_url": "https://www.nwtheatre.org/event/sense-and-sensibility-taproot-theatre-seattle-730/",
+    "source_priority": 1,
+    "producer_url": "",
+    "ticket_url": "",
+    "id": "34d2174e4f640b26",
+    "performance_occurrences": [
+      {
+        "date": "2027-03-17",
+        "event_url": "https://www.nwtheatre.org/event/sense-and-sensibility-taproot-theatre-seattle-730/"
+      }
+    ],
+    "sources": [
+      "NWTheatre Calendar"
+    ],
+    "featured": false
+  },
+  {
+    "title": "Much Ado About Nothing @ Union Arts Center (Seattle – Downtown)",
+    "start_date": "2027-03-20",
+    "end_date": "2027-03-20",
+    "performance_dates": [
+      "2027-03-20"
+    ],
+    "venue": "",
+    "producer": "",
+    "description": "Beatrice and Benedick insist they’re not in love (loudly), but no one else is buying it in Shakespeare’s sharp-tongued, witty comedy. Directed by Leah Adcock-Starr. Tickets here.",
+    "categories": "* Theatre (Plays, Musicals & Opera),Plays (Drama & Comedy)",
+    "url": "https://www.nwtheatre.org/event/much-ado-about-nothing-union-arts-center-seattle-730/",
+    "event_url": "https://www.nwtheatre.org/event/much-ado-about-nothing-union-arts-center-seattle-730/",
+    "source_priority": 1,
+    "producer_url": "",
+    "ticket_url": "",
+    "id": "05cd7931efd4b213",
+    "performance_occurrences": [
+      {
+        "date": "2027-03-20",
+        "event_url": "https://www.nwtheatre.org/event/much-ado-about-nothing-union-arts-center-seattle-730/"
+      }
+    ],
+    "sources": [
+      "NWTheatre Calendar"
+    ],
+    "featured": false
+  },
+  {
+    "title": "anthropology @ ArtsWest (West Seattle)",
+    "start_date": "2027-04-08",
+    "end_date": "2027-04-08",
+    "performance_dates": [
+      "2027-04-08"
+    ],
+    "venue": "",
+    "producer": "",
+    "description": "Coping with grief and unanswered questions, a woman uses A.I. to create her own version of her missing sister — with unexpected fallout. By Lauren Gunderson. Tickets here.",
+    "categories": "* Theatre (Plays, Musicals & Opera),Plays (Drama & Comedy)",
+    "url": "https://www.nwtheatre.org/event/anthropology-artswest-seattle-730/",
+    "event_url": "https://www.nwtheatre.org/event/anthropology-artswest-seattle-730/",
+    "source_priority": 1,
+    "producer_url": "",
+    "ticket_url": "",
+    "id": "8e8c90cc994b4194",
+    "performance_occurrences": [
+      {
+        "date": "2027-04-08",
+        "event_url": "https://www.nwtheatre.org/event/anthropology-artswest-seattle-730/"
+      }
+    ],
+    "sources": [
+      "NWTheatre Calendar"
+    ],
+    "featured": false
+  },
+  {
+    "title": "The River Bride @ Union Arts Center (Seattle – Downtown)",
+    "start_date": "2027-05-01",
+    "end_date": "2027-05-01",
+    "performance_dates": [
+      "2027-05-01"
+    ],
+    "venue": "",
+    "producer": "",
+    "description": "A stranger is pulled from the Amazon River, with no name, no memory, and no explanation — just a magnetism toward a sister she can’t recall. By Marisela Treviño Orta; directed by Rebecca Tourino Collinsworth. Tickets here.",
+    "categories": "* Theatre (Plays, Musicals & Opera),Plays (Drama & Comedy)",
+    "url": "https://www.nwtheatre.org/event/the-river-bride-union-arts-center-seattle-730/",
+    "event_url": "https://www.nwtheatre.org/event/the-river-bride-union-arts-center-seattle-730/",
+    "source_priority": 1,
+    "producer_url": "",
+    "ticket_url": "",
+    "id": "5a5fb251b318b0d6",
+    "performance_occurrences": [
+      {
+        "date": "2027-05-01",
+        "event_url": "https://www.nwtheatre.org/event/the-river-bride-union-arts-center-seattle-730/"
+      }
+    ],
+    "sources": [
+      "NWTheatre Calendar"
+    ],
+    "featured": false
+  },
+  {
+    "title": "House of India @ Taproot Theatre (Seattle – Greenwood)",
+    "start_date": "2027-05-12",
+    "end_date": "2027-05-12",
+    "performance_dates": [
+      "2027-05-12"
+    ],
+    "venue": "",
+    "producer": "",
+    "description": "A beloved family-owned Indian restaurant is torn between honoring tradition and adapting to new trends — but generational differences are just the beginning as the family questions their future. By Deepak Kumar. Tickets on sale in spring. Info here.",
+    "categories": "* Theatre (Plays, Musicals & Opera),Plays (Drama & Comedy)",
+    "url": "https://www.nwtheatre.org/event/house-of-india-taproot-theatre-seattle-730/",
+    "event_url": "https://www.nwtheatre.org/event/house-of-india-taproot-theatre-seattle-730/",
+    "source_priority": 1,
+    "producer_url": "",
+    "ticket_url": "",
+    "id": "ed938691764e8c5e",
+    "performance_occurrences": [
+      {
+        "date": "2027-05-12",
+        "event_url": "https://www.nwtheatre.org/event/house-of-india-taproot-theatre-seattle-730/"
+      }
+    ],
+    "sources": [
+      "NWTheatre Calendar"
+    ],
+    "featured": false
+  },
+  {
+    "title": "P.Y.G. or The Mis-Edumacation of Dorian Belle @ ArtsWest (West Seattle)",
+    "start_date": "2027-06-10",
+    "end_date": "2027-06-10",
+    "performance_dates": [
+      "2027-06-10"
+    ],
+    "venue": "",
+    "producer": "",
+    "description": "Canadian pop sweetheart Dorian Belle is ready to manufacture some street cred, with the help of rap group Petty Young Goons and reality TV cameras rolling, in this scathing comedic look at cultural and racial appropriation. By Tearrance Arvelle Chisholm. Tickets here.",
+    "categories": "* Theatre (Plays, Musicals & Opera),Plays (Drama & Comedy)",
+    "url": "https://www.nwtheatre.org/event/pyg-misedumacation-of-dorian-belle-artswest-seattle-730/",
+    "event_url": "https://www.nwtheatre.org/event/pyg-misedumacation-of-dorian-belle-artswest-seattle-730/",
+    "source_priority": 1,
+    "producer_url": "",
+    "ticket_url": "",
+    "id": "dab1fc4c28e19352",
+    "performance_occurrences": [
+      {
+        "date": "2027-06-10",
+        "event_url": "https://www.nwtheatre.org/event/pyg-misedumacation-of-dorian-belle-artswest-seattle-730/"
+      }
+    ],
+    "sources": [
+      "NWTheatre Calendar"
+    ],
+    "featured": false
+  },
+  {
+    "title": "Alice in Neverland @ The 5th Avenue Theatre (Seattle – Downtown)",
+    "start_date": "2027-06-11",
+    "end_date": "2027-06-11",
+    "performance_dates": [
+      "2027-06-11"
+    ],
+    "venue": "",
+    "producer": "",
+    "description": "Alice sets out back to Wonderland 20 years later but ends up in Neverland instead, in this musical prequel to Peter Pan. By Phil Kenny & Reston Williams (book, music, & lyrics); directed by Catie Davis. Tickets on sale in fall. Info here.",
+    "categories": "* Theatre (Plays, Musicals & Opera),Musicals & Opera",
+    "url": "https://www.nwtheatre.org/event/alice-in-neverland-5th-avenue-theatre-seattle-730/",
+    "event_url": "https://www.nwtheatre.org/event/alice-in-neverland-5th-avenue-theatre-seattle-730/",
+    "source_priority": 1,
+    "producer_url": "",
+    "ticket_url": "",
+    "id": "e463e5ead65716b4",
+    "performance_occurrences": [
+      {
+        "date": "2027-06-11",
+        "event_url": "https://www.nwtheatre.org/event/alice-in-neverland-5th-avenue-theatre-seattle-730/"
+      }
+    ],
+    "sources": [
+      "NWTheatre Calendar"
+    ],
+    "featured": false
+  },
+  {
+    "title": "Maybe Happy Ending – touring @ The 5th Avenue Theatre (Seattle – Downtown)",
+    "start_date": "2027-07-21",
+    "end_date": "2027-07-21",
+    "performance_dates": [
+      "2027-07-21"
+    ],
+    "venue": "",
+    "producer": "",
+    "description": "A chance encounter sparks connection, adventure, and maybe even love, in this new musical that explores what it means to be human — even if they’re not. By Will Aronson & Hue Park; directed by Michael Arden. First national tour, co-presented by Seattle Theatre Group and The 5th. Tickets on sale in spring. Info here.",
+    "categories": "* Theatre (Plays, Musicals & Opera),Musicals & Opera",
+    "url": "https://www.nwtheatre.org/event/maybe-happy-ending-tour-5th-avenue-theatre-seattle-730/",
+    "event_url": "https://www.nwtheatre.org/event/maybe-happy-ending-tour-5th-avenue-theatre-seattle-730/",
+    "source_priority": 1,
+    "producer_url": "",
+    "ticket_url": "",
+    "id": "4e285dc9e7a515a0",
+    "performance_occurrences": [
+      {
+        "date": "2027-07-21",
+        "event_url": "https://www.nwtheatre.org/event/maybe-happy-ending-tour-5th-avenue-theatre-seattle-730/"
+      }
+    ],
+    "sources": [
+      "NWTheatre Calendar"
+    ],
+    "featured": false
   }
 ]
