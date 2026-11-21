@@ -556,6 +556,7 @@ def main():
     featured = json.loads(featured_path.read_text()) if featured_path.exists() else []
     found = []
     official_catalog = []
+    successful_sources = set()
     enabled_sources = [source for source in CFG["sources"] if source.get("enabled")]
     # Fetch calendars concurrently so one slow site does not hold up every other source.
     with ThreadPoolExecutor(max_workers=5) as pool:
@@ -564,6 +565,7 @@ def main():
             source = jobs[job]
             try:
                 extracted = job.result()
+                successful_sources.add(source["name"])
                 listings = extracted["productions"]
                 found.extend(listings)
                 official_catalog.extend(extracted["catalog"])
@@ -578,7 +580,7 @@ def main():
                 print("SOURCE ERROR", source["name"], str(exc), file=sys.stderr)
     productions = merge(productions, found)
     # Replace each source's previous catalogue snapshot with this run's results.
-    catalog_by_source = {source["name"]: [] for source in enabled_sources}
+    catalog_by_source = {name: [] for name in successful_sources}
     for entry in official_catalog:
         catalog_by_source.setdefault(entry["source_name"], []).append(entry)
     prior_catalog = load_official_catalog()
