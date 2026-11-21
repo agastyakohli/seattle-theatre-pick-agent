@@ -1,0 +1,40 @@
+name: Daily Seattle Theatre Pick
+
+on:
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Do not publish; only show the selected post"
+        required: true
+        default: "true"
+  schedule:
+    - cron: "30 16 * * *" # 8:30 AM Pacific during standard time; shifts to 9:30 AM during daylight time
+
+permissions:
+  contents: write
+
+jobs:
+  pick:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -r requirements.txt
+      - name: Run daily curator
+        env:
+          FB_PAGE_ID: ${{ secrets.FB_PAGE_ID }}
+          FB_PAGE_ACCESS_TOKEN: ${{ secrets.FB_PAGE_ACCESS_TOKEN }}
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ] && [ "${{ inputs.dry_run }}" = "true" ]; then
+            python -m src.agent --dry-run
+          else
+            python -m src.agent --publish
+          fi
+      - name: Commit updated production history
+        run: |
+          git config user.name "theatre-pick-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/*.json
+          git diff --cached --quiet || (git commit -m "Update production and featured history" && git push)
