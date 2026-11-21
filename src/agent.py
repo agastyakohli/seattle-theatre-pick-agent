@@ -63,7 +63,7 @@ def catalog_from_page(soup, source):
     seen = set()
     generic = {"mainstage", "season", "current season", "upcoming", "shows", "productions",
                "tickets", "get tickets", "buy tickets", "wip showcase", "co-productions and extras"}
-    for heading in soup.select("h2, h3, h4"):
+    for heading in soup.select("h1, h2, h3, h4"):
         title = clean(heading.get_text(" ", strip=True))
         if not title or title.casefold() in generic or len(title) < 4:
             continue
