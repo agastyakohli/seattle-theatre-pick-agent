@@ -51,4 +51,4 @@ Never commit or paste access tokens into chat. Tokens can expire or be invalidat
 - Only a specifically listed performance date qualifies; the agent does not assume every day in a show's run is a performance.
 - A production is intended to be featured once, regardless of how many dates or calendars list it.
 - Producer rotation discourages featuring the same company repeatedly within a rolling seven-day window.
-- Third-party calendar extraction is still subject to source markup changes and occasional outages. Audit dry runs before enabling unattended publishing.
+- Third-party calendar extraction is still subject to source markup changes and occasional outages. Continue reviewing workflow logs and Facebook posts; broader source coverage is deferred to v2.0.
