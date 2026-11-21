@@ -149,7 +149,7 @@ def is_excluded_event(item):
 def producer_key(item):
     # Prefer explicit producer/organizer; venue is a fallback where unavailable.
     value = clean(item.get("producer") or item.get("venue") or item.get("source") or "")
-    return re.sub(r"\\s+", " ", value).casefold()
+    return re.sub(r"\s+", " ", value).casefold()
 
 
 def merge(existing, incoming):
