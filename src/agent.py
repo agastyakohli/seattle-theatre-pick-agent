@@ -157,9 +157,9 @@ def main():
         print("No validated future production found. No post will be published.")
     else:
         pick = candidates[0]
-        message = ("🎭 Seattle Theatre Pick of the Day: " + pick["title"] + "\\n\\n" +
-          (pick.get("description") or "Discover a Puget Sound theatre production.") + "\\n\\n" +
-          "📍 " + (pick.get("venue") or "Puget Sound") + "\\n🎟️ Details & tickets: " + pick["url"])
+        message = ("🎭 Seattle Theatre Pick of the Day: " + pick["title"] + "\n\n" +
+          (pick.get("description") or "Discover a Puget Sound theatre production.") + "\n\n" +
+          "📍 " + (pick.get("venue") or "Puget Sound") + "\n🎟️ Details & tickets: " + pick["url"])
         print("PROPOSED PICK:", pick["title"])
         print(message)
         if args.publish and not args.dry_run:
@@ -174,9 +174,9 @@ def main():
             featured.append({"production_id":pick["id"], "title":pick["title"],
               "published_at":datetime.now(TZ).isoformat(), "url":pick["url"]})
             pick["featured"] = True
-            featured_path.write_text(json.dumps(featured, indent=2) + "\\n")
+            featured_path.write_text(json.dumps(featured, indent=2) + "\n")
             print("Facebook post created:", response.json().get("id"))
-    productions_path.write_text(json.dumps(productions, indent=2, ensure_ascii=False) + "\\n")
+    productions_path.write_text(json.dumps(productions, indent=2, ensure_ascii=False) + "\n")
 
 if __name__ == "__main__":
     main()
