@@ -105,13 +105,28 @@ def event_links(event_url, fallback=None, item=None):
                     if isinstance(offer, dict) and offer.get("url") and not ticket_url:
                         ticket_url = urljoin(event_url, offer["url"])
         page_host = urlparse(event_url).netloc.casefold()
-        for anchor in soup.select("a[href]"):
+        # TPS labels the producer link "Website:" separately from its anchor.
+        # Find that labeled anchor even when the label and link are siblings.
+        for label_node in soup.find_all(["h2", "h3", "h4", "strong", "b", "dt", "p", "div"]):
+            label_text = clean(label_node.get_text(" ", strip=True)).casefold().strip()
+            if label_text in ("website:", "website"):
+                candidate = label_node.find("a", href=True) or label_node.find_next("a", href=True)
+                if candidate:
+                    href = urljoin(event_url, candidate.get("href", ""))
+                    host = urlparse(href).netloc.casefold()
+                    if href.startswith(("http://", "https://")) and host and host != page_host:
+                        producer_url = href
+                        break
+        # Restrict ticket detection to event content so global site/footer links
+        # (such as TPS Gregory Awards tickets) cannot be mistaken for this show's tickets.
+        main_content = soup.select_one("main, article, .tribe-events-single, .event-content, .event-details")
+        scan_root = main_content or soup
+        for anchor in scan_root.select("a[href]"):
             href = urljoin(event_url, anchor.get("href", ""))
             label = clean(anchor.get_text(" ", strip=True)).casefold()
             host = urlparse(href).netloc.casefold()
             if not href.startswith(("http://", "https://")) or not host:
                 continue
-            # Many TPS cards label the producer link simply "Website".
             context = clean(anchor.parent.get_text(" ", strip=True)).casefold() if anchor.parent else ""
             if (any(term in label for term in ("official website", "producer website", "company website", "show website", "visit website", "website"))
                     or context.startswith("website:") or context.startswith("website ")) and host != page_host:
@@ -382,9 +397,12 @@ def main():
         # Resolve producer/ticket links and fill missing details for this one event only.
         event_url = pick.get("event_url") or pick.get("url")
         preferred, producer_url, ticket_url = event_links(event_url, pick.get("url"), pick)
-        pick["producer_url"] = pick.get("producer_url") or producer_url
-        pick["ticket_url"] = pick.get("ticket_url") or ticket_url
+        # Use only destinations verified from this event page on this run.
+        # Never let stale saved producer/ticket URLs override fresh resolution.
+        pick["producer_url"] = producer_url
+        pick["ticket_url"] = ticket_url
         pick["url"] = preferred
+        print("LINK RESOLUTION:", "producer=", producer_url or "(none)", "ticket=", ticket_url or "(none)", "event=", event_url)
         description = clean(pick.get("description")) or ("A live theatre production from " + clean(pick.get("producer") or "a local theatre company") + ".")
         message = ("🎭 Seattle Theatre Pick of the Day: " + clean(pick["title"]) + "\n\n" +
           description + "\n\n" +
