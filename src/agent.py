@@ -235,7 +235,8 @@ def event_links(event_url, fallback=None, item=None):
                 if candidate:
                     href = urljoin(event_url, candidate.get("href", ""))
                     host = urlparse(href).netloc.casefold()
-                    if href.startswith(("http://", "https://")) and host and host != page_host:
+                    if (href.startswith(("http://", "https://")) and host and host != page_host
+                            and not is_ticketing_host(host)):
                         producer_url = href
                         break
         # Restrict ticket detection to event content so global site/footer links
@@ -249,8 +250,9 @@ def event_links(event_url, fallback=None, item=None):
             if not href.startswith(("http://", "https://")) or not host:
                 continue
             context = clean(anchor.parent.get_text(" ", strip=True)).casefold() if anchor.parent else ""
-            if (any(term in label for term in ("official website", "producer website", "company website", "show website", "visit website", "website"))
-                    or context.startswith("website:") or context.startswith("website ")) and host != page_host:
+            if ((any(term in label for term in ("official website", "producer website", "company website", "show website", "visit website", "website"))
+                    or context.startswith("website:") or context.startswith("website "))
+                    and host != page_host and not is_ticketing_host(host)):
                 producer_url = href
             if not ticket_url and (any(term in host for term in ("eventbrite.", "ticketmaster.", "showclix.", "brownpapertickets.")) or any(term in label for term in ("buy tickets", "get tickets", "tickets"))):
                 ticket_url = href
@@ -278,6 +280,19 @@ def event_links(event_url, fallback=None, item=None):
     event_host = urlparse(event_url).netloc.casefold().removeprefix("www.")
     if event_host and event_host not in calendar_hosts and not is_ticketing_host(event_host):
         producer_url = event_url
+    # If an aggregator labels a ticketing URL as the show's "Website", do not
+    # mistake it for the producer. Seed discovery from a known official producer
+    # homepage, then resolve a title-matching show page below.
+    if not producer_url and item is not None and item.get("producer"):
+        item_producer_key = clean(item.get("producer")).casefold()
+        for producer_site in CFG.get("producer_sites", []):
+            configured_name = clean(producer_site.get("producer")).casefold()
+            if configured_name and (configured_name == item_producer_key
+                    or configured_name in item_producer_key
+                    or item_producer_key in configured_name):
+                producer_url = producer_site.get("url", "")
+                if producer_url:
+                    break
     # If the calendar only exposes the producer homepage, look for a
     # production-specific page on that site (including its experiences/shows index).
     if producer_url and producer_url != event_url and item is not None and item.get("title"):
