@@ -16,13 +16,13 @@
     ],
     "venue": "Theatre Puget Sound",
     "producer": "Theatre Puget Sound",
-    "description": "The Rocky Horror Improv Show mashes up the cult-classic chaos of The Rocky Horror Picture Show with the anything-goes magic of live improv. Every performance is a wild, one-night-only rock […] \\n",
-    "url": "https://theatrepugetsound.org/event/rocky-horror-improv-show/2026-10-25/",
+    "description": "Eventbrite - Unexpected Productions Improv presents Rocky Horror Improv Show - Saturday, October 3, 2026 at Unexpected Productions Market Theater, Seattle, WA. Find event and ticket information.",
+    "url": "https://www.eventbrite.com/e/1988129220016?aff=oddtdtcreator",
     "event_url": "https://theatrepugetsound.org/event/rocky-horror-improv-show/2026-10-25/",
     "run_end_date": "2026-12-07",
     "source_priority": 1,
-    "producer_url": "",
-    "ticket_url": "",
+    "producer_url": "https://www.eventbrite.com/e/1988129220016?aff=oddtdtcreator",
+    "ticket_url": "https://theatrepugetsound.org/event/rocky-horror-improv-show/2026-11-22/",
     "id": "fae89dc0dc938d39",
     "performance_occurrences": [
       {
@@ -69,7 +69,7 @@
     "sources": [
       "Theatre Puget Sound Community Events Calendar"
     ],
-    "featured": false
+    "featured": true
   },
   {
     "title": "A Christmas Carol",
