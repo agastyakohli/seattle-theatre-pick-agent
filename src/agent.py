@@ -336,6 +336,15 @@ def event_links(event_url, fallback=None, item=None):
                     producer_url = ""
         except Exception as exc:
             print("PRODUCER PAGE LOOKUP WARNING:", str(exc))
+    if item is not None:
+        for override in CFG.get("production_overrides", []):
+            if clean(item.get("title")).casefold() == clean(override.get("title")).casefold():
+                producer_url = override.get("url") or producer_url
+                if override.get("producer"):
+                    item["producer"] = override["producer"]
+                if override.get("venue"):
+                    item["venue"] = override["venue"]
+                break
     # Read show-specific descriptive metadata from the official producer page,
     # but only after this dated calendar occurrence has already been selected.
     if producer_url and producer_url != event_url and item is not None:
@@ -367,15 +376,6 @@ def event_links(event_url, fallback=None, item=None):
                 item["description"] = official_description[:600]
         except Exception as exc:
             print("OFFICIAL SHOW ENRICHMENT WARNING:", str(exc))
-    if item is not None:
-        for override in CFG.get("production_overrides", []):
-            if clean(item.get("title")).casefold() == clean(override.get("title")).casefold():
-                producer_url = override.get("url") or producer_url
-                if override.get("producer"):
-                    item["producer"] = override["producer"]
-                if override.get("venue"):
-                    item["venue"] = override["venue"]
-                break
     return producer_url or ticket_url or event_url or fallback, producer_url, ticket_url
 
 def extract(source):
