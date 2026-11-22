@@ -61,12 +61,12 @@
     "master class",
     "masterclass"
   ],
-  "production_overrides": [
+  "production_overrides": [],
+  "exclude_occurrences": [
     {
       "title": "Rocky Horror Improv Show",
-      "producer": "Unexpected Productions Improv",
-      "venue": "Unexpected Productions Market Theater",
-      "url": "https://www.unexpectedproductions.org/series/rocky-horror-improv-show/"
+      "date": "2026-11-22",
+      "reason": "TPS listing's Eventbrite destination describes a different October 3 event; not present on the producer's November 22 calendar."
     }
   ]
 }
