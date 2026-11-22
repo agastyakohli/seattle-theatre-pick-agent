@@ -60,5 +60,11 @@
     "training",
     "master class",
     "masterclass"
+  ],
+  "producer_sites": [
+    {
+      "producer": "Unexpected Productions Improv",
+      "url": "https://www.unexpectedproductions.org/"
+    }
   ]
 }
