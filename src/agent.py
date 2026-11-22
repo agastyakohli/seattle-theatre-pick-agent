@@ -825,6 +825,16 @@ def main():
             performance_dates.add(p["start_date"])
         if today not in performance_dates:
             continue
+        # Suppress specifically identified bad calendar occurrences when a
+        # third-party listing conflicts with its linked ticket page or producer schedule.
+        excluded_occurrence = any(
+            clean(rule.get("title")).casefold() == clean(p.get("title")).casefold()
+            and rule.get("date") == today
+            for rule in CFG.get("exclude_occurrences", [])
+        )
+        if excluded_occurrence:
+            print("SKIPPED INVALIDATED CALENDAR OCCURRENCE:", p.get("title"), "-", today)
+            continue
         # Reject stale calendar occurrences only when an independent directory
         # explicitly confirms that the production closed before today.
         if p.get("run_end_source") == "NWTheatre 2026 Shows directory" and p.get("run_end_date") and p["run_end_date"] < today:
