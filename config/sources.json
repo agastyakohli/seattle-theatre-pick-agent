@@ -61,10 +61,12 @@
     "master class",
     "masterclass"
   ],
-  "producer_sites": [
+  "production_overrides": [
     {
+      "title": "Rocky Horror Improv Show",
       "producer": "Unexpected Productions Improv",
-      "url": "https://www.unexpectedproductions.org/"
+      "venue": "Unexpected Productions Market Theater",
+      "url": "https://www.unexpectedproductions.org/series/rocky-horror-improv-show/"
     }
   ]
 }
