@@ -14,7 +14,7 @@ on:
         default: false
         type: boolean
   schedule:
-    - cron: "30 16 * * *" # Daily at 08:30 Pacific Standard Time / 09:30 Pacific Daylight Time
+    - cron: "17 16 * * *" # Daily at 08:17 Pacific Standard Time / 09:17 Pacific Daylight Time
 
 permissions:
   contents: write
