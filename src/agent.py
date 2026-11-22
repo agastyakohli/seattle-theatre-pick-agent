@@ -895,7 +895,7 @@ def main():
         description = clean(pick.get("description")) or ("A live theatre production from " + clean(pick.get("producer") or "a local theatre company") + ".")
         # Eventbrite-generated snippets can describe an unrelated dated occurrence.
         # Never publish that ticketing-platform boilerplate as the show's description.
-        if re.match(r"^Eventbrite\\s*[-–]", description, re.IGNORECASE):
+        if re.match(r"^Eventbrite\s*[-–]", description, re.IGNORECASE):
             print("REJECTED STALE TICKETING DESCRIPTION:", description[:180])
             description = ("A live performance from " + clean(pick.get("producer") or "a local theatre company") + ".")
         message = ("🎭 Seattle Theatre Pick of the Day: " + clean(pick["title"]) + "\n\n" +
