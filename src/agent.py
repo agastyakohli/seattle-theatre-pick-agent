@@ -893,6 +893,11 @@ def main():
         pick["url"] = preferred
         print("LINK RESOLUTION:", "producer=", producer_url or "(none)", "ticket=", ticket_url or "(none)", "event=", event_url)
         description = clean(pick.get("description")) or ("A live theatre production from " + clean(pick.get("producer") or "a local theatre company") + ".")
+        # Eventbrite-generated snippets can describe an unrelated dated occurrence.
+        # Never publish that ticketing-platform boilerplate as the show's description.
+        if re.match(r"^Eventbrite\\s*[-–]", description, re.IGNORECASE):
+            print("REJECTED STALE TICKETING DESCRIPTION:", description[:180])
+            description = ("A live performance from " + clean(pick.get("producer") or "a local theatre company") + ".")
         message = ("🎭 Seattle Theatre Pick of the Day: " + clean(pick["title"]) + "\n\n" +
           description + "\n\n" +
           "📍 " + (pick.get("venue") or "Puget Sound") + "\n🎟️ Details & tickets: " + pick["url"])
