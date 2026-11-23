@@ -38,7 +38,7 @@ Never commit or paste access tokens into chat. Tokens can expire or be invalidat
 
 ## v1.0 production operation
 
-- The scheduled GitHub Actions workflow publishes automatically once daily at 08:17 Pacific Standard Time / 09:17 Pacific Daylight Time.
+- The scheduled GitHub Actions workflow publishes automatically once daily at 07:17 Pacific Standard Time / 08:17 Pacific Daylight Time.
 - Manual workflow dispatch defaults to dry-run. The Facebook connection test never publishes.
 - If no validated production is listed for the current local date, the agent does not publish.
 - Facebook Page credentials are read only from GitHub Actions Secrets (`FB_PAGE_ID` and `FB_PAGE_ACCESS_TOKEN`); never store them in repository files.
