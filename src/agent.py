@@ -553,20 +553,20 @@ def is_excluded_event(item):
     # their titles contain the name of a musical or play (e.g. "Broadway
     # Inclusion Program - Beauty and the Beast"). These are not performances.
     program_title_patterns = [
-        r"\\bprogram(?:me)?\\b",
-        r"\\bprogramming\\b",
+        r"\bprogram(?:me)?\b",
+        r"\bprogramming\b",
     ]
     if any(re.search(pattern, title, re.IGNORECASE) for pattern in program_title_patterns):
         return True
 
     activity_program_patterns = [
-        r"\\btheatre arts programming\\b",
-        r"\\btheater arts programming\\b",
-        r"\\bparticipants?\\s+(?:meet|gather|participate|explore|engage)\\b",
-        r"\\b(?:weekly|once a week)\\s+(?:sessions?|meetings?|activities|classes)\\b",
-        r"\\b(?:register here|registration required|sign up to participate)\\b",
-        r"\\b(?:final|end[- ]of[- ](?:quarter|term|session))\\s+(?:share|showcase|presentation)\\b",
-        r"\\bmovement[- ]based activities\\b",
+        r"\btheatre arts programming\b",
+        r"\btheater arts programming\b",
+        r"\bparticipants?\s+(?:meet|gather|participate|explore|engage)\b",
+        r"\b(?:weekly|once a week)\s+(?:sessions?|meetings?|activities|classes)\b",
+        r"\b(?:register here|registration required|sign up to participate)\b",
+        r"\b(?:final|end[- ]of[- ](?:quarter|term|session))\s+(?:share|showcase|presentation)\b",
+        r"\bmovement[- ]based activities\b",
     ]
     if any(re.search(pattern, description, re.IGNORECASE) for pattern in activity_program_patterns):
         return True
