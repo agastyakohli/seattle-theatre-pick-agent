@@ -3229,7 +3229,7 @@
     "source_priority": 5,
     "producer_type": "presenter",
     "producer_url": "",
-    "ticket_url": "",
+    "ticket_url": "https://www.stgpresents.org/events/broadway-inclusion-program-summit-disneys-beauty-and-the-beast/",
     "id": "781e69968aa7a0c0",
     "performance_occurrences": [
       {
@@ -3256,7 +3256,7 @@
     "sources": [
       "Seattle Theatre Group Calendar"
     ],
-    "featured": false
+    "featured": true
   },
   {
     "title": "STG Dance for PD® at PNB",
@@ -5701,6 +5701,38 @@
     ],
     "sources": [
       "Seattle Theatre Group Calendar"
+    ],
+    "featured": false
+  },
+  {
+    "title": "Cinema Unexpected: An Improvised Movie Live",
+    "start_date": "2026-11-15",
+    "end_date": "2026-11-22",
+    "performance_dates": [
+      "2026-11-15",
+      "2026-11-22"
+    ],
+    "venue": "",
+    "producer": "",
+    "description": "",
+    "url": "https://theatrepugetsound.org/event/cinema-unexpected-an-improvised-movie-live/2026-11-22/",
+    "source_priority": 1,
+    "event_url": "https://theatrepugetsound.org/event/cinema-unexpected-an-improvised-movie-live/2026-11-22/",
+    "producer_url": "",
+    "ticket_url": "",
+    "id": "f0a50a426d67f029",
+    "performance_occurrences": [
+      {
+        "date": "2026-11-15",
+        "event_url": "https://theatrepugetsound.org/event/cinema-unexpected-an-improvised-movie-live/2026-11-15/"
+      },
+      {
+        "date": "2026-11-22",
+        "event_url": "https://theatrepugetsound.org/event/cinema-unexpected-an-improvised-movie-live/2026-11-22/"
+      }
+    ],
+    "sources": [
+      "Theatre Puget Sound Community Events Calendar"
     ],
     "featured": false
   }
