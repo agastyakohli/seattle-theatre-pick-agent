@@ -590,7 +590,7 @@ def is_excluded_event(item):
     # Generic archive/index pages are not individual productions, even if
     # their publisher attaches a date to the page. Do not reject productions
     # merely because their title contains words such as "archive" in a story title.
-    if re.search(r"\\b(?:calendar|event archive|events archive|archive of events)\\b", title, re.IGNORECASE):
+    if re.search(r"\b(?:calendar|event archive|events archive|archive of events)\b", title, re.IGNORECASE):
         return True
 
     # Exclude ballet and opera, plus explicitly identified stand-up comedy.
