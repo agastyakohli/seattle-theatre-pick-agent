@@ -587,6 +587,12 @@ def is_excluded_event(item):
     if any(re.search(pattern, description, re.IGNORECASE) for pattern in activity_program_patterns):
         return True
 
+    # Generic archive/index pages are not individual productions, even if
+    # their publisher attaches a date to the page. Do not reject productions
+    # merely because their title contains words such as "archive" in a story title.
+    if re.search(r"\\b(?:calendar|event archive|events archive|archive of events)\\b", title, re.IGNORECASE):
+        return True
+
     # Exclude ballet and opera, plus explicitly identified stand-up comedy.
     # Keep sketch comedy, improv, plays and musicals eligible.
     out_of_scope_patterns = [
@@ -856,6 +862,7 @@ def main():
     productions = json.loads(productions_path.read_text()) if productions_path.exists() else []
     featured = json.loads(featured_path.read_text()) if featured_path.exists() else []
     found = []
+    today = datetime.now(TZ).date().isoformat()
     enabled_sources = [source for source in CFG["sources"] if source.get("enabled")]
     # Fetch calendars sequentially to reduce bursts that may trigger source-side throttling.
     for source in enabled_sources:
@@ -864,6 +871,35 @@ def main():
             listings = extracted["productions"]
             found.extend(listings)
             dated = sum(1 for item in listings if item.get("performance_dates") or item.get("start_date"))
+            today_items = []
+            for item in listings:
+                dates = set(item.get("performance_dates") or [])
+                if not dates and item.get("start_date"):
+                    dates.add(item["start_date"])
+                if today in dates:
+                    today_items.append(item)
+            passed = []
+            rejected = []
+            for item in today_items:
+                reason = ""
+                if is_excluded_event(item):
+                    reason = "non-production / out-of-scope classification"
+                else:
+                    music_reason = music_event_exclusion_reason(item)
+                    if music_reason:
+                        reason = "music event: " + music_reason
+                if reason:
+                    rejected.append((clean(item.get("title", "(untitled)")), reason))
+                else:
+                    passed.append(clean(item.get("title", "(untitled)")))
+            print("SOURCE TODAY CHECK:", source["name"],
+                  "| dated listings:", len(today_items),
+                  "| pass production filters:", len(passed),
+                  "| rejected:", len(rejected))
+            for title in passed:
+                print("  TODAY CANDIDATE:", title)
+            for title, reason in rejected:
+                print("  TODAY REJECTED:", title, "-", reason)
             print("Fetched:", source["name"])
             diag = extracted.get("diagnostic", {})
             print("SOURCE RESPONSE:", source["name"],
@@ -917,7 +953,6 @@ def main():
     # Title-level suppression preserves historical featured entries across
     # the identity-key migration from venue-based to producer-based IDs.
     already_titles = {clean(x.get("title")).casefold() for x in featured if x.get("title")}
-    today = datetime.now(TZ).date().isoformat()
     candidates = []
     # One pick per producer within a rolling seven-day window.
     recent_cutoff = datetime.now(TZ).date().toordinal() - 7
