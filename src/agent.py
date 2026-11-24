@@ -618,6 +618,85 @@ def is_excluded_event(item):
     # Apply broad title-only exclusions such as tours and concerts.
     return any(term.casefold() in title for term in CFG.get("exclude_title_terms", []))
 
+
+def music_event_exclusion_reason(item):
+    """Identify concerts using event taxonomy and event-page evidence, not performer names."""
+    title = clean(item.get("title", ""))
+    description = clean(item.get("description", ""))
+    categories = clean(item.get("categories", ""))
+    genres = clean(item.get("genres", ""))
+    taxonomy = " ".join((categories, genres)).casefold()
+
+    # Explicit source taxonomy is the strongest signal. A musical's plot or
+    # description may mention music, but an event classified as the Music
+    # genre is a concert/music event rather than a theatre production.
+    if re.search(r"(?<![a-z])music(?![a-z])", taxonomy):
+        return "source category/genre is Music"
+
+    # Strong descriptive signals that identify a live music event. Avoid
+    # generic words such as "music", "song", or "band" by themselves because
+    # legitimate theatre productions can contain original/live music.
+    music_description_patterns = [
+        r"\\bsinger[- ]songwriter\\b",
+        r"\\bconcerts?\\b",
+        r"\\blive music(?: performance| event| show)?\\b",
+        r"\\b(?:music|concert) tour\\b",
+        r"\\b(?:headlined|headline|headlining) tours?\\b",
+        r"\\b(?:album|ep|single) (?:release|launch) (?:show|party|event)\\b",
+        r"\\b(?:rock|pop|jazz|country|folk|indie|hip[- ]hop|reggae|metal) (?:music )?(?:artist|band|group)\\b",
+        r"\\b(?:orchestra|symphony orchestra) (?:performs?|concert)\\b",
+        r"\\bdj set\\b",
+    ]
+    combined = (title + " " + description).casefold()
+    for pattern in music_description_patterns:
+        if re.search(pattern, combined, re.IGNORECASE):
+            return "event description identifies a live music/concert performance"
+
+    # Calendar cards often omit genre and a performer's name alone is not
+    # enough to classify an event. Inspect the dated event page before
+    # selection; STG exposes an explicit 'Genres: Music' field on show pages.
+    event_url = item.get("event_url") or item.get("url")
+    if event_url:
+        try:
+            response = requests.get(event_url, headers=HEADERS, timeout=12)
+            response.raise_for_status()
+            soup = BeautifulSoup(response.text, "html.parser")
+            page_text = clean(soup.get_text(" ", strip=True))
+
+            # Read explicit genre labels in the rendered page text. This is
+            # deliberately label-bound, not a loose search for the word music.
+            if re.search(r"\\bGenres\\s+Music\\b", page_text, re.IGNORECASE):
+                return "event page explicitly lists Genres: Music"
+
+            # Also inspect structured event metadata where publishers expose
+            # genre/category/keywords rather than a visible genre label.
+            scripts = soup.select('script[type="application/ld+json"]')
+            stack = []
+            for script in scripts:
+                try:
+                    stack.append(json.loads(script.string or script.get_text()))
+                except Exception:
+                    continue
+            while stack:
+                obj = stack.pop()
+                if isinstance(obj, list):
+                    stack.extend(obj)
+                elif isinstance(obj, dict):
+                    graph = obj.get("@graph")
+                    if isinstance(graph, list):
+                        stack.extend(graph)
+                    for key in ("genre", "category", "keywords"):
+                        value = obj.get(key)
+                        if isinstance(value, list):
+                            value = " ".join(clean(x.get("name") if isinstance(x, dict) else x) for x in value)
+                        elif isinstance(value, dict):
+                            value = clean(value.get("name", ""))
+                        if re.fullmatch(r"\\s*music\\s*", clean(value), re.IGNORECASE):
+                            return "event structured metadata classifies it as Music"
+        except Exception as exc:
+            print("EVENT CLASSIFICATION LOOKUP WARNING:", title, str(exc))
+    return ""
+
 def parse_nwtheatre_run_end_dates(html_text, productions):
     """Attach independent directory closing dates to already-discovered shows only.
 
@@ -725,7 +804,7 @@ def merge(existing, incoming):
                 prior["end_date"] = prior["performance_dates"][-1]
             if item.get("run_end_date") and (not prior.get("run_end_date") or item["run_end_date"] > prior["run_end_date"]):
                 prior["run_end_date"] = item["run_end_date"]
-            for key in ("venue", "producer", "description", "event_url", "producer_url", "ticket_url", "source_priority", "producer_type"):
+            for key in ("venue", "producer", "description", "categories", "genres", "event_url", "producer_url", "ticket_url", "source_priority", "producer_type"):
                 if item.get(key) and (not prior.get(key) or key in ("producer_url", "ticket_url", "source_priority", "producer_type")):
                     prior[key] = item[key]
             # Replace an older calendar URL with the best destination discovered now.
@@ -880,6 +959,10 @@ def main():
             continue
         if is_excluded_event(p):
             print("SKIPPED NON-PRODUCTION EVENT:", p.get("title", "(untitled)"))
+            continue
+        music_reason = music_event_exclusion_reason(p)
+        if music_reason:
+            print("SKIPPED MUSIC CONCERT:", p.get("title", "(untitled)"), "-", music_reason)
             continue
         key = producer_key(p)
         if key and key in recent_producers:
