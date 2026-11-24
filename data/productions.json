@@ -5264,7 +5264,7 @@
     "source_priority": 5,
     "producer_type": "presenter",
     "producer_url": "",
-    "ticket_url": "",
+    "ticket_url": "https://www.stgpresents.org/events/prateek-kuhad/",
     "id": "1ab5fe2ac7b99c53",
     "performance_occurrences": [
       {
@@ -5275,7 +5275,7 @@
     "sources": [
       "Seattle Theatre Group Calendar"
     ],
-    "featured": false
+    "featured": true
   },
   {
     "title": "Scott Bradlee’s Postmodern Jukebox",
