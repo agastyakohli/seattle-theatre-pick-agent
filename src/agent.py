@@ -535,6 +535,22 @@ def is_excluded_event(item):
     description = clean(item.get("description", "")).casefold()
     combined = title + " " + description
 
+    # Cancellation/postponement status overrides every other eligibility
+    # signal. Calendar pages may retain a dated listing after the event is off.
+    cancellation_patterns = [
+        r"\\b(?:canceled|cancelled|postponed)\\b",
+        r"\\btickets?\\s+(?:will be|are being)\\s+(?:automatically\\s+)?refunded\\b",
+        r"\\b(?:event|performance|show|concert)\\s+(?:is|was|has been)\\s+(?:canceled|cancelled|postponed)\\b",
+    ]
+    if any(re.search(pattern, title, re.IGNORECASE) for pattern in cancellation_patterns[:1]):
+        return True
+    if any(re.search(pattern, description, re.IGNORECASE) for pattern in cancellation_patterns[1:]):
+        return True
+    # STG's canceled-event pages use a standalone status word after the
+    # presenter/title and explicitly promise automatic ticket refunds.
+    if re.search(r"\\b(?:canceled|cancelled|postponed)\\b", description, re.IGNORECASE) and re.search(r"\\brefund(?:ed|s)?\\b", description, re.IGNORECASE):
+        return True
+
     # Exclude instructional/participatory listings rather than public performances.
     instructional_patterns = [
         r"(?<![\w-])class(?:es)?(?![\w-])",
