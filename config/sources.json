@@ -45,8 +45,7 @@
     "camp",
     "concert",
     "meet and greet",
-    "open house",
-    "postmodern jukebox"
+    "open house"
   ],
   "minimum_confidence": 0.72,
   "exclude_event_terms": [
