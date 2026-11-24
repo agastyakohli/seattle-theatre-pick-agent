@@ -636,9 +636,11 @@ def music_event_exclusion_reason(item):
     # Strong descriptive signals that identify a live music event. Avoid
     # generic words such as "music", "song", or "band" by themselves because
     # legitimate theatre productions can contain original/live music.
+    if re.search(r"\bconcerts?\b", title, re.IGNORECASE):
+        return "event title identifies a concert"
+
     music_description_patterns = [
         r"\bsinger[- ]songwriter\b",
-        r"\bconcerts?\b",
         r"\blive music(?: performance| event| show)?\b",
         r"\b(?:music|concert) tour\b",
         r"\b(?:headlined|headline|headlining) tours?\b",
