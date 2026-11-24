@@ -637,15 +637,15 @@ def music_event_exclusion_reason(item):
     # generic words such as "music", "song", or "band" by themselves because
     # legitimate theatre productions can contain original/live music.
     music_description_patterns = [
-        r"\\bsinger[- ]songwriter\\b",
-        r"\\bconcerts?\\b",
-        r"\\blive music(?: performance| event| show)?\\b",
-        r"\\b(?:music|concert) tour\\b",
-        r"\\b(?:headlined|headline|headlining) tours?\\b",
-        r"\\b(?:album|ep|single) (?:release|launch) (?:show|party|event)\\b",
-        r"\\b(?:rock|pop|jazz|country|folk|indie|hip[- ]hop|reggae|metal) (?:music )?(?:artist|band|group)\\b",
-        r"\\b(?:orchestra|symphony orchestra) (?:performs?|concert)\\b",
-        r"\\bdj set\\b",
+        r"\bsinger[- ]songwriter\b",
+        r"\bconcerts?\b",
+        r"\blive music(?: performance| event| show)?\b",
+        r"\b(?:music|concert) tour\b",
+        r"\b(?:headlined|headline|headlining) tours?\b",
+        r"\b(?:album|ep|single) (?:release|launch) (?:show|party|event)\b",
+        r"\b(?:rock|pop|jazz|country|folk|indie|hip[- ]hop|reggae|metal) (?:music )?(?:artist|band|group)\b",
+        r"\b(?:orchestra|symphony orchestra) (?:performs?|concert)\b",
+        r"\bdj set\b",
     ]
     combined = (title + " " + description).casefold()
     for pattern in music_description_patterns:
@@ -665,7 +665,7 @@ def music_event_exclusion_reason(item):
 
             # Read explicit genre labels in the rendered page text. This is
             # deliberately label-bound, not a loose search for the word music.
-            if re.search(r"\\bGenres\\s+Music\\b", page_text, re.IGNORECASE):
+            if re.search(r"\bGenres\s+Music\b", page_text, re.IGNORECASE):
                 return "event page explicitly lists Genres: Music"
 
             # Also inspect structured event metadata where publishers expose
@@ -691,7 +691,7 @@ def music_event_exclusion_reason(item):
                             value = " ".join(clean(x.get("name") if isinstance(x, dict) else x) for x in value)
                         elif isinstance(value, dict):
                             value = clean(value.get("name", ""))
-                        if re.fullmatch(r"\\s*music\\s*", clean(value), re.IGNORECASE):
+                        if re.fullmatch(r"\s*music\s*", clean(value), re.IGNORECASE):
                             return "event structured metadata classifies it as Music"
         except Exception as exc:
             print("EVENT CLASSIFICATION LOOKUP WARNING:", title, str(exc))
