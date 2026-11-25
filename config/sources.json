@@ -23,6 +23,14 @@
       "enabled": true,
       "priority": 5,
       "producer_type": "presenter"
+    },
+    {
+      "name": "BroadwayWorld Seattle Regional Shows",
+      "url": "https://www.broadwayworld.com/seattle/regionalshows/",
+      "type": "html",
+      "enabled": true,
+      "priority": 2,
+      "producer_type": "aggregator"
     }
   ],
   "include_categories": [
