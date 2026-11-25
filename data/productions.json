@@ -5763,5 +5763,818 @@
       "Seattle Theatre Group Calendar"
     ],
     "featured": false
+  },
+  {
+    "title": "Sorry! Wrong Chimney!",
+    "start_date": "2026-11-27",
+    "end_date": "2026-12-20",
+    "performance_dates": [
+      "2026-11-27"
+    ],
+    "venue": "Phoenix Theatre",
+    "producer": "Phoenix Theatre",
+    "description": "By Jack Sharkey, Leo W. Sears.",
+    "url": "https://www.broadwayworld.com/seattle/regional/SorryWrong-Chimney--4417460",
+    "event_url": "https://www.broadwayworld.com/seattle/regional/SorryWrong-Chimney--4417460",
+    "run_end_date": "2026-12-20",
+    "source_priority": 2,
+    "producer_type": "aggregator",
+    "producer_url": "",
+    "ticket_url": "",
+    "id": "9620110fe5070666",
+    "performance_occurrences": [
+      {
+        "date": "2026-11-27",
+        "event_url": "https://www.broadwayworld.com/seattle/regional/SorryWrong-Chimney--4417460"
+      }
+    ],
+    "sources": [
+      "BroadwayWorld Seattle Regional Shows"
+    ],
+    "featured": false
+  },
+  {
+    "title": "Snowed In",
+    "start_date": "2026-11-28",
+    "end_date": "2026-12-20",
+    "performance_dates": [
+      "2026-11-28"
+    ],
+    "venue": "ArtsWest",
+    "producer": "ArtsWest",
+    "description": "Snowed In is an original Christmas musical by Corinne Park-Buffelen and Mathew Wright, with music by David Taylor Gomes. The show celebrates the messy joy of collaboration as a group of artists trapped together by a winter storm attempt to create the perfect holiday show, discovering friendship, music, and unexpected connection along the way.",
+    "url": "https://www.broadwayworld.com/seattle/regional/Snowed-In",
+    "event_url": "https://www.broadwayworld.com/seattle/regional/Snowed-In",
+    "run_end_date": "2026-12-20",
+    "source_priority": 2,
+    "producer_type": "aggregator",
+    "producer_url": "",
+    "ticket_url": "",
+    "id": "e68819d1dc6f1bdf",
+    "performance_occurrences": [
+      {
+        "date": "2026-11-28",
+        "event_url": "https://www.broadwayworld.com/seattle/regional/Snowed-In"
+      }
+    ],
+    "sources": [
+      "BroadwayWorld Seattle Regional Shows"
+    ],
+    "featured": false
+  },
+  {
+    "title": "Scrooge!",
+    "start_date": "2026-12-04",
+    "end_date": "2026-12-20",
+    "performance_dates": [
+      "2026-12-04"
+    ],
+    "venue": "Renton Civic Theatre",
+    "producer": "Renton Civic Theatre",
+    "description": "By Leslie Bricusse.",
+    "url": "https://www.broadwayworld.com/seattle/regional/Scrooge--4417463",
+    "event_url": "https://www.broadwayworld.com/seattle/regional/Scrooge--4417463",
+    "run_end_date": "2026-12-20",
+    "source_priority": 2,
+    "producer_type": "aggregator",
+    "producer_url": "",
+    "ticket_url": "",
+    "id": "8641e2e147d1069d",
+    "performance_occurrences": [
+      {
+        "date": "2026-12-04",
+        "event_url": "https://www.broadwayworld.com/seattle/regional/Scrooge--4417463"
+      }
+    ],
+    "sources": [
+      "BroadwayWorld Seattle Regional Shows"
+    ],
+    "featured": false
+  },
+  {
+    "title": "Little Women",
+    "start_date": "2026-11-27",
+    "end_date": "2026-12-20",
+    "performance_dates": [
+      "2026-11-27"
+    ],
+    "venue": "Red Curtain Foundation for the Arts",
+    "producer": "Red Curtain Foundation for the Arts",
+    "description": "By Louisa May Alcott, Kate Hamill.",
+    "url": "https://www.broadwayworld.com/seattle/regional/Little-Women-4417461",
+    "event_url": "https://www.broadwayworld.com/seattle/regional/Little-Women-4417461",
+    "run_end_date": "2026-12-20",
+    "source_priority": 2,
+    "producer_type": "aggregator",
+    "producer_url": "",
+    "ticket_url": "",
+    "id": "c5a38d5d05c0461c",
+    "performance_occurrences": [
+      {
+        "date": "2026-11-27",
+        "event_url": "https://www.broadwayworld.com/seattle/regional/Little-Women-4417461"
+      }
+    ],
+    "sources": [
+      "BroadwayWorld Seattle Regional Shows"
+    ],
+    "featured": false,
+    "run_end_source": "NWTheatre 2026 Shows directory"
+  },
+  {
+    "title": "Come From Away",
+    "start_date": "2026-11-10",
+    "end_date": "2026-12-20",
+    "performance_dates": [
+      "2026-11-10"
+    ],
+    "venue": "Village Theatre",
+    "producer": "Village Theatre",
+    "description": "Welcome to the rock! This exuberant, Tony Award–winning musical has captivated audiences around the world with its astonishing true story of kindness in the face of crisis. On September 11, 2001, nearly 7,000 airline passengers were unexpectedly diverted to the tiny town of Gander, Newfoundland. Overnight, strangers from across the globe found themselves stranded far from home—but the people of Gander answered uncertainty with compassion and generosity, opening their hearts, their homes, and...",
+    "url": "https://www.broadwayworld.com/seattle/regional/Come-From-Away-4365801",
+    "event_url": "https://www.broadwayworld.com/seattle/regional/Come-From-Away-4365801",
+    "run_end_date": "2026-12-20",
+    "source_priority": 2,
+    "producer_type": "aggregator",
+    "producer_url": "",
+    "ticket_url": "",
+    "id": "084fb52c24feb340",
+    "performance_occurrences": [
+      {
+        "date": "2026-11-10",
+        "event_url": "https://www.broadwayworld.com/seattle/regional/Come-From-Away-4365801"
+      }
+    ],
+    "sources": [
+      "BroadwayWorld Seattle Regional Shows"
+    ],
+    "featured": false
+  },
+  {
+    "title": "Christmastown",
+    "start_date": "2026-11-27",
+    "end_date": "2026-12-20",
+    "performance_dates": [
+      "2026-11-27"
+    ],
+    "venue": "Jefferson Street Arts Center",
+    "producer": "Jefferson Street Arts Center",
+    "description": "A private eye gets wrapped up in a mystery involving an elf fatale, thuggish reindeer and maybe even Big Red himself!",
+    "url": "https://www.broadwayworld.com/seattle/regional/Christmastown-4404905",
+    "event_url": "https://www.broadwayworld.com/seattle/regional/Christmastown-4404905",
+    "run_end_date": "2026-12-20",
+    "source_priority": 2,
+    "producer_type": "aggregator",
+    "producer_url": "",
+    "ticket_url": "",
+    "id": "db978fdbbbed0b27",
+    "performance_occurrences": [
+      {
+        "date": "2026-11-27",
+        "event_url": "https://www.broadwayworld.com/seattle/regional/Christmastown-4404905"
+      }
+    ],
+    "sources": [
+      "BroadwayWorld Seattle Regional Shows"
+    ],
+    "featured": false
+  },
+  {
+    "title": "Almost, Maine",
+    "start_date": "2026-12-03",
+    "end_date": "2026-12-20",
+    "performance_dates": [
+      "2026-12-03"
+    ],
+    "venue": "SecondStory Repertory",
+    "producer": "SecondStory Repertory",
+    "description": "By John Cariani.",
+    "url": "https://www.broadwayworld.com/seattle/regional/AlmostMaine-4417462",
+    "event_url": "https://www.broadwayworld.com/seattle/regional/AlmostMaine-4417462",
+    "run_end_date": "2026-12-20",
+    "source_priority": 2,
+    "producer_type": "aggregator",
+    "producer_url": "",
+    "ticket_url": "",
+    "id": "0d0b74c66e316985",
+    "performance_occurrences": [
+      {
+        "date": "2026-12-03",
+        "event_url": "https://www.broadwayworld.com/seattle/regional/AlmostMaine-4417462"
+      }
+    ],
+    "sources": [
+      "BroadwayWorld Seattle Regional Shows"
+    ],
+    "featured": false
+  },
+  {
+    "title": "Aladdin, a Holiday Panto",
+    "start_date": "2026-11-28",
+    "end_date": "2026-12-20",
+    "performance_dates": [
+      "2026-11-28"
+    ],
+    "venue": "Centerstage Theatre",
+    "producer": "Centerstage Theatre",
+    "description": "Aladdin, a Holiday Panto By Vince Brady Directed by Trista Duval Join us for another magical holiday adventure in Aladdin: A Holiday Panto! Filled with laugh-out-loud comedy, pop music favorites, and all your favorite characters, this retelling of the classic fairytale follows Aladdin as he gets caught up in an evil sorcerer’s scheme and must find a way out, for him and for the Princess who’s stolen his heart. Centerstage’s Holiday Panto is the perfect family outing, date night, or solo break...",
+    "url": "https://www.broadwayworld.com/seattle/regional/Aladdina-Holiday-Panto-4401195",
+    "event_url": "https://www.broadwayworld.com/seattle/regional/Aladdina-Holiday-Panto-4401195",
+    "run_end_date": "2026-12-20",
+    "source_priority": 2,
+    "producer_type": "aggregator",
+    "producer_url": "",
+    "ticket_url": "",
+    "id": "69f8a113f1954759",
+    "performance_occurrences": [
+      {
+        "date": "2026-11-28",
+        "event_url": "https://www.broadwayworld.com/seattle/regional/Aladdina-Holiday-Panto-4401195"
+      }
+    ],
+    "sources": [
+      "BroadwayWorld Seattle Regional Shows"
+    ],
+    "featured": false
+  },
+  {
+    "title": "Fa la la la la, ha ha ha ha: A Holiday Improvised Musical Extravaganza!",
+    "start_date": "2026-11-28",
+    "end_date": "2026-12-19",
+    "performance_dates": [
+      "2026-11-28"
+    ],
+    "venue": "Unexpected Productions",
+    "producer": "Unexpected Productions",
+    "description": "It's part holiday concert, part Hallmark movie parody, and completely unpredictable! A hilarious, completely improvised holiday musical where your suggestions inspire the fun",
+    "url": "https://www.broadwayworld.com/seattle/regional/Fa-la-la-la-laha-ha-ha-haA-Holiday-Improvised-Musical-Extravaganza--4418620",
+    "event_url": "https://www.broadwayworld.com/seattle/regional/Fa-la-la-la-laha-ha-ha-haA-Holiday-Improvised-Musical-Extravaganza--4418620",
+    "run_end_date": "2026-12-19",
+    "source_priority": 2,
+    "producer_type": "aggregator",
+    "producer_url": "",
+    "ticket_url": "",
+    "id": "0f787a3e8561b21f",
+    "performance_occurrences": [
+      {
+        "date": "2026-11-28",
+        "event_url": "https://www.broadwayworld.com/seattle/regional/Fa-la-la-la-laha-ha-ha-haA-Holiday-Improvised-Musical-Extravaganza--4418620"
+      }
+    ],
+    "sources": [
+      "BroadwayWorld Seattle Regional Shows"
+    ],
+    "featured": false
+  },
+  {
+    "title": "Atomic Wild",
+    "start_date": "2026-12-03",
+    "end_date": "2026-12-19",
+    "performance_dates": [
+      "2026-12-03"
+    ],
+    "venue": "Annex Theatre",
+    "producer": "Annex Theatre",
+    "description": "Conceived by Maridee Slater, this devised piece moves between Seattle's Century 21 World's Fair, the uranium boom of the Atomic West, and 40 years of art-making at Annex Theatre. It looks at the strange promises made about what comes next, including the futures advertised, the futures built, and the stories that survive their makers. The show was developed with the Annex community through a collaborative process, asking what is inherited, what is buried, and what refuses to disappear.",
+    "url": "https://www.broadwayworld.com/seattle/regional/Atomic-Wild",
+    "event_url": "https://www.broadwayworld.com/seattle/regional/Atomic-Wild",
+    "run_end_date": "2026-12-19",
+    "source_priority": 2,
+    "producer_type": "aggregator",
+    "producer_url": "",
+    "ticket_url": "",
+    "id": "7f5853a9dca6ab59",
+    "performance_occurrences": [
+      {
+        "date": "2026-12-03",
+        "event_url": "https://www.broadwayworld.com/seattle/regional/Atomic-Wild"
+      }
+    ],
+    "sources": [
+      "BroadwayWorld Seattle Regional Shows"
+    ],
+    "featured": false
+  },
+  {
+    "title": "Anita Spritzer's Gay Apparel",
+    "start_date": "2026-12-11",
+    "end_date": "2026-12-19",
+    "performance_dates": [
+      "2026-12-11"
+    ],
+    "venue": "Tagney Jones Hall at the Opera Center",
+    "producer": "Tagney Jones Hall at the Opera Center",
+    "description": "Seattle's favorite opera-singing drag queen Anita Spritzer brings her holiday confection Gay Apparel back to Seattle Opera. Together with pianist Jay Rozendaal and a few special guests, Spritzer serves up a classic Christmas special in operatic drag, complete with festive tunes, holiday gags, and heartfelt stories. The performance on Thursday, December 17 is a relaxed performance designed for first-time audiences and those with sensitivity concerns or disabilities. The show runs approximately 1...",
+    "url": "https://www.broadwayworld.com/seattle/regional/Anita-Spritzer-s-Gay-Apparel",
+    "event_url": "https://www.broadwayworld.com/seattle/regional/Anita-Spritzer-s-Gay-Apparel",
+    "run_end_date": "2026-12-19",
+    "source_priority": 2,
+    "producer_type": "aggregator",
+    "producer_url": "",
+    "ticket_url": "",
+    "id": "ee3779cb2eff6595",
+    "performance_occurrences": [
+      {
+        "date": "2026-12-11",
+        "event_url": "https://www.broadwayworld.com/seattle/regional/Anita-Spritzer-s-Gay-Apparel"
+      }
+    ],
+    "sources": [
+      "BroadwayWorld Seattle Regional Shows"
+    ],
+    "featured": false
+  },
+  {
+    "title": "The Wiz",
+    "start_date": "2026-12-17",
+    "end_date": "2026-12-18",
+    "performance_dates": [
+      "2026-12-17"
+    ],
+    "venue": "Capitol Theatre",
+    "producer": "Capitol Theatre",
+    "description": "It’s got rock. It’s got gospel. It’s got soul. And oh my, the dancing! In a dream collaboration, Dallas Theater Center and Dallas Black Dance Theatre, the city’s oldest continuously operating dance company, fill the Wyly Theatre with dancing, singing and laughter for the dazzling musical that won seven Tony Awards when it opened on Broadway in 1975. Featuring Brierley Resident Acting Company members Liz Mikel and Hassan El-Amin, this eye-popping, high-energy family hit starts with a tornado and...",
+    "url": "https://www.broadwayworld.com/seattle/regional/the-wiz-yakima-62447",
+    "event_url": "https://www.broadwayworld.com/seattle/regional/the-wiz-yakima-62447",
+    "run_end_date": "2026-12-18",
+    "source_priority": 2,
+    "producer_type": "aggregator",
+    "producer_url": "",
+    "ticket_url": "",
+    "id": "0a1ef8a586758ad2",
+    "performance_occurrences": [
+      {
+        "date": "2026-12-17",
+        "event_url": "https://www.broadwayworld.com/seattle/regional/the-wiz-yakima-62447"
+      }
+    ],
+    "sources": [
+      "BroadwayWorld Seattle Regional Shows"
+    ],
+    "featured": false
+  },
+  {
+    "title": "The Nutcracker",
+    "start_date": "2026-12-11",
+    "end_date": "2026-12-13",
+    "performance_dates": [
+      "2026-12-11"
+    ],
+    "venue": "Everett Performing Arts Center",
+    "producer": "Everett Performing Arts Center",
+    "description": "Olympic Ballet Theatre's annual production of The Nutcracker brings Clara's magical journey to life with Tchaikovsky's beloved score. Choreography is by OBT Artistic Directors Mara Vinson and Oleg Gorboulev. Abridged school and group morning matinees are also offered, including an Introduction to the Magic of Theatre intermission segment.",
+    "url": "https://www.broadwayworld.com/seattle/regional/The-Nutcracker-4404044",
+    "event_url": "https://www.broadwayworld.com/seattle/regional/The-Nutcracker-4404044",
+    "run_end_date": "2026-12-28",
+    "source_priority": 2,
+    "producer_type": "aggregator",
+    "producer_url": "",
+    "ticket_url": "",
+    "id": "4706bb303184c1b4",
+    "performance_occurrences": [
+      {
+        "date": "2026-12-11",
+        "event_url": "https://www.broadwayworld.com/seattle/regional/The-Nutcracker-4404044"
+      }
+    ],
+    "sources": [
+      "BroadwayWorld Seattle Regional Shows"
+    ],
+    "featured": false,
+    "run_end_source": "NWTheatre 2026 Shows directory"
+  },
+  {
+    "title": "The Hitch-Hiker",
+    "start_date": "2026-12-04",
+    "end_date": "2026-12-13",
+    "performance_dates": [
+      "2026-12-04"
+    ],
+    "venue": "Shoreline Community College",
+    "producer": "Shoreline Community College",
+    "description": "By Lucille Fletcher.",
+    "url": "https://www.broadwayworld.com/seattle/regional/The-Hitch-Hiker-4417464",
+    "event_url": "https://www.broadwayworld.com/seattle/regional/The-Hitch-Hiker-4417464",
+    "run_end_date": "2026-12-13",
+    "source_priority": 2,
+    "producer_type": "aggregator",
+    "producer_url": "",
+    "ticket_url": "",
+    "id": "350f1769eccf9125",
+    "performance_occurrences": [
+      {
+        "date": "2026-12-04",
+        "event_url": "https://www.broadwayworld.com/seattle/regional/The-Hitch-Hiker-4417464"
+      }
+    ],
+    "sources": [
+      "BroadwayWorld Seattle Regional Shows"
+    ],
+    "featured": false
+  },
+  {
+    "title": "A Christmas Story: The Musical",
+    "start_date": "2026-11-20",
+    "end_date": "2026-12-13",
+    "performance_dates": [
+      "2026-11-20"
+    ],
+    "venue": "Tacoma Musical Playhouse",
+    "producer": "Tacoma Musical Playhouse",
+    "description": "Based on the 1983 holiday film, A Christmas Story: The Musical is set in 1940s Indiana and follows young Ralphie Parker as he dreams of receiving an Official Red Ryder Carbine Action 200-shot Range Model air rifle for Christmas. The production revisits iconic moments including the leg lamp, a tongue stuck to a frozen flagpole, and a department store Santa. It features music and lyrics by Benj Pasek and Justin Paul and a book by Joseph Robinette.",
+    "url": "https://www.broadwayworld.com/seattle/regional/A-Christmas-StoryThe-Musical",
+    "event_url": "https://www.broadwayworld.com/seattle/regional/A-Christmas-StoryThe-Musical",
+    "run_end_date": "2026-12-13",
+    "source_priority": 2,
+    "producer_type": "aggregator",
+    "producer_url": "",
+    "ticket_url": "",
+    "id": "52127c510afc1607",
+    "performance_occurrences": [
+      {
+        "date": "2026-11-20",
+        "event_url": "https://www.broadwayworld.com/seattle/regional/A-Christmas-StoryThe-Musical"
+      }
+    ],
+    "sources": [
+      "BroadwayWorld Seattle Regional Shows"
+    ],
+    "featured": false
+  },
+  {
+    "title": "Hip Hop Nutcracker",
+    "start_date": "2026-12-11",
+    "end_date": "2026-12-12",
+    "performance_dates": [
+      "2026-12-11"
+    ],
+    "venue": "The Moore",
+    "producer": "The Moore",
+    "description": "Directed and choreographed by Tony and Olivier Award-nominated Jennifer Weber, Hip Hop Nutcracker is a contemporary dance spectacle that is a re-mixed and re-imagined version of the classic Nutcracker, combining hip-hop dance with Tchaikovsky's music. The show features a powerhouse cast of a dozen all-star dancers, a DJ, a violinist, and MC Kurtis Blow, one of hip hop's founding fathers, who opens the show with a short set. Innovative digital graffiti and visuals transform the story from 19th...",
+    "url": "https://www.broadwayworld.com/seattle/regional/Hip-Hop-Nutcracker",
+    "event_url": "https://www.broadwayworld.com/seattle/regional/Hip-Hop-Nutcracker",
+    "run_end_date": "2026-12-12",
+    "source_priority": 2,
+    "producer_type": "aggregator",
+    "producer_url": "",
+    "ticket_url": "",
+    "id": "f980352462d5020a",
+    "performance_occurrences": [
+      {
+        "date": "2026-12-11",
+        "event_url": "https://www.broadwayworld.com/seattle/regional/Hip-Hop-Nutcracker"
+      }
+    ],
+    "sources": [
+      "BroadwayWorld Seattle Regional Shows"
+    ],
+    "featured": false
+  },
+  {
+    "title": "The Outsiders",
+    "start_date": "2026-11-27",
+    "end_date": "2026-12-06",
+    "performance_dates": [
+      "2026-11-27"
+    ],
+    "venue": "Paramount Theatre",
+    "producer": "Paramount Theatre",
+    "description": "In Tulsa, Oklahoma, 1967, Ponyboy Curtis, his best friend Johnny Cade and their Greaser family of “outsiders” battle with their affluent rivals, the Socs. This thrilling new Broadway musical navigates the complexities of self-discovery as the Greasers dream about who they want to become in a world that may never accept them. With a dynamic original score, The Outsiders is a story of friendship, family, belonging... and the realization that there is still “lots of good in the world.”",
+    "url": "https://www.broadwayworld.com/seattle/regional/the-outsiders-seattle-61393",
+    "event_url": "https://www.broadwayworld.com/seattle/regional/the-outsiders-seattle-61393",
+    "run_end_date": "2026-12-06",
+    "source_priority": 2,
+    "producer_type": "aggregator",
+    "producer_url": "",
+    "ticket_url": "",
+    "id": "9b1b2ce74f7d9af6",
+    "performance_occurrences": [
+      {
+        "date": "2026-11-27",
+        "event_url": "https://www.broadwayworld.com/seattle/regional/the-outsiders-seattle-61393"
+      }
+    ],
+    "sources": [
+      "BroadwayWorld Seattle Regional Shows"
+    ],
+    "featured": false
+  },
+  {
+    "title": "SCMS Signature Series Concert IV: Balourdet Quartet with Marc-André Hamelin",
+    "start_date": "2026-12-06",
+    "end_date": "2026-12-06",
+    "performance_dates": [
+      "2026-12-06"
+    ],
+    "venue": "Nordstrom Recital Hall",
+    "producer": "Nordstrom Recital Hall",
+    "description": "Marc-André Hamelin joins the Balourdet Quartet for a program featuring Dvořák's Piano Quintet No. 2 in A Major, one of the most beloved works in chamber music. The concert also includes a new commission by composer Hannah Ishizaki, the current Composer-in-Residence of Young Concert Artists, as well as Puccini's Crisantemi and Shostakovich's String Quartet No. 3.",
+    "url": "https://www.broadwayworld.com/seattle/regional/SCMS-Signature-Series-Concert-IVBalourdet-Quartet-with-Marc-Andr-Hamelin",
+    "event_url": "https://www.broadwayworld.com/seattle/regional/SCMS-Signature-Series-Concert-IVBalourdet-Quartet-with-Marc-Andr-Hamelin",
+    "source_priority": 2,
+    "producer_type": "aggregator",
+    "producer_url": "",
+    "ticket_url": "",
+    "id": "47f3986601ed6b23",
+    "performance_occurrences": [
+      {
+        "date": "2026-12-06",
+        "event_url": "https://www.broadwayworld.com/seattle/regional/SCMS-Signature-Series-Concert-IVBalourdet-Quartet-with-Marc-Andr-Hamelin"
+      }
+    ],
+    "sources": [
+      "BroadwayWorld Seattle Regional Shows"
+    ],
+    "featured": false
+  },
+  {
+    "title": "Don't Call It a Journey",
+    "start_date": "2026-09-30",
+    "end_date": "2026-12-05",
+    "performance_dates": [
+      "2026-09-30"
+    ],
+    "venue": "The Auditorium at University Heights, Seattle",
+    "producer": "The Auditorium at University Heights, Seattle",
+    "description": "eSe Teatro presents the world premiere of Don't Call It a Journey, an original play co-created by playwright Julieta Vitullo and performer Iveliz Martel. Built from objects, inside jokes, mistranslations between Spanish and English, and the absurd bureaucracy of illness, the solo performance moves between a Seattle kitchen, a hospital room, and a dreamscape where crabs, hydras, and robins carry what words can't. Told through analog technologies like a tape recorder, an overhead projector, and a...",
+    "url": "https://www.broadwayworld.com/seattle/regional/Don-t-Call-It-a-Journey-4404833",
+    "event_url": "https://www.broadwayworld.com/seattle/regional/Don-t-Call-It-a-Journey-4404833",
+    "run_end_date": "2026-12-05",
+    "source_priority": 2,
+    "producer_type": "aggregator",
+    "producer_url": "",
+    "ticket_url": "",
+    "id": "00b2eb6249ef2c02",
+    "performance_occurrences": [
+      {
+        "date": "2026-09-30",
+        "event_url": "https://www.broadwayworld.com/seattle/regional/Don-t-Call-It-a-Journey-4404833"
+      }
+    ],
+    "sources": [
+      "BroadwayWorld Seattle Regional Shows"
+    ],
+    "featured": false
+  },
+  {
+    "title": "Black Artists Market",
+    "start_date": "2026-12-04",
+    "end_date": "2026-12-05",
+    "performance_dates": [
+      "2026-12-04"
+    ],
+    "venue": "Midtown Square / The Opera Center",
+    "producer": "Midtown Square / The Opera Center",
+    "description": "Seattle Opera brings back its Black Artists Market in partnership with ARTE NOIR, featuring crafts, gifts, and treats made by two dozen local Black artists, artisans, and Black-owned small businesses. The market spans two days, running at Midtown Square in the Central District and at the Opera Center. Shoppers at the Opera Center will be serenaded by local Black singers, including Yusef Seevers, Ibidunni Ojikutu, and Brandi Birdsong, performing holiday and operatic favorites.",
+    "url": "https://www.broadwayworld.com/seattle/regional/Black-Artists-Market",
+    "event_url": "https://www.broadwayworld.com/seattle/regional/Black-Artists-Market",
+    "run_end_date": "2026-12-05",
+    "source_priority": 2,
+    "producer_type": "aggregator",
+    "producer_url": "",
+    "ticket_url": "",
+    "id": "22ff34f97c821698",
+    "performance_occurrences": [
+      {
+        "date": "2026-12-04",
+        "event_url": "https://www.broadwayworld.com/seattle/regional/Black-Artists-Market"
+      }
+    ],
+    "sources": [
+      "BroadwayWorld Seattle Regional Shows"
+    ],
+    "featured": false
+  },
+  {
+    "title": "Haunting Holidays III",
+    "start_date": "2026-12-04",
+    "end_date": "2026-12-04",
+    "performance_dates": [
+      "2026-12-04"
+    ],
+    "venue": "Spartan Theatre",
+    "producer": "Spartan Theatre",
+    "description": "This annual one-page play festival, directed by Rebecca Cook, is a one-night-only Reader's Theatre event. It features tiny plays selected from submissions by writers from around the world, throughout the Spokane community and across the SFCC campus. The result is a fast-paced evening showcasing storytelling, humor and mischief.",
+    "url": "https://www.broadwayworld.com/seattle/regional/Haunting-Holidays-III",
+    "event_url": "https://www.broadwayworld.com/seattle/regional/Haunting-Holidays-III",
+    "source_priority": 2,
+    "producer_type": "aggregator",
+    "producer_url": "",
+    "ticket_url": "",
+    "id": "8fb9c2022ef08823",
+    "performance_occurrences": [
+      {
+        "date": "2026-12-04",
+        "event_url": "https://www.broadwayworld.com/seattle/regional/Haunting-Holidays-III"
+      }
+    ],
+    "sources": [
+      "BroadwayWorld Seattle Regional Shows"
+    ],
+    "featured": false
+  },
+  {
+    "title": "Village Theatre Presents: A Very Die Hard Christmas",
+    "start_date": "2026-11-21",
+    "end_date": "2026-11-29",
+    "performance_dates": [
+      "2026-11-21"
+    ],
+    "venue": "Village Theatre",
+    "producer": "Village Theatre",
+    "description": "Yippee-Ki-Yay — it’s back! After last year’s sold-out run, The Habit returns with their outrageous spoofcomedy that is sure to blow the roof off the joint. Perfect for those who like their holiday entertainment with lots of action, 80s jokes, soft rock jams, and villains sassier than your in-laws. It’s festive.It’s explosive.It’s one weekend only. And unlike fruitcake, it won’t last forever.So grab your tickets now, because nothing says Christmas cheer like Nerf guns, nefarious terrorists, and...",
+    "url": "https://www.broadwayworld.com/seattle/regional/Village-Theatre-PresentsA-Very-Die-Hard-Christmas-4401707",
+    "event_url": "https://www.broadwayworld.com/seattle/regional/Village-Theatre-PresentsA-Very-Die-Hard-Christmas-4401707",
+    "run_end_date": "2026-11-29",
+    "source_priority": 2,
+    "producer_type": "aggregator",
+    "producer_url": "",
+    "ticket_url": "",
+    "id": "38106e93883bba76",
+    "performance_occurrences": [
+      {
+        "date": "2026-11-21",
+        "event_url": "https://www.broadwayworld.com/seattle/regional/Village-Theatre-PresentsA-Very-Die-Hard-Christmas-4401707"
+      }
+    ],
+    "sources": [
+      "BroadwayWorld Seattle Regional Shows"
+    ],
+    "featured": false
+  },
+  {
+    "title": "Ride the Cyclone",
+    "start_date": "2026-11-05",
+    "end_date": "2026-11-29",
+    "performance_dates": [
+      "2026-11-05"
+    ],
+    "venue": "Whidbey Playhouse, Inc",
+    "producer": "Whidbey Playhouse, Inc",
+    "description": "By Brooke Maxwell, Jacob Richmond.",
+    "url": "https://www.broadwayworld.com/seattle/regional/Ride-the-Cyclone-4417452",
+    "event_url": "https://www.broadwayworld.com/seattle/regional/Ride-the-Cyclone-4417452",
+    "run_end_date": "2026-11-29",
+    "source_priority": 2,
+    "producer_type": "aggregator",
+    "producer_url": "",
+    "ticket_url": "",
+    "id": "850cbb4913d59e6b",
+    "performance_occurrences": [
+      {
+        "date": "2026-11-05",
+        "event_url": "https://www.broadwayworld.com/seattle/regional/Ride-the-Cyclone-4417452"
+      }
+    ],
+    "sources": [
+      "BroadwayWorld Seattle Regional Shows"
+    ],
+    "featured": false
+  },
+  {
+    "title": "Ooh La La",
+    "start_date": "2026-11-05",
+    "end_date": "2026-11-29",
+    "performance_dates": [
+      "2026-11-05"
+    ],
+    "venue": "Can Can Culinary Cabaret",
+    "producer": "Can Can Culinary Cabaret",
+    "description": "You are cordially invited under the petticoats of Can Can Culinary Cabaret for an evening of over-the-top opulence with an all-new original Parisian inspired production, \"Ooh La La!\" Paint the town pink and revel in Can Can’s latest and loveliest rose-colored soirée to remember. Sip on lavish libations and dine on delectable delicacies and fall in love with a stage brimming with burlesque beauty, daring dance, sultry song and lively laughter. Can Can’s heart-shaped world is brought to you once...",
+    "url": "https://www.broadwayworld.com/seattle/regional/Ooh-La-La-4414299",
+    "event_url": "https://www.broadwayworld.com/seattle/regional/Ooh-La-La-4414299",
+    "run_end_date": "2026-11-29",
+    "source_priority": 2,
+    "producer_type": "aggregator",
+    "producer_url": "",
+    "ticket_url": "",
+    "id": "63b7f6eae3ecc5fb",
+    "performance_occurrences": [
+      {
+        "date": "2026-11-05",
+        "event_url": "https://www.broadwayworld.com/seattle/regional/Ooh-La-La-4414299"
+      }
+    ],
+    "sources": [
+      "BroadwayWorld Seattle Regional Shows"
+    ],
+    "featured": false
+  },
+  {
+    "title": "Dom We Now Our Gay Apparel",
+    "start_date": "2026-11-29",
+    "end_date": "2026-11-29",
+    "performance_dates": [
+      "2026-11-29"
+    ],
+    "venue": "The Rendezvous",
+    "producer": "The Rendezvous",
+    "description": "Dominick Pupa, (RAISING SPIRITS, LO on ROKU) nightclub sensation and cohost of the hit podcast FixingFamousPeople, returns to Seattle and makes his Rendezvous debut with Dom We Now Our Gay Apparel, his acclaimed annual skewering of the year that was. It’s a pop culture roasting with holiday music parodies that will ruin the Christmas classics for you forever. TimeOutNY calls it “One of the 50 Best Things to do at Christmas.” Jokes, songs, one elf, no shelf. BIO • Dominick Pupa is a comedian...",
+    "url": "https://www.broadwayworld.com/seattle/regional/Dom-We-Now-Our-Gay-Apparel-4418512",
+    "event_url": "https://www.broadwayworld.com/seattle/regional/Dom-We-Now-Our-Gay-Apparel-4418512",
+    "source_priority": 2,
+    "producer_type": "aggregator",
+    "producer_url": "",
+    "ticket_url": "",
+    "id": "cd531c5474df044e",
+    "performance_occurrences": [
+      {
+        "date": "2026-11-29",
+        "event_url": "https://www.broadwayworld.com/seattle/regional/Dom-We-Now-Our-Gay-Apparel-4418512"
+      }
+    ],
+    "sources": [
+      "BroadwayWorld Seattle Regional Shows"
+    ],
+    "featured": false
+  },
+  {
+    "title": "Peter Pan Goes Wrong",
+    "start_date": "2026-11-27",
+    "end_date": "2027-01-03",
+    "performance_dates": [
+      "2026-11-27"
+    ],
+    "venue": "Seattle Rep Theater",
+    "producer": "Seattle Rep Theater",
+    "description": "Going wrong has never felt so right. Someone at Seattle Rep had the brilliant idea to invite the Cornley Drama Society back this season—yes, the same troupe whose legendary disaster, The Murder at Haversham Manor, left audiences crying with laughter and our backstage crews crying for... other reasons. And yet, despite their trainwreck of a debut, Cornley is back to prove that this time, they’ll finally get it right. From the creators of the smash-hit The Play That Goes Wrong, don’t miss...",
+    "url": "https://www.broadwayworld.com/seattle/regional/Peter-Pan-Goes-Wrong-4414427",
+    "event_url": "https://www.broadwayworld.com/seattle/regional/Peter-Pan-Goes-Wrong-4414427",
+    "run_end_date": "2028-01-03",
+    "source_priority": 2,
+    "producer_type": "aggregator",
+    "producer_url": "",
+    "ticket_url": "",
+    "id": "19a32673378238a3",
+    "performance_occurrences": [
+      {
+        "date": "2026-11-27",
+        "event_url": "https://www.broadwayworld.com/seattle/regional/Peter-Pan-Goes-Wrong-4414427"
+      }
+    ],
+    "sources": [
+      "BroadwayWorld Seattle Regional Shows"
+    ],
+    "featured": false,
+    "run_end_source": "NWTheatre 2026 Shows directory"
+  },
+  {
+    "title": "The Wizard of Oz",
+    "start_date": "2026-11-27",
+    "end_date": "2026-12-27",
+    "performance_dates": [
+      "2026-11-27"
+    ],
+    "venue": "The 5th Avenue Theatre",
+    "producer": "The 5th Avenue Theatre",
+    "description": "The Wizard of Oz runs November 27 through December 27, 2026 at The 5th Avenue Theatre in Seattle as part of the theatre's 2026/27 season. The production is one of five shows in a season that also includes A Chorus Line, Operation Mincemeat: A New Musical, Alice in Neverland, and Maybe Happy Ending. Additional casting and creative team details have not yet been announced.",
+    "url": "https://www.broadwayworld.com/seattle/regional/The-Wizard-of-Oz-4368986",
+    "event_url": "https://www.broadwayworld.com/seattle/regional/The-Wizard-of-Oz-4368986",
+    "run_end_date": "2026-12-27",
+    "source_priority": 2,
+    "producer_type": "aggregator",
+    "producer_url": "",
+    "ticket_url": "",
+    "id": "6052f61233238ec0",
+    "performance_occurrences": [
+      {
+        "date": "2026-11-27",
+        "event_url": "https://www.broadwayworld.com/seattle/regional/The-Wizard-of-Oz-4368986"
+      }
+    ],
+    "sources": [
+      "BroadwayWorld Seattle Regional Shows"
+    ],
+    "featured": false,
+    "run_end_source": "NWTheatre 2026 Shows directory"
+  },
+  {
+    "title": "A Sherlock Carol",
+    "start_date": "2026-11-27",
+    "end_date": "2026-12-24",
+    "performance_dates": [
+      "2026-11-27"
+    ],
+    "venue": "State Theater",
+    "producer": "State Theater",
+    "description": "Moriarty is dead, to begin with. And Sherlock Holmes is a haunted man. But, when a grown-up Tiny Tim asks Holmes to investigate the death of Ebenezer Scrooge, the Great Detective must use his gifts to solve a Dickens of a Christmas mystery! Six actors take on the beloved characters of Arthur Conan Doyle and Charles Dickens in this heartwarming and highly theatrical holiday treat for all ages.",
+    "url": "https://www.broadwayworld.com/seattle/regional/A-Sherlock-Carol-4414856",
+    "event_url": "https://www.broadwayworld.com/seattle/regional/A-Sherlock-Carol-4414856",
+    "run_end_date": "2026-12-24",
+    "source_priority": 2,
+    "producer_type": "aggregator",
+    "producer_url": "",
+    "ticket_url": "",
+    "id": "6b33922b2e6b53a4",
+    "performance_occurrences": [
+      {
+        "date": "2026-11-27",
+        "event_url": "https://www.broadwayworld.com/seattle/regional/A-Sherlock-Carol-4414856"
+      }
+    ],
+    "sources": [
+      "BroadwayWorld Seattle Regional Shows"
+    ],
+    "featured": false
   }
 ]
