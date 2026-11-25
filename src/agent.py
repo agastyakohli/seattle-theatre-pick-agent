@@ -473,11 +473,20 @@ def extract(source):
                         if isinstance(organizer, list):
                             organizer = organizer[0] if organizer else {}
                         producer = organizer.get("name", "") if isinstance(organizer, dict) else clean(organizer)
-                        event_item = {"title":clean(obj["name"]), "start_date":start, "end_date":end,
-                          "performance_dates":[start], "venue":clean(venue), "producer":clean(producer),
+                        # Aggregator start/end dates describe a production's run,
+                        # not individual showtimes. Keep BroadwayWorld records as
+                        # discovery leads until an independent source provides
+                        # explicit performance dates.
+                        discovery_only = bool(source.get("discovery_only"))
+                        event_item = {"title":clean(obj["name"]),
+                          "start_date":None if discovery_only else start,
+                          "end_date":None if discovery_only else end,
+                          "performance_dates":[] if discovery_only else [start],
+                          "venue":clean(venue), "producer":clean(producer),
                           "description":clean(obj.get("description"))[:600],
                           "url":link, "event_url":link, "source":source["name"]}
                         if end and start and end > start:
+                            event_item["run_start_date"] = start
                             event_item["run_end_date"] = end
                         results.append(event_item)
     # Generic event cards: deliberately low-confidence fallback.
