@@ -1092,7 +1092,7 @@ def main():
             lead["event_url"] = lead.get("producer_url") or lead.get("verified_schedule_url") or lead.get("event_url")
             lead["url"] = lead["event_url"]
             verified_leads += 1
-    print("DISCOVERY SCHEDULE SUMMARY:", len(discovery_leads), "leads checked;",
+    print("DISCOVERY SCHEDULE SUMMARY:", min(20, len(discovery_leads)), "of", len(discovery_leads), "leads checked;",
           verified_leads, "productions with explicit dates verified")
     productions = merge(productions, found)
     # Apply verified metadata corrections before producer-diversity selection.
