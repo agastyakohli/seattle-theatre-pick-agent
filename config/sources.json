@@ -30,7 +30,8 @@
       "type": "html",
       "enabled": true,
       "priority": 2,
-      "producer_type": "aggregator"
+      "producer_type": "aggregator",
+      "discovery_only": true
     }
   ],
   "include_categories": [
