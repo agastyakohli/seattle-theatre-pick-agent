@@ -157,7 +157,7 @@ def is_ticketing_host(host):
     host = (host or "").casefold().removeprefix("www.")
     return any(domain in host for domain in (
         "eventbrite.", "ticketmaster.", "showclix.", "brownpapertickets.",
-        "ticketweb.", "tixr.", "universe.com", "etix.com", "seetickets."
+        "ticketweb.", "tixr.", "universe.com", "etix.com", "seetickets.", "ludus.com"
     ))
 
 
@@ -1060,6 +1060,7 @@ def main():
     # Resolve aggregator leads against official show/ticket calendars before selection.
     discovery_leads = [item for item in found if item.get("source") == "BroadwayWorld Seattle Regional Shows"]
     verified_leads = 0
+    discovery_leads.sort(key=lambda item: (item.get("run_end_date") or "9999-12-31", item.get("run_start_date") or "9999-12-31"))
     for lead in discovery_leads[:20]:
         occurrences = verify_discovery_schedule(lead)
         if occurrences:
