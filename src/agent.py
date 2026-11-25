@@ -538,6 +538,123 @@ def extract(source):
     return {"productions": results, "diagnostic": diagnostic}
 
 
+
+def verify_discovery_schedule(item):
+    """Follow an aggregator lead to its official show page and explicit ticket-calendar dates."""
+    event_url = item.get("event_url") or item.get("url")
+    if not event_url:
+        return []
+    today = datetime.now(TZ).date()
+    session = requests.Session()
+    session.headers.update(HEADERS)
+
+    def fetch(url):
+        try:
+            response = session.get(url, timeout=8)
+            response.raise_for_status()
+            return response
+        except Exception as exc:
+            print("SCHEDULE VERIFY FETCH WARNING:", clean(item.get("title")), url, str(exc)[:180])
+            return None
+
+    def links_from(soup, base_url):
+        found = []
+        for anchor in soup.select("a[href]"):
+            href = urljoin(base_url, anchor.get("href", ""))
+            label = clean(anchor.get_text(" ", strip=True)).casefold()
+            if href.startswith(("http://", "https://")):
+                found.append((label, href))
+        return found
+
+    aggregator = fetch(event_url)
+    if not aggregator:
+        return []
+    aggregator_soup = BeautifulSoup(aggregator.text, "html.parser")
+    aggregator_host = urlparse(aggregator.url).netloc.casefold()
+    external = [(label, href) for label, href in links_from(aggregator_soup, aggregator.url)
+                if urlparse(href).netloc.casefold() != aggregator_host]
+    ticket_terms = ("buy tickets", "get tickets", "tickets", "official website", "website")
+    external.sort(key=lambda pair: (
+        0 if any(term in pair[0] for term in ticket_terms) else 1,
+        0 if not is_ticketing_host(urlparse(pair[1]).netloc) else 1))
+    official_url = ""
+    official_response = None
+    for label, href in external[:8]:
+        response = fetch(href)
+        if not response:
+            continue
+        host = urlparse(response.url).netloc.casefold()
+        # Prefer the producer's own site; a ticketing destination is only a
+        # schedule source when no official-site link is available.
+        if not is_ticketing_host(host):
+            official_url, official_response = response.url, response
+            if any(term in label for term in ("website", "official")):
+                break
+        elif not official_response:
+            official_url, official_response = response.url, response
+
+    if not official_response:
+        print("SCHEDULE VERIFY: no producer/ticket destination found for", clean(item.get("title")))
+        return []
+    official_soup = BeautifulSoup(official_response.text, "html.parser")
+    official_host = urlparse(official_response.url).netloc.casefold()
+    schedule_terms = ("performance dates", "full list", "calendar", "view dates", "select a date", "get tickets", "buy tickets")
+    schedule_links = [(label, href) for label, href in links_from(official_soup, official_response.url)
+                      if any(term in label for term in schedule_terms)]
+    schedule_links.sort(key=lambda pair: (
+        0 if "performance dates" in pair[0] or "full list" in pair[0] else 1,
+        0 if is_ticketing_host(urlparse(pair[1]).netloc) else 1))
+    pages = [(official_response.url, official_response.text)]
+    visited = {official_response.url}
+    for label, href in schedule_links[:5]:
+        if href in visited:
+            continue
+        visited.add(href)
+        response = fetch(href)
+        if response:
+            pages.append((response.url, response.text))
+
+    # Accept only full weekday + month + day + year + time occurrences.
+    # A run range or a generic weekday pattern is never expanded into dates.
+    occurrence_pattern = re.compile(
+        r"\\b(Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday),?\\s+"
+        r"(January|February|March|April|May|June|July|August|September|October|November|December)\\s+"
+        r"(\\d{1,2}),?\\s+(20\\d{2})\\s+(?:at\\s+)?"
+        r"(\\d{1,2}:\\d{2}\\s*(?:AM|PM))\\b", re.IGNORECASE)
+    dates = {}
+    for page_url, page_html in pages:
+        page_soup = BeautifulSoup(page_html, "html.parser")
+        visible = clean(page_soup.get_text(" ", strip=True))
+        for match in occurrence_pattern.finditer(visible):
+            raw = " ".join(match.groups()[:4])
+            try:
+                occurrence_day = datetime.strptime(raw.title(), "%A %B %d %Y").date()
+            except ValueError:
+                continue
+            if occurrence_day.strftime("%A").casefold() != match.group(1).casefold():
+                continue
+            if occurrence_day < today:
+                continue
+            day = occurrence_day.isoformat()
+            dates.setdefault(day, page_url)
+
+    if not dates:
+        print("SCHEDULE VERIFY: no explicit dated showtimes found for", clean(item.get("title")),
+              "| official page:", official_url)
+        return []
+
+    # Keep the producer's own page as the occurrence link where available;
+    # schedule/ticket page is retained separately for ticket resolution.
+    producer_page = official_url if not is_ticketing_host(urlparse(official_url).netloc) else ""
+    ticket_page = next((url for url, _ in pages if is_ticketing_host(urlparse(url).netloc)), "")
+    occurrence_url = producer_page or next(iter(dates.values()))
+    item["producer_url"] = producer_page
+    item["ticket_url"] = ticket_page
+    item["verified_schedule_url"] = next(iter(dates.values()))
+    print("SCHEDULE VERIFY: VERIFIED", clean(item.get("title")), "| dates:", ", ".join(sorted(dates)),
+          "| producer:", producer_page or "(not found)", "| schedule:", item["verified_schedule_url"])
+    return [{"date": day, "event_url": occurrence_url} for day in sorted(dates)]
+
 def is_excluded_event(item):
     """Reject listings outside the page's editorial scope."""
     title = clean(item.get("title", "")).casefold()
@@ -940,6 +1057,21 @@ def main():
                     print("  LISTING:", clean(item.get("title", "(untitled)")), "| dates:", ", ".join(item.get("performance_dates") or ([item.get("start_date")] if item.get("start_date") else [])) or "(none)")
         except Exception as exc:
             print("SOURCE ERROR", source["name"], str(exc), file=sys.stderr)
+    # Resolve aggregator leads against official show/ticket calendars before selection.
+    discovery_leads = [item for item in found if item.get("source") == "BroadwayWorld Seattle Regional Shows"]
+    verified_leads = 0
+    for lead in discovery_leads[:20]:
+        occurrences = verify_discovery_schedule(lead)
+        if occurrences:
+            lead["performance_dates"] = sorted({x["date"] for x in occurrences})
+            lead["start_date"] = lead["performance_dates"][0]
+            lead["end_date"] = lead["performance_dates"][-1]
+            lead["performance_occurrences"] = occurrences
+            lead["event_url"] = lead.get("producer_url") or lead.get("verified_schedule_url") or lead.get("event_url")
+            lead["url"] = lead["event_url"]
+            verified_leads += 1
+    print("DISCOVERY SCHEDULE SUMMARY:", len(discovery_leads), "leads checked;",
+          verified_leads, "productions with explicit dates verified")
     productions = merge(productions, found)
     # Apply verified metadata corrections before producer-diversity selection.
     for production in productions:
