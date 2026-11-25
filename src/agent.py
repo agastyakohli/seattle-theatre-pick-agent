@@ -930,8 +930,14 @@ def main():
                 print("NWTHEATRE INLINE CALENDAR DATA:", json.dumps(diag.get("calendar_inline_scripts", []), ensure_ascii=False))
                 print("NWTHEATRE AI1EC EXPORT:", json.dumps(diag.get("ai1ec_export", {}), ensure_ascii=False))
             print("CALENDAR INVENTORY:", source["name"], "-", len(listings), "dated listings")
-            for item in listings[:3]:
-                print("  LISTING:", clean(item.get("title", "(untitled)")), "| dates:", ", ".join(item.get("performance_dates") or ([item.get("start_date")] if item.get("start_date") else [])) or "(none)")
+            if source.get("discovery_only"):
+                print("DISCOVERY LEADS:", source["name"], "-", len(listings), "productions; aggregator dates are not treated as performances")
+                for item in listings[:10]:
+                    run_range = (item.get("run_start_date") or "?") + " to " + (item.get("run_end_date") or "?")
+                    print("  DISCOVERY:", clean(item.get("title", "(untitled)")), "| run range:", run_range, "| page:", item.get("event_url") or item.get("url"))
+            else:
+                for item in listings[:3]:
+                    print("  LISTING:", clean(item.get("title", "(untitled)")), "| dates:", ", ".join(item.get("performance_dates") or ([item.get("start_date")] if item.get("start_date") else [])) or "(none)")
         except Exception as exc:
             print("SOURCE ERROR", source["name"], str(exc), file=sys.stderr)
     productions = merge(productions, found)
