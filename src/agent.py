@@ -540,18 +540,38 @@ def extract(source):
 
 
 def verify_discovery_schedule(item):
-    """Follow an aggregator lead to its official show page and explicit ticket-calendar dates."""
+    """Follow an aggregator lead only through genuine producer/ticketing links."""
     event_url = item.get("event_url") or item.get("url")
     if not event_url:
         return []
     today = datetime.now(TZ).date()
     session = requests.Session()
     session.headers.update(HEADERS)
+    blocked_hosts = (
+        "facebook.com", "instagram.com", "twitter.com", "x.com",
+        "youtube.com", "data.broadwayworld.com",
+    )
+
+    def useful_destination(url):
+        parsed = urlparse(url)
+        host = parsed.netloc.casefold().removeprefix("www.")
+        if not host or any(domain in host for domain in blocked_hosts):
+            return False
+        # BroadwayWorld tracking links can resolve to generic Ticketmaster
+        # campaign pages (e.g. /holiday), not to the production being checked.
+        if host.endswith("ticketmaster.com"):
+            path = parsed.path.strip("/").casefold()
+            if path in ("", "holiday", "events", "browse"):
+                return False
+        return True
 
     def fetch(url):
         try:
             response = session.get(url, timeout=8)
             response.raise_for_status()
+            if not useful_destination(response.url):
+                print("SCHEDULE VERIFY SKIP REDIRECT:", clean(item.get("title")), response.url)
+                return None
             return response
         except Exception as exc:
             print("SCHEDULE VERIFY FETCH WARNING:", clean(item.get("title")), url, str(exc)[:180])
@@ -564,7 +584,7 @@ def verify_discovery_schedule(item):
             label = clean(anchor.get_text(" ", strip=True)).casefold()
             context = clean(anchor.parent.get_text(" ", strip=True)).casefold() if anchor.parent else ""
             searchable_label = (label + " " + context).strip()
-            if href.startswith(("http://", "https://")):
+            if href.startswith(("http://", "https://")) and useful_destination(href):
                 found.append((searchable_label, href))
         return found
 
@@ -575,49 +595,50 @@ def verify_discovery_schedule(item):
     aggregator_host = urlparse(aggregator.url).netloc.casefold()
     external = [(label, href) for label, href in links_from(aggregator_soup, aggregator.url)
                 if urlparse(href).netloc.casefold() != aggregator_host]
-    ticket_terms = ("buy tickets", "get tickets", "tickets", "official website", "website")
+    # Explicit producer/official-site links outrank generic ticket buttons.
     external.sort(key=lambda pair: (
-        0 if any(term in pair[0] for term in ticket_terms) else 1,
+        0 if any(term in pair[0] for term in ("official website", "producer website", "company website", "visit website", "website")) else 1,
         0 if not is_ticketing_host(urlparse(pair[1]).netloc) else 1))
-    official_url = ""
-    official_response = None
-    for label, href in external[:8]:
+    producer_response = None
+    ticket_response = None
+    for label, href in external[:12]:
         response = fetch(href)
         if not response:
             continue
         host = urlparse(response.url).netloc.casefold()
-        # Prefer the producer's own site; a ticketing destination is only a
-        # schedule source when no official-site link is available.
-        if not is_ticketing_host(host):
-            official_url, official_response = response.url, response
-            if any(term in label for term in ("website", "official")):
+        if is_ticketing_host(host):
+            if not ticket_response:
+                ticket_response = response
+        elif not producer_response:
+            producer_response = response
+            if any(term in label for term in ("official website", "producer website", "company website", "visit website", "website")):
                 break
-        elif not official_response:
-            official_url, official_response = response.url, response
 
-    if not official_response:
-        print("SCHEDULE VERIFY: no producer/ticket destination found for", clean(item.get("title")))
+    # Prefer the producer's site; use a real, show-specific ticket page only
+    # when the aggregator exposes no producer website.
+    primary_response = producer_response or ticket_response
+    if not primary_response:
+        print("SCHEDULE VERIFY: no valid producer/ticket destination for", clean(item.get("title")))
         return []
-    official_soup = BeautifulSoup(official_response.text, "html.parser")
-    official_host = urlparse(official_response.url).netloc.casefold()
+    official_url = producer_response.url if producer_response else ""
+    primary_soup = BeautifulSoup(primary_response.text, "html.parser")
     schedule_terms = ("performance dates", "full list", "calendar", "view dates", "select a date", "get tickets", "buy tickets")
-    schedule_links = [(label, href) for label, href in links_from(official_soup, official_response.url)
+    schedule_links = [(label, href) for label, href in links_from(primary_soup, primary_response.url)
                       if any(term in label for term in schedule_terms)]
     schedule_links.sort(key=lambda pair: (
         0 if "performance dates" in pair[0] or "full list" in pair[0] else 1,
         0 if is_ticketing_host(urlparse(pair[1]).netloc) else 1))
-    pages = [(official_response.url, official_response.text)]
-    visited = {official_response.url}
-    for label, href in schedule_links[:5]:
+    pages = [(primary_response.url, primary_response.text)]
+    visited = {primary_response.url}
+    for label, href in schedule_links[:8]:
         if href in visited:
             continue
         visited.add(href)
         response = fetch(href)
         if response:
             pages.append((response.url, response.text))
-
-    # Accept only full weekday + month + day + year + time occurrences.
-    # A run range or a generic weekday pattern is never expanded into dates.
+    # Also inspect the aggregator's own linked news/show page only as a
+    # discovery lead; it cannot contribute run-range dates.
     occurrence_pattern = re.compile(
         r"\b(Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday),?\s+"
         r"(January|February|March|April|May|June|July|August|September|October|November|December)\s+"
@@ -637,22 +658,20 @@ def verify_discovery_schedule(item):
                 continue
             if occurrence_day < today:
                 continue
-            day = occurrence_day.isoformat()
-            dates.setdefault(day, page_url)
+            dates.setdefault(occurrence_day.isoformat(), page_url)
 
     if not dates:
         print("SCHEDULE VERIFY: no explicit dated showtimes found for", clean(item.get("title")),
-              "| official page:", official_url)
+              "| producer page:", official_url or "(not found)",
+              "| ticket page:", ticket_response.url if ticket_response else "(not found)")
         return []
 
-    # Keep the producer's own page as the occurrence link where available;
-    # schedule/ticket page is retained separately for ticket resolution.
-    producer_page = official_url if not is_ticketing_host(urlparse(official_url).netloc) else ""
-    ticket_page = next((url for url, _ in pages if is_ticketing_host(urlparse(url).netloc)), "")
-    occurrence_url = producer_page or next(iter(dates.values()))
+    producer_page = official_url
+    ticket_page = ticket_response.url if ticket_response else ""
     item["producer_url"] = producer_page
     item["ticket_url"] = ticket_page
     item["verified_schedule_url"] = next(iter(dates.values()))
+    occurrence_url = producer_page or item["verified_schedule_url"]
     print("SCHEDULE VERIFY: VERIFIED", clean(item.get("title")), "| dates:", ", ".join(sorted(dates)),
           "| producer:", producer_page or "(not found)", "| schedule:", item["verified_schedule_url"])
     return [{"date": day, "event_url": occurrence_url} for day in sorted(dates)]
