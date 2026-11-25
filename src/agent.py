@@ -593,11 +593,24 @@ def verify_discovery_schedule(item):
         return []
     aggregator_soup = BeautifulSoup(aggregator.text, "html.parser")
     aggregator_host = urlparse(aggregator.url).netloc.casefold()
-    external = [(label, href) for label, href in links_from(aggregator_soup, aggregator.url)
-                if urlparse(href).netloc.casefold() != aggregator_host]
-    # Explicit producer/official-site links outrank generic ticket buttons.
+    # Restrict discovery to production content, not global navigation/footer
+    # links such as BroadwayWorld's "Chat" link to forum.broadwayworld.com.
+    content_root = aggregator_soup.select_one("main, article, #content, .content")
+    content_soup = content_root if content_root else aggregator_soup
+    relevant_link_terms = (
+        "buy tickets", "get tickets", "tickets", "official website",
+        "producer website", "company website", "show website", "visit website", "website",
+    )
+    external = [
+        (label, href) for label, href in links_from(content_soup, aggregator.url)
+        if urlparse(href).netloc.casefold() != aggregator_host
+        and any(term in label for term in relevant_link_terms)
+    ]
+    # eSe Teatro's BWW page labels its direct company link "Buy Tickets";
+    # prioritize this production-specific link over generic site navigation.
     external.sort(key=lambda pair: (
-        0 if any(term in pair[0] for term in ("official website", "producer website", "company website", "visit website", "website")) else 1,
+        0 if any(term in pair[0] for term in ("official website", "producer website", "company website", "show website", "visit website", "website")) else 1,
+        0 if "buy tickets" in pair[0] or "get tickets" in pair[0] else 1,
         0 if not is_ticketing_host(urlparse(pair[1]).netloc) else 1))
     producer_response = None
     ticket_response = None
