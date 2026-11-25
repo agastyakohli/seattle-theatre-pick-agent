@@ -562,8 +562,10 @@ def verify_discovery_schedule(item):
         for anchor in soup.select("a[href]"):
             href = urljoin(base_url, anchor.get("href", ""))
             label = clean(anchor.get_text(" ", strip=True)).casefold()
+            context = clean(anchor.parent.get_text(" ", strip=True)).casefold() if anchor.parent else ""
+            searchable_label = (label + " " + context).strip()
             if href.startswith(("http://", "https://")):
-                found.append((label, href))
+                found.append((searchable_label, href))
         return found
 
     aggregator = fetch(event_url)
