@@ -617,10 +617,10 @@ def verify_discovery_schedule(item):
     # Accept only full weekday + month + day + year + time occurrences.
     # A run range or a generic weekday pattern is never expanded into dates.
     occurrence_pattern = re.compile(
-        r"\\b(Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday),?\\s+"
-        r"(January|February|March|April|May|June|July|August|September|October|November|December)\\s+"
-        r"(\\d{1,2}),?\\s+(20\\d{2})\\s+(?:at\\s+)?"
-        r"(\\d{1,2}:\\d{2}\\s*(?:AM|PM))\\b", re.IGNORECASE)
+        r"\b(Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday),?\s+"
+        r"(January|February|March|April|May|June|July|August|September|October|November|December)\s+"
+        r"(\d{1,2}),?\s+(20\d{2})\s+(?:at\s+)?"
+        r"(\d{1,2}:\d{2}\s*(?:AM|PM))\b", re.IGNORECASE)
     dates = {}
     for page_url, page_html in pages:
         page_soup = BeautifulSoup(page_html, "html.parser")
