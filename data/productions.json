@@ -5735,5 +5735,33 @@
       "Theatre Puget Sound Community Events Calendar"
     ],
     "featured": false
+  },
+  {
+    "title": "Broadway + Performing Arts Workshop Series: THE OUTSIDERS Dance Masterclass",
+    "start_date": "2026-12-04",
+    "end_date": "2026-12-04",
+    "performance_dates": [
+      "2026-12-04"
+    ],
+    "venue": "Kerry Hall",
+    "producer": "",
+    "description": "STG Presents Broadway + Performing Arts Workshop Series: THE OUTSIDERS Dance Masterclass Friday, Dec. 4, 2026 Kerry Hall Doors/Check-in: 4:30 PM Event Start: 5:00 PM Event End: 6:30 PM Age Requirement: 14+ and Adults Get Tickets STG’s Broadway + Performing Arts Workshop Series (BPAWS) is a monthly series of workshops featuring local, national, and internationally acclaimed guest artists. The series provides aspiring dancers and performing artists with opportunities to train with industry professionals, develop their skills, and explore diverse movement practices. Join us for a special dance ma",
+    "url": "https://www.stgpresents.org/events/broadway-performing-arts-workshop-series-the-outsiders-dance-masterclass/",
+    "event_url": "https://www.stgpresents.org/events/broadway-performing-arts-workshop-series-the-outsiders-dance-masterclass/",
+    "source_priority": 5,
+    "producer_type": "presenter",
+    "producer_url": "",
+    "ticket_url": "",
+    "id": "1f3bd6ac0f5e746c",
+    "performance_occurrences": [
+      {
+        "date": "2026-12-04",
+        "event_url": "https://www.stgpresents.org/events/broadway-performing-arts-workshop-series-the-outsiders-dance-masterclass/"
+      }
+    ],
+    "sources": [
+      "Seattle Theatre Group Calendar"
+    ],
+    "featured": false
   }
 ]
