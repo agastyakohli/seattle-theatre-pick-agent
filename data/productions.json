@@ -8,6 +8,8 @@
       "2026-10-31",
       "2026-11-01",
       "2026-11-07",
+      "2026-11-14",
+      "2026-11-21",
       "2026-11-22",
       "2026-11-28",
       "2026-11-29",
@@ -64,6 +66,14 @@
       {
         "date": "2026-10-25",
         "event_url": "https://theatrepugetsound.org/event/rocky-horror-improv-show/2026-10-25/"
+      },
+      {
+        "date": "2026-11-21",
+        "event_url": "https://theatrepugetsound.org/event/rocky-horror-improv-show/2026-11-21/"
+      },
+      {
+        "date": "2026-11-14",
+        "event_url": "https://theatrepugetsound.org/event/rocky-horror-improv-show/2026-11-14/"
       }
     ],
     "sources": [
@@ -1546,6 +1556,8 @@
       "2026-10-31",
       "2026-11-01",
       "2026-11-07",
+      "2026-11-14",
+      "2026-11-21",
       "2026-11-22",
       "2026-11-28",
       "2026-11-29",
@@ -1597,6 +1609,14 @@
       {
         "date": "2026-12-06",
         "event_url": "https://theatrepugetsound.org/event/rocky-horror-improv-show/2026-12-06/"
+      },
+      {
+        "date": "2026-11-14",
+        "event_url": "https://theatrepugetsound.org/event/rocky-horror-improv-show/2026-11-14/"
+      },
+      {
+        "date": "2026-11-21",
+        "event_url": "https://theatrepugetsound.org/event/rocky-horror-improv-show/2026-11-21/"
       }
     ],
     "sources": [
@@ -1808,9 +1828,9 @@
     "venue": "",
     "producer": "",
     "description": "",
-    "url": "https://theatrepugetsound.org/event/%e0%a4%a8%e0%a5%87%e0%a4%b9%e0%a4%be-neel-neha-and-neel-%e0%a4%a8%e0%a5%87%e0%a4%b9%e0%a4%be-%e0%a4%94%e0%a4%b0-%e0%a4%a8%e0%a5%80%e0%a4%b2/2026-11-19/",
+    "url": "https://theatrepugetsound.org/event/%e0%a4%a8%e0%a5%87%e0%a4%b9%e0%a4%be-neel-neha-and-neel-%e0%a4%a8%e0%a5%87%e0%a4%b9%e0%a4%be-%e0%a4%94%e0%a4%b0-%e0%a4%a8%e0%a5%80%e0%a4%b2/2026-10-28/",
     "source_priority": 1,
-    "event_url": "https://theatrepugetsound.org/event/%e0%a4%a8%e0%a5%87%e0%a4%b9%e0%a4%be-neel-neha-and-neel-%e0%a4%a8%e0%a5%87%e0%a4%b9%e0%a4%be-%e0%a4%94%e0%a4%b0-%e0%a4%a8%e0%a5%80%e0%a4%b2/2026-11-19/",
+    "event_url": "https://theatrepugetsound.org/event/%e0%a4%a8%e0%a5%87%e0%a4%b9%e0%a4%be-neel-neha-and-neel-%e0%a4%a8%e0%a5%87%e0%a4%b9%e0%a4%be-%e0%a4%94%e0%a4%b0-%e0%a4%a8%e0%a5%80%e0%a4%b2/2026-10-28/",
     "producer_url": "",
     "ticket_url": "",
     "id": "78cbff768be63e87",
@@ -1842,14 +1862,14 @@
       "2026-11-27",
       "2026-11-28"
     ],
-    "venue": "",
-    "producer": "",
-    "description": "",
-    "url": "https://theatrepugetsound.org/event/the-dumb-waiter-by-harold-pinter/2026-11-28/",
+    "venue": "Trinity Parish Hall",
+    "producer": "Theatre Puget Sound",
+    "description": "Sneaky Cat Acting Academy presents PROFESSIONAL SERIES PREMIERE THE DUMB WAITER By Harold Pinter Directed by Paul O’Connell Starring Terry Edward Moore* & Anthony Duckett* Thursdays, Fridays and Saturdays at […] \\n",
+    "url": "https://sneakycat.org/wp-content/uploads/2026/09/dumb-waiter-poster-2.pdf",
     "source_priority": 1,
-    "event_url": "https://theatrepugetsound.org/event/the-dumb-waiter-by-harold-pinter/2026-11-28/",
-    "producer_url": "",
-    "ticket_url": "",
+    "event_url": "https://theatrepugetsound.org/event/the-dumb-waiter-by-harold-pinter/2026-11-27/",
+    "producer_url": "https://sneakycat.org/wp-content/uploads/2026/09/dumb-waiter-poster-2.pdf",
+    "ticket_url": "https://theatrepugetsound.org/event/the-dumb-waiter-by-harold-pinter/2026-11-26/",
     "id": "9ac5c737784fcd0a",
     "performance_occurrences": [
       {
@@ -1884,7 +1904,7 @@
     "sources": [
       "Theatre Puget Sound Community Events Calendar"
     ],
-    "featured": false
+    "featured": true
   },
   {
     "title": "Young Frankenstein",
@@ -5913,25 +5933,79 @@
   {
     "title": "Christmastown",
     "start_date": "2026-11-27",
-    "end_date": "2026-11-27",
+    "end_date": "2026-12-13",
     "performance_dates": [
-      "2026-11-27"
+      "2026-11-27",
+      "2026-11-28",
+      "2026-11-29",
+      "2026-12-03",
+      "2026-12-04",
+      "2026-12-05",
+      "2026-12-06",
+      "2026-12-10",
+      "2026-12-11",
+      "2026-12-12",
+      "2026-12-13"
     ],
     "venue": "Jefferson Street Arts Center",
     "producer": "Jefferson Street Arts Center",
     "description": "A private eye gets wrapped up in a mystery involving an elf fatale, thuggish reindeer and maybe even Big Red himself!",
-    "url": "https://www.broadwayworld.com/seattle/regional/Christmastown-4404905",
-    "event_url": "https://www.broadwayworld.com/seattle/regional/Christmastown-4404905",
+    "url": "https://tickets.evvnt.com/organizations/battleground-productions?fbclid=IwY2xjawVtj-xleHRuA2FlbQIxMABwZG9mBWJyaWQRMWFKQXpya0VuM1pOQ3V6S09zcnRjBmFwcF9pZBAyMjIwMzkxNzg4MjAwODkyAAEfV-14TlsFq4MBzLR-0NcdoPv9Q16VHbEJldh3EUbrC4MmphdENZuTJW1THdY_aem_Ajqwq3xW5kcpTtPMuAJa0w",
+    "event_url": "https://tickets.evvnt.com/organizations/battleground-productions?fbclid=IwY2xjawVtj-xleHRuA2FlbQIxMABwZG9mBWJyaWQRMWFKQXpya0VuM1pOQ3V6S09zcnRjBmFwcF9pZBAyMjIwMzkxNzg4MjAwODkyAAEfV-14TlsFq4MBzLR-0NcdoPv9Q16VHbEJldh3EUbrC4MmphdENZuTJW1THdY_aem_Ajqwq3xW5kcpTtPMuAJa0w",
     "run_end_date": "2026-12-20",
     "source_priority": 2,
     "producer_type": "aggregator",
-    "producer_url": "",
+    "producer_url": "https://tickets.evvnt.com/organizations/battleground-productions?fbclid=IwY2xjawVtj-xleHRuA2FlbQIxMABwZG9mBWJyaWQRMWFKQXpya0VuM1pOQ3V6S09zcnRjBmFwcF9pZBAyMjIwMzkxNzg4MjAwODkyAAEfV-14TlsFq4MBzLR-0NcdoPv9Q16VHbEJldh3EUbrC4MmphdENZuTJW1THdY_aem_Ajqwq3xW5kcpTtPMuAJa0w",
     "ticket_url": "",
     "id": "db978fdbbbed0b27",
     "performance_occurrences": [
       {
         "date": "2026-11-27",
         "event_url": "https://www.broadwayworld.com/seattle/regional/Christmastown-4404905"
+      },
+      {
+        "date": "2026-11-27",
+        "event_url": "https://tickets.evvnt.com/organizations/battleground-productions?fbclid=IwY2xjawVtj-xleHRuA2FlbQIxMABwZG9mBWJyaWQRMWFKQXpya0VuM1pOQ3V6S09zcnRjBmFwcF9pZBAyMjIwMzkxNzg4MjAwODkyAAEfV-14TlsFq4MBzLR-0NcdoPv9Q16VHbEJldh3EUbrC4MmphdENZuTJW1THdY_aem_Ajqwq3xW5kcpTtPMuAJa0w"
+      },
+      {
+        "date": "2026-11-28",
+        "event_url": "https://tickets.evvnt.com/organizations/battleground-productions?fbclid=IwY2xjawVtj-xleHRuA2FlbQIxMABwZG9mBWJyaWQRMWFKQXpya0VuM1pOQ3V6S09zcnRjBmFwcF9pZBAyMjIwMzkxNzg4MjAwODkyAAEfV-14TlsFq4MBzLR-0NcdoPv9Q16VHbEJldh3EUbrC4MmphdENZuTJW1THdY_aem_Ajqwq3xW5kcpTtPMuAJa0w"
+      },
+      {
+        "date": "2026-11-29",
+        "event_url": "https://tickets.evvnt.com/organizations/battleground-productions?fbclid=IwY2xjawVtj-xleHRuA2FlbQIxMABwZG9mBWJyaWQRMWFKQXpya0VuM1pOQ3V6S09zcnRjBmFwcF9pZBAyMjIwMzkxNzg4MjAwODkyAAEfV-14TlsFq4MBzLR-0NcdoPv9Q16VHbEJldh3EUbrC4MmphdENZuTJW1THdY_aem_Ajqwq3xW5kcpTtPMuAJa0w"
+      },
+      {
+        "date": "2026-12-03",
+        "event_url": "https://tickets.evvnt.com/organizations/battleground-productions?fbclid=IwY2xjawVtj-xleHRuA2FlbQIxMABwZG9mBWJyaWQRMWFKQXpya0VuM1pOQ3V6S09zcnRjBmFwcF9pZBAyMjIwMzkxNzg4MjAwODkyAAEfV-14TlsFq4MBzLR-0NcdoPv9Q16VHbEJldh3EUbrC4MmphdENZuTJW1THdY_aem_Ajqwq3xW5kcpTtPMuAJa0w"
+      },
+      {
+        "date": "2026-12-04",
+        "event_url": "https://tickets.evvnt.com/organizations/battleground-productions?fbclid=IwY2xjawVtj-xleHRuA2FlbQIxMABwZG9mBWJyaWQRMWFKQXpya0VuM1pOQ3V6S09zcnRjBmFwcF9pZBAyMjIwMzkxNzg4MjAwODkyAAEfV-14TlsFq4MBzLR-0NcdoPv9Q16VHbEJldh3EUbrC4MmphdENZuTJW1THdY_aem_Ajqwq3xW5kcpTtPMuAJa0w"
+      },
+      {
+        "date": "2026-12-05",
+        "event_url": "https://tickets.evvnt.com/organizations/battleground-productions?fbclid=IwY2xjawVtj-xleHRuA2FlbQIxMABwZG9mBWJyaWQRMWFKQXpya0VuM1pOQ3V6S09zcnRjBmFwcF9pZBAyMjIwMzkxNzg4MjAwODkyAAEfV-14TlsFq4MBzLR-0NcdoPv9Q16VHbEJldh3EUbrC4MmphdENZuTJW1THdY_aem_Ajqwq3xW5kcpTtPMuAJa0w"
+      },
+      {
+        "date": "2026-12-06",
+        "event_url": "https://tickets.evvnt.com/organizations/battleground-productions?fbclid=IwY2xjawVtj-xleHRuA2FlbQIxMABwZG9mBWJyaWQRMWFKQXpya0VuM1pOQ3V6S09zcnRjBmFwcF9pZBAyMjIwMzkxNzg4MjAwODkyAAEfV-14TlsFq4MBzLR-0NcdoPv9Q16VHbEJldh3EUbrC4MmphdENZuTJW1THdY_aem_Ajqwq3xW5kcpTtPMuAJa0w"
+      },
+      {
+        "date": "2026-12-10",
+        "event_url": "https://tickets.evvnt.com/organizations/battleground-productions?fbclid=IwY2xjawVtj-xleHRuA2FlbQIxMABwZG9mBWJyaWQRMWFKQXpya0VuM1pOQ3V6S09zcnRjBmFwcF9pZBAyMjIwMzkxNzg4MjAwODkyAAEfV-14TlsFq4MBzLR-0NcdoPv9Q16VHbEJldh3EUbrC4MmphdENZuTJW1THdY_aem_Ajqwq3xW5kcpTtPMuAJa0w"
+      },
+      {
+        "date": "2026-12-11",
+        "event_url": "https://tickets.evvnt.com/organizations/battleground-productions?fbclid=IwY2xjawVtj-xleHRuA2FlbQIxMABwZG9mBWJyaWQRMWFKQXpya0VuM1pOQ3V6S09zcnRjBmFwcF9pZBAyMjIwMzkxNzg4MjAwODkyAAEfV-14TlsFq4MBzLR-0NcdoPv9Q16VHbEJldh3EUbrC4MmphdENZuTJW1THdY_aem_Ajqwq3xW5kcpTtPMuAJa0w"
+      },
+      {
+        "date": "2026-12-12",
+        "event_url": "https://tickets.evvnt.com/organizations/battleground-productions?fbclid=IwY2xjawVtj-xleHRuA2FlbQIxMABwZG9mBWJyaWQRMWFKQXpya0VuM1pOQ3V6S09zcnRjBmFwcF9pZBAyMjIwMzkxNzg4MjAwODkyAAEfV-14TlsFq4MBzLR-0NcdoPv9Q16VHbEJldh3EUbrC4MmphdENZuTJW1THdY_aem_Ajqwq3xW5kcpTtPMuAJa0w"
+      },
+      {
+        "date": "2026-12-13",
+        "event_url": "https://tickets.evvnt.com/organizations/battleground-productions?fbclid=IwY2xjawVtj-xleHRuA2FlbQIxMABwZG9mBWJyaWQRMWFKQXpya0VuM1pOQ3V6S09zcnRjBmFwcF9pZBAyMjIwMzkxNzg4MjAwODkyAAEfV-14TlsFq4MBzLR-0NcdoPv9Q16VHbEJldh3EUbrC4MmphdENZuTJW1THdY_aem_Ajqwq3xW5kcpTtPMuAJa0w"
       }
     ],
     "sources": [
@@ -6572,6 +6646,140 @@
         "event_url": "https://www.broadwayworld.com/seattle/regional/A-Sherlock-Carol-4414856"
       }
     ],
+    "sources": [
+      "BroadwayWorld Seattle Regional Shows"
+    ],
+    "featured": false
+  },
+  {
+    "title": "GRA",
+    "start_date": "2026-11-28",
+    "end_date": "2026-11-29",
+    "performance_dates": [
+      "2026-11-28",
+      "2026-11-29"
+    ],
+    "venue": "Seattle Open Arts Place",
+    "producer": "",
+    "description": "Flying along the edges of the world, Carmen Aguilar y Wedge (Whoopsie) is an award-winning Mexa designer, artist, and physical theater maker. A devoted enthusiast, amateur clown historian, and menace, […] \\n",
+    "url": "https://theatrepugetsound.org/event/gra/2026-11-28/",
+    "event_url": "https://theatrepugetsound.org/event/gra/2026-11-28/",
+    "source_priority": 1,
+    "producer_url": "",
+    "ticket_url": "",
+    "id": "eca6170fa4d9e146",
+    "performance_occurrences": [
+      {
+        "date": "2026-11-29",
+        "event_url": "https://theatrepugetsound.org/event/gra/2026-11-29/"
+      },
+      {
+        "date": "2026-11-28",
+        "event_url": "https://theatrepugetsound.org/event/gra/2026-11-28/"
+      }
+    ],
+    "sources": [
+      "Theatre Puget Sound Community Events Calendar"
+    ],
+    "featured": false
+  },
+  {
+    "title": "Clownesque Bodies Workshop",
+    "start_date": "2026-11-28",
+    "end_date": "2026-11-28",
+    "performance_dates": [
+      "2026-11-28"
+    ],
+    "venue": "Seattle Open Arts Place",
+    "producer": "",
+    "description": "A technique-driven workshop combining movement, clown, mime, and dance to develop a more conscious, expressive, and physically dynamic stage presence. Drawing on the work of Mexican masters Sigfrido Aguilar and […] \\n",
+    "url": "https://theatrepugetsound.org/event/clownesque-bodies-workshop/",
+    "event_url": "https://theatrepugetsound.org/event/clownesque-bodies-workshop/",
+    "source_priority": 1,
+    "producer_url": "",
+    "ticket_url": "",
+    "id": "bdf75646ece0e74e",
+    "performance_occurrences": [
+      {
+        "date": "2026-11-28",
+        "event_url": "https://theatrepugetsound.org/event/clownesque-bodies-workshop/"
+      }
+    ],
+    "sources": [
+      "Theatre Puget Sound Community Events Calendar"
+    ],
+    "featured": false
+  },
+  {
+    "title": "Clownesque Bodies Workshop",
+    "start_date": "2026-11-28",
+    "end_date": "2026-11-28",
+    "performance_dates": [
+      "2026-11-28"
+    ],
+    "venue": "",
+    "producer": "",
+    "description": "",
+    "url": "https://theatrepugetsound.org/event/clownesque-bodies-workshop/",
+    "source_priority": 1,
+    "event_url": "https://theatrepugetsound.org/event/clownesque-bodies-workshop/",
+    "producer_url": "",
+    "ticket_url": "",
+    "id": "f1856642fdf18f4d",
+    "performance_occurrences": [
+      {
+        "date": "2026-11-28",
+        "event_url": "https://theatrepugetsound.org/event/clownesque-bodies-workshop/"
+      }
+    ],
+    "sources": [
+      "Theatre Puget Sound Community Events Calendar"
+    ],
+    "featured": false
+  },
+  {
+    "title": "GRA",
+    "start_date": "2026-11-29",
+    "end_date": "2026-11-29",
+    "performance_dates": [
+      "2026-11-29"
+    ],
+    "venue": "",
+    "producer": "",
+    "description": "",
+    "url": "https://theatrepugetsound.org/event/gra/2026-11-29/",
+    "source_priority": 1,
+    "event_url": "https://theatrepugetsound.org/event/gra/2026-11-29/",
+    "producer_url": "",
+    "ticket_url": "",
+    "id": "be8accbb72c15adf",
+    "performance_occurrences": [
+      {
+        "date": "2026-11-29",
+        "event_url": "https://theatrepugetsound.org/event/gra/2026-11-29/"
+      }
+    ],
+    "sources": [
+      "Theatre Puget Sound Community Events Calendar"
+    ],
+    "featured": false
+  },
+  {
+    "title": "Haunting Holidays",
+    "start_date": null,
+    "end_date": null,
+    "performance_dates": [],
+    "venue": "Spartan Theatre",
+    "producer": "Spartan Theatre",
+    "description": "This annual one-page play festival, directed by Rebecca Cook, is a Reader's Theatre event. It features tiny plays selected from submissions from around the world.",
+    "url": "https://www.broadwayworld.com/seattle/regional/Haunting-Holidays-4403011",
+    "event_url": "https://www.broadwayworld.com/seattle/regional/Haunting-Holidays-4403011",
+    "source_priority": 2,
+    "producer_type": "aggregator",
+    "producer_url": "",
+    "ticket_url": "",
+    "id": "51d47966f7f6ae59",
+    "performance_occurrences": [],
     "sources": [
       "BroadwayWorld Seattle Regional Shows"
     ],
