@@ -1850,63 +1850,6 @@
     "featured": false
   },
   {
-    "title": "THE DUMB WAITER by Harold Pinter",
-    "start_date": "2026-10-29",
-    "end_date": "2026-11-28",
-    "performance_dates": [
-      "2026-10-29",
-      "2026-10-30",
-      "2026-11-12",
-      "2026-11-13",
-      "2026-11-26",
-      "2026-11-27",
-      "2026-11-28"
-    ],
-    "venue": "Trinity Parish Hall",
-    "producer": "Theatre Puget Sound",
-    "description": "Sneaky Cat Acting Academy presents PROFESSIONAL SERIES PREMIERE THE DUMB WAITER By Harold Pinter Directed by Paul O’Connell Starring Terry Edward Moore* & Anthony Duckett* Thursdays, Fridays and Saturdays at […] \\n",
-    "url": "https://sneakycat.org/wp-content/uploads/2026/09/dumb-waiter-poster-2.pdf",
-    "source_priority": 1,
-    "event_url": "https://theatrepugetsound.org/event/the-dumb-waiter-by-harold-pinter/2026-11-27/",
-    "producer_url": "https://sneakycat.org/wp-content/uploads/2026/09/dumb-waiter-poster-2.pdf",
-    "ticket_url": "https://theatrepugetsound.org/event/the-dumb-waiter-by-harold-pinter/2026-11-26/",
-    "id": "9ac5c737784fcd0a",
-    "performance_occurrences": [
-      {
-        "date": "2026-10-29",
-        "event_url": "https://theatrepugetsound.org/event/the-dumb-waiter-by-harold-pinter/2026-10-29/"
-      },
-      {
-        "date": "2026-10-30",
-        "event_url": "https://theatrepugetsound.org/event/the-dumb-waiter-by-harold-pinter/2026-10-30/"
-      },
-      {
-        "date": "2026-11-12",
-        "event_url": "https://theatrepugetsound.org/event/the-dumb-waiter-by-harold-pinter/2026-11-12/"
-      },
-      {
-        "date": "2026-11-13",
-        "event_url": "https://theatrepugetsound.org/event/the-dumb-waiter-by-harold-pinter/2026-11-13/"
-      },
-      {
-        "date": "2026-11-26",
-        "event_url": "https://theatrepugetsound.org/event/the-dumb-waiter-by-harold-pinter/2026-11-26/"
-      },
-      {
-        "date": "2026-11-27",
-        "event_url": "https://theatrepugetsound.org/event/the-dumb-waiter-by-harold-pinter/2026-11-27/"
-      },
-      {
-        "date": "2026-11-28",
-        "event_url": "https://theatrepugetsound.org/event/the-dumb-waiter-by-harold-pinter/2026-11-28/"
-      }
-    ],
-    "sources": [
-      "Theatre Puget Sound Community Events Calendar"
-    ],
-    "featured": true
-  },
-  {
     "title": "Young Frankenstein",
     "start_date": "2026-10-30",
     "end_date": "2026-11-07",
@@ -6313,14 +6256,14 @@
     ],
     "venue": "Paramount Theatre",
     "producer": "Paramount Theatre",
-    "description": "In Tulsa, Oklahoma, 1967, Ponyboy Curtis, his best friend Johnny Cade and their Greaser family of “outsiders” battle with their affluent rivals, the Socs. This thrilling new Broadway musical navigates the complexities of self-discovery as the Greasers dream about who they want to become in a world that may never accept them. With a dynamic original score, The Outsiders is a story of friendship, family, belonging... and the realization that there is still “lots of good in the world.”",
-    "url": "https://www.broadwayworld.com/seattle/regional/the-outsiders-seattle-61393",
+    "description": "In Tulsa, Oklahoma, 1967, Ponyboy Curtis, his best friend Johnny Cade and their Greaser family of “outsiders” battle with their affluent rivals, the Socs. This thrilling new Broadway musical navigates the complexities of self-discovery as the Greasers dream about who they want to become in a wor",
+    "url": "https://outsidersmusical.com/",
     "event_url": "https://www.broadwayworld.com/seattle/regional/the-outsiders-seattle-61393",
     "run_end_date": "2026-12-06",
     "source_priority": 2,
     "producer_type": "aggregator",
     "producer_url": "",
-    "ticket_url": "",
+    "ticket_url": "https://outsidersmusical.com/",
     "id": "9b1b2ce74f7d9af6",
     "performance_occurrences": [
       {
@@ -6331,7 +6274,7 @@
     "sources": [
       "BroadwayWorld Seattle Regional Shows"
     ],
-    "featured": false
+    "featured": true
   },
   {
     "title": "SCMS Signature Series Concert IV: Balourdet Quartet with Marc-André Hamelin",
@@ -6782,6 +6725,58 @@
     "performance_occurrences": [],
     "sources": [
       "BroadwayWorld Seattle Regional Shows"
+    ],
+    "featured": false
+  },
+  {
+    "title": "THE DUMB WAITER by Harold Pinter",
+    "start_date": "2026-10-29",
+    "end_date": "2026-11-27",
+    "performance_dates": [
+      "2026-10-29",
+      "2026-10-30",
+      "2026-11-12",
+      "2026-11-13",
+      "2026-11-26",
+      "2026-11-27"
+    ],
+    "venue": "",
+    "producer": "",
+    "description": "",
+    "url": "https://theatrepugetsound.org/event/the-dumb-waiter-by-harold-pinter/2026-11-27/",
+    "source_priority": 1,
+    "event_url": "https://theatrepugetsound.org/event/the-dumb-waiter-by-harold-pinter/2026-11-27/",
+    "producer_url": "",
+    "ticket_url": "",
+    "id": "9ac5c737784fcd0a",
+    "performance_occurrences": [
+      {
+        "date": "2026-10-29",
+        "event_url": "https://theatrepugetsound.org/event/the-dumb-waiter-by-harold-pinter/2026-10-29/"
+      },
+      {
+        "date": "2026-10-30",
+        "event_url": "https://theatrepugetsound.org/event/the-dumb-waiter-by-harold-pinter/2026-10-30/"
+      },
+      {
+        "date": "2026-11-12",
+        "event_url": "https://theatrepugetsound.org/event/the-dumb-waiter-by-harold-pinter/2026-11-12/"
+      },
+      {
+        "date": "2026-11-13",
+        "event_url": "https://theatrepugetsound.org/event/the-dumb-waiter-by-harold-pinter/2026-11-13/"
+      },
+      {
+        "date": "2026-11-26",
+        "event_url": "https://theatrepugetsound.org/event/the-dumb-waiter-by-harold-pinter/2026-11-26/"
+      },
+      {
+        "date": "2026-11-27",
+        "event_url": "https://theatrepugetsound.org/event/the-dumb-waiter-by-harold-pinter/2026-11-27/"
+      }
+    ],
+    "sources": [
+      "Theatre Puget Sound Community Events Calendar"
     ],
     "featured": false
   }
